@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SierraZim Training Academy — Website
 
-## Getting Started
+Marketing website for **SierraZim Training Academy** (Sierrazim Limited) — defensive
+driving, heavy-vehicle, surface mobile equipment and agriculture operator training,
+assessment and certification.
 
-First, run the development server:
+Built with **Next.js 16 (App Router) · Tailwind CSS v4 · Phosphor Icons**, statically
+generated for speed and SEO.
+
+## Run it locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npm run build    # production build (static export of all routes)
+npm run start    # serve the production build
+npm run lint
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design language
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A bespoke "field-manual" art direction — deliberately not a generic template:
 
-## Learn More
+- **Type:** Bricolage Grotesque (display), Hanken Grotesk (body), Space Mono
+  (technical labels) — wired via `next/font` in `src/app/layout.tsx`.
+- **Palette:** warm paper, forest green, safety amber, red-earth clay. Tokens live
+  in `src/app/globals.css` under `@theme` (`paper`, `forest-*`, `safety-*`, `clay-*`).
+- **Motifs:** hairline rules, blueprint grid, index numbers, a certification "seal",
+  square (non-rounded) industrial edges, flat surfaces (no soft glow shadows).
 
-To learn more about Next.js, take a look at the following resources:
+## Editing content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Almost all copy and data is centralised in **`src/lib/site.ts`**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `site` — name, contact details, phones, address, hours, leadership.
+- `services` — the 7 programmes (title, copy, features, icon, image). Drives the
+  services pages **and** the static `/services/[slug]` routes, sitemap and JSON-LD.
+- `clients`, `valueProps`, `stats`, `gallery`.
 
-## Deploy on Vercel
+Change it there and every page, the sitemap and structured data update automatically.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+  app/
+    layout.tsx              root layout: fonts, metadata, header/footer, Org JSON-LD
+    page.tsx                home
+    about/  services/  portfolio/  gallery/  contact/   pages
+    services/[slug]/        static service detail pages
+    portfolio/[slug]/       static case-study pages
+    sitemap.ts  robots.ts   SEO route files
+    icon.png  apple-icon.png  favicons (generated from the logo)
+  components/
+    site-header.tsx  site-footer.tsx
+    contact-form.tsx
+    sections/               home/page section blocks
+    ui/                     container, button-link, eyebrow, logo, page-header
+  lib/
+    site.ts                 <- single source of content
+    structured-data.ts      JSON-LD builders
+    utils.ts
+public/
+  brand/logo.png
+  gallery/*.jpg             curated training photos
+```
+
+## SEO included
+
+- Per-page `<title>`/description, canonical URLs, Open Graph + Twitter cards.
+- `sitemap.xml` and `robots.txt` (generated).
+- JSON-LD: `EducationalOrganization` + `LocalBusiness` site-wide; `Service` and
+  `BreadcrumbList` on each programme page.
+- Semantic headings, descriptive `alt` text, optimised `next/image`.
+
+> **Before launch:** set the real production domain in `SITE_URL`
+> (`src/lib/site.ts`) — it drives canonicals, sitemap and structured data.
+
+## Things to confirm / wire up
+
+- **Portfolio photos:** only the **DADTCO Mozambique** case study uses photos from
+  that actual engagement. The other case studies (Sierra Rutile, Sierra Tropical,
+  Frontier Buses, Miro Forestry, Mantrac) reuse representative training photos as
+  placeholders — replace the `image`/`gallery` fields in `caseStudies` (`site.ts`)
+  with real client photos when available. Also confirm the case-study copy/outcomes.
+- **Stats numbers** (`stats` in `site.ts`) are sensible defaults — adjust to real
+  figures if available (e.g. drivers trained, years operating).
+- **Contact form** currently opens the visitor's email app, pre-filled, to
+  `info@sierrazim.com` (works with zero backend). To deliver straight to an inbox,
+  wire a form service (e.g. Resend or Formspree) in `src/components/contact-form.tsx`.
+- **Map** embeds Makeni via Google Maps — swap in the exact address/pin when known.
+- **Deployment:** ready for Vercel (`vercel` / push to a connected repo). It's a
+  static site, so any static host works too.
