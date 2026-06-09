@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Hanken_Grotesk, Space_Mono } from "next/font/googl
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { JsonLd } from "@/components/json-ld";
 import { organizationLd } from "@/lib/structured-data";
 import { site, SITE_URL } from "@/lib/site";
@@ -91,6 +92,7 @@ export default function RootLayout({
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
+        <WhatsAppFab />
       </body>
     </html>
   );

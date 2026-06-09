@@ -7,7 +7,7 @@ import {
   WhatsappLogoIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
-import { site } from "@/lib/site";
+import { site, whatsappHref } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -27,10 +27,9 @@ export function Hero() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Left — copy */}
           <div className="max-w-2xl">
-            <p className="mb-5 text-sm font-semibold">
-              <span className="text-flag-blue">Sierra&nbsp;Leone&rsquo;s</span>{" "}
-              <span className="text-forest-700">driver &amp; operator</span>{" "}
-              <span className="text-flag-red">training academy</span>
+            <p className="mb-5 text-sm font-semibold text-ink/70">
+              <span className="text-forest-700">Sierra&nbsp;Leone&rsquo;s</span>{" "}
+              driver &amp; operator training academy
             </p>
 
             <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[4.4rem]">
@@ -39,11 +38,11 @@ export function Hero() {
               <span className="text-forest-700">Certified</span> to standard.
             </h1>
 
-            <p className="mt-6 max-w-xl text-base font-light leading-relaxed text-ink/60 sm:text-lg md:text-xl">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70 sm:text-lg md:text-xl">
               Defensive driving, heavy-vehicle, surface mobile equipment and
               agriculture operator training — with real assessment and
-              certification. Trusted by leading mines, farms and fleets across
-              West Africa.
+              certification, from our base in Makeni. On the ground for Sierra
+              Rutile, Sierra Tropical, DADTCO Mozambique and more.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -79,8 +78,9 @@ export function Hero() {
                 </a>
                 <span className="h-4 w-px bg-ink/15" aria-hidden />
                 <a
-                  href={`https://wa.me/${site.whatsapp}`}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink/50 transition-colors hover:text-forest-700"
+                  href={whatsappHref}
+                  rel="noopener"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink/70 transition-colors hover:text-forest-700"
                 >
                   <WhatsappLogoIcon weight="fill" className="size-4" />
                   WhatsApp us
@@ -114,7 +114,7 @@ export function Hero() {
               </span>
               <div className="leading-tight">
                 <p className="text-sm font-semibold text-ink">Assessed &amp; certified</p>
-                <p className="text-xs text-ink/50">Theory + practical, every time</p>
+                <p className="text-xs text-ink/60">Theory + practical — nothing skipped</p>
               </div>
             </div>
           </div>

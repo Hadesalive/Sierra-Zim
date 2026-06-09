@@ -1,4 +1,4 @@
-import { SITE_URL, site, services, type Service } from "@/lib/site";
+import { SITE_URL, site, services, mapsHref, type Service } from "@/lib/site";
 
 const ORG_ID = `${SITE_URL}/#organization`;
 
@@ -26,7 +26,10 @@ export function organizationLd(): Record<string, unknown> {
     areaServed: [
       { "@type": "Country", name: "Sierra Leone" },
       { "@type": "Country", name: "Mozambique" },
+      { "@type": "Country", name: "Côte d'Ivoire" },
     ],
+    geo: { "@type": "GeoCoordinates", latitude: 8.8817, longitude: -12.044 },
+    hasMap: mapsHref,
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -48,6 +51,53 @@ export function serviceLd(service: Service): Record<string, unknown> {
     image: `${SITE_URL}${service.image}`,
     provider: { "@id": ORG_ID },
     areaServed: { "@type": "Country", name: "Sierra Leone" },
+  };
+}
+
+export function courseLd(service: Service): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: service.title,
+    description: service.short,
+    url: `${SITE_URL}/services/${service.slug}`,
+    image: `${SITE_URL}${service.image}`,
+    provider: {
+      "@type": "EducationalOrganization",
+      "@id": ORG_ID,
+      name: site.name,
+      url: SITE_URL,
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "onsite",
+      courseWorkload:
+        "Classroom theory, oral examination and hands-on practical assessment",
+      location: {
+        "@type": "Place",
+        name: site.address.full,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: site.address.city,
+          addressRegion: site.address.region,
+          addressCountry: "SL",
+        },
+      },
+    },
+  };
+}
+
+export function faqLd(
+  items: { q: string; a: string }[],
+): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
   };
 }
 

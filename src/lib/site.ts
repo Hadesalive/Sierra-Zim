@@ -46,6 +46,20 @@ export const site = {
   ],
 } as const;
 
+/** Pre-filled WhatsApp deep link (wa.me) carrying an enquiry message. */
+export function whatsappLink(message?: string) {
+  const text =
+    message ?? "Hello SierraZim, I'd like to enquire about a training programme.";
+  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(text)}`;
+}
+
+export const whatsappHref = whatsappLink();
+
+/** Google Maps search for the Makeni location — a text link, not an embedded pin. */
+export const mapsHref =
+  "https://www.google.com/maps/search/?api=1&query=" +
+  encodeURIComponent("Makeni Sierra Leone");
+
 export type NavItem = { label: string; href: string };
 
 export const mainNav: NavItem[] = [
@@ -191,21 +205,109 @@ export const services: Service[] = [
   },
 ];
 
+/** Per-programme detail used on the service pages — who it's for, how it runs, what you get. */
+export const serviceDetails: Record<
+  string,
+  { audience: string; format: string; certification: string }
+> = {
+  "light-vehicle-defensive-driving": {
+    audience:
+      "New and improving light-motor-vehicle drivers, and fleets that need certified, defensive drivers.",
+    format:
+      "Theory & oral classroom (road-safety rules, pre-start checks, component identification) plus practical driving on the yard.",
+    certification:
+      "Defensive-driving certificate, issued on passing both theory and practical.",
+  },
+  "heavy-vehicle-defensive-driving": {
+    audience:
+      "Haulage, tanker, delivery-truck and bus operators — and the employers who run them.",
+    format:
+      "Theory & oral classroom plus practical training on heavy vehicles to international technical standards.",
+    certification: "Heavy-vehicle defensive-driving certificate on completion.",
+  },
+  "theory-and-classroom-training": {
+    audience:
+      "Light-motor and heavy-duty learners building the safety foundation every certified operator needs.",
+    format: "Classroom instruction, taught orally and theoretically.",
+    certification:
+      "The knowledge base that underpins practical training and assessment.",
+  },
+  "simulator-training": {
+    audience: "Drivers and operators sharpening technical skills without on-road risk.",
+    format: "Advanced driving simulators in a controlled, repeatable environment.",
+    certification:
+      "Measured skill built before on-road exposure — fewer incidents on the job.",
+  },
+  "surface-mobile-equipment-training": {
+    audience:
+      "Mining operators and contractors — including Sierra Rutile and its contractors.",
+    format:
+      "Pre-employment screening, on-the-job training, and defensive operator training.",
+    certification: "Operator certification for surface mobile equipment.",
+  },
+  "agriculture-equipment-training": {
+    audience: "Young people and agribusiness teams, with NAYCOM, UNDP and Sierra Tropical.",
+    format:
+      "Machinery operation plus mechanical apprenticeship — hands-on and market-driven.",
+    certification: "Practical, employable skills toward real work.",
+  },
+  "pre-employment-screening": {
+    audience:
+      "Employers who need to verify driver and operator competence before they hire.",
+    format:
+      "Independent assessment, technical skills evaluation and on-the-job training.",
+    certification: "An honest, documented read on competency.",
+  },
+};
+
 export function getService(slug: string) {
   return services.find((s) => s.slug === slug);
 }
 
-export type Client = { name: string; note?: string };
+export type Client = { name: string; note?: string; context?: string };
 
+/** Real clients & partners — each one a programme we ran, not a logo we borrowed. */
 export const clients: Client[] = [
-  { name: "Sierra Rutile", note: "Mining" },
-  { name: "Sierra Tropical", note: "Agribusiness" },
-  { name: "DADTCO Mozambique", note: "Cassava processing" },
-  { name: "Miro Forestry", note: "Forestry" },
-  { name: "Mantrac", note: "Equipment" },
-  { name: "Frontier Buses", note: "Transport" },
-  { name: "BAM Natull", note: "Construction" },
-  { name: "NAYCOM & UNDP", note: "Youth skills partners" },
+  {
+    name: "Sierra Rutile",
+    note: "Mining",
+    context: "Surface mobile equipment operators — screened, trained and certified.",
+  },
+  {
+    name: "Sierra Tropical",
+    note: "Agribusiness",
+    context: "Agriculture equipment training & youth apprenticeships.",
+  },
+  {
+    name: "DADTCO Mozambique",
+    note: "Agro-processing · 2018",
+    context: "A complete cross-border driver & operator programme, delivered on site.",
+  },
+  {
+    name: "Miro Forestry",
+    note: "Forestry",
+    context: "Driver & operator training across plantation terrain.",
+  },
+  {
+    name: "Mantrac",
+    note: "Equipment",
+    context: "Heavy-equipment operator training & certification.",
+  },
+  {
+    name: "Frontier Buses",
+    note: "Public transport",
+    context: "Defensive driver training for a passenger fleet.",
+  },
+  {
+    name: "BAM Natull",
+    note: "Construction",
+    context: "Driver & operator training on construction sites.",
+  },
+  {
+    name: "NAYCOM & UNDP",
+    note: "Development partners",
+    context: "Youth skills development programmes.",
+  },
 ];
 
 export const valueProps: { title: string; description: string; icon: Icon }[] = [
@@ -229,20 +331,78 @@ export const valueProps: { title: string; description: string; icon: Icon }[] = 
   },
 ];
 
+// Sourced, defensible facts — each one attributable, not an unverified vanity number.
 export const stats: { value: string; label: string }[] = [
-  { value: "7", label: "Specialised programmes" },
-  { value: "8+", label: "Major clients & partners" },
-  { value: "2", label: "Countries delivered in" },
-  { value: "100%", label: "Assessed before certification" },
+  { value: "7", label: "Specialised programmes, classroom to certification" },
+  { value: "3", label: "Countries delivered in — Sierra Leone, Mozambique & Côte d’Ivoire" },
+  { value: "8+", label: "Named clients & development partners" },
+  { value: "100%", label: "Assessed before we certify — theory and practical" },
 ];
 
-export type GalleryItem = {
+// Common B2B enquiries — answered plainly. Also powers FAQ structured data.
+export const faqs: { q: string; a: string }[] = [
+  {
+    q: "Where are you based, and where do you train?",
+    a: "We’re based in Makeni, Northern Province, Sierra Leone. We train at our academy and on clients’ sites across Sierra Leone — and across borders, having delivered in Mozambique and Côte d’Ivoire.",
+  },
+  {
+    q: "Do you train whole teams and fleets?",
+    a: "Yes — most of our work is training and certifying groups of drivers and operators for mines, agribusinesses, forestry, equipment dealers and passenger fleets. Tell us how many people and where, and we’ll plan it with you.",
+  },
+  {
+    q: "What does certification involve?",
+    a: "Every candidate completes classroom theory and an oral examination, then hands-on practical on the yard. A certificate is issued only when both the theory and the practical are passed — no shortcuts.",
+  },
+  {
+    q: "Which programmes do you offer?",
+    a: "Seven: light-vehicle and heavy-vehicle defensive driving, oral & theory, simulator, surface mobile equipment, agriculture equipment, and pre-employment screening & consultancy.",
+  },
+  {
+    q: "Can you deliver on our site?",
+    a: "Yes. We deploy instructors to run theory, practical and assessment on your site — as we did for DADTCO in Mozambique in 2018.",
+  },
+  {
+    q: "How do we get a quote or book a programme?",
+    a: "Send an enquiry on WhatsApp or through the form, or call +232 73 077 004. Tell us the programme, the number of people and the location, and we’ll reply within one business day.",
+  },
+];
+
+export type GalleryImage = {
+  type?: "image";
   src: string;
   alt: string;
   caption: string;
   w: number;
   h: number;
 };
+
+export type GalleryVideoItem = {
+  type: "video";
+  /** "file" → self-hosted mp4 in /public; "youtube" | "vimeo" → embed by id. */
+  provider: "file" | "youtube" | "vimeo";
+  /** provider "file": video path (e.g. "/gallery/clip.mp4"); otherwise the video id. */
+  src: string;
+  /** Poster image shown before play, and used to reserve layout space. */
+  poster: string;
+  alt: string;
+  caption: string;
+  w: number;
+  h: number;
+};
+
+export type GalleryItem = GalleryImage | GalleryVideoItem;
+
+/*
+ * To add a video to the gallery, drop an entry into `gallery` below, e.g.:
+ *   // Self-hosted clip (put the file in public/gallery/):
+ *   { type: "video", provider: "file", src: "/gallery/training-clip.mp4",
+ *     poster: "/gallery/dadtco-sunset.jpg", alt: "Defensive-driving drill on the course",
+ *     caption: "Defensive-driving drill · 2018", w: 1280, h: 720 },
+ *   // Or a YouTube / Vimeo video (just the id):
+ *   { type: "video", provider: "youtube", src: "dQw4w9WgXcQ",
+ *     poster: "/gallery/dadtco-sunset.jpg", alt: "...", caption: "...", w: 1280, h: 720 },
+ * The poster reserves layout space (use the real video's width/height for w/h).
+ */
 
 export const gallery: GalleryItem[] = [
   {
@@ -315,6 +475,65 @@ export const gallery: GalleryItem[] = [
     w: 1536,
     h: 1152,
   },
+  {
+    src: "/gallery/dadtco-instructor.jpg",
+    alt: "An instructor on the red-earth cone course beside a training truck, DADTCO programme, Mozambique, 2018",
+    caption: "On the field course · DADTCO, Mozambique · 2018",
+    w: 1536,
+    h: 1152,
+  },
+  {
+    src: "/gallery/dadtco-heavy-cones.jpg",
+    alt: "A heavy training truck on the red-earth manoeuvring course lined with cones, DADTCO programme, Mozambique, 2018",
+    caption: "Heavy-vehicle manoeuvring · DADTCO, Mozambique · 2018",
+    w: 1536,
+    h: 1152,
+  },
+  {
+    src: "/gallery/dadtco-hilux-side.jpg",
+    alt: "A light vehicle working the cone course on red earth, DADTCO programme, Mozambique, 2018",
+    caption: "Light-vehicle control · DADTCO, Mozambique · 2018",
+    w: 1536,
+    h: 1152,
+  },
+  {
+    src: "/gallery/dadtco-pickup.jpg",
+    alt: "A pickup navigating cones during a driving assessment on red earth, DADTCO programme, Mozambique, 2018",
+    caption: "Pre-employment assessment · DADTCO, Mozambique · 2018",
+    w: 1536,
+    h: 1152,
+  },
+  {
+    src: "/gallery/dadtco-sunset.jpg",
+    alt: "The training truck and cone course at golden hour, sun flaring through the palms, DADTCO programme, Mozambique, 2018",
+    caption: "End of a training day · DADTCO, Mozambique · 2018",
+    w: 1536,
+    h: 1152,
+  },
+  {
+    src: "/gallery/dadtco-trainees.jpg",
+    alt: "Three trainee drivers in SierraZim shirts on the training ground, DADTCO programme, Mozambique, 2018",
+    caption: "On the programme · DADTCO, Mozambique · 2018",
+    w: 1152,
+    h: 1536,
+  },
+  {
+    src: "/gallery/dadtco-classroom.jpg",
+    alt: "Trainees seated for a theory and oral classroom session, DADTCO programme, Mozambique, 2018",
+    caption: "Theory & oral session · DADTCO, Mozambique · 2018",
+    w: 1536,
+    h: 1152,
+  },
+  {
+    src: "/gallery/dadtco-graduates.jpg",
+    alt: "Graduates holding their certificates after passing the DADTCO programme, Mozambique, 2018",
+    caption: "Certified graduates · DADTCO, Mozambique · 2018",
+    w: 1536,
+    h: 1152,
+  },
+  // Videos go here — see the GalleryItem example above. e.g.:
+  // { type: "video", provider: "youtube", src: "<youtube-id>", poster: "/gallery/dadtco-sunset.jpg",
+  //   alt: "Defensive-driving drill on the course", caption: "Programme highlights · 2018", w: 1280, h: 720 },
 ];
 
 export type CaseStudy = {
@@ -398,6 +617,22 @@ export const caseStudies: CaseStudy[] = [
       {
         src: "/gallery/graduation-certificates.jpg",
         alt: "DADTCO graduates holding their completion certificates",
+      },
+      {
+        src: "/gallery/dadtco-sunset.jpg",
+        alt: "The training truck and cone course at golden hour during the DADTCO programme, Mozambique",
+      },
+      {
+        src: "/gallery/dadtco-hilux-side.jpg",
+        alt: "A light vehicle working the cone course on red earth, DADTCO programme, Mozambique",
+      },
+      {
+        src: "/gallery/dadtco-classroom.jpg",
+        alt: "Trainees seated for a theory and oral classroom session, DADTCO programme, Mozambique",
+      },
+      {
+        src: "/gallery/dadtco-graduates.jpg",
+        alt: "Graduates holding certificates after passing the DADTCO programme, Mozambique",
       },
     ],
     realPhotos: true,
@@ -532,4 +767,76 @@ export const caseStudies: CaseStudy[] = [
 
 export function getCaseStudy(slug: string) {
   return caseStudies.find((c) => c.slug === slug);
+}
+
+export type Sector = {
+  slug: string;
+  name: string;
+  title: string;
+  intro: string;
+  metaDescription: string;
+  programmeSlugs: string[];
+  clientNames: string[];
+  image: string;
+  imageAlt: string;
+};
+
+/** Sector landing pages — genuine, differentiated content for search + buyers. */
+export const sectors: Sector[] = [
+  {
+    slug: "mining",
+    name: "Mining",
+    title: "Operator training & certification for mining",
+    intro:
+      "We screen, train and certify surface mobile equipment operators for mines and their contractors — including Sierra Rutile. From pre-employment screening through on-the-job training to operator certification, we help build a safe, competent and certified mobile-equipment workforce.",
+    metaDescription:
+      "Surface mobile equipment operator training, pre-employment screening and certification for mining in Sierra Leone — trusted by Sierra Rutile and its contractors.",
+    programmeSlugs: [
+      "surface-mobile-equipment-training",
+      "pre-employment-screening",
+      "heavy-vehicle-defensive-driving",
+    ],
+    clientNames: ["Sierra Rutile", "Mantrac"],
+    image: "/gallery/truck-cone-course.jpg",
+    imageAlt:
+      "Surface mobile equipment training course set out with safety cones on red earth",
+  },
+  {
+    slug: "agriculture",
+    name: "Agriculture & agribusiness",
+    title: "Training for agriculture & agribusiness",
+    intro:
+      "We deliver agriculture equipment training and mechanical apprenticeships that build hands-on, market-driven skills — working with agribusinesses such as Sierra Tropical and in support of NAYCOM and UNDP youth programmes.",
+    metaDescription:
+      "Agriculture equipment operator training and mechanical apprenticeships in Sierra Leone — with Sierra Tropical, NAYCOM and UNDP.",
+    programmeSlugs: [
+      "agriculture-equipment-training",
+      "light-vehicle-defensive-driving",
+      "theory-and-classroom-training",
+    ],
+    clientNames: ["Sierra Tropical", "NAYCOM & UNDP"],
+    image: "/gallery/motorbike-training-team.jpg",
+    imageAlt: "Training team during an agriculture and equipment programme",
+  },
+  {
+    slug: "transport-and-fleets",
+    name: "Transport & fleets",
+    title: "Defensive driver training for transport & fleets",
+    intro:
+      "Passenger and haulage operations demand the highest driving standards. We train and certify drivers for buses, haulage, tankers and delivery fleets — theory, oral, practical and defensive driving, with certification on completion. Trusted by Frontier Buses, Miro Forestry and others.",
+    metaDescription:
+      "Heavy-vehicle and defensive driver training and certification for buses, haulage and fleets in Sierra Leone — trusted by Frontier Buses and Miro Forestry.",
+    programmeSlugs: [
+      "heavy-vehicle-defensive-driving",
+      "light-vehicle-defensive-driving",
+      "simulator-training",
+    ],
+    clientNames: ["Frontier Buses", "Miro Forestry", "BAM Natull"],
+    image: "/gallery/heavy-truck-side.jpg",
+    imageAlt: "Heavy haulage truck used in defensive driver training",
+  },
+];
+
+export function getSector(slug: string) {
+  return sectors.find((s) => s.slug === slug);
 }

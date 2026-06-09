@@ -60,6 +60,14 @@ export function SiteFooter() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/sectors"
+                className="text-sm text-paper/80 transition-colors hover:text-safety-400"
+              >
+                Sectors
+              </Link>
+            </li>
           </ul>
         </nav>
 

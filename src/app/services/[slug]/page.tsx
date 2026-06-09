@@ -11,8 +11,8 @@ import {
 import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button-link";
 import { JsonLd } from "@/components/json-ld";
-import { serviceLd, breadcrumbLd } from "@/lib/structured-data";
-import { getService, services, site } from "@/lib/site";
+import { courseLd, breadcrumbLd } from "@/lib/structured-data";
+import { getService, serviceDetails, services, site } from "@/lib/site";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -44,10 +44,11 @@ export default async function ServiceDetailPage({ params }: Params) {
   const index = services.findIndex((s) => s.slug === service.slug) + 1;
   const Icon = service.icon;
   const others = services.filter((s) => s.slug !== service.slug).slice(0, 3);
+  const details = serviceDetails[service.slug];
 
   return (
     <>
-      <JsonLd data={serviceLd(service)} />
+      <JsonLd data={courseLd(service)} />
       <JsonLd
         data={breadcrumbLd([
           { name: "Home", path: "/" },
@@ -142,21 +143,23 @@ export default async function ServiceDetailPage({ params }: Params) {
               <span className="label-mono text-ink">Programme facts</span>
             </div>
             <dl className="mt-6 space-y-5 text-sm">
-              <div className="flex justify-between gap-4 border-b border-line pb-4">
-                <dt className="text-ink-soft">Delivery</dt>
-                <dd className="text-right font-medium text-ink">Theory + practical</dd>
+              <div className="border-b border-line pb-4">
+                <dt className="label-mono text-ink-soft">Who it&rsquo;s for</dt>
+                <dd className="mt-1.5 leading-snug text-ink">{details?.audience}</dd>
               </div>
-              <div className="flex justify-between gap-4 border-b border-line pb-4">
-                <dt className="text-ink-soft">Assessment</dt>
-                <dd className="text-right font-medium text-ink">Independent</dd>
+              <div className="border-b border-line pb-4">
+                <dt className="label-mono text-ink-soft">Format</dt>
+                <dd className="mt-1.5 leading-snug text-ink">{details?.format}</dd>
               </div>
-              <div className="flex justify-between gap-4 border-b border-line pb-4">
-                <dt className="text-ink-soft">Certification</dt>
-                <dd className="text-right font-medium text-ink">On completion</dd>
+              <div className="border-b border-line pb-4">
+                <dt className="label-mono text-ink-soft">What you get</dt>
+                <dd className="mt-1.5 leading-snug text-ink">{details?.certification}</dd>
               </div>
-              <div className="flex justify-between gap-4">
-                <dt className="text-ink-soft">Location</dt>
-                <dd className="text-right font-medium text-ink">On-site / academy</dd>
+              <div>
+                <dt className="label-mono text-ink-soft">Where</dt>
+                <dd className="mt-1.5 leading-snug text-ink">
+                  {site.address.city}, {site.address.region} — or on your site
+                </dd>
               </div>
             </dl>
             <Link

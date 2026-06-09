@@ -16,6 +16,15 @@ export const metadata: Metadata = {
   title: "Contact",
   description: `Enrol your drivers and operators with SierraZim Training Academy in ${site.address.city}, Sierra Leone. Call ${site.phones[0]}, email ${site.email}, or send an enquiry.`,
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact · SierraZim",
+    images: [
+      {
+        url: "/gallery/instructor-truck-course.jpg",
+        alt: "A SierraZim instructor leading a training course on a field ground",
+      },
+    ],
+  },
 };
 
 export default function ContactPage() {

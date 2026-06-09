@@ -14,13 +14,23 @@ export const metadata: Metadata = {
   description:
     "SierraZim Training Academy — a Sierra Leone-based driver and operator training company built on Zimbabwean training expertise, delivering certified programmes for mining, agribusiness, forestry and transport across West Africa.",
   alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About · SierraZim",
+    images: [
+      {
+        url: "/gallery/heavy-truck-side.jpg",
+        alt: "A heavy haulage truck on a SierraZim field training ground",
+      },
+    ],
+  },
 };
 
 const locations = [
   { place: "Makeni", note: "Headquarters · Northern Province" },
   { place: "Sierra Rutile", note: "Mining operations support" },
   { place: "Sumbuya", note: "Field training" },
-  { place: "Mozambique", note: "Cross-border delivery — DADTCO" },
+  { place: "Mozambique", note: "Cross-border delivery — DADTCO, 2018" },
+  { place: "Côte d'Ivoire", note: "Cross-border operator training" },
 ];
 
 export default function AboutPage() {
@@ -64,7 +74,8 @@ export default function AboutPage() {
             </p>
             <p>
               Today we support some of the biggest names in the region and deliver
-              across borders — proof that training done by experts travels.
+              across borders — in Mozambique and Côte d&rsquo;Ivoire — proof that
+              training done by experts travels.
             </p>
           </div>
         </div>

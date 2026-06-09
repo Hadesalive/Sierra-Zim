@@ -31,7 +31,7 @@
   --color-safety-300: #ffe487;
   --color-safety-400: #ffc81f;
   --color-safety-500: #f0c000;
-  --color-safety-600: #b07f00;
+  --color-safety-600: #8a6300; /* darkened to meet WCAG AA for small text on white */
 
   /* Flag support accents — used sparingly */
   --color-flag-red: #d81e1e;

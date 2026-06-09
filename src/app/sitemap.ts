@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL, services, caseStudies } from "@/lib/site";
+import { SITE_URL, services, caseStudies, sectors } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/", priority: 1, changeFrequency: "monthly" as const },
     { path: "/about", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/services", priority: 0.9, changeFrequency: "monthly" as const },
+    { path: "/sectors", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/portfolio", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/gallery", priority: 0.6, changeFrequency: "monthly" as const },
     { path: "/contact", priority: 0.7, changeFrequency: "yearly" as const },
@@ -32,5 +33,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...portfolioRoutes];
+  const sectorRoutes = sectors.map((s) => ({
+    url: `${SITE_URL}/sectors/${s.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [
+    ...staticRoutes,
+    ...serviceRoutes,
+    ...sectorRoutes,
+    ...portfolioRoutes,
+  ];
 }

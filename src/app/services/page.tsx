@@ -10,6 +10,15 @@ export const metadata: Metadata = {
   description:
     "Defensive driving, heavy-vehicle, oral & theory, simulator, surface mobile equipment, agriculture equipment and pre-employment screening — explore SierraZim's seven specialised training and certification programmes.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Training Programmes · SierraZim",
+    images: [
+      {
+        url: "/gallery/truck-cone-course.jpg",
+        alt: "Operator training course set out with cones on a red-earth field",
+      },
+    ],
+  },
 };
 
 export default function ServicesPage() {

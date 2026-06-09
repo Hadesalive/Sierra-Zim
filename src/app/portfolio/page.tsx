@@ -12,6 +12,15 @@ export const metadata: Metadata = {
   description:
     "Programmes SierraZim Training Academy has delivered — including cross-border driver training for DADTCO Mozambique, surface mobile equipment training for Sierra Rutile, and youth apprenticeships with Sierra Tropical, NAYCOM and UNDP.",
   alternates: { canonical: "/portfolio" },
+  openGraph: {
+    title: "Portfolio · SierraZim",
+    images: [
+      {
+        url: "/gallery/dadtco-heavy-truck.jpg",
+        alt: "A DADTCO haulage truck on the SierraZim training ground, Mozambique, 2018",
+      },
+    ],
+  },
 };
 
 export default function PortfolioPage() {
