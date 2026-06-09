@@ -1,8 +1,15 @@
 import { PlusIcon } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
-import { faqs } from "@/lib/site";
 
-export function Faq({ tone = "white" }: { tone?: "white" | "tint" }) {
+type FaqItem = { q: string; a: string };
+
+export function Faq({
+  tone = "white",
+  faqs,
+}: {
+  tone?: "white" | "tint";
+  faqs: FaqItem[];
+}) {
   return (
     <section
       aria-labelledby="faq-heading"

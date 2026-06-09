@@ -9,9 +9,10 @@ import { GalleryPreview } from "@/components/sections/gallery-preview";
 import { Faq } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
 import { faqLd } from "@/lib/structured-data";
-import { faqs } from "@/lib/site";
+import { getFaqs } from "@/lib/content";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const faqs = await getFaqs();
   return (
     <>
       <JsonLd data={faqLd(faqs)} />
@@ -22,7 +23,7 @@ export default function HomePage() {
       <WhyUs tone="white" />
       <WorkPreview tone="tint" />
       <GalleryPreview tone="white" />
-      <Faq tone="tint" />
+      <Faq tone="tint" faqs={faqs} />
       <StatementBand />
     </>
   );

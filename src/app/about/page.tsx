@@ -7,7 +7,8 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { StatsBand } from "@/components/sections/stats-band";
 import { WhyUs } from "@/components/sections/why-us";
 import { CertificationPath } from "@/components/sections/certification-path";
-import { clients, site } from "@/lib/site";
+import { site } from "@/lib/site";
+import { getClients } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About",
@@ -33,7 +34,8 @@ const locations = [
   { place: "Côte d'Ivoire", note: "Cross-border operator training" },
 ];
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const clients = await getClients();
   return (
     <>
       <PageHeader

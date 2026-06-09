@@ -42,6 +42,7 @@ export default config({
       schema: {
         question: fields.slug({ name: { label: "Question" } }),
         answer: fields.text({ label: "Answer", multiline: true }),
+        order: fields.integer({ label: "Order", defaultValue: 0 }),
       },
     }),
     clients: collection({
@@ -53,6 +54,7 @@ export default config({
         name: fields.slug({ name: { label: "Name" } }),
         sector: fields.text({ label: "Sector" }),
         context: fields.text({ label: "One-line context", multiline: true }),
+        order: fields.integer({ label: "Order", defaultValue: 0 }),
       },
     }),
   },

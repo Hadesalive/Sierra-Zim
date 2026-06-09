@@ -1,11 +1,13 @@
 import { Container } from "@/components/ui/container";
-import { clients } from "@/lib/site";
+import { getClients } from "@/lib/content";
 
 /**
  * "Who we train for" — a static, honest strip of real client names (no infinite
  * marquee). The names are the proof; the sector note adds specificity.
+ * Content is managed in the CMS (Keystatic).
  */
-export function ClientMarquee() {
+export async function ClientMarquee() {
+  const clients = await getClients();
   return (
     <section
       aria-label="Organisations we have trained for"
