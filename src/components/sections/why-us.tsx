@@ -1,12 +1,14 @@
 import Image from "next/image";
-import { valueProps } from "@/lib/site";
+import { getValueProps } from "@/lib/content";
+import { valuePropIcon } from "@/lib/icons";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { ButtonLink } from "@/components/ui/button-link";
 import { sectionToneClass, type SectionTone } from "@/lib/section";
 import { cn } from "@/lib/utils";
 
-export function WhyUs({ tone = "white" }: { tone?: SectionTone }) {
+export async function WhyUs({ tone = "white" }: { tone?: SectionTone }) {
+  const valueProps = await getValueProps();
   return (
     <section className={cn("border-b border-line", sectionToneClass[tone])}>
       <Container className="grid gap-12 py-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:py-24">
@@ -46,7 +48,7 @@ export function WhyUs({ tone = "white" }: { tone?: SectionTone }) {
         {/* Right — value list */}
         <ol className="border-t border-line">
           {valueProps.map((vp, i) => {
-            const Icon = vp.icon;
+            const Icon = valuePropIcon(vp.slug);
             return (
               <li
                 key={vp.title}

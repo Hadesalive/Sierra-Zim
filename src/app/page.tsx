@@ -9,16 +9,16 @@ import { GalleryPreview } from "@/components/sections/gallery-preview";
 import { Faq } from "@/components/sections/faq";
 import { JsonLd } from "@/components/json-ld";
 import { faqLd } from "@/lib/structured-data";
-import { getFaqs } from "@/lib/content";
+import { getFaqs, getProgrammes } from "@/lib/content";
 
 export default async function HomePage() {
-  const faqs = await getFaqs();
+  const [faqs, programmes] = await Promise.all([getFaqs(), getProgrammes()]);
   return (
     <>
       <JsonLd data={faqLd(faqs)} />
       <Hero />
       <ClientMarquee />
-      <ServiceCarousel />
+      <ServiceCarousel programmes={programmes} />
       <CertificationPath tone="tint" />
       <WhyUs tone="white" />
       <WorkPreview tone="tint" />

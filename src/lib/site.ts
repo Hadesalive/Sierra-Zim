@@ -25,7 +25,7 @@ export const site = {
   legalName: "Sierrazim Limited",
   tagline: "Solution to All Your Training Needs",
   description:
-    "SierraZim Training Academy is Sierra Leone's specialist in defensive driving, heavy-vehicle, surface mobile equipment and agricultural machinery operator training, assessment and certification. Trusted by leading mines, farms and fleets across West Africa.",
+    "SierraZim Training Academy trains, assesses and certifies drivers and heavy-equipment operators in Makeni, Northern Province, Sierra Leone — classroom theory, oral examination and hands-on practical on the yard, certified only when both theory and practical are passed.",
   url: SITE_URL,
   email: "info@sierrazim.com",
   phones: ["+232 73 077 004", "+232 80 549 288"],
@@ -45,6 +45,7 @@ export const site = {
     { name: "Anastasia R. Zayat", role: "Managing Director" },
   ],
 } as const;
+
 
 /** Pre-filled WhatsApp deep link (wa.me) carrying an enquiry message. */
 export function whatsappLink(message?: string) {

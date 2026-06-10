@@ -57,5 +57,41 @@ export default config({
         order: fields.integer({ label: "Order", defaultValue: 0 }),
       },
     }),
+    programmes: collection({
+      label: "Programmes",
+      slugField: "title",
+      path: "src/content/programmes/*",
+      format: { data: "json" },
+      schema: {
+        title: fields.slug({ name: { label: "Title" } }),
+        short: fields.text({ label: "Short description", multiline: true }),
+        description: fields.text({ label: "Full description", multiline: true }),
+        features: fields.array(fields.text({ label: "Feature" }), {
+          label: "What it covers",
+          itemLabel: (props) => props.value,
+        }),
+        image: fields.image({
+          label: "Image",
+          directory: "public/gallery",
+          publicPath: "/gallery",
+        }),
+        imageAlt: fields.text({ label: "Image alt text" }),
+        audience: fields.text({ label: "Who it's for", multiline: true }),
+        format: fields.text({ label: "Format", multiline: true }),
+        certification: fields.text({ label: "What you get", multiline: true }),
+        order: fields.integer({ label: "Order", defaultValue: 0 }),
+      },
+    }),
+    valueProps: collection({
+      label: "Value props (Why SierraZim)",
+      slugField: "title",
+      path: "src/content/value-props/*",
+      format: { data: "json" },
+      schema: {
+        title: fields.slug({ name: { label: "Title" } }),
+        description: fields.text({ label: "Description", multiline: true }),
+        order: fields.integer({ label: "Order", defaultValue: 0 }),
+      },
+    }),
   },
 });

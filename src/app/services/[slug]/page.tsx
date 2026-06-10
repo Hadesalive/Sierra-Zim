@@ -12,17 +12,20 @@ import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button-link";
 import { JsonLd } from "@/components/json-ld";
 import { courseLd, breadcrumbLd } from "@/lib/structured-data";
-import { getService, serviceDetails, services, site } from "@/lib/site";
+import { site } from "@/lib/site";
+import { getProgramme, getProgrammes } from "@/lib/content";
+import { programmeIcon, ProgrammeIcon } from "@/lib/icons";
 
 type Params = { params: Promise<{ slug: string }> };
 
-export function generateStaticParams() {
-  return services.map((s) => ({ slug: s.slug }));
+export async function generateStaticParams() {
+  const programmes = await getProgrammes();
+  return programmes.map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
-  const service = getService(slug);
+  const service = await getProgramme(slug);
   if (!service) return {};
   return {
     title: service.title,
@@ -38,13 +41,12 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function ServiceDetailPage({ params }: Params) {
   const { slug } = await params;
-  const service = getService(slug);
+  const programmes = await getProgrammes();
+  const service = programmes.find((p) => p.slug === slug);
   if (!service) notFound();
 
-  const index = services.findIndex((s) => s.slug === service.slug) + 1;
-  const Icon = service.icon;
-  const others = services.filter((s) => s.slug !== service.slug).slice(0, 3);
-  const details = serviceDetails[service.slug];
+  const index = programmes.findIndex((p) => p.slug === slug) + 1;
+  const others = programmes.filter((p) => p.slug !== slug).slice(0, 3);
 
   return (
     <>
@@ -85,7 +87,7 @@ export default async function ServiceDetailPage({ params }: Params) {
             <span className="label-mono text-safety-400">
               {String(index).padStart(2, "0")} / 07
             </span>
-            <Icon weight="light" className="size-11 text-paper" />
+            <ProgrammeIcon slug={slug} weight="light" className="size-11 text-paper" />
           </div>
           <h1 className="mt-5 max-w-3xl font-display text-[2.5rem] font-extrabold leading-[0.98] tracking-tight text-paper sm:text-6xl">
             {service.title}
@@ -145,15 +147,15 @@ export default async function ServiceDetailPage({ params }: Params) {
             <dl className="mt-6 space-y-5 text-sm">
               <div className="border-b border-line pb-4">
                 <dt className="label-mono text-ink-soft">Who it&rsquo;s for</dt>
-                <dd className="mt-1.5 leading-snug text-ink">{details?.audience}</dd>
+                <dd className="mt-1.5 leading-snug text-ink">{service.audience}</dd>
               </div>
               <div className="border-b border-line pb-4">
                 <dt className="label-mono text-ink-soft">Format</dt>
-                <dd className="mt-1.5 leading-snug text-ink">{details?.format}</dd>
+                <dd className="mt-1.5 leading-snug text-ink">{service.format}</dd>
               </div>
               <div className="border-b border-line pb-4">
                 <dt className="label-mono text-ink-soft">What you get</dt>
-                <dd className="mt-1.5 leading-snug text-ink">{details?.certification}</dd>
+                <dd className="mt-1.5 leading-snug text-ink">{service.certification}</dd>
               </div>
               <div>
                 <dt className="label-mono text-ink-soft">Where</dt>
@@ -182,7 +184,7 @@ export default async function ServiceDetailPage({ params }: Params) {
           </div>
           <div className="mt-8 grid border-t border-l border-line sm:grid-cols-3">
             {others.map((s) => {
-              const OIcon = s.icon;
+              const OIcon = programmeIcon(s.slug);
               return (
                 <Link
                   key={s.slug}

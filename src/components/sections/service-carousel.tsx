@@ -6,9 +6,13 @@ import Link from "next/link";
 import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { services } from "@/lib/site";
+import type { ProgrammeItem } from "@/lib/content";
 
-export function ServiceCarousel() {
+export function ServiceCarousel({
+  programmes,
+}: {
+  programmes: ProgrammeItem[];
+}) {
   const scroller = useRef<HTMLDivElement>(null);
 
   const scroll = (dir: 1 | -1) => {
@@ -60,7 +64,7 @@ export function ServiceCarousel() {
           ref={scroller}
           className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 [margin-right:calc(50%_-_50vw)] lg:gap-8"
         >
-          {services.map((service) => (
+          {programmes.map((service) => (
             <article
               key={service.slug}
               className="group w-[80vw] shrink-0 snap-start sm:w-[440px] lg:w-[520px]"

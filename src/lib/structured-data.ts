@@ -54,7 +54,12 @@ export function serviceLd(service: Service): Record<string, unknown> {
   };
 }
 
-export function courseLd(service: Service): Record<string, unknown> {
+export function courseLd(service: {
+  slug: string;
+  title: string;
+  short: string;
+  image: string;
+}): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": "Course",

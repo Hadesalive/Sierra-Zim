@@ -4,20 +4,22 @@ import {
   ArrowUpRightIcon,
   ChatCircleDotsIcon,
 } from "@phosphor-icons/react/dist/ssr";
-import { services } from "@/lib/site";
+import { getProgrammes } from "@/lib/content";
+import { programmeIcon } from "@/lib/icons";
 import { cn } from "@/lib/utils";
 
-export function ServiceLedger({
+export async function ServiceLedger({
   className,
   withPromo = true,
 }: {
   className?: string;
   withPromo?: boolean;
 }) {
+  const programmes = await getProgrammes();
   return (
     <div className={cn("grid gap-5 sm:grid-cols-2 lg:grid-cols-3", className)}>
-      {services.map((service, i) => {
-        const Icon = service.icon;
+      {programmes.map((service, i) => {
+        const Icon = programmeIcon(service.slug);
         return (
           <Link
             key={service.slug}

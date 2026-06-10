@@ -1,0 +1,17 @@
+{
+  "title": "Light Vehicle & Defensive Driving",
+  "short": "Professional light motor vehicle training covering road safety, vehicle control and certified defensive driving.",
+  "description": "Our intensive light vehicle programme combines classroom theory with hands-on practical sessions. Learners master road-safety regulations, vehicle pre-start checks and component identification before progressing to all the core skills of driving. The defensive driving module adds technical skills assessment, training and certification so every graduate drives safely and confidently.",
+  "features": [
+    "Road-safety rules and regulations",
+    "Vehicle pre-start checks and component identification",
+    "Practical vehicle-control skills",
+    "Technical skills assessment and certification"
+  ],
+  "image": "light-vehicle-hilux.jpg",
+  "imageAlt": "Light vehicle defensive driving training through a cone course in the field",
+  "audience": "New and improving light-motor-vehicle drivers, and fleets that need certified, defensive drivers.",
+  "format": "Theory & oral classroom (road-safety rules, pre-start checks, component identification) plus practical driving on the yard.",
+  "certification": "Defensive-driving certificate, issued on passing both theory and practical.",
+  "order": 0
+}
