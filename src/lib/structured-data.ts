@@ -1,8 +1,9 @@
-import { SITE_URL, site, services, mapsHref, type Service } from "@/lib/site";
+import { SITE_URL, site, services, type Service } from "@/lib/site";
+import type { SiteSettings } from "@/lib/content";
 
 const ORG_ID = `${SITE_URL}/#organization`;
 
-export function organizationLd(): Record<string, unknown> {
+export function organizationLd(site: SiteSettings): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": ["EducationalOrganization", "LocalBusiness"],
@@ -29,7 +30,7 @@ export function organizationLd(): Record<string, unknown> {
       { "@type": "Country", name: "Côte d'Ivoire" },
     ],
     geo: { "@type": "GeoCoordinates", latitude: 8.8817, longitude: -12.044 },
-    hasMap: mapsHref,
+    hasMap: site.mapsHref,
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],

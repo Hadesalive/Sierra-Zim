@@ -7,11 +7,10 @@ import {
   WhatsappLogoIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
-import { site, whatsappHref } from "@/lib/site";
-import { getHome } from "@/lib/content";
+import { getHome, getSite } from "@/lib/content";
 
 export async function Hero() {
-  const home = await getHome();
+  const [home, site] = await Promise.all([getHome(), getSite()]);
   return (
     <section className="relative overflow-hidden bg-paper pt-14 pb-10 sm:pt-20 lg:pt-24 lg:pb-16">
       {/* subtle dot texture */}
@@ -78,7 +77,7 @@ export async function Hero() {
                 </a>
                 <span className="h-4 w-px bg-ink/15" aria-hidden />
                 <a
-                  href={whatsappHref}
+                  href={site.whatsappHref}
                   rel="noopener"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink/70 transition-colors hover:text-forest-700"
                 >

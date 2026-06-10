@@ -1,12 +1,11 @@
 import { WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
-import { whatsappHref } from "@/lib/site";
 
 /** Floating WhatsApp button — WhatsApp is the dominant channel in Sierra Leone,
  *  so keep a prefilled chat one tap away on every page. */
-export function WhatsAppFab() {
+export function WhatsAppFab({ href }: { href: string }) {
   return (
     <a
-      href={whatsappHref}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with SierraZim on WhatsApp"

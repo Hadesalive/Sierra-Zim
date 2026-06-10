@@ -10,24 +10,28 @@ import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { ContactForm } from "@/components/contact-form";
-import { site } from "@/lib/site";
+import { getSite, getProgrammes } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: `Enrol your drivers and operators with SierraZim Training Academy in ${site.address.city}, Sierra Leone. Call ${site.phones[0]}, email ${site.email}, or send an enquiry.`,
-  alternates: { canonical: "/contact" },
-  openGraph: {
-    title: "Contact · SierraZim",
-    images: [
-      {
-        url: "/gallery/instructor-truck-course.jpg",
-        alt: "A SierraZim instructor leading a training course on a field ground",
-      },
-    ],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const site = await getSite();
+  return {
+    title: "Contact",
+    description: `Enrol your drivers and operators with ${site.name} in ${site.address.city}, ${site.address.country}. Call ${site.phones[0]}, email ${site.email}, or send an enquiry.`,
+    alternates: { canonical: "/contact" },
+    openGraph: {
+      title: `Contact · ${site.shortName}`,
+      images: [
+        {
+          url: "/gallery/instructor-truck-course.jpg",
+          alt: "A SierraZim instructor leading a training course on a field ground",
+        },
+      ],
+    },
+  };
+}
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const [site, programmes] = await Promise.all([getSite(), getProgrammes()]);
   return (
     <>
       <PageHeader
@@ -103,7 +107,7 @@ export default function ContactPage() {
           </ul>
 
           <a
-            href={`https://wa.me/${site.whatsapp}`}
+            href={site.whatsappHref}
             className="group mt-8 inline-flex items-center gap-2.5 border border-forest-700 px-6 py-3.5 font-mono text-[0.78rem] uppercase tracking-[0.16em] text-forest-700 transition-colors hover:bg-forest-700 hover:text-paper"
           >
             <WhatsappLogoIcon weight="fill" className="size-4" />
@@ -126,7 +130,7 @@ export default function ContactPage() {
         <div>
           <Eyebrow index="03">Send an enquiry</Eyebrow>
           <div className="mt-5">
-            <ContactForm />
+            <ContactForm site={site} programmes={programmes.map((p) => p.title)} />
           </div>
         </div>
       </Container>

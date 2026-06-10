@@ -7,8 +7,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { StatsBand } from "@/components/sections/stats-band";
 import { WhyUs } from "@/components/sections/why-us";
 import { CertificationPath } from "@/components/sections/certification-path";
-import { site } from "@/lib/site";
-import { getClients } from "@/lib/content";
+import { getClients, getSite } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About",
@@ -35,7 +34,7 @@ const locations = [
 ];
 
 export default async function AboutPage() {
-  const clients = await getClients();
+  const [clients, site] = await Promise.all([getClients(), getSite()]);
   return (
     <>
       <PageHeader

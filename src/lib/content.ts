@@ -40,8 +40,60 @@ export async function getClients(): Promise<ClientItem[]> {
     .map(({ slug, name, note, context }) => ({ slug, name, note, context }));
 }
 
-export async function getSiteSettings() {
-  return reader.singletons.site.read();
+export type SiteSettings = {
+  name: string;
+  shortName: string;
+  legalName: string;
+  tagline: string;
+  description: string;
+  email: string;
+  phones: string[];
+  phonesE164: string[];
+  whatsapp: string;
+  whatsappHref: string;
+  mapsHref: string;
+  address: { city: string; region: string; country: string; full: string };
+  hours: string;
+  leadership: { name: string; role: string }[];
+};
+
+export async function getSite(): Promise<SiteSettings> {
+  const s = await reader.singletons.site.read();
+  const phonePrimary = s?.phonePrimary ?? "";
+  const phoneSecondary = s?.phoneSecondary ?? "";
+  const city = s?.addressCity ?? "";
+  const region = s?.addressRegion ?? "";
+  const country = s?.addressCountry ?? "";
+  const whatsapp = s?.whatsapp ?? "";
+  const toE164 = (p: string) => "+" + p.replace(/[^\d]/g, "");
+  return {
+    name: s?.name ?? "",
+    shortName: s?.shortName ?? "",
+    legalName: s?.legalName ?? "",
+    tagline: s?.tagline ?? "",
+    description: s?.description ?? "",
+    email: s?.email ?? "",
+    phones: [phonePrimary, phoneSecondary],
+    phonesE164: [toE164(phonePrimary), toE164(phoneSecondary)],
+    whatsapp,
+    whatsappHref: `https://wa.me/${whatsapp}?text=${encodeURIComponent(
+      "Hello SierraZim, I'd like to enquire about a training programme.",
+    )}`,
+    mapsHref:
+      "https://www.google.com/maps/search/?api=1&query=" +
+      encodeURIComponent([city, country].filter(Boolean).join(" ")),
+    address: {
+      city,
+      region,
+      country,
+      full: [city, region, country].filter(Boolean).join(", "),
+    },
+    hours: s?.hours ?? "",
+    leadership: [...(s?.leadership ?? [])].map((l) => ({
+      name: l.name,
+      role: l.role,
+    })),
+  };
 }
 
 export async function getHome() {

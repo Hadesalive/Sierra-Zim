@@ -6,7 +6,7 @@ import {
   CheckCircleIcon,
   EnvelopeSimpleIcon,
 } from "@phosphor-icons/react/dist/ssr";
-import { services, site, whatsappLink } from "@/lib/site";
+import type { SiteSettings } from "@/lib/content";
 
 const field =
   "w-full border border-line bg-paper px-4 py-3 text-ink placeholder:text-ink-soft/60 focus:border-forest-600 focus:outline-none";
@@ -14,7 +14,13 @@ const labelCls = "label-mono mb-2 block text-ink-soft";
 
 type Payload = { whatsapp: string; mailto: string };
 
-export function ContactForm() {
+export function ContactForm({
+  site,
+  programmes,
+}: {
+  site: SiteSettings;
+  programmes: string[];
+}) {
   const [payload, setPayload] = useState<Payload | null>(null);
 
   function compose(form: HTMLFormElement): Payload {
@@ -45,7 +51,8 @@ export function ContactForm() {
     const mailto = `mailto:${site.email}?subject=${encodeURIComponent(
       subject,
     )}&body=${encodeURIComponent(body)}`;
-    return { whatsapp: whatsappLink(body), mailto };
+    const whatsapp = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(body)}`;
+    return { whatsapp, mailto };
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -152,9 +159,9 @@ export function ContactForm() {
           <option value="" disabled>
             Select a programme
           </option>
-          {services.map((s) => (
-            <option key={s.slug} value={s.title}>
-              {s.title}
+          {programmes.map((p) => (
+            <option key={p} value={p}>
+              {p}
             </option>
           ))}
           <option value="Not sure / multiple">Not sure / multiple</option>

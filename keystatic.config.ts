@@ -20,6 +20,8 @@ export default config({
       format: { data: "json" },
       schema: {
         name: fields.text({ label: "Academy name" }),
+        shortName: fields.text({ label: "Short name" }),
+        legalName: fields.text({ label: "Legal name" }),
         tagline: fields.text({ label: "Tagline" }),
         description: fields.text({
           label: "Site description (SEO / social)",

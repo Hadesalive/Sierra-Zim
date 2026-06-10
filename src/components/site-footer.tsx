@@ -7,12 +7,12 @@ import {
   ArrowUpRightIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
-import { mainNav, site } from "@/lib/site";
-import { getProgrammes } from "@/lib/content";
+import { mainNav } from "@/lib/site";
+import { getProgrammes, getSite } from "@/lib/content";
 
 export async function SiteFooter() {
   const year = 2026;
-  const programmes = await getProgrammes();
+  const [programmes, site] = await Promise.all([getProgrammes(), getSite()]);
 
   return (
     <footer className="mt-auto bg-forest-950 text-paper">

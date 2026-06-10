@@ -6,7 +6,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { JsonLd } from "@/components/json-ld";
 import { organizationLd } from "@/lib/structured-data";
-import { site, SITE_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
+import { getSite } from "@/lib/content";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -27,72 +28,77 @@ const spaceMono = Space_Mono({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: {
-    default: `${site.name} — ${site.tagline}`,
-    template: `%s · ${site.shortName}`,
-  },
-  description: site.description,
-  applicationName: site.name,
-  keywords: [
-    "defensive driving training Sierra Leone",
-    "heavy vehicle driver training",
-    "surface mobile equipment training",
-    "operator certification",
-    "driver training Makeni",
-    "mining operator training Sierra Leone",
-    "agriculture equipment training",
-    "SierraZim Training Academy",
-  ],
-  authors: [{ name: site.name }],
-  creator: site.name,
-  publisher: site.name,
-  alternates: { canonical: "/" },
-  openGraph: {
-    type: "website",
-    locale: "en_GB",
-    url: SITE_URL,
-    siteName: site.name,
-    title: `${site.name} — ${site.tagline}`,
+export async function generateMetadata(): Promise<Metadata> {
+  const site = await getSite();
+  const titleDefault = `${site.name} — ${site.tagline}`;
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: titleDefault,
+      template: `%s · ${site.shortName}`,
+    },
     description: site.description,
-    images: [
-      {
-        url: "/gallery/instructor-truck-course.jpg",
-        width: 1024,
-        height: 768,
-        alt: "SierraZim instructor leading a heavy-vehicle driver training course",
-      },
+    applicationName: site.name,
+    keywords: [
+      "defensive driving training Sierra Leone",
+      "heavy vehicle driver training",
+      "surface mobile equipment training",
+      "operator certification",
+      "driver training Makeni",
+      "mining operator training Sierra Leone",
+      "agriculture equipment training",
+      "SierraZim Training Academy",
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${site.name} — ${site.tagline}`,
-    description: site.description,
-    images: ["/gallery/instructor-truck-course.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large" },
-  },
-  category: "education",
-};
+    authors: [{ name: site.name }],
+    creator: site.name,
+    publisher: site.legalName,
+    alternates: { canonical: "/" },
+    openGraph: {
+      type: "website",
+      locale: "en_GB",
+      url: SITE_URL,
+      siteName: site.name,
+      title: titleDefault,
+      description: site.description,
+      images: [
+        {
+          url: "/gallery/instructor-truck-course.jpg",
+          width: 1024,
+          height: 768,
+          alt: "SierraZim instructor leading a heavy-vehicle driver training course",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: titleDefault,
+      description: site.description,
+      images: ["/gallery/instructor-truck-course.jpg"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, "max-image-preview": "large" },
+    },
+    category: "education",
+  };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const site = await getSite();
   return (
     <html
       lang="en"
       className={`${bricolage.variable} ${hanken.variable} ${spaceMono.variable} antialiased`}
     >
       <body className="flex min-h-dvh flex-col bg-paper text-ink">
-        <JsonLd data={organizationLd()} />
-        <SiteHeader />
+        <JsonLd data={organizationLd(site)} />
+        <SiteHeader site={site} />
         <main className="flex-1">{children}</main>
         <SiteFooter />
-        <WhatsAppFab />
+        <WhatsAppFab href={site.whatsappHref} />
       </body>
     </html>
   );
