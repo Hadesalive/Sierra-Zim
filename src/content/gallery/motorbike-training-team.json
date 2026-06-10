@@ -1,0 +1,13 @@
+{
+  "caption": "On-site training team",
+  "alt": "Training team with motorbikes during a field programme",
+  "media": {
+    "discriminant": "image",
+    "value": {
+      "image": "motorbike-training-team.jpg",
+      "width": 1536,
+      "height": 1152
+    }
+  },
+  "order": 5
+}

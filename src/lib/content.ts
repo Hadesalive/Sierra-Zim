@@ -1,5 +1,6 @@
 import { createReader } from "@keystatic/core/reader";
 import keystaticConfig from "../../keystatic.config";
+import type { GalleryItem } from "@/lib/site";
 
 /**
  * Content-access layer. Pages/components call these (at build time, in Node) to
@@ -41,6 +42,39 @@ export async function getClients(): Promise<ClientItem[]> {
 
 export async function getSiteSettings() {
   return reader.singletons.site.read();
+}
+
+export async function getGallery(): Promise<GalleryItem[]> {
+  const all = await reader.collections.gallery.all();
+  const items = all.map((e) => {
+    const order = e.entry.order ?? 0;
+    const m = e.entry.media;
+    let item: GalleryItem;
+    if (m.discriminant === "video") {
+      item = {
+        type: "video",
+        provider: m.value.provider,
+        src: m.value.src,
+        poster: img(m.value.poster),
+        alt: e.entry.alt,
+        caption: e.entry.caption,
+        w: m.value.width ?? 1280,
+        h: m.value.height ?? 720,
+      };
+    } else {
+      item = {
+        type: "image",
+        src: img(m.value.image),
+        alt: e.entry.alt,
+        caption: e.entry.caption,
+        w: m.value.width ?? 1536,
+        h: m.value.height ?? 1152,
+      };
+    }
+    return { item, order };
+  });
+  items.sort((a, b) => a.order - b.order);
+  return items.map((x) => x.item);
 }
 
 const img = (file: string | null) => (file ? `/gallery/${file}` : "");

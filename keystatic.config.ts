@@ -173,5 +173,56 @@ export default config({
         order: fields.integer({ label: "Order", defaultValue: 0 }),
       },
     }),
+    gallery: collection({
+      label: "Gallery",
+      slugField: "caption",
+      path: "src/content/gallery/*",
+      format: { data: "json" },
+      schema: {
+        caption: fields.slug({ name: { label: "Caption" } }),
+        alt: fields.text({ label: "Alt text", multiline: true }),
+        media: fields.conditional(
+          fields.select({
+            label: "Type",
+            options: [
+              { label: "Image", value: "image" },
+              { label: "Video", value: "video" },
+            ],
+            defaultValue: "image",
+          }),
+          {
+            image: fields.object({
+              image: fields.image({
+                label: "Image",
+                directory: "public/gallery",
+                publicPath: "/gallery",
+              }),
+              width: fields.integer({ label: "Width", defaultValue: 1536 }),
+              height: fields.integer({ label: "Height", defaultValue: 1152 }),
+            }),
+            video: fields.object({
+              provider: fields.select({
+                label: "Provider",
+                options: [
+                  { label: "YouTube", value: "youtube" },
+                  { label: "Vimeo", value: "vimeo" },
+                  { label: "File (MP4)", value: "file" },
+                ],
+                defaultValue: "youtube",
+              }),
+              src: fields.text({ label: "Video ID or /path.mp4" }),
+              poster: fields.image({
+                label: "Poster",
+                directory: "public/gallery",
+                publicPath: "/gallery",
+              }),
+              width: fields.integer({ label: "Width", defaultValue: 1280 }),
+              height: fields.integer({ label: "Height", defaultValue: 720 }),
+            }),
+          },
+        ),
+        order: fields.integer({ label: "Order", defaultValue: 0 }),
+      },
+    }),
   },
 });

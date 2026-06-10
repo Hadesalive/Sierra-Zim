@@ -1,0 +1,13 @@
+{
+  "caption": "Pre-employment assessment",
+  "alt": "Pickup performing a controlled manoeuvre between cones",
+  "media": {
+    "discriminant": "image",
+    "value": {
+      "image": "pickup-maneuvering.jpg",
+      "width": 1536,
+      "height": 1152
+    }
+  },
+  "order": 7
+}

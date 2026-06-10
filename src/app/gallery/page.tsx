@@ -4,7 +4,7 @@ import { PlayIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
 import { GalleryVideo } from "@/components/gallery-video";
-import { gallery } from "@/lib/site";
+import { getGallery } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -22,7 +22,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const gallery = await getGallery();
   return (
     <>
       <PageHeader

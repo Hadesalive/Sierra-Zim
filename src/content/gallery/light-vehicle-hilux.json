@@ -1,0 +1,13 @@
+{
+  "caption": "Light vehicle defensive driving",
+  "alt": "Light vehicle navigating a defensive-driving cone course",
+  "media": {
+    "discriminant": "image",
+    "value": {
+      "image": "light-vehicle-hilux.jpg",
+      "width": 1536,
+      "height": 1152
+    }
+  },
+  "order": 2
+}
