@@ -1,0 +1,28 @@
+{
+  "client": "Sierra Tropical",
+  "sector": "Agribusiness",
+  "location": "Sierra Leone",
+  "year": "Ongoing",
+  "title": "Agriculture equipment training & youth apprenticeships",
+  "summary": "Agriculture equipment training and mechanical apprenticeships supporting Sierra Tropical's pineapple operations, in partnership with NAYCOM and UNDP.",
+  "overview": "Working under Sierra Tropical Limited — a major name in pineapple farming — and in support of the National Youth Commission (NAYCOM) and UNDP, SierraZim delivers agriculture equipment training and mechanical apprenticeships that build hands-on, market-driven skills for young people.",
+  "delivered": [
+    "Agriculture equipment operation training",
+    "Mechanical apprenticeship training",
+    "Hands-on, market-driven skills development",
+    "NAYCOM & UNDP youth programme support"
+  ],
+  "outcomes": [
+    "Young people equipped with employable, practical skills",
+    "A trained workforce for modern agribusiness operations"
+  ],
+  "services": [
+    "agriculture-equipment-training"
+  ],
+  "image": "motorbike-training-team.jpg",
+  "imageAlt": "Training team during an agriculture and equipment programme",
+  "gallery": [],
+  "realPhotos": false,
+  "featured": false,
+  "order": 2
+}

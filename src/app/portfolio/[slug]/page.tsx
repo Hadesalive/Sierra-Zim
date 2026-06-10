@@ -15,17 +15,18 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { ButtonLink } from "@/components/ui/button-link";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbLd } from "@/lib/structured-data";
-import { caseStudies, getCaseStudy, getService } from "@/lib/site";
+import { getCaseStudies, getCaseStudy, getProgrammes } from "@/lib/content";
 
 type Params = { params: Promise<{ slug: string }> };
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const caseStudies = await getCaseStudies();
   return caseStudies.map((c) => ({ slug: c.slug }));
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
-  const study = getCaseStudy(slug);
+  const study = await getCaseStudy(slug);
   if (!study) return {};
   return {
     title: `${study.client} — Case Study`,
@@ -41,13 +42,17 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function CaseStudyPage({ params }: Params) {
   const { slug } = await params;
-  const study = getCaseStudy(slug);
+  const study = await getCaseStudy(slug);
   if (!study) notFound();
 
-  const related = caseStudies.filter((c) => c.slug !== study.slug).slice(0, 3);
-  const involvedServices = study.services
-    .map((s) => getService(s))
-    .filter((s) => s !== undefined);
+  const [allCases, allProgrammes] = await Promise.all([
+    getCaseStudies(),
+    getProgrammes(),
+  ]);
+  const related = allCases.filter((c) => c.slug !== slug).slice(0, 3);
+  const involvedServices = study.serviceSlugs
+    .map((sl) => allProgrammes.find((p) => p.slug === sl))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
     <>

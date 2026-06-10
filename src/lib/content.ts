@@ -121,6 +121,60 @@ export async function getSector(slug: string): Promise<SectorItem | null> {
   return (await getSectors()).find((s) => s.slug === slug) ?? null;
 }
 
+export type CaseStudyItem = {
+  slug: string;
+  client: string;
+  sector: string;
+  location: string;
+  year: string;
+  title: string;
+  summary: string;
+  overview: string;
+  delivered: string[];
+  outcomes: string[];
+  serviceSlugs: string[];
+  image: string;
+  imageAlt: string;
+  gallery: { src: string; alt: string }[];
+  realPhotos: boolean;
+  featured: boolean;
+  order: number;
+};
+
+export async function getCaseStudies(): Promise<CaseStudyItem[]> {
+  const all = await reader.collections.caseStudies.all();
+  return all
+    .map((e) => ({
+      slug: e.slug,
+      client: e.entry.client,
+      sector: e.entry.sector,
+      location: e.entry.location,
+      year: e.entry.year,
+      title: e.entry.title,
+      summary: e.entry.summary,
+      overview: e.entry.overview,
+      delivered: [...(e.entry.delivered ?? [])],
+      outcomes: [...(e.entry.outcomes ?? [])],
+      serviceSlugs: [...(e.entry.services ?? [])].filter(
+        (x): x is string => Boolean(x),
+      ),
+      image: img(e.entry.image),
+      imageAlt: e.entry.imageAlt,
+      gallery: [...(e.entry.gallery ?? [])].map((g) => ({
+        src: img(g.image),
+        alt: g.alt,
+      })),
+      realPhotos: e.entry.realPhotos,
+      featured: e.entry.featured,
+      order: e.entry.order ?? 0,
+    }))
+    .sort(byOrder);
+}
+
+export async function getCaseStudy(slug: string): Promise<CaseStudyItem | null> {
+  return (await getCaseStudies()).find((c) => c.slug === slug) ?? null;
+}
+
 export type ValuePropItem = { slug: string; title: string; description: string };
 
 export async function getValueProps(): Promise<ValuePropItem[]> {

@@ -5,7 +5,7 @@ import { ArrowUpRightIcon, MapPinIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { caseStudies } from "@/lib/site";
+import { getCaseStudies } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -23,7 +23,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
+  const caseStudies = await getCaseStudies();
   const featured = caseStudies.find((c) => c.featured) ?? caseStudies[0];
   const rest = caseStudies.filter((c) => c.slug !== featured.slug);
 

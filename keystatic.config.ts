@@ -120,5 +120,58 @@ export default config({
         order: fields.integer({ label: "Order", defaultValue: 0 }),
       },
     }),
+    caseStudies: collection({
+      label: "Case studies",
+      slugField: "client",
+      path: "src/content/case-studies/*",
+      format: { data: "json" },
+      schema: {
+        client: fields.slug({ name: { label: "Client" } }),
+        sector: fields.text({ label: "Sector" }),
+        location: fields.text({ label: "Location" }),
+        year: fields.text({ label: "Year" }),
+        title: fields.text({ label: "Title" }),
+        summary: fields.text({ label: "Summary", multiline: true }),
+        overview: fields.text({ label: "Overview", multiline: true }),
+        delivered: fields.array(fields.text({ label: "Item" }), {
+          label: "What we delivered",
+          itemLabel: (p) => p.value,
+        }),
+        outcomes: fields.array(fields.text({ label: "Item" }), {
+          label: "Outcomes",
+          itemLabel: (p) => p.value,
+        }),
+        services: fields.array(
+          fields.relationship({ label: "Programme", collection: "programmes" }),
+          { label: "Programmes involved", itemLabel: (p) => p.value ?? "" },
+        ),
+        image: fields.image({
+          label: "Cover image",
+          directory: "public/gallery",
+          publicPath: "/gallery",
+        }),
+        imageAlt: fields.text({ label: "Cover image alt" }),
+        gallery: fields.array(
+          fields.object({
+            image: fields.image({
+              label: "Image",
+              directory: "public/gallery",
+              publicPath: "/gallery",
+            }),
+            alt: fields.text({ label: "Alt" }),
+          }),
+          {
+            label: "Photo gallery",
+            itemLabel: (p) => p.fields.alt.value || "Photo",
+          },
+        ),
+        realPhotos: fields.checkbox({
+          label: "Has real photos from this engagement",
+          defaultValue: false,
+        }),
+        featured: fields.checkbox({ label: "Featured", defaultValue: false }),
+        order: fields.integer({ label: "Order", defaultValue: 0 }),
+      },
+    }),
   },
 });

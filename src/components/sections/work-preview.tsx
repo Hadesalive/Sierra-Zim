@@ -3,11 +3,12 @@ import Link from "next/link";
 import { ArrowUpRightIcon, MapPinIcon } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { caseStudies } from "@/lib/site";
+import { getCaseStudies } from "@/lib/content";
 import { sectionToneClass, type SectionTone } from "@/lib/section";
 import { cn } from "@/lib/utils";
 
-export function WorkPreview({ tone = "white" }: { tone?: SectionTone }) {
+export async function WorkPreview({ tone = "white" }: { tone?: SectionTone }) {
+  const caseStudies = await getCaseStudies();
   const featured = caseStudies.find((c) => c.featured) ?? caseStudies[0];
   const others = caseStudies.filter((c) => c.slug !== featured.slug).slice(0, 2);
   const items = [featured, ...others];
