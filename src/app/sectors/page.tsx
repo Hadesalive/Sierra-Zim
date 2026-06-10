@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
-import { sectors } from "@/lib/site";
+import { getSectors } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Sectors we train",
@@ -24,7 +24,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function SectorsPage() {
+export default async function SectorsPage() {
+  const sectors = await getSectors();
   return (
     <>
       <PageHeader

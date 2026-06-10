@@ -93,5 +93,32 @@ export default config({
         order: fields.integer({ label: "Order", defaultValue: 0 }),
       },
     }),
+    sectors: collection({
+      label: "Sectors",
+      slugField: "name",
+      path: "src/content/sectors/*",
+      format: { data: "json" },
+      schema: {
+        name: fields.slug({ name: { label: "Name" } }),
+        title: fields.text({ label: "Title" }),
+        intro: fields.text({ label: "Intro", multiline: true }),
+        metaDescription: fields.text({ label: "Meta description", multiline: true }),
+        image: fields.image({
+          label: "Image",
+          directory: "public/gallery",
+          publicPath: "/gallery",
+        }),
+        imageAlt: fields.text({ label: "Image alt" }),
+        programmes: fields.array(
+          fields.relationship({ label: "Programme", collection: "programmes" }),
+          { label: "Programmes", itemLabel: (p) => p.value ?? "" },
+        ),
+        clients: fields.array(
+          fields.relationship({ label: "Client", collection: "clients" }),
+          { label: "Clients", itemLabel: (p) => p.value ?? "" },
+        ),
+        order: fields.integer({ label: "Order", defaultValue: 0 }),
+      },
+    }),
   },
 });

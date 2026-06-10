@@ -1,0 +1,19 @@
+{
+  "name": "Transport & fleets",
+  "title": "Defensive driver training for transport & fleets",
+  "intro": "Passenger and haulage operations demand the highest driving standards. We train and certify drivers for buses, haulage, tankers and delivery fleets — theory, oral, practical and defensive driving, with certification on completion. Trusted by Frontier Buses, Miro Forestry and others.",
+  "metaDescription": "Heavy-vehicle and defensive driver training and certification for buses, haulage and fleets in Sierra Leone — trusted by Frontier Buses and Miro Forestry.",
+  "image": "heavy-truck-side.jpg",
+  "imageAlt": "Heavy haulage truck used in defensive driver training",
+  "programmes": [
+    "heavy-vehicle-defensive-driving",
+    "light-vehicle-defensive-driving",
+    "simulator-training"
+  ],
+  "clients": [
+    "frontier-buses",
+    "miro-forestry",
+    "bam-natull"
+  ],
+  "order": 2
+}

@@ -8,17 +8,24 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { ButtonLink } from "@/components/ui/button-link";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbLd } from "@/lib/structured-data";
-import { getSector, getService, sectors, clients, type Service } from "@/lib/site";
+import {
+  getSectors,
+  getSector,
+  getProgrammes,
+  getClients,
+} from "@/lib/content";
+import { ProgrammeIcon } from "@/lib/icons";
 
 type Params = { params: Promise<{ slug: string }> };
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const sectors = await getSectors();
   return sectors.map((s) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
-  const sector = getSector(slug);
+  const sector = await getSector(slug);
   if (!sector) return {};
   return {
     title: sector.title,
@@ -34,14 +41,18 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function SectorPage({ params }: Params) {
   const { slug } = await params;
-  const sector = getSector(slug);
+  const sector = await getSector(slug);
   if (!sector) notFound();
 
+  const [allProgrammes, allClients] = await Promise.all([
+    getProgrammes(),
+    getClients(),
+  ]);
   const programmes = sector.programmeSlugs
-    .map(getService)
-    .filter((s): s is Service => Boolean(s));
-  const sectorClients = clients.filter((c) =>
-    sector.clientNames.includes(c.name),
+    .map((sl) => allProgrammes.find((p) => p.slug === sl))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+  const sectorClients = allClients.filter((c) =>
+    sector.clientSlugs.includes(c.slug),
   );
 
   return (
@@ -75,15 +86,13 @@ export default async function SectorPage({ params }: Params) {
           What we run for {sector.name.toLowerCase()}.
         </h2>
         <div className="mt-10 grid border-t border-l border-line sm:grid-cols-3">
-          {programmes.map((s) => {
-            const Icon = s.icon;
-            return (
+          {programmes.map((s) => (
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
                 className="group flex flex-col border-b border-r border-line bg-paper p-7 transition-colors hover:bg-paper-3"
               >
-                <Icon weight="light" className="size-9 text-forest-700" />
+                <ProgrammeIcon slug={s.slug} weight="light" className="size-9 text-forest-700" />
                 <h3 className="mt-6 font-display text-xl font-bold text-ink">
                   {s.title}
                 </h3>
@@ -95,8 +104,7 @@ export default async function SectorPage({ params }: Params) {
                   <ArrowUpRightIcon weight="bold" className="size-3.5" />
                 </span>
               </Link>
-            );
-          })}
+          ))}
         </div>
 
         {sectorClients.length > 0 && (

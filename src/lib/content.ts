@@ -18,19 +18,25 @@ export async function getFaqs(): Promise<{ q: string; a: string }[]> {
     .map(({ q, a }) => ({ q, a }));
 }
 
-export type ClientItem = { name: string; note: string; context: string };
+export type ClientItem = {
+  slug: string;
+  name: string;
+  note: string;
+  context: string;
+};
 
 export async function getClients(): Promise<ClientItem[]> {
   const all = await reader.collections.clients.all();
   return all
     .map((e) => ({
+      slug: e.slug,
       name: e.entry.name,
       note: e.entry.sector,
       context: e.entry.context,
       order: e.entry.order ?? 0,
     }))
     .sort(byOrder)
-    .map(({ name, note, context }) => ({ name, note, context }));
+    .map(({ slug, name, note, context }) => ({ slug, name, note, context }));
 }
 
 export async function getSiteSettings() {
@@ -74,6 +80,45 @@ export async function getProgrammes(): Promise<ProgrammeItem[]> {
 
 export async function getProgramme(slug: string): Promise<ProgrammeItem | null> {
   return (await getProgrammes()).find((p) => p.slug === slug) ?? null;
+}
+
+export type SectorItem = {
+  slug: string;
+  name: string;
+  title: string;
+  intro: string;
+  metaDescription: string;
+  image: string;
+  imageAlt: string;
+  programmeSlugs: string[];
+  clientSlugs: string[];
+  order: number;
+};
+
+export async function getSectors(): Promise<SectorItem[]> {
+  const all = await reader.collections.sectors.all();
+  return all
+    .map((e) => ({
+      slug: e.slug,
+      name: e.entry.name,
+      title: e.entry.title,
+      intro: e.entry.intro,
+      metaDescription: e.entry.metaDescription,
+      image: img(e.entry.image),
+      imageAlt: e.entry.imageAlt,
+      programmeSlugs: [...(e.entry.programmes ?? [])].filter(
+        (x): x is string => Boolean(x),
+      ),
+      clientSlugs: [...(e.entry.clients ?? [])].filter(
+        (x): x is string => Boolean(x),
+      ),
+      order: e.entry.order ?? 0,
+    }))
+    .sort(byOrder);
+}
+
+export async function getSector(slug: string): Promise<SectorItem | null> {
+  return (await getSectors()).find((s) => s.slug === slug) ?? null;
 }
 
 export type ValuePropItem = { slug: string; title: string; description: string };

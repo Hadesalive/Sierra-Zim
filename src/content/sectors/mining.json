@@ -1,0 +1,18 @@
+{
+  "name": "Mining",
+  "title": "Operator training & certification for mining",
+  "intro": "We screen, train and certify surface mobile equipment operators for mines and their contractors — including Sierra Rutile. From pre-employment screening through on-the-job training to operator certification, we help build a safe, competent and certified mobile-equipment workforce.",
+  "metaDescription": "Surface mobile equipment operator training, pre-employment screening and certification for mining in Sierra Leone — trusted by Sierra Rutile and its contractors.",
+  "image": "truck-cone-course.jpg",
+  "imageAlt": "Surface mobile equipment training course set out with safety cones on red earth",
+  "programmes": [
+    "surface-mobile-equipment-training",
+    "pre-employment-screening",
+    "heavy-vehicle-defensive-driving"
+  ],
+  "clients": [
+    "sierra-rutile",
+    "mantrac"
+  ],
+  "order": 0
+}
