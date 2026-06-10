@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getValueProps } from "@/lib/content";
+import { getValueProps, getHome } from "@/lib/content";
 import { valuePropIcon } from "@/lib/icons";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -8,19 +8,18 @@ import { sectionToneClass, type SectionTone } from "@/lib/section";
 import { cn } from "@/lib/utils";
 
 export async function WhyUs({ tone = "white" }: { tone?: SectionTone }) {
-  const valueProps = await getValueProps();
+  const [valueProps, home] = await Promise.all([getValueProps(), getHome()]);
   return (
     <section className={cn("border-b border-line", sectionToneClass[tone])}>
       <Container className="grid gap-12 py-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:py-24">
         {/* Left — heading */}
         <div className="lg:sticky lg:top-28 lg:self-start">
-          <Eyebrow index="04">Why SierraZim</Eyebrow>
+          <Eyebrow index="04">{home.whyUsEyebrow}</Eyebrow>
           <h2 className="mt-5 font-display text-4xl font-extrabold leading-[1.02] text-ink sm:text-5xl">
-            Training built for the work, not the certificate alone.
+            {home.whyUsHeading}
           </h2>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-ink-soft">
-            We train the way the job is actually done — on real vehicles and
-            equipment, to standards employers can rely on.
+            {home.whyUsIntro}
           </p>
           <div className="mt-8">
             <ButtonLink href="/about" variant="ghost">
@@ -39,7 +38,7 @@ export async function WhyUs({ tone = "white" }: { tone?: SectionTone }) {
               />
               <div className="absolute inset-0 bg-linear-to-t from-forest-950/60 via-transparent to-transparent" />
               <p className="absolute inset-x-0 bottom-0 p-4 font-display text-lg font-bold text-paper">
-                Certified on completion — every graduate.
+                {home.whyUsImageCaption}
               </p>
             </div>
           </div>

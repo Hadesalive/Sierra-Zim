@@ -1,27 +1,29 @@
 import { PlusIcon } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
+import { getHome } from "@/lib/content";
 
 type FaqItem = { q: string; a: string };
 
-export function Faq({
+export async function Faq({
   tone = "white",
   faqs,
 }: {
   tone?: "white" | "tint";
   faqs: FaqItem[];
 }) {
+  const home = await getHome();
   return (
     <section
       aria-labelledby="faq-heading"
       className={tone === "tint" ? "border-y border-line bg-paper-2" : "bg-paper"}
     >
       <Container className="py-16 lg:py-24">
-        <p className="label-mono text-safety-600">FAQ</p>
+        <p className="label-mono text-safety-600">{home.faqEyebrow}</p>
         <h2
           id="faq-heading"
           className="mt-5 max-w-2xl font-display text-4xl font-extrabold leading-[1.02] text-ink sm:text-5xl"
         >
-          Questions employers ask us.
+          {home.faqHeading}
         </h2>
 
         <div className="mt-12 border-t border-line">

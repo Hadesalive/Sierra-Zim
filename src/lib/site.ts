@@ -47,6 +47,7 @@ export const site = {
 } as const;
 
 
+
 /** Pre-filled WhatsApp deep link (wa.me) carrying an enquiry message. */
 export function whatsappLink(message?: string) {
   const text =

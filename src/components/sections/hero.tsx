@@ -8,8 +8,10 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
 import { site, whatsappHref } from "@/lib/site";
+import { getHome } from "@/lib/content";
 
-export function Hero() {
+export async function Hero() {
+  const home = await getHome();
   return (
     <section className="relative overflow-hidden bg-paper pt-14 pb-10 sm:pt-20 lg:pt-24 lg:pb-16">
       {/* subtle dot texture */}
@@ -28,21 +30,19 @@ export function Hero() {
           {/* Left — copy */}
           <div className="max-w-2xl">
             <p className="mb-5 text-sm font-semibold text-ink/70">
-              <span className="text-forest-700">Sierra&nbsp;Leone&rsquo;s</span>{" "}
-              driver &amp; operator training academy
+              <span className="text-forest-700">{home.heroEyebrowAccent}</span>{" "}
+              {home.heroEyebrowRest}
             </p>
 
             <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[4.4rem]">
-              Trained to drive.
+              {home.heroTitleLine1}
               <br />
-              <span className="text-forest-700">Certified</span> to standard.
+              <span className="text-forest-700">{home.heroTitleAccent}</span>{" "}
+              {home.heroTitleLine2}
             </h1>
 
             <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70 sm:text-lg md:text-xl">
-              Defensive driving, heavy-vehicle, surface mobile equipment and
-              agriculture operator training — with real assessment and
-              certification, from our base in Makeni. On the ground for Sierra
-              Rutile, Sierra Tropical, DADTCO Mozambique and more.
+              {home.heroSubhead}
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -113,8 +113,8 @@ export function Hero() {
                 <SealCheckIcon weight="fill" className="size-6" />
               </span>
               <div className="leading-tight">
-                <p className="text-sm font-semibold text-ink">Assessed &amp; certified</p>
-                <p className="text-xs text-ink/60">Theory + practical — nothing skipped</p>
+                <p className="text-sm font-semibold text-ink">{home.heroPillTitle}</p>
+                <p className="text-xs text-ink/60">{home.heroPillSubtitle}</p>
               </div>
             </div>
           </div>

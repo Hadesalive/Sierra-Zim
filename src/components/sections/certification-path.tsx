@@ -1,4 +1,3 @@
-import type { Icon } from "@phosphor-icons/react";
 import {
   ChalkboardTeacherIcon,
   SteeringWheelIcon,
@@ -7,58 +6,41 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
+import { getHome } from "@/lib/content";
 import { sectionToneClass, type SectionTone } from "@/lib/section";
 import { cn } from "@/lib/utils";
 
-type Step = { title: string; body: string; icon: Icon };
-
-const steps: Step[] = [
-  {
-    title: "Classroom & theory",
-    body: "Road-safety rules, regulations, pre-start checks and vehicle knowledge, taught orally and theoretically.",
-    icon: ChalkboardTeacherIcon,
-  },
-  {
-    title: "Practical training",
-    body: "Hands-on vehicle control and the technical driving and operating skills for each vehicle class.",
-    icon: SteeringWheelIcon,
-  },
-  {
-    title: "Skills assessment",
-    body: "Technical skills are assessed against high international standards before anyone progresses.",
-    icon: GaugeIcon,
-  },
-  {
-    title: "Certification",
-    body: "Issued only when a candidate has fully completed the programme and passed theory and practical.",
-    icon: CertificateIcon,
-  },
+// Icons stay in code, applied to the CMS steps by position.
+const stepIcons = [
+  ChalkboardTeacherIcon,
+  SteeringWheelIcon,
+  GaugeIcon,
+  CertificateIcon,
 ];
 
-export function CertificationPath({ tone = "tint" }: { tone?: SectionTone }) {
+export async function CertificationPath({ tone = "tint" }: { tone?: SectionTone }) {
+  const home = await getHome();
   return (
     <section className={cn("border-y border-line", sectionToneClass[tone])}>
       <Container className="py-16 lg:py-24">
         <div className="max-w-3xl">
-          <Eyebrow index="03">The certification path</Eyebrow>
+          <Eyebrow index="03">{home.certPathEyebrow}</Eyebrow>
           <h2 className="mt-5 font-display text-4xl font-extrabold leading-[1.02] text-ink sm:text-5xl">
-            From classroom to certificate — nothing skipped.
+            {home.certPathHeading}
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-            Every SierraZim driver and operator follows the same disciplined route.
-            Certification is earned, not handed out.
+            {home.certPathIntro}
           </p>
         </div>
 
         <div className="relative mt-14">
-          {/* connector */}
           <div
             className="rule-road pointer-events-none absolute left-0 right-0 top-7 hidden lg:block"
             aria-hidden
           />
           <ol className="grid gap-px border-t border-l border-line lg:grid-cols-4 lg:gap-0 lg:border-0">
-            {steps.map((step, i) => {
-              const Icon = step.icon;
+            {home.certPathSteps.map((step, i) => {
+              const Icon = stepIcons[i] ?? CertificateIcon;
               return (
                 <li
                   key={step.title}

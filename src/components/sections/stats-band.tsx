@@ -1,12 +1,13 @@
-import { stats } from "@/lib/site";
+import { getHome } from "@/lib/content";
 import { Container } from "@/components/ui/container";
 
-export function StatsBand() {
+export async function StatsBand() {
+  const home = await getHome();
   return (
     <section className="bg-forest-950 text-paper">
       <Container className="py-14 lg:py-16">
         <dl className="grid grid-cols-2 gap-y-10 lg:grid-cols-4">
-          {stats.map((s, i) => (
+          {home.stats.map((s, i) => (
             <div
               key={s.label}
               className={

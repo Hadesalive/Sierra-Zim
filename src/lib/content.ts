@@ -44,6 +44,13 @@ export async function getSiteSettings() {
   return reader.singletons.site.read();
 }
 
+export async function getHome() {
+  const h = await reader.singletons.home.read();
+  if (!h) throw new Error("Home content (src/content/home.json) is missing.");
+  return h;
+}
+export type HomeContent = Awaited<ReturnType<typeof getHome>>;
+
 export async function getGallery(): Promise<GalleryItem[]> {
   const all = await reader.collections.gallery.all();
   const items = all.map((e) => {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { getGallery } from "@/lib/content";
+import { getGallery, getHome } from "@/lib/content";
 import { sectionToneClass, type SectionTone } from "@/lib/section";
 import { cn } from "@/lib/utils";
 
@@ -11,18 +11,17 @@ import { cn } from "@/lib/utils";
 const spans = ["sm:col-span-2 sm:row-span-2", "sm:col-span-2", "", ""];
 
 export async function GalleryPreview({ tone = "tint" }: { tone?: SectionTone }) {
-  const tiles = (await getGallery())
-    .filter((g) => g.type !== "video")
-    .slice(0, 4);
+  const [home, allGallery] = await Promise.all([getHome(), getGallery()]);
+  const tiles = allGallery.filter((g) => g.type !== "video").slice(0, 4);
 
   return (
     <section className={cn("border-b border-line", sectionToneClass[tone])}>
       <Container className="py-16 lg:py-24">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
-            <Eyebrow index="06">On the ground</Eyebrow>
+            <Eyebrow index="06">{home.galleryEyebrow}</Eyebrow>
             <h2 className="mt-5 max-w-2xl font-display text-4xl font-extrabold leading-[1.02] text-ink sm:text-5xl">
-              Real vehicles. Real ground. Real results.
+              {home.galleryHeading}
             </h2>
           </div>
           <Link

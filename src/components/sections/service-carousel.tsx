@@ -10,8 +10,14 @@ import type { ProgrammeItem } from "@/lib/content";
 
 export function ServiceCarousel({
   programmes,
+  eyebrow,
+  heading,
+  intro,
 }: {
   programmes: ProgrammeItem[];
+  eyebrow: string;
+  heading: string;
+  intro: string;
 }) {
   const scroller = useRef<HTMLDivElement>(null);
 
@@ -28,14 +34,11 @@ export function ServiceCarousel({
       <Container>
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-2xl">
-            <Eyebrow index="02">Programmes</Eyebrow>
+            <Eyebrow index="02">{eyebrow}</Eyebrow>
             <h2 className="mt-5 font-display text-4xl font-extrabold leading-[1.02] text-ink sm:text-5xl">
-              Training for every class of vehicle.
+              {heading}
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-              Seven specialised programmes — each pairing classroom theory with
-              practical, on-vehicle training and ending in certification.
-            </p>
+            <p className="mt-5 text-lg leading-relaxed text-ink-soft">{intro}</p>
           </div>
 
           <div className="flex items-center gap-3">
