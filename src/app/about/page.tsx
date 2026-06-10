@@ -7,47 +7,46 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { StatsBand } from "@/components/sections/stats-band";
 import { WhyUs } from "@/components/sections/why-us";
 import { CertificationPath } from "@/components/sections/certification-path";
-import { getClients, getSite } from "@/lib/content";
+import { getClients, getSite, getPages } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "SierraZim Training Academy — a Sierra Leone-based driver and operator training company built on Zimbabwean training expertise, delivering certified programmes for mining, agribusiness, forestry and transport across West Africa.",
-  alternates: { canonical: "/about" },
-  openGraph: {
-    title: "About · SierraZim",
-    images: [
-      {
-        url: "/gallery/heavy-truck-side.jpg",
-        alt: "A heavy haulage truck on a SierraZim field training ground",
-      },
-    ],
-  },
-};
-
-const locations = [
-  { place: "Makeni", note: "Headquarters · Northern Province" },
-  { place: "Sierra Rutile", note: "Mining operations support" },
-  { place: "Sumbuya", note: "Field training" },
-  { place: "Mozambique", note: "Cross-border delivery — DADTCO, 2018" },
-  { place: "Côte d'Ivoire", note: "Cross-border operator training" },
-];
+export async function generateMetadata(): Promise<Metadata> {
+  const pages = await getPages();
+  return {
+    title: "About",
+    description: pages.about.metaDescription,
+    alternates: { canonical: "/about" },
+    openGraph: {
+      title: "About · SierraZim",
+      images: [
+        {
+          url: "/gallery/heavy-truck-side.jpg",
+          alt: "A heavy haulage truck on a SierraZim field training ground",
+        },
+      ],
+    },
+  };
+}
 
 export default async function AboutPage() {
-  const [clients, site] = await Promise.all([getClients(), getSite()]);
+  const [clients, site, pages] = await Promise.all([
+    getClients(),
+    getSite(),
+    getPages(),
+  ]);
+  const about = pages.about;
   return (
     <>
       <PageHeader
         index="01"
-        eyebrow="About us"
+        eyebrow={about.heroEyebrow}
         title={
           <>
-            Sierra Leone&apos;s training academy,
+            {about.heroTitleLine1}
             <br />
-            built on real expertise.
+            {about.heroTitleLine2}
           </>
         }
-        intro={`${site.legalName} trains and certifies the drivers and operators who keep the region's mines, farms, forests and fleets moving — to a standard that holds up on the ground.`}
+        intro={about.heroIntro}
         image="/gallery/heavy-truck-side.jpg"
         imageAlt="Heavy haulage truck on a SierraZim field training ground"
       />
@@ -55,29 +54,14 @@ export default async function AboutPage() {
       {/* Story */}
       <Container className="grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:py-24">
         <div>
-          <Eyebrow index="02">Our story</Eyebrow>
+          <Eyebrow index="02">{about.storyEyebrow}</Eyebrow>
           <h2 className="mt-5 font-display text-4xl font-extrabold leading-[1.02] text-ink sm:text-[2.75rem]">
-            The name says it: Sierra&nbsp;Leone, Zimbabwean training roots.
+            {about.storyHeading}
           </h2>
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-ink-soft">
-            <p>
-              SierraZim Training Academy brings together Sierra Leonean roots and
-              the deep operator-training expertise Zimbabwe is known for across the
-              mining and heavy-industry world. That combination is in our name — and
-              in every programme we run.
-            </p>
-            <p>
-              We deliver defensive driving, heavy-vehicle, surface mobile equipment
-              and agriculture operator training, plus pre-employment screening and
-              consultancy. From light motor vehicles to mine-site equipment, learners
-              progress from classroom theory to hands-on practical training, and are
-              certified only once they have passed both.
-            </p>
-            <p>
-              Today we support some of the biggest names in the region and deliver
-              across borders — in Mozambique and Côte d&rsquo;Ivoire — proof that
-              training done by experts travels.
-            </p>
+            {about.storyBlocks.map((b, i) => (
+              <p key={i}>{b}</p>
+            ))}
           </div>
         </div>
 
@@ -91,7 +75,7 @@ export default async function AboutPage() {
               className="object-cover"
             />
             <div className="absolute inset-x-0 bottom-0 bg-ink/80 px-4 py-2.5">
-              <span className="label-mono text-paper">On site with our clients</span>
+              <span className="label-mono text-paper">{about.storyImageCaption}</span>
             </div>
           </div>
         </div>
@@ -102,9 +86,9 @@ export default async function AboutPage() {
       {/* Leadership */}
       <section className="border-y border-line bg-paper-2">
         <Container className="py-16 lg:py-24">
-          <Eyebrow index="03">Leadership</Eyebrow>
+          <Eyebrow index="03">{about.leadershipEyebrow}</Eyebrow>
           <h2 className="mt-5 max-w-2xl font-display text-4xl font-extrabold leading-[1.02] text-ink sm:text-5xl">
-            Meet the people behind the academy.
+            {about.leadershipHeading}
           </h2>
           <div className="mt-12 grid border-t border-l border-line sm:grid-cols-2">
             {site.leadership.map((person) => (
@@ -129,12 +113,12 @@ export default async function AboutPage() {
 
       {/* Where we work */}
       <Container className="py-16 lg:py-24">
-        <Eyebrow index="04">Where we work</Eyebrow>
+        <Eyebrow index="04">{about.locationsEyebrow}</Eyebrow>
         <h2 className="mt-5 max-w-2xl font-display text-4xl font-extrabold leading-[1.02] text-ink sm:text-5xl">
-          On the ground, across borders.
+          {about.locationsHeading}
         </h2>
         <div className="mt-12 grid border-t border-l border-line sm:grid-cols-2 lg:grid-cols-4">
-          {locations.map((loc, i) => (
+          {about.locations.map((loc, i) => (
             <div
               key={loc.place}
               className="border-b border-r border-line bg-paper p-7"
@@ -152,7 +136,7 @@ export default async function AboutPage() {
 
         {/* Clients */}
         <div className="mt-16">
-          <Eyebrow>Clients &amp; partners</Eyebrow>
+          <Eyebrow>{about.clientsHeading}</Eyebrow>
           <div className="mt-8 grid border-t border-l border-line sm:grid-cols-2 lg:grid-cols-4">
             {clients.map((c) => (
               <div

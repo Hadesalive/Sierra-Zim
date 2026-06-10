@@ -4,35 +4,38 @@ import Image from "next/image";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
-import { getSectors } from "@/lib/content";
+import { getSectors, getPages } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Sectors we train",
-  description:
-    "Operator and driver training and certification for mining, agriculture & agribusiness, and transport & fleets across Sierra Leone and the region.",
-  alternates: { canonical: "/sectors" },
-  openGraph: {
-    title: "Sectors we train · SierraZim",
-    description:
-      "Training and certification shaped around the equipment and conditions each sector works in.",
-    images: [
-      {
-        url: "/gallery/instructor-truck-course.jpg",
-        alt: "SierraZim instructor leading a training course on a field ground",
-      },
-    ],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { sectorsHero } = await getPages();
+  return {
+    title: "Sectors we train",
+    description: sectorsHero.metaDescription,
+    alternates: { canonical: "/sectors" },
+    openGraph: {
+      title: "Sectors we train · SierraZim",
+      description:
+        "Training and certification shaped around the equipment and conditions each sector works in.",
+      images: [
+        {
+          url: "/gallery/instructor-truck-course.jpg",
+          alt: "SierraZim instructor leading a training course on a field ground",
+        },
+      ],
+    },
+  };
+}
 
 export default async function SectorsPage() {
-  const sectors = await getSectors();
+  const [sectors, pages] = await Promise.all([getSectors(), getPages()]);
+  const hero = pages.sectorsHero;
   return (
     <>
       <PageHeader
         index="01"
-        eyebrow="Sectors"
-        title="Built for the work each sector does."
-        intro="From mines to fleets to farms, our programmes are shaped around the equipment and conditions each sector works in — with certification that holds up on the ground."
+        eyebrow={hero.eyebrow}
+        title={hero.title}
+        intro={hero.intro}
         image="/gallery/instructor-truck-course.jpg"
         imageAlt="SierraZim instructor leading a training course on a field ground"
       />

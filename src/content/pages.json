@@ -1,0 +1,75 @@
+{
+  "about": {
+    "metaDescription": "SierraZim Training Academy — a Sierra Leone-based driver and operator training company built on Zimbabwean training expertise, delivering certified programmes for mining, agribusiness, forestry and transport across West Africa.",
+    "heroEyebrow": "About us",
+    "heroTitleLine1": "Sierra Leone’s training academy,",
+    "heroTitleLine2": "built on real expertise.",
+    "heroIntro": "Sierrazim Limited trains and certifies the drivers and operators who keep the region’s mines, farms, forests and fleets moving — to a standard that holds up on the ground.",
+    "storyEyebrow": "Our story",
+    "storyHeading": "The name says it: Sierra Leone, Zimbabwean training roots.",
+    "storyBlocks": [
+      "SierraZim Training Academy brings together Sierra Leonean roots and the deep operator-training expertise Zimbabwe is known for across the mining and heavy-industry world. That combination is in our name — and in every programme we run.",
+      "We deliver defensive driving, heavy-vehicle, surface mobile equipment and agriculture operator training, plus pre-employment screening and consultancy. From light motor vehicles to mine-site equipment, learners progress from classroom theory to hands-on practical training, and are certified only once they have passed both.",
+      "Today we support some of the biggest names in the region and deliver across borders — in Mozambique and Côte d’Ivoire — proof that training done by experts travels."
+    ],
+    "storyImageCaption": "On site with our clients",
+    "leadershipEyebrow": "Leadership",
+    "leadershipHeading": "Meet the people behind the academy.",
+    "locationsEyebrow": "Where we work",
+    "locationsHeading": "On the ground, across borders.",
+    "locations": [
+      {
+        "place": "Makeni",
+        "note": "Headquarters · Northern Province"
+      },
+      {
+        "place": "Sierra Rutile",
+        "note": "Mining operations support"
+      },
+      {
+        "place": "Sumbuya",
+        "note": "Field training"
+      },
+      {
+        "place": "Mozambique",
+        "note": "Cross-border delivery — DADTCO, 2018"
+      },
+      {
+        "place": "Côte d’Ivoire",
+        "note": "Cross-border operator training"
+      }
+    ],
+    "clientsHeading": "Clients & partners"
+  },
+  "contact": {
+    "heroEyebrow": "Contact",
+    "heroTitle": "Let’s get your team certified.",
+    "heroIntro": "Tell us about your drivers, operators and equipment, and we’ll put together the right training and certification plan.",
+    "detailsEyebrow": "Get in touch",
+    "detailsHeading": "Talk to the academy."
+  },
+  "servicesHero": {
+    "metaDescription": "Defensive driving, heavy-vehicle, oral & theory, simulator, surface mobile equipment, agriculture equipment and pre-employment screening — explore SierraZim’s seven specialised training and certification programmes.",
+    "eyebrow": "Programmes",
+    "title": "Training and certification for every class of vehicle.",
+    "intro": "Sierrazim Limited delivers seven specialised programmes — each combining classroom theory, practical on-vehicle training and independent assessment, ending in certification you can rely on."
+  },
+  "portfolioHero": {
+    "metaDescription": "Programmes SierraZim Training Academy has delivered — including cross-border driver training for DADTCO Mozambique, surface mobile equipment training for Sierra Rutile, and youth apprenticeships with Sierra Tropical, NAYCOM and UNDP.",
+    "eyebrow": "Portfolio",
+    "title": "Programmes we’ve delivered.",
+    "intro": "From cross-border driver training to mine-site operator certification and youth apprenticeships — a look at the work behind the certificates."
+  },
+  "galleryHero": {
+    "metaDescription": "See SierraZim Training Academy in action — defensive driving, heavy-vehicle and operator training on real ground, plus certified graduates from programmes including DADTCO Mozambique.",
+    "eyebrow": "Gallery",
+    "title": "Training in the field, captured.",
+    "intro": "Real vehicles, real ground and real candidates — from cone courses and heavy haulage to classroom briefings and certified graduates."
+  },
+  "sectorsHero": {
+    "metaDescription": "Operator and driver training and certification for mining, agriculture & agribusiness, and transport & fleets across Sierra Leone and the region.",
+    "eyebrow": "Sectors",
+    "title": "Built for the work each sector does.",
+    "intro": "From mines to fleets to farms, our programmes are shaped around the equipment and conditions each sector works in — with certification that holds up on the ground."
+  }
+}

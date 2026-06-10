@@ -1,5 +1,16 @@
 import { config, fields, collection, singleton } from "@keystatic/core";
 
+const indexHero = (label: string) =>
+  fields.object(
+    {
+      metaDescription: fields.text({ label: "Meta description", multiline: true }),
+      eyebrow: fields.text({ label: "Eyebrow" }),
+      title: fields.text({ label: "Title", multiline: true }),
+      intro: fields.text({ label: "Intro", multiline: true }),
+    },
+    { label: `${label} page hero` },
+  );
+
 /**
  * SierraZim CMS — Phase 0 model (a representative slice to prove the pattern).
  * Storage is "local" for development; switch to { kind: "github", repo: "Hadesalive/Sierra-Zim" }
@@ -97,6 +108,56 @@ export default config({
           }),
           { label: "Stats", itemLabel: (p) => p.fields.value.value },
         ),
+      },
+    }),
+    pages: singleton({
+      label: "Other pages",
+      path: "src/content/pages",
+      format: { data: "json" },
+      schema: {
+        about: fields.object(
+          {
+            metaDescription: fields.text({ label: "Meta description", multiline: true }),
+            heroEyebrow: fields.text({ label: "Hero eyebrow" }),
+            heroTitleLine1: fields.text({ label: "Hero title — line 1" }),
+            heroTitleLine2: fields.text({ label: "Hero title — line 2" }),
+            heroIntro: fields.text({ label: "Hero intro", multiline: true }),
+            storyEyebrow: fields.text({ label: "Story eyebrow" }),
+            storyHeading: fields.text({ label: "Story heading" }),
+            storyBlocks: fields.array(
+              fields.text({ label: "Paragraph", multiline: true }),
+              { label: "Story paragraphs", itemLabel: (p) => p.value.slice(0, 48) },
+            ),
+            storyImageCaption: fields.text({ label: "Story image caption" }),
+            leadershipEyebrow: fields.text({ label: "Leadership eyebrow" }),
+            leadershipHeading: fields.text({ label: "Leadership heading" }),
+            locationsEyebrow: fields.text({ label: "Locations eyebrow" }),
+            locationsHeading: fields.text({ label: "Locations heading" }),
+            locations: fields.array(
+              fields.object({
+                place: fields.text({ label: "Place" }),
+                note: fields.text({ label: "Note" }),
+              }),
+              { label: "Locations", itemLabel: (p) => p.fields.place.value },
+            ),
+            clientsHeading: fields.text({ label: "Clients heading" }),
+          },
+          { label: "About page" },
+        ),
+        contact: fields.object(
+          {
+            heroEyebrow: fields.text({ label: "Hero eyebrow" }),
+            heroTitle: fields.text({ label: "Hero title" }),
+            heroIntro: fields.text({ label: "Hero intro", multiline: true }),
+            detailsEyebrow: fields.text({ label: "Details eyebrow" }),
+            detailsHeading: fields.text({ label: "Details heading" }),
+          },
+          { label: "Contact page" },
+        ),
+        servicesHero: indexHero("Services"),
+        portfolioHero: indexHero("Portfolio"),
+        galleryHero: indexHero("Gallery"),
+        sectorsHero: indexHero("Sectors"),
       },
     }),
   },

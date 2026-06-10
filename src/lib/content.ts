@@ -103,6 +103,13 @@ export async function getHome() {
 }
 export type HomeContent = Awaited<ReturnType<typeof getHome>>;
 
+export async function getPages() {
+  const p = await reader.singletons.pages.read();
+  if (!p) throw new Error("Pages content (src/content/pages.json) is missing.");
+  return p;
+}
+export type PagesContent = Awaited<ReturnType<typeof getPages>>;
+
 export async function getGallery(): Promise<GalleryItem[]> {
   const all = await reader.collections.gallery.all();
   const items = all.map((e) => {

@@ -4,33 +4,36 @@ import { PlayIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
 import { GalleryVideo } from "@/components/gallery-video";
-import { getGallery } from "@/lib/content";
+import { getGallery, getPages } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Gallery",
-  description:
-    "See SierraZim Training Academy in action — defensive driving, heavy-vehicle and operator training on real ground, plus certified graduates from programmes including DADTCO Mozambique.",
-  alternates: { canonical: "/gallery" },
-  openGraph: {
-    title: "Gallery · SierraZim",
-    images: [
-      {
-        url: "/gallery/dadtco-sunset.jpg",
-        alt: "The training truck and cone course at golden hour, DADTCO, Mozambique, 2018",
-      },
-    ],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { galleryHero } = await getPages();
+  return {
+    title: "Gallery",
+    description: galleryHero.metaDescription,
+    alternates: { canonical: "/gallery" },
+    openGraph: {
+      title: "Gallery · SierraZim",
+      images: [
+        {
+          url: "/gallery/dadtco-sunset.jpg",
+          alt: "The training truck and cone course at golden hour, DADTCO, Mozambique, 2018",
+        },
+      ],
+    },
+  };
+}
 
 export default async function GalleryPage() {
-  const gallery = await getGallery();
+  const [gallery, pages] = await Promise.all([getGallery(), getPages()]);
+  const hero = pages.galleryHero;
   return (
     <>
       <PageHeader
         index="01"
-        eyebrow="Gallery"
-        title="Training in the field, captured."
-        intro="Real vehicles, real ground and real candidates — from cone courses and heavy haulage to classroom briefings and certified graduates."
+        eyebrow={hero.eyebrow}
+        title={hero.title}
+        intro={hero.intro}
         image="/gallery/dadtco-heavy-truck.jpg"
         imageAlt="DADTCO Mozambique heavy haulage truck on the training ground"
       />

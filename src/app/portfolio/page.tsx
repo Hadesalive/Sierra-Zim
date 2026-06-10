@@ -5,26 +5,29 @@ import { ArrowUpRightIcon, MapPinIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { getCaseStudies } from "@/lib/content";
+import { getCaseStudies, getPages } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Portfolio",
-  description:
-    "Programmes SierraZim Training Academy has delivered — including cross-border driver training for DADTCO Mozambique, surface mobile equipment training for Sierra Rutile, and youth apprenticeships with Sierra Tropical, NAYCOM and UNDP.",
-  alternates: { canonical: "/portfolio" },
-  openGraph: {
-    title: "Portfolio · SierraZim",
-    images: [
-      {
-        url: "/gallery/dadtco-heavy-truck.jpg",
-        alt: "A DADTCO haulage truck on the SierraZim training ground, Mozambique, 2018",
-      },
-    ],
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { portfolioHero } = await getPages();
+  return {
+    title: "Portfolio",
+    description: portfolioHero.metaDescription,
+    alternates: { canonical: "/portfolio" },
+    openGraph: {
+      title: "Portfolio · SierraZim",
+      images: [
+        {
+          url: "/gallery/dadtco-heavy-truck.jpg",
+          alt: "A DADTCO haulage truck on the SierraZim training ground, Mozambique, 2018",
+        },
+      ],
+    },
+  };
+}
 
 export default async function PortfolioPage() {
-  const caseStudies = await getCaseStudies();
+  const [caseStudies, pages] = await Promise.all([getCaseStudies(), getPages()]);
+  const hero = pages.portfolioHero;
   const featured = caseStudies.find((c) => c.featured) ?? caseStudies[0];
   const rest = caseStudies.filter((c) => c.slug !== featured.slug);
 
@@ -32,9 +35,9 @@ export default async function PortfolioPage() {
     <>
       <PageHeader
         index="01"
-        eyebrow="Portfolio"
-        title="Programmes we've delivered."
-        intro="From cross-border driver training to mine-site operator certification and youth apprenticeships — a look at the work behind the certificates."
+        eyebrow={hero.eyebrow}
+        title={hero.title}
+        intro={hero.intro}
         image="/gallery/graduation-certificates.jpg"
         imageAlt="SierraZim graduates holding their completion certificates"
       />

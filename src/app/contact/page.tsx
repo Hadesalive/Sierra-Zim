@@ -10,7 +10,7 @@ import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { ContactForm } from "@/components/contact-form";
-import { getSite, getProgrammes } from "@/lib/content";
+import { getSite, getProgrammes, getPages } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
   const site = await getSite();
@@ -31,14 +31,19 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ContactPage() {
-  const [site, programmes] = await Promise.all([getSite(), getProgrammes()]);
+  const [site, programmes, pages] = await Promise.all([
+    getSite(),
+    getProgrammes(),
+    getPages(),
+  ]);
+  const contact = pages.contact;
   return (
     <>
       <PageHeader
         index="01"
-        eyebrow="Contact"
-        title="Let's get your team certified."
-        intro="Tell us about your drivers, operators and equipment, and we'll put together the right training and certification plan."
+        eyebrow={contact.heroEyebrow}
+        title={contact.heroTitle}
+        intro={contact.heroIntro}
         image="/gallery/classroom-briefing.jpg"
         imageAlt="Classroom briefing during a SierraZim training session"
       />
@@ -46,9 +51,9 @@ export default async function ContactPage() {
       <Container className="grid gap-12 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-20">
         {/* Details */}
         <div>
-          <Eyebrow index="02">Get in touch</Eyebrow>
+          <Eyebrow index="02">{contact.detailsEyebrow}</Eyebrow>
           <h2 className="mt-5 font-display text-3xl font-bold text-ink sm:text-4xl">
-            Talk to the academy.
+            {contact.detailsHeading}
           </h2>
 
           <ul className="mt-10 divide-y divide-line border-y border-line">
