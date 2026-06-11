@@ -4,8 +4,14 @@ import { fileURLToPath } from "url";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
-import { buildConfig } from "payload";
+import { buildConfig, type CollectionConfig, type GlobalConfig } from "payload";
 import sharp from "sharp";
+
+import {
+  revalidateAfterChange,
+  revalidateAfterDelete,
+  revalidateGlobal,
+} from "./lib/revalidate";
 
 import { CaseStudies } from "./collections/CaseStudies";
 import { Clients } from "./collections/Clients";
@@ -23,6 +29,24 @@ import { Site } from "./globals/Site";
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
+/** Append the on-demand revalidation hooks so publishes appear on the site instantly. */
+const withRevalidate = (c: CollectionConfig): CollectionConfig => ({
+  ...c,
+  hooks: {
+    ...c.hooks,
+    afterChange: [...(c.hooks?.afterChange ?? []), revalidateAfterChange],
+    afterDelete: [...(c.hooks?.afterDelete ?? []), revalidateAfterDelete],
+  },
+});
+
+const withGlobalRevalidate = (g: GlobalConfig): GlobalConfig => ({
+  ...g,
+  hooks: {
+    ...g.hooks,
+    afterChange: [...(g.hooks?.afterChange ?? []), revalidateGlobal],
+  },
+});
+
 /**
  * SierraZim CMS — Payload config.
  * Every piece of site content (except icons, which stay in code) is editable here.
@@ -35,17 +59,12 @@ export default buildConfig({
     },
   },
   collections: [
-    Programmes,
-    Sectors,
-    CaseStudies,
-    Clients,
-    ValueProps,
-    Faqs,
-    Gallery,
-    Media,
+    ...[Programmes, Sectors, CaseStudies, Clients, ValueProps, Faqs, Gallery, Media].map(
+      withRevalidate,
+    ),
     Users,
   ],
-  globals: [Site, Home, Pages],
+  globals: [Site, Home, Pages].map(withGlobalRevalidate),
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   db: postgresAdapter({
