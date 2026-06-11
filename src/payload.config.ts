@@ -7,13 +7,25 @@ import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import { buildConfig } from "payload";
 import sharp from "sharp";
 
+import { CaseStudies } from "./collections/CaseStudies";
+import { Clients } from "./collections/Clients";
+import { Faqs } from "./collections/Faqs";
+import { Gallery } from "./collections/Gallery";
+import { Media } from "./collections/Media";
+import { Programmes } from "./collections/Programmes";
+import { Sectors } from "./collections/Sectors";
+import { Users } from "./collections/Users";
+import { ValueProps } from "./collections/ValueProps";
+import { Home } from "./globals/Home";
+import { Pages } from "./globals/Pages";
+import { Site } from "./globals/Site";
+
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
 /**
  * SierraZim CMS — Payload config.
- * Scaffold stage: auth (users) + media (uploads → Vercel Blob) only.
- * Content collections + globals are added during the modelling phase.
+ * Every piece of site content (except icons, which stay in code) is editable here.
  */
 export default buildConfig({
   admin: {
@@ -23,24 +35,17 @@ export default buildConfig({
     },
   },
   collections: [
-    {
-      slug: "users",
-      auth: true,
-      admin: { useAsTitle: "email", group: "Admin" },
-      fields: [
-        { name: "name", type: "text" },
-      ],
-    },
-    {
-      slug: "media",
-      access: { read: () => true },
-      admin: { group: "Admin" },
-      upload: true,
-      fields: [
-        { name: "alt", type: "text", label: "Alt text" },
-      ],
-    },
+    Programmes,
+    Sectors,
+    CaseStudies,
+    Clients,
+    ValueProps,
+    Faqs,
+    Gallery,
+    Media,
+    Users,
   ],
+  globals: [Site, Home, Pages],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   db: postgresAdapter({

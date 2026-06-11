@@ -67,8 +67,15 @@ export interface Config {
   };
   blocks: {};
   collections: {
-    users: User;
+    programmes: Programme;
+    sectors: Sector;
+    'case-studies': CaseStudy;
+    clients: Client;
+    'value-props': ValueProp;
+    faqs: Faq;
+    gallery: Gallery;
     media: Media;
+    users: User;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -76,8 +83,15 @@ export interface Config {
   };
   collectionsJoins: {};
   collectionsSelect: {
-    users: UsersSelect<false> | UsersSelect<true>;
+    programmes: ProgrammesSelect<false> | ProgrammesSelect<true>;
+    sectors: SectorsSelect<false> | SectorsSelect<true>;
+    'case-studies': CaseStudiesSelect<false> | CaseStudiesSelect<true>;
+    clients: ClientsSelect<false> | ClientsSelect<true>;
+    'value-props': ValuePropsSelect<false> | ValuePropsSelect<true>;
+    faqs: FaqsSelect<false> | FaqsSelect<true>;
+    gallery: GallerySelect<false> | GallerySelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    users: UsersSelect<false> | UsersSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -87,8 +101,16 @@ export interface Config {
     defaultIDType: number;
   };
   fallbackLocale: null;
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    site: Site;
+    home: Home;
+    pages: Page;
+  };
+  globalsSelect: {
+    site: SiteSelect<false> | SiteSelect<true>;
+    home: HomeSelect<false> | HomeSelect<true>;
+    pages: PagesSelect<false> | PagesSelect<true>;
+  };
   locale: null;
   widgets: {
     collections: CollectionsWidget;
@@ -119,6 +141,211 @@ export interface UserAuthOperations {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "programmes".
+ */
+export interface Programme {
+  id: number;
+  title: string;
+  /**
+   * URL segment. Leave blank to auto-fill from "title".
+   */
+  slug?: string | null;
+  short?: string | null;
+  description?: string | null;
+  features?:
+    | {
+        feature?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  image?: (number | null) | Media;
+  imageAlt?: string | null;
+  audience?: string | null;
+  format?: string | null;
+  certification?: string | null;
+  /**
+   * Sort order — lower numbers appear first.
+   */
+  order?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media".
+ */
+export interface Media {
+  id: number;
+  alt?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  url?: string | null;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sectors".
+ */
+export interface Sector {
+  id: number;
+  name: string;
+  /**
+   * URL segment. Leave blank to auto-fill from "name".
+   */
+  slug?: string | null;
+  title?: string | null;
+  intro?: string | null;
+  metaDescription?: string | null;
+  image?: (number | null) | Media;
+  imageAlt?: string | null;
+  programmes?: (number | Programme)[] | null;
+  clients?: (number | Client)[] | null;
+  /**
+   * Sort order — lower numbers appear first.
+   */
+  order?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "clients".
+ */
+export interface Client {
+  id: number;
+  name: string;
+  /**
+   * URL segment. Leave blank to auto-fill from "name".
+   */
+  slug?: string | null;
+  sector?: string | null;
+  context?: string | null;
+  /**
+   * Sort order — lower numbers appear first.
+   */
+  order?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "case-studies".
+ */
+export interface CaseStudy {
+  id: number;
+  client: string;
+  /**
+   * URL segment. Leave blank to auto-fill from "client".
+   */
+  slug?: string | null;
+  sector?: string | null;
+  location?: string | null;
+  year?: string | null;
+  title?: string | null;
+  summary?: string | null;
+  overview?: string | null;
+  delivered?:
+    | {
+        item?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  outcomes?:
+    | {
+        item?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  services?: (number | Programme)[] | null;
+  image?: (number | null) | Media;
+  imageAlt?: string | null;
+  gallery?:
+    | {
+        image?: (number | null) | Media;
+        alt?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  realPhotos?: boolean | null;
+  featured?: boolean | null;
+  /**
+   * Sort order — lower numbers appear first.
+   */
+  order?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "value-props".
+ */
+export interface ValueProp {
+  id: number;
+  title: string;
+  /**
+   * URL segment. Leave blank to auto-fill from "title".
+   */
+  slug?: string | null;
+  description?: string | null;
+  /**
+   * Sort order — lower numbers appear first.
+   */
+  order?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faqs".
+ */
+export interface Faq {
+  id: number;
+  question: string;
+  answer?: string | null;
+  /**
+   * Sort order — lower numbers appear first.
+   */
+  order?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery".
+ */
+export interface Gallery {
+  id: number;
+  caption: string;
+  alt?: string | null;
+  mediaType: 'image' | 'video';
+  image?: (number | null) | Media;
+  provider?: ('youtube' | 'vimeo' | 'file') | null;
+  videoSrc?: string | null;
+  poster?: (number | null) | Media;
+  /**
+   * Video frame width
+   */
+  width?: number | null;
+  /**
+   * Video frame height
+   */
+  height?: number | null;
+  /**
+   * Sort order — lower numbers appear first.
+   */
+  order?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
  */
 export interface User {
@@ -145,25 +372,6 @@ export interface User {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "media".
- */
-export interface Media {
-  id: number;
-  alt?: string | null;
-  updatedAt: string;
-  createdAt: string;
-  url?: string | null;
-  thumbnailURL?: string | null;
-  filename?: string | null;
-  mimeType?: string | null;
-  filesize?: number | null;
-  width?: number | null;
-  height?: number | null;
-  focalX?: number | null;
-  focalY?: number | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -187,12 +395,40 @@ export interface PayloadLockedDocument {
   id: number;
   document?:
     | ({
-        relationTo: 'users';
-        value: number | User;
+        relationTo: 'programmes';
+        value: number | Programme;
+      } | null)
+    | ({
+        relationTo: 'sectors';
+        value: number | Sector;
+      } | null)
+    | ({
+        relationTo: 'case-studies';
+        value: number | CaseStudy;
+      } | null)
+    | ({
+        relationTo: 'clients';
+        value: number | Client;
+      } | null)
+    | ({
+        relationTo: 'value-props';
+        value: number | ValueProp;
+      } | null)
+    | ({
+        relationTo: 'faqs';
+        value: number | Faq;
+      } | null)
+    | ({
+        relationTo: 'gallery';
+        value: number | Gallery;
       } | null)
     | ({
         relationTo: 'media';
         value: number | Media;
+      } | null)
+    | ({
+        relationTo: 'users';
+        value: number | User;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -238,6 +474,161 @@ export interface PayloadMigration {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "programmes_select".
+ */
+export interface ProgrammesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  short?: T;
+  description?: T;
+  features?:
+    | T
+    | {
+        feature?: T;
+        id?: T;
+      };
+  image?: T;
+  imageAlt?: T;
+  audience?: T;
+  format?: T;
+  certification?: T;
+  order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sectors_select".
+ */
+export interface SectorsSelect<T extends boolean = true> {
+  name?: T;
+  slug?: T;
+  title?: T;
+  intro?: T;
+  metaDescription?: T;
+  image?: T;
+  imageAlt?: T;
+  programmes?: T;
+  clients?: T;
+  order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "case-studies_select".
+ */
+export interface CaseStudiesSelect<T extends boolean = true> {
+  client?: T;
+  slug?: T;
+  sector?: T;
+  location?: T;
+  year?: T;
+  title?: T;
+  summary?: T;
+  overview?: T;
+  delivered?:
+    | T
+    | {
+        item?: T;
+        id?: T;
+      };
+  outcomes?:
+    | T
+    | {
+        item?: T;
+        id?: T;
+      };
+  services?: T;
+  image?: T;
+  imageAlt?: T;
+  gallery?:
+    | T
+    | {
+        image?: T;
+        alt?: T;
+        id?: T;
+      };
+  realPhotos?: T;
+  featured?: T;
+  order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "clients_select".
+ */
+export interface ClientsSelect<T extends boolean = true> {
+  name?: T;
+  slug?: T;
+  sector?: T;
+  context?: T;
+  order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "value-props_select".
+ */
+export interface ValuePropsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  description?: T;
+  order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faqs_select".
+ */
+export interface FaqsSelect<T extends boolean = true> {
+  question?: T;
+  answer?: T;
+  order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery_select".
+ */
+export interface GallerySelect<T extends boolean = true> {
+  caption?: T;
+  alt?: T;
+  mediaType?: T;
+  image?: T;
+  provider?: T;
+  videoSrc?: T;
+  poster?: T;
+  width?: T;
+  height?: T;
+  order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "media_select".
+ */
+export interface MediaSelect<T extends boolean = true> {
+  alt?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users_select".
  */
 export interface UsersSelect<T extends boolean = true> {
@@ -258,24 +649,6 @@ export interface UsersSelect<T extends boolean = true> {
         createdAt?: T;
         expiresAt?: T;
       };
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "media_select".
- */
-export interface MediaSelect<T extends boolean = true> {
-  alt?: T;
-  updatedAt?: T;
-  createdAt?: T;
-  url?: T;
-  thumbnailURL?: T;
-  filename?: T;
-  mimeType?: T;
-  filesize?: T;
-  width?: T;
-  height?: T;
-  focalX?: T;
-  focalY?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -316,6 +689,327 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "site".
+ */
+export interface Site {
+  id: number;
+  name?: string | null;
+  shortName?: string | null;
+  legalName?: string | null;
+  tagline?: string | null;
+  description?: string | null;
+  email?: string | null;
+  phonePrimary?: string | null;
+  phoneSecondary?: string | null;
+  /**
+   * Digits only, e.g. 23273077004
+   */
+  whatsapp?: string | null;
+  addressCity?: string | null;
+  addressRegion?: string | null;
+  addressCountry?: string | null;
+  hours?: string | null;
+  leadership?:
+    | {
+        name?: string | null;
+        role?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "home".
+ */
+export interface Home {
+  id: number;
+  heroEyebrowAccent?: string | null;
+  heroEyebrowRest?: string | null;
+  heroTitleLine1?: string | null;
+  heroTitleAccent?: string | null;
+  heroTitleLine2?: string | null;
+  heroSubhead?: string | null;
+  heroPillTitle?: string | null;
+  heroPillSubtitle?: string | null;
+  clientsLabel?: string | null;
+  programmesEyebrow?: string | null;
+  programmesHeading?: string | null;
+  programmesIntro?: string | null;
+  certPathEyebrow?: string | null;
+  certPathHeading?: string | null;
+  certPathIntro?: string | null;
+  certPathSteps?:
+    | {
+        title?: string | null;
+        body?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  whyUsEyebrow?: string | null;
+  whyUsHeading?: string | null;
+  whyUsIntro?: string | null;
+  whyUsImageCaption?: string | null;
+  workEyebrow?: string | null;
+  workHeading?: string | null;
+  galleryEyebrow?: string | null;
+  galleryHeading?: string | null;
+  faqEyebrow?: string | null;
+  faqHeading?: string | null;
+  statementQuote?: string | null;
+  statementPartnersLabel?: string | null;
+  statementPartners?:
+    | {
+        partner?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  stats?:
+    | {
+        value?: string | null;
+        label?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages".
+ */
+export interface Page {
+  id: number;
+  about?: {
+    metaDescription?: string | null;
+    heroEyebrow?: string | null;
+    heroTitleLine1?: string | null;
+    heroTitleLine2?: string | null;
+    heroIntro?: string | null;
+    storyEyebrow?: string | null;
+    storyHeading?: string | null;
+    storyBlocks?:
+      | {
+          text?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+    storyImageCaption?: string | null;
+    leadershipEyebrow?: string | null;
+    leadershipHeading?: string | null;
+    locationsEyebrow?: string | null;
+    locationsHeading?: string | null;
+    locations?:
+      | {
+          place?: string | null;
+          note?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+    clientsHeading?: string | null;
+  };
+  contact?: {
+    heroEyebrow?: string | null;
+    heroTitle?: string | null;
+    heroIntro?: string | null;
+    detailsEyebrow?: string | null;
+    detailsHeading?: string | null;
+  };
+  servicesHero?: {
+    metaDescription?: string | null;
+    eyebrow?: string | null;
+    title?: string | null;
+    intro?: string | null;
+  };
+  portfolioHero?: {
+    metaDescription?: string | null;
+    eyebrow?: string | null;
+    title?: string | null;
+    intro?: string | null;
+  };
+  galleryHero?: {
+    metaDescription?: string | null;
+    eyebrow?: string | null;
+    title?: string | null;
+    intro?: string | null;
+  };
+  sectorsHero?: {
+    metaDescription?: string | null;
+    eyebrow?: string | null;
+    title?: string | null;
+    intro?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "site_select".
+ */
+export interface SiteSelect<T extends boolean = true> {
+  name?: T;
+  shortName?: T;
+  legalName?: T;
+  tagline?: T;
+  description?: T;
+  email?: T;
+  phonePrimary?: T;
+  phoneSecondary?: T;
+  whatsapp?: T;
+  addressCity?: T;
+  addressRegion?: T;
+  addressCountry?: T;
+  hours?: T;
+  leadership?:
+    | T
+    | {
+        name?: T;
+        role?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "home_select".
+ */
+export interface HomeSelect<T extends boolean = true> {
+  heroEyebrowAccent?: T;
+  heroEyebrowRest?: T;
+  heroTitleLine1?: T;
+  heroTitleAccent?: T;
+  heroTitleLine2?: T;
+  heroSubhead?: T;
+  heroPillTitle?: T;
+  heroPillSubtitle?: T;
+  clientsLabel?: T;
+  programmesEyebrow?: T;
+  programmesHeading?: T;
+  programmesIntro?: T;
+  certPathEyebrow?: T;
+  certPathHeading?: T;
+  certPathIntro?: T;
+  certPathSteps?:
+    | T
+    | {
+        title?: T;
+        body?: T;
+        id?: T;
+      };
+  whyUsEyebrow?: T;
+  whyUsHeading?: T;
+  whyUsIntro?: T;
+  whyUsImageCaption?: T;
+  workEyebrow?: T;
+  workHeading?: T;
+  galleryEyebrow?: T;
+  galleryHeading?: T;
+  faqEyebrow?: T;
+  faqHeading?: T;
+  statementQuote?: T;
+  statementPartnersLabel?: T;
+  statementPartners?:
+    | T
+    | {
+        partner?: T;
+        id?: T;
+      };
+  stats?:
+    | T
+    | {
+        value?: T;
+        label?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages_select".
+ */
+export interface PagesSelect<T extends boolean = true> {
+  about?:
+    | T
+    | {
+        metaDescription?: T;
+        heroEyebrow?: T;
+        heroTitleLine1?: T;
+        heroTitleLine2?: T;
+        heroIntro?: T;
+        storyEyebrow?: T;
+        storyHeading?: T;
+        storyBlocks?:
+          | T
+          | {
+              text?: T;
+              id?: T;
+            };
+        storyImageCaption?: T;
+        leadershipEyebrow?: T;
+        leadershipHeading?: T;
+        locationsEyebrow?: T;
+        locationsHeading?: T;
+        locations?:
+          | T
+          | {
+              place?: T;
+              note?: T;
+              id?: T;
+            };
+        clientsHeading?: T;
+      };
+  contact?:
+    | T
+    | {
+        heroEyebrow?: T;
+        heroTitle?: T;
+        heroIntro?: T;
+        detailsEyebrow?: T;
+        detailsHeading?: T;
+      };
+  servicesHero?:
+    | T
+    | {
+        metaDescription?: T;
+        eyebrow?: T;
+        title?: T;
+        intro?: T;
+      };
+  portfolioHero?:
+    | T
+    | {
+        metaDescription?: T;
+        eyebrow?: T;
+        title?: T;
+        intro?: T;
+      };
+  galleryHero?:
+    | T
+    | {
+        metaDescription?: T;
+        eyebrow?: T;
+        title?: T;
+        intro?: T;
+      };
+  sectorsHero?:
+    | T
+    | {
+        metaDescription?: T;
+        eyebrow?: T;
+        title?: T;
+        intro?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
