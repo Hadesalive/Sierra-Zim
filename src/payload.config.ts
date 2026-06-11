@@ -58,7 +58,9 @@ export default buildConfig({
   plugins: [
     vercelBlobStorage({
       enabled: true,
-      collections: { media: true },
+      // Serve public Blob URLs directly (CDN-cached) instead of proxying through
+      // Payload's /api/media/file route — best for a public marketing site.
+      collections: { media: { disablePayloadAccessControl: true } },
       token: process.env.BLOB_READ_WRITE_TOKEN || "",
     }),
   ],
