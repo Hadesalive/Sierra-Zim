@@ -2,21 +2,32 @@
   "name": "sierrazim-website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "payload": "payload",
+    "generate:types": "payload generate:types",
+    "generate:importmap": "payload generate:importmap"
   },
   "dependencies": {
     "@keystatic/core": "^0.5.50",
     "@keystatic/next": "^5.0.4",
     "@markdoc/markdoc": "^0.5.7",
+    "@payloadcms/db-postgres": "^3.85.1",
+    "@payloadcms/next": "^3.85.1",
+    "@payloadcms/richtext-lexical": "^3.85.1",
+    "@payloadcms/storage-vercel-blob": "^3.85.1",
     "@phosphor-icons/react": "^2.1.10",
     "clsx": "^2.1.1",
+    "graphql": "^16.14.2",
     "next": "16.2.7",
+    "payload": "^3.85.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "sharp": "^0.35.0",
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
