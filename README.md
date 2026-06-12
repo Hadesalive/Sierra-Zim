@@ -1,96 +1,122 @@
 # SierraZim Training Academy — Website
 
-Marketing website for **SierraZim Training Academy** (Sierrazim Limited) — defensive
-driving, heavy-vehicle, surface mobile equipment and agriculture operator training,
-assessment and certification.
+Marketing website **and CMS** for **SierraZim Training Academy** (Sierrazim Limited) —
+defensive driving, heavy-vehicle, surface mobile equipment and agriculture operator
+training, assessment and certification in Makeni, Sierra Leone.
 
-Built with **Next.js 16 (App Router) · Tailwind CSS v4 · Phosphor Icons**, statically
-generated for speed and SEO.
+Every piece of content (except icons) is editable in a built-in admin. The public
+site is statically prerendered for speed and SEO; edits publish **instantly** without
+a rebuild.
 
-## Run it locally
+## Stack
+
+| Layer | Tech |
+| --- | --- |
+| Framework | **Next.js 16** (App Router, Turbopack, React 19) |
+| Styling | **Tailwind CSS v4** (`@theme` tokens, no config file) + Phosphor Icons |
+| CMS | **Payload 3** (embedded in the same Next app) |
+| Database | **Neon Postgres** (`@payloadcms/db-postgres`) |
+| Media | **Vercel Blob** (`@payloadcms/storage-vercel-blob`) |
+| Hosting | **Vercel** |
+
+The project is **ESM** (`"type": "module"` in `package.json`) — required by Payload's
+CLI and standalone scripts.
+
+## Quick start
 
 ```bash
 npm install
-npm run dev      # http://localhost:3000
+cp .env.example .env      # then fill in PAYLOAD_SECRET, DATABASE_URI, BLOB_READ_WRITE_TOKEN
+npm run dev               # http://localhost:3000  ·  admin at /admin
 ```
 
+First run: visit **`/admin`** and create the first admin user, then manage content.
+See **[docs/development.md](docs/development.md)** for the full local setup, scripts,
+and how to seed content.
+
 ```bash
-npm run build    # production build (static export of all routes)
+npm run build    # payload generate:importmap && next build
 npm run start    # serve the production build
 npm run lint
+npm run migrate  # apply Payload DB migrations
 ```
+
+## How content works
+
+- Content lives in **Payload** (Neon Postgres); images live in **Vercel Blob**.
+- Pages read content through the typed getters in **`src/lib/content.ts`** (Payload's
+  local API) — never by importing data directly.
+- **Icons stay in code** (`src/lib/icons.ts`, mapped by slug) — everything else is
+  editable in the admin.
+- Editing in `/admin` triggers on-demand revalidation, so changes appear on the live
+  site within seconds — no rebuild.
+
+What's editable: programmes, sectors, case studies, clients, value props, FAQs, the
+gallery (images **and** videos), plus site settings and all home/about/contact/index
+page copy. Full field reference: **[docs/content-model.md](docs/content-model.md)**.
+
+## Documentation
+
+- **[docs/architecture.md](docs/architecture.md)** — how the system fits together
+  (route groups, content layer, media, instant publishing, SSG).
+- **[docs/content-model.md](docs/content-model.md)** — the CMS schema: every
+  collection, global and field.
+- **[docs/development.md](docs/development.md)** — local setup, env vars, npm scripts,
+  seeding, type generation, adding a field/collection.
+- **[docs/deploy.md](docs/deploy.md)** — deploying to Vercel (env vars, first admin
+  user, migrations, domain).
 
 ## Design language
 
 A bespoke "field-manual" art direction — deliberately not a generic template:
 
 - **Type:** Bricolage Grotesque (display), Hanken Grotesk (body), Space Mono
-  (technical labels) — wired via `next/font` in `src/app/layout.tsx`.
-- **Palette:** warm paper, forest green, safety amber, red-earth clay. Tokens live
-  in `src/app/globals.css` under `@theme` (`paper`, `forest-*`, `safety-*`, `clay-*`).
+  (technical labels) — wired via `next/font` in `src/app/(frontend)/layout.tsx`.
+- **Palette:** warm paper, forest green, safety amber, red-earth clay. Tokens live in
+  `src/app/(frontend)/globals.css` under `@theme` (`paper`, `forest-*`, `safety-*`,
+  `clay-*`).
 - **Motifs:** hairline rules, blueprint grid, index numbers, a certification "seal",
-  square (non-rounded) industrial edges, flat surfaces (no soft glow shadows).
+  square industrial edges, flat surfaces.
 
-## Editing content
-
-Almost all copy and data is centralised in **`src/lib/site.ts`**:
-
-- `site` — name, contact details, phones, address, hours, leadership.
-- `services` — the 7 programmes (title, copy, features, icon, image). Drives the
-  services pages **and** the static `/services/[slug]` routes, sitemap and JSON-LD.
-- `clients`, `valueProps`, `stats`, `gallery`.
-
-Change it there and every page, the sitemap and structured data update automatically.
-
-## Structure
+## Project structure
 
 ```
 src/
   app/
-    layout.tsx              root layout: fonts, metadata, header/footer, Org JSON-LD
-    page.tsx                home
-    about/  services/  portfolio/  gallery/  contact/   pages
-    services/[slug]/        static service detail pages
-    portfolio/[slug]/       static case-study pages
-    sitemap.ts  robots.ts   SEO route files
-    icon.png  apple-icon.png  favicons (generated from the logo)
-  components/
-    site-header.tsx  site-footer.tsx
-    contact-form.tsx
-    sections/               home/page section blocks
-    ui/                     container, button-link, eyebrow, logo, page-header
+    (frontend)/             the public marketing site (its own root layout)
+      layout.tsx            fonts, metadata, header/footer, Org JSON-LD
+      page.tsx              home
+      about/ services/ portfolio/ gallery/ sectors/ contact/
+      services/[slug]/  portfolio/[slug]/  sectors/[slug]/   detail routes
+      sitemap.ts  robots.ts  globals.css
+    (payload)/              the Payload admin + REST/GraphQL API
+      admin/  api/  layout.tsx
+  collections/              Payload collections (Programmes, Sectors, …, Media, Users)
+  globals/                  Payload globals (Site, Home, Pages)
+  fields/shared.ts          reusable field helpers (slug, order, index hero)
   lib/
-    site.ts                 <- single source of content
+    content.ts              typed getters — pages read content from here
+    payload.ts              the Payload local-API client
+    revalidate.ts           on-demand revalidation hooks (instant publishing)
+    icons.ts                slug → icon maps (icons stay in code)
+    metadata.ts             shared OpenGraph helper
     structured-data.ts      JSON-LD builders
-    utils.ts
-public/
-  brand/logo.png
-  gallery/*.jpg             curated training photos
+    site.ts                 non-content config (SITE_URL, nav, gallery types)
+  content/                  seed data (JSON) — source for scripts/seed.ts only
+  migrations/               Payload DB migrations (committed)
+  payload.config.ts         the CMS schema + adapters
+scripts/seed.ts             one-off: src/content → Neon + Blob
+public/                     logo, favicons, gallery photos
+docs/                       documentation (see above)
 ```
 
-## SEO included
+## SEO
 
-- Per-page `<title>`/description, canonical URLs, Open Graph + Twitter cards.
-- `sitemap.xml` and `robots.txt` (generated).
-- JSON-LD: `EducationalOrganization` + `LocalBusiness` site-wide; `Service` and
-  `BreadcrumbList` on each programme page.
-- Semantic headings, descriptive `alt` text, optimised `next/image`.
+- Per-page `<title>`/description, canonical URLs, Open Graph + Twitter cards (each
+  page emits its own — see `src/lib/metadata.ts`).
+- `sitemap.xml` and `robots.txt` (generated, CMS-driven).
+- JSON-LD: `EducationalOrganization` + `LocalBusiness` site-wide; `Course` + FAQ +
+  `BreadcrumbList` where relevant.
 
 > **Before launch:** set the real production domain in `SITE_URL`
 > (`src/lib/site.ts`) — it drives canonicals, sitemap and structured data.
-
-## Things to confirm / wire up
-
-- **Portfolio photos:** only the **DADTCO Mozambique** case study uses photos from
-  that actual engagement. The other case studies (Sierra Rutile, Sierra Tropical,
-  Frontier Buses, Miro Forestry, Mantrac) reuse representative training photos as
-  placeholders — replace the `image`/`gallery` fields in `caseStudies` (`site.ts`)
-  with real client photos when available. Also confirm the case-study copy/outcomes.
-- **Stats numbers** (`stats` in `site.ts`) are sensible defaults — adjust to real
-  figures if available (e.g. drivers trained, years operating).
-- **Contact form** currently opens the visitor's email app, pre-filled, to
-  `info@sierrazim.com` (works with zero backend). To deliver straight to an inbox,
-  wire a form service (e.g. Resend or Formspree) in `src/components/contact-form.tsx`.
-- **Map** embeds Makeni via Google Maps — swap in the exact address/pin when known.
-- **Deployment:** ready for Vercel (`vercel` / push to a connected repo). It's a
-  static site, so any static host works too.
