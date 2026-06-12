@@ -10,7 +10,8 @@ export const slugify = (s: string): string =>
     .replace(/-+/g, "-")
     .replace(/^-+|-+$/g, "");
 
-/** A sidebar slug field that auto-fills from `source` when left blank. */
+/** A sidebar slug field that auto-fills from `source` when left blank, and
+ *  auto-suffixes (-2, -3, …) to stay unique when two items slugify the same. */
 export const slugField = (source = "title"): Field => ({
   name: "slug",
   type: "text",
@@ -22,8 +23,29 @@ export const slugField = (source = "title"): Field => ({
   },
   hooks: {
     beforeValidate: [
-      ({ value, data }) =>
-        value || (data?.[source] ? slugify(String(data[source])) : value),
+      async ({ value, data, req, originalDoc, collection }) => {
+        const base =
+          (value && String(value)) ||
+          (data?.[source] ? slugify(String(data[source])) : "");
+        if (!base || !collection) return value;
+        let candidate = base;
+        let n = 2;
+        // Bump the suffix until the slug is unique (excluding this same doc).
+        while (
+          (
+            await req.payload.count({
+              collection: collection.slug,
+              where: {
+                slug: { equals: candidate },
+                ...(originalDoc?.id ? { id: { not_equals: originalDoc.id } } : {}),
+              },
+            })
+          ).totalDocs > 0
+        ) {
+          candidate = `${base}-${n++}`;
+        }
+        return candidate;
+      },
     ],
   },
 });

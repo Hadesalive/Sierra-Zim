@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { ogBase } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightIcon, MapPinIcon } from "@phosphor-icons/react/dist/ssr";
@@ -14,6 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: portfolioHero.metaDescription,
     alternates: { canonical: "/portfolio" },
     openGraph: {
+      ...ogBase("/portfolio"),
       title: "Portfolio · SierraZim",
       images: [
         {
@@ -29,6 +32,7 @@ export default async function PortfolioPage() {
   const [caseStudies, pages] = await Promise.all([getCaseStudies(), getPages()]);
   const hero = pages.portfolioHero;
   const featured = caseStudies.find((c) => c.featured) ?? caseStudies[0];
+  if (!featured) notFound(); // no case studies yet
   const rest = caseStudies.filter((c) => c.slug !== featured.slug);
 
   return (

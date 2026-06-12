@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogBase } from "@/lib/metadata";
 import Image from "next/image";
 import { PlayIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHeader } from "@/components/ui/page-header";
@@ -13,6 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: galleryHero.metaDescription,
     alternates: { canonical: "/gallery" },
     openGraph: {
+      ...ogBase("/gallery"),
       title: "Gallery · SierraZim",
       images: [
         {

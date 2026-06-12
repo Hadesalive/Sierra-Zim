@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogBase } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
 import { ServiceLedger } from "@/components/sections/service-ledger";
@@ -12,6 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: servicesHero.metaDescription,
     alternates: { canonical: "/services" },
     openGraph: {
+      ...ogBase("/services"),
       title: "Training Programmes · SierraZim",
       images: [
         {

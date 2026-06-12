@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 export async function WorkPreview({ tone = "white" }: { tone?: SectionTone }) {
   const [caseStudies, home] = await Promise.all([getCaseStudies(), getHome()]);
   const featured = caseStudies.find((c) => c.featured) ?? caseStudies[0];
+  if (!featured) return null; // no case studies yet — skip the section
   const others = caseStudies.filter((c) => c.slug !== featured.slug).slice(0, 2);
   const items = [featured, ...others];
 

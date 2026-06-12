@@ -8,6 +8,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { ButtonLink } from "@/components/ui/button-link";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbLd } from "@/lib/structured-data";
+import { ogBase } from "@/lib/metadata";
 import {
   getSectors,
   getSector,
@@ -32,6 +33,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: sector.metaDescription,
     alternates: { canonical: `/sectors/${slug}` },
     openGraph: {
+      ...ogBase(`/sectors/${slug}`),
       title: `${sector.title} · SierraZim`,
       description: sector.metaDescription,
       images: [{ url: sector.image, alt: sector.imageAlt }],

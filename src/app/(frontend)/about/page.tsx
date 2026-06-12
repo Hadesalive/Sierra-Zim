@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogBase } from "@/lib/metadata";
 import Image from "next/image";
 import { UserIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHeader } from "@/components/ui/page-header";
@@ -16,6 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: pages.about.metaDescription,
     alternates: { canonical: "/about" },
     openGraph: {
+      ...ogBase("/about"),
       title: "About · SierraZim",
       images: [
         {

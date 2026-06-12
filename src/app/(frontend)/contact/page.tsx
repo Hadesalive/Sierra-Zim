@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogBase } from "@/lib/metadata";
 import {
   PhoneCallIcon,
   EnvelopeSimpleIcon,
@@ -19,6 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: `Enrol your drivers and operators with ${site.name} in ${site.address.city}, ${site.address.country}. Call ${site.phones[0]}, email ${site.email}, or send an enquiry.`,
     alternates: { canonical: "/contact" },
     openGraph: {
+      ...ogBase("/contact"),
       title: `Contact · ${site.shortName}`,
       images: [
         {

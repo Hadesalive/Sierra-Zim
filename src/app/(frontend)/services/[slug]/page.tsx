@@ -12,6 +12,7 @@ import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button-link";
 import { JsonLd } from "@/components/json-ld";
 import { courseLd, breadcrumbLd } from "@/lib/structured-data";
+import { ogBase } from "@/lib/metadata";
 import { getProgramme, getProgrammes, getSite } from "@/lib/content";
 import { programmeIcon, ProgrammeIcon } from "@/lib/icons";
 
@@ -31,6 +32,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: service.short,
     alternates: { canonical: `/services/${service.slug}` },
     openGraph: {
+      ...ogBase(`/services/${service.slug}`),
       title: `${service.title} · ${site.shortName}`,
       description: service.short,
       images: [{ url: service.image, alt: service.imageAlt }],
@@ -84,7 +86,7 @@ export default async function ServiceDetailPage({ params }: Params) {
 
           <div className="mt-8 flex items-center gap-4">
             <span className="label-mono text-safety-400">
-              {String(index).padStart(2, "0")} / 07
+              {String(index).padStart(2, "0")} / {String(programmes.length).padStart(2, "0")}
             </span>
             <ProgrammeIcon slug={slug} weight="light" className="size-11 text-paper" />
           </div>

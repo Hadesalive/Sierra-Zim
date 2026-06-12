@@ -15,6 +15,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { ButtonLink } from "@/components/ui/button-link";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbLd } from "@/lib/structured-data";
+import { ogBase } from "@/lib/metadata";
 import { getCaseStudies, getCaseStudy, getProgrammes } from "@/lib/content";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -33,6 +34,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: study.summary,
     alternates: { canonical: `/portfolio/${study.slug}` },
     openGraph: {
+      ...ogBase(`/portfolio/${study.slug}`),
       title: `${study.client} · Case Study`,
       description: study.summary,
       images: [{ url: study.image, alt: study.imageAlt }],

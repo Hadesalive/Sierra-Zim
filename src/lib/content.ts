@@ -94,6 +94,7 @@ export async function getSite(): Promise<SiteSettings> {
   const country = str(s?.addressCountry);
   const whatsapp = str(s?.whatsapp);
   const toE164 = (ph: string) => "+" + ph.replace(/[^\d]/g, "");
+  const phones = [phonePrimary, phoneSecondary].filter(Boolean);
   return {
     name: str(s?.name),
     shortName: str(s?.shortName),
@@ -101,8 +102,8 @@ export async function getSite(): Promise<SiteSettings> {
     tagline: str(s?.tagline),
     description: str(s?.description),
     email: str(s?.email),
-    phones: [phonePrimary, phoneSecondary],
-    phonesE164: [toE164(phonePrimary), toE164(phoneSecondary)],
+    phones,
+    phonesE164: phones.map(toE164),
     whatsapp,
     whatsappHref: `https://wa.me/${whatsapp}?text=${encodeURIComponent(
       "Hello SierraZim, I'd like to enquire about a training programme.",

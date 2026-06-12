@@ -69,11 +69,10 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       ],
     },
+    // Only the card type here — Next derives per-page twitter title/description/
+    // images from each route's openGraph (the home card comes from the root OG).
     twitter: {
       card: "summary_large_image",
-      title: titleDefault,
-      description: site.description,
-      images: ["/gallery/instructor-truck-course.jpg"],
     },
     robots: {
       index: true,

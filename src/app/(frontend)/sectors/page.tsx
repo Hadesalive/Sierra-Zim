@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogBase } from "@/lib/metadata";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
@@ -13,6 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: sectorsHero.metaDescription,
     alternates: { canonical: "/sectors" },
     openGraph: {
+      ...ogBase("/sectors"),
       title: "Sectors we train · SierraZim",
       description:
         "Training and certification shaped around the equipment and conditions each sector works in.",
