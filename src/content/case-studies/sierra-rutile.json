@@ -1,0 +1,29 @@
+{
+  "client": "Sierra Rutile",
+  "sector": "Mining",
+  "location": "Sierra Leone",
+  "year": "Ongoing",
+  "title": "Surface mobile equipment training for Sierra Rutile & contractors",
+  "summary": "Supporting one of Sierra Leone's biggest mines with pre-employment screening, on-the-job training and operator certification for surface mobile equipment.",
+  "overview": "SierraZim supports Sierra Rutile Mine and its contractors with consultancy across the operator lifecycle — from screening candidates before they are hired, through on-the-job training, to defensive driver and operator certification for surface mobile equipment.",
+  "delivered": [
+    "Pre-employment screening assessments",
+    "On-the-job training for mobile equipment operators",
+    "Defensive driver and operator training",
+    "Operator certification"
+  ],
+  "outcomes": [
+    "A screened, competent mobile-equipment workforce",
+    "Reduced on-site risk through certified operators"
+  ],
+  "services": [
+    "surface-mobile-equipment-training",
+    "pre-employment-screening"
+  ],
+  "image": "truck-cone-course.jpg",
+  "imageAlt": "Operator training course set out with safety cones",
+  "gallery": [],
+  "realPhotos": false,
+  "featured": false,
+  "order": 1
+}

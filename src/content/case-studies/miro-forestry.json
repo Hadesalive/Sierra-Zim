@@ -1,0 +1,29 @@
+{
+  "client": "Miro Forestry",
+  "sector": "Forestry",
+  "location": "Sierra Leone",
+  "year": "Ongoing",
+  "title": "Driver & operator training for forestry operations",
+  "summary": "Defensive driving and operator training supporting Miro Forestry's plantation and haulage operations.",
+  "overview": "Forestry operations rely on safe driving and competent equipment handling across challenging terrain. SierraZim provides driver and operator training and certification to keep Miro Forestry's teams safe and productive.",
+  "delivered": [
+    "Light and heavy-vehicle driver training",
+    "Defensive driving",
+    "Practical skills assessment",
+    "Certification on completion"
+  ],
+  "outcomes": [
+    "Certified drivers and operators for forestry haulage",
+    "Improved safety across plantation operations"
+  ],
+  "services": [
+    "light-vehicle-defensive-driving",
+    "heavy-vehicle-defensive-driving"
+  ],
+  "image": "instructor-truck-course.jpg",
+  "imageAlt": "Instructor guiding a driver through a practical training course",
+  "gallery": [],
+  "realPhotos": false,
+  "featured": false,
+  "order": 4
+}

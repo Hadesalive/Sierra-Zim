@@ -7,10 +7,12 @@ import {
   ArrowUpRightIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
-import { mainNav, services, site } from "@/lib/site";
+import { mainNav } from "@/lib/site";
+import { getProgrammes, getSite } from "@/lib/content";
 
-export function SiteFooter() {
+export async function SiteFooter() {
   const year = 2026;
+  const [programmes, site] = await Promise.all([getProgrammes(), getSite()]);
 
   return (
     <footer className="mt-auto bg-forest-950 text-paper">
@@ -60,13 +62,21 @@ export function SiteFooter() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/sectors"
+                className="text-sm text-paper/80 transition-colors hover:text-safety-400"
+              >
+                Sectors
+              </Link>
+            </li>
           </ul>
         </nav>
 
         <nav aria-label="Programmes">
           <p className="label-mono text-paper/50">Programmes</p>
           <ul className="mt-5 space-y-3">
-            {services.slice(0, 5).map((s) => (
+            {programmes.slice(0, 5).map((s) => (
               <li key={s.slug}>
                 <Link
                   href={`/services/${s.slug}`}

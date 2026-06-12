@@ -1,0 +1,29 @@
+{
+  "client": "Frontier Buses",
+  "sector": "Public transport",
+  "location": "Sierra Leone",
+  "year": "Ongoing",
+  "title": "Defensive driver training for a bus fleet",
+  "summary": "Heavy-vehicle and defensive driver training for Frontier Buses, raising safety standards across a passenger-carrying fleet.",
+  "overview": "Passenger transport demands the highest driving standards. SierraZim delivers theory, practical and defensive driver training for Frontier Buses, certifying drivers to operate safely and professionally on the road.",
+  "delivered": [
+    "Oral and theory classroom training",
+    "Practical bus and heavy-vehicle driving",
+    "Defensive driver training",
+    "Driver certification"
+  ],
+  "outcomes": [
+    "Safer passenger transport through certified drivers",
+    "Consistent professional driving standards across the fleet"
+  ],
+  "services": [
+    "heavy-vehicle-defensive-driving",
+    "theory-and-classroom-training"
+  ],
+  "image": "heavy-truck-side.jpg",
+  "imageAlt": "Heavy vehicle used in defensive driver training",
+  "gallery": [],
+  "realPhotos": false,
+  "featured": false,
+  "order": 3
+}

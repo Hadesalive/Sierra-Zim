@@ -1,0 +1,13 @@
+{
+  "caption": "Heavy haulage training",
+  "alt": "Heavy haulage truck used in heavy-vehicle driver training",
+  "media": {
+    "discriminant": "image",
+    "value": {
+      "image": "heavy-truck-side.jpg",
+      "width": 1536,
+      "height": 1152
+    }
+  },
+  "order": 8
+}

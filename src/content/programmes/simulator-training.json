@@ -1,0 +1,17 @@
+{
+  "title": "Simulator Training",
+  "short": "Advanced simulator-based training that sharpens technical skills and reduces incidents.",
+  "description": "SierraZim is one of the first training institutes in the region to train with advanced driving simulators. Simulator sessions sharpen learners' technical driving skills in a controlled, safe environment, build vast practical knowledge and drive down incidents and accidents in everyday operations, without the risk and cost of on-road exposure.",
+  "features": [
+    "Advanced driving-simulator technology",
+    "Safe, controlled skills practice",
+    "Incident and accident reduction",
+    "Faster, measurable skills development"
+  ],
+  "image": "instructor-truck-course.jpg",
+  "imageAlt": "Instructor guiding a practical driver-training exercise",
+  "audience": "Drivers and operators sharpening technical skills without on-road risk.",
+  "format": "Advanced driving simulators in a controlled, repeatable environment.",
+  "certification": "Measured skill built before on-road exposure — fewer incidents on the job.",
+  "order": 3
+}

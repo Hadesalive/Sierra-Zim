@@ -1,0 +1,71 @@
+{
+  "heroEyebrowAccent": "Sierra Leone’s",
+  "heroEyebrowRest": "driver & operator training academy",
+  "heroTitleLine1": "Trained to drive.",
+  "heroTitleAccent": "Certified",
+  "heroTitleLine2": "to standard.",
+  "heroSubhead": "Defensive driving, heavy-vehicle, surface mobile equipment and agriculture operator training — with real assessment and certification, from our base in Makeni. On the ground for Sierra Rutile, Sierra Tropical, DADTCO Mozambique and more.",
+  "heroPillTitle": "Assessed & certified",
+  "heroPillSubtitle": "Theory + practical — nothing skipped",
+  "clientsLabel": "Who we train for",
+  "programmesEyebrow": "Programmes",
+  "programmesHeading": "Training for every class of vehicle.",
+  "programmesIntro": "Seven specialised programmes — each pairing classroom theory with practical, on-vehicle training and ending in certification.",
+  "certPathEyebrow": "The certification path",
+  "certPathHeading": "From classroom to certificate — nothing skipped.",
+  "certPathIntro": "Every SierraZim driver and operator follows the same disciplined route. Certification is earned, not handed out.",
+  "certPathSteps": [
+    {
+      "title": "Classroom & theory",
+      "body": "Road-safety rules, regulations, pre-start checks and vehicle knowledge, taught orally and theoretically."
+    },
+    {
+      "title": "Practical training",
+      "body": "Hands-on vehicle control and the technical driving and operating skills for each vehicle class."
+    },
+    {
+      "title": "Skills assessment",
+      "body": "Technical skills are assessed against high international standards before anyone progresses."
+    },
+    {
+      "title": "Certification",
+      "body": "Issued only when a candidate has fully completed the programme and passed theory and practical."
+    }
+  ],
+  "whyUsEyebrow": "Why SierraZim",
+  "whyUsHeading": "Training built for the work, not the certificate alone.",
+  "whyUsIntro": "We train the way the job is actually done — on real vehicles and equipment, to standards employers can rely on.",
+  "whyUsImageCaption": "Certified on completion — every graduate.",
+  "workEyebrow": "Selected work",
+  "workHeading": "Trusted to deliver, on site and across borders.",
+  "galleryEyebrow": "On the ground",
+  "galleryHeading": "Real vehicles. Real ground. Real results.",
+  "faqEyebrow": "FAQ",
+  "faqHeading": "Questions employers ask us.",
+  "statementQuote": "We don’t just train drivers — we develop people. Alongside national and development partners, SierraZim builds hands-on, market-driven skills that put young people into real, productive work.",
+  "statementPartnersLabel": "In partnership with",
+  "statementPartners": [
+    "NAYCOM",
+    "UNDP",
+    "Sierra Tropical",
+    "Sierra Rutile"
+  ],
+  "stats": [
+    {
+      "value": "7",
+      "label": "Specialised programmes, classroom to certification"
+    },
+    {
+      "value": "3",
+      "label": "Countries delivered in — Sierra Leone, Mozambique & Côte d’Ivoire"
+    },
+    {
+      "value": "8+",
+      "label": "Named clients & development partners"
+    },
+    {
+      "value": "100%",
+      "label": "Assessed before we certify — theory and practical"
+    }
+  ]
+}

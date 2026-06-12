@@ -1,0 +1,77 @@
+{
+  "client": "DADTCO Mozambique",
+  "sector": "Agro-processing",
+  "location": "Mozambique",
+  "year": "2018",
+  "title": "Cross-border driver & operator training for DADTCO Mozambique",
+  "summary": "A full defensive-driving and operator training programme delivered on the ground in Mozambique — classroom, practical and certification — for DADTCO's cassava-processing fleet.",
+  "overview": "DADTCO (Dutch Agricultural Development & Trading Company) runs mobile cassava processing across Mozambique, with a fleet of heavy trucks, light vehicles and field bikes. SierraZim deployed its instructors to deliver a complete training programme on site — proof that training done by experts travels across borders.",
+  "delivered": [
+    "Oral and theory classroom training on road safety and vehicle knowledge",
+    "Practical defensive driving on a purpose-laid field course",
+    "Heavy-vehicle and light-vehicle driver training",
+    "Technical skills assessment to international standards",
+    "Certification for drivers who passed theory and practical"
+  ],
+  "outcomes": [
+    "A certified, competent driving team across the DADTCO fleet",
+    "Defensive-driving discipline embedded for safer daily operations",
+    "Graduates certified on completion and ready for work"
+  ],
+  "services": [
+    "heavy-vehicle-defensive-driving",
+    "light-vehicle-defensive-driving",
+    "theory-and-classroom-training"
+  ],
+  "image": "dadtco-heavy-truck.jpg",
+  "imageAlt": "DADTCO Mozambique heavy haulage truck on the SierraZim training ground",
+  "gallery": [
+    {
+      "image": "instructor-truck-course.jpg",
+      "alt": "Instructor leading a heavy-vehicle driver through the cone course in Mozambique"
+    },
+    {
+      "image": "heavy-truck-side.jpg",
+      "alt": "DADTCO heavy haulage truck on the field training ground"
+    },
+    {
+      "image": "truck-cone-course.jpg",
+      "alt": "Truck and safety cones laid out for a manoeuvring exercise"
+    },
+    {
+      "image": "light-vehicle-hilux.jpg",
+      "alt": "Light vehicle navigating the defensive-driving cone course"
+    },
+    {
+      "image": "motorbike-training-team.jpg",
+      "alt": "Training team with field bikes during the programme"
+    },
+    {
+      "image": "classroom-briefing.jpg",
+      "alt": "Classroom briefing during oral and theory training"
+    },
+    {
+      "image": "graduation-certificates.jpg",
+      "alt": "DADTCO graduates holding their completion certificates"
+    },
+    {
+      "image": "dadtco-sunset.jpg",
+      "alt": "The training truck and cone course at golden hour during the DADTCO programme, Mozambique"
+    },
+    {
+      "image": "dadtco-hilux-side.jpg",
+      "alt": "A light vehicle working the cone course on red earth, DADTCO programme, Mozambique"
+    },
+    {
+      "image": "dadtco-classroom.jpg",
+      "alt": "Trainees seated for a theory and oral classroom session, DADTCO programme, Mozambique"
+    },
+    {
+      "image": "dadtco-graduates.jpg",
+      "alt": "Graduates holding certificates after passing the DADTCO programme, Mozambique"
+    }
+  ],
+  "realPhotos": true,
+  "featured": true,
+  "order": 0
+}

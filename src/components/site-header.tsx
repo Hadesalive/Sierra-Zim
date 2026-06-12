@@ -12,10 +12,11 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
-import { mainNav, site } from "@/lib/site";
+import { mainNav } from "@/lib/site";
+import type { SiteSettings } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
-export function SiteHeader() {
+export function SiteHeader({ site }: { site: SiteSettings }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -74,7 +75,7 @@ export function SiteHeader() {
         )}
       >
         <Container className="flex h-[68px] items-center justify-between gap-4">
-          <Logo />
+          <Logo name={site.name} />
 
           <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary">
             {mainNav.map((item) => (

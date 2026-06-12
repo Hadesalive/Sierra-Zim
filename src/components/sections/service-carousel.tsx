@@ -6,9 +6,19 @@ import Link from "next/link";
 import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { services } from "@/lib/site";
+import type { ProgrammeItem } from "@/lib/content";
 
-export function ServiceCarousel() {
+export function ServiceCarousel({
+  programmes,
+  eyebrow,
+  heading,
+  intro,
+}: {
+  programmes: ProgrammeItem[];
+  eyebrow: string;
+  heading: string;
+  intro: string;
+}) {
   const scroller = useRef<HTMLDivElement>(null);
 
   const scroll = (dir: 1 | -1) => {
@@ -24,14 +34,11 @@ export function ServiceCarousel() {
       <Container>
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-2xl">
-            <Eyebrow index="02">Programmes</Eyebrow>
+            <Eyebrow index="02">{eyebrow}</Eyebrow>
             <h2 className="mt-5 font-display text-4xl font-extrabold leading-[1.02] text-ink sm:text-5xl">
-              Training for every class of vehicle.
+              {heading}
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-              Seven specialised programmes — each pairing classroom theory with
-              practical, on-vehicle training and ending in certification.
-            </p>
+            <p className="mt-5 text-lg leading-relaxed text-ink-soft">{intro}</p>
           </div>
 
           <div className="flex items-center gap-3">
@@ -39,7 +46,7 @@ export function ServiceCarousel() {
               type="button"
               onClick={() => scroll(-1)}
               aria-label="Previous programmes"
-              className="flex size-12 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink/40 hover:bg-ink/[0.04]"
+              className="flex size-12 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink/40 hover:bg-ink/4"
             >
               <ArrowLeftIcon weight="bold" className="size-5" />
             </button>
@@ -47,7 +54,7 @@ export function ServiceCarousel() {
               type="button"
               onClick={() => scroll(1)}
               aria-label="Next programmes"
-              className="flex size-12 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink/40 hover:bg-ink/[0.04]"
+              className="flex size-12 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink/40 hover:bg-ink/4"
             >
               <ArrowRightIcon weight="bold" className="size-5" />
             </button>
@@ -58,15 +65,15 @@ export function ServiceCarousel() {
             right edge bleeds to the viewport so cards scroll all the way out. */}
         <div
           ref={scroller}
-          className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 [margin-right:calc(50%_-_50vw)] lg:gap-8"
+          className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 mr-[calc(50%-50vw)] lg:gap-8"
         >
-          {services.map((service) => (
+          {programmes.map((service) => (
             <article
               key={service.slug}
               className="group w-[80vw] shrink-0 snap-start sm:w-[440px] lg:w-[520px]"
             >
               <Link href={`/services/${service.slug}`} className="block">
-                <div className="relative aspect-[5/4] overflow-hidden rounded-2xl">
+                <div className="relative aspect-5/4 overflow-hidden rounded-2xl">
                   <Image
                     src={service.image}
                     alt={service.imageAlt}

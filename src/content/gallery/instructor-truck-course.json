@@ -1,0 +1,13 @@
+{
+  "caption": "Practical heavy-vehicle training",
+  "alt": "Instructor guiding a heavy-vehicle driver through a cone course",
+  "media": {
+    "discriminant": "image",
+    "value": {
+      "image": "instructor-truck-course.jpg",
+      "width": 1536,
+      "height": 1152
+    }
+  },
+  "order": 0
+}

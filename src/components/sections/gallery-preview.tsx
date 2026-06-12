@@ -3,45 +3,25 @@ import Link from "next/link";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
+import { getGallery, getHome } from "@/lib/content";
 import { sectionToneClass, type SectionTone } from "@/lib/section";
 import { cn } from "@/lib/utils";
 
-const tiles = [
-  {
-    src: "/gallery/dadtco-heavy-truck.jpg",
-    alt: "DADTCO Mozambique heavy haulage truck on a SierraZim training ground",
-    caption: "DADTCO Mozambique",
-    className: "sm:col-span-2 sm:row-span-2",
-  },
-  {
-    src: "/gallery/graduation-certificates.jpg",
-    alt: "SierraZim graduates holding their completion certificates",
-    caption: "Certified graduates",
-    className: "sm:col-span-2",
-  },
-  {
-    src: "/gallery/light-vehicle-hilux.jpg",
-    alt: "Light vehicle navigating a defensive-driving cone course",
-    caption: "Defensive driving",
-    className: "",
-  },
-  {
-    src: "/gallery/motorbike-training-team.jpg",
-    alt: "SierraZim training team on a field programme",
-    caption: "On-site team",
-    className: "",
-  },
-];
+// Bento spans applied to the first few gallery items, by index.
+const spans = ["sm:col-span-2 sm:row-span-2", "sm:col-span-2", "", ""];
 
-export function GalleryPreview({ tone = "tint" }: { tone?: SectionTone }) {
+export async function GalleryPreview({ tone = "tint" }: { tone?: SectionTone }) {
+  const [home, allGallery] = await Promise.all([getHome(), getGallery()]);
+  const tiles = allGallery.filter((g) => g.type !== "video").slice(0, 4);
+
   return (
     <section className={cn("border-b border-line", sectionToneClass[tone])}>
       <Container className="py-16 lg:py-24">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
-            <Eyebrow index="06">On the ground</Eyebrow>
+            <Eyebrow index="06">{home.galleryEyebrow}</Eyebrow>
             <h2 className="mt-5 max-w-2xl font-display text-4xl font-extrabold leading-[1.02] text-ink sm:text-5xl">
-              Real vehicles. Real ground. Real results.
+              {home.galleryHeading}
             </h2>
           </div>
           <Link
@@ -57,10 +37,10 @@ export function GalleryPreview({ tone = "tint" }: { tone?: SectionTone }) {
         </div>
 
         <div className="mt-10 grid auto-rows-[200px] grid-cols-1 gap-3 sm:grid-cols-4 sm:auto-rows-[180px] lg:auto-rows-[210px]">
-          {tiles.map((t) => (
+          {tiles.map((t, i) => (
             <figure
               key={t.src}
-              className={`group relative overflow-hidden border border-ink/15 ${t.className}`}
+              className={`group relative overflow-hidden border border-ink/15 ${spans[i] ?? ""}`}
             >
               <Image
                 src={t.src}

@@ -1,0 +1,25 @@
+{
+  "name": "SierraZim Training Academy",
+  "shortName": "SierraZim",
+  "legalName": "Sierrazim Limited",
+  "tagline": "Solution to All Your Training Needs",
+  "description": "SierraZim Training Academy trains, assesses and certifies drivers and heavy-equipment operators in Makeni, Northern Province, Sierra Leone — classroom theory, oral examination and hands-on practical on the yard, certified only when both theory and practical are passed.",
+  "email": "info@sierrazim.com",
+  "phonePrimary": "+232 73 077 004",
+  "phoneSecondary": "+232 80 549 288",
+  "whatsapp": "23273077004",
+  "addressCity": "Makeni",
+  "addressRegion": "Northern Province",
+  "addressCountry": "Sierra Leone",
+  "hours": "Monday – Friday, 8:00am – 4:30pm",
+  "leadership": [
+    {
+      "name": "Stephen Mafunga",
+      "role": "Chief Executive Officer"
+    },
+    {
+      "name": "Anastasia R. Zayat",
+      "role": "Managing Director"
+    }
+  ]
+}

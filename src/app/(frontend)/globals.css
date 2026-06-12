@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * SierraZim Training Academy — design tokens
+ * Art direction: "field manual" — warm paper, hairline rules,
+ * forest green + safety amber + red-earth clay, technical mono labels.
+ * ------------------------------------------------------------------ */
+@theme {
+  /* Surfaces & ink — clean, lightly green-cool neutrals (no more cream) */
+  --color-paper: #ffffff;
+  --color-paper-2: #f2f7f3;
+  --color-paper-3: #e7efe9;
+  --color-ink: #14201a;
+  --color-ink-soft: #55635c;
+  --color-line: #e1e9e4;
+  --color-line-strong: #c6d2cb;
+
+  /* Forest green — primary, taken from the logo (Sierra Leone × Zimbabwe green) */
+  --color-forest-50: #e7f6ec;
+  --color-forest-100: #c3e9ce;
+  --color-forest-200: #95d6a7;
+  --color-forest-400: #28a648;
+  --color-forest-500: #0f9531;
+  --color-forest-600: #0b7c29;
+  --color-forest-700: #0a6322;
+  --color-forest-800: #094e1d;
+  --color-forest-900: #073a17;
+  --color-forest-950: #04250f;
+
+  /* Gold — accent, from the bulldozer / Zimbabwe yellow */
+  --color-safety-300: #ffe487;
+  --color-safety-400: #ffc81f;
+  --color-safety-500: #f0c000;
+  --color-safety-600: #8a6300; /* darkened to meet WCAG AA for small text on white */
+
+  /* Flag support accents — used sparingly */
+  --color-flag-red: #d81e1e;
+  --color-flag-red-ink: #b11414;
+  --color-flag-blue: #0a63c4;
+  --color-flag-blue-ink: #0a52a3;
+
+  /* Fonts (wired to next/font variables in layout.tsx) */
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-space-mono), ui-monospace, monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv01";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: var(--color-safety-400);
+    color: var(--color-ink);
+  }
+
+  /* Visible, on-brand focus ring for keyboard users */
+  :focus-visible {
+    outline: 2px solid var(--color-forest-600);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Technical eyebrow label — the recurring "field manual" motif */
+  .label-mono {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  /* Dashed "road" divider */
+  .rule-road {
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--color-line-strong) 0 14px,
+      transparent 14px 26px
+    );
+    height: 2px;
+  }
+
+  /* Faint blueprint grid used behind hero / feature panels */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, var(--color-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-line) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}
+
+@layer utilities {
+  .marquee-track {
+    animation: marquee 38s linear infinite;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Card rail: left edge aligns with the centered container content (so it
+     lines up with the heading and the rest of the site), while the rail runs
+     wider toward the viewport. A comfortable right gutter keeps cards off the
+     edge. Left matches Container content-left (max-w-[84rem] + px). */
+  .rail-pad {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .rail-pad {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .rail-pad {
+      padding-left: max(3rem, calc((100vw - 84rem) / 2 + 3rem));
+      padding-right: 3rem;
+    }
+  }
+
+  .rise {
+    animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

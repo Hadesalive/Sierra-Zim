@@ -1,8 +1,12 @@
-import { SITE_URL, site, services, type Service } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
+import type { SiteSettings } from "@/lib/content";
 
 const ORG_ID = `${SITE_URL}/#organization`;
 
-export function organizationLd(): Record<string, unknown> {
+export function organizationLd(
+  site: SiteSettings,
+  knowsAbout: string[],
+): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": ["EducationalOrganization", "LocalBusiness"],
@@ -26,28 +30,72 @@ export function organizationLd(): Record<string, unknown> {
     areaServed: [
       { "@type": "Country", name: "Sierra Leone" },
       { "@type": "Country", name: "Mozambique" },
+      { "@type": "Country", name: "Côte d'Ivoire" },
     ],
+    geo: { "@type": "GeoCoordinates", latitude: 8.8817, longitude: -12.044 },
+    hasMap: site.mapsHref,
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "08:00",
       closes: "16:30",
     },
-    knowsAbout: services.map((s) => s.title),
+    knowsAbout,
   };
 }
 
-export function serviceLd(service: Service): Record<string, unknown> {
+export function courseLd(
+  service: {
+    slug: string;
+    title: string;
+    short: string;
+    image: string;
+  },
+  site: SiteSettings,
+): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": "Course",
     name: service.title,
     description: service.short,
-    serviceType: "Vocational training and certification",
     url: `${SITE_URL}/services/${service.slug}`,
-    image: `${SITE_URL}${service.image}`,
-    provider: { "@id": ORG_ID },
-    areaServed: { "@type": "Country", name: "Sierra Leone" },
+    image: service.image,
+    provider: {
+      "@type": "EducationalOrganization",
+      "@id": ORG_ID,
+      name: site.name,
+      url: SITE_URL,
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "onsite",
+      courseWorkload:
+        "Classroom theory, oral examination and hands-on practical assessment",
+      location: {
+        "@type": "Place",
+        name: site.address.full,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: site.address.city,
+          addressRegion: site.address.region,
+          addressCountry: "SL",
+        },
+      },
+    },
+  };
+}
+
+export function faqLd(
+  items: { q: string; a: string }[],
+): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
   };
 }
 

@@ -1,0 +1,13 @@
+{
+  "caption": "Manoeuvring & control",
+  "alt": "Truck and safety cones laid out for an operator training exercise",
+  "media": {
+    "discriminant": "image",
+    "value": {
+      "image": "truck-cone-course.jpg",
+      "width": 1536,
+      "height": 1152
+    }
+  },
+  "order": 4
+}

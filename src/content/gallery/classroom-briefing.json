@@ -1,0 +1,13 @@
+{
+  "caption": "Oral & theory classroom",
+  "alt": "Classroom briefing during oral and theory training",
+  "media": {
+    "discriminant": "image",
+    "value": {
+      "image": "classroom-briefing.jpg",
+      "width": 1536,
+      "height": 1152
+    }
+  },
+  "order": 9
+}

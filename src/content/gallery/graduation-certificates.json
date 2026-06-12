@@ -1,0 +1,13 @@
+{
+  "caption": "Certified graduates",
+  "alt": "Graduates holding their completion certificates",
+  "media": {
+    "discriminant": "image",
+    "value": {
+      "image": "graduation-certificates.jpg",
+      "width": 1536,
+      "height": 1152
+    }
+  },
+  "order": 6
+}

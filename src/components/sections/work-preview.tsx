@@ -3,12 +3,14 @@ import Link from "next/link";
 import { ArrowUpRightIcon, MapPinIcon } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { caseStudies } from "@/lib/site";
+import { getCaseStudies, getHome } from "@/lib/content";
 import { sectionToneClass, type SectionTone } from "@/lib/section";
 import { cn } from "@/lib/utils";
 
-export function WorkPreview({ tone = "white" }: { tone?: SectionTone }) {
+export async function WorkPreview({ tone = "white" }: { tone?: SectionTone }) {
+  const [caseStudies, home] = await Promise.all([getCaseStudies(), getHome()]);
   const featured = caseStudies.find((c) => c.featured) ?? caseStudies[0];
+  if (!featured) return null; // no case studies yet — skip the section
   const others = caseStudies.filter((c) => c.slug !== featured.slug).slice(0, 2);
   const items = [featured, ...others];
 
@@ -17,9 +19,9 @@ export function WorkPreview({ tone = "white" }: { tone?: SectionTone }) {
       <Container className="py-16 lg:py-24">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-2xl">
-            <Eyebrow index="05">Selected work</Eyebrow>
+            <Eyebrow index="05">{home.workEyebrow}</Eyebrow>
             <h2 className="mt-5 font-display text-4xl font-extrabold leading-[1.02] text-ink sm:text-5xl">
-              Trusted to deliver, on site and across borders.
+              {home.workHeading}
             </h2>
           </div>
           <Link
@@ -41,7 +43,7 @@ export function WorkPreview({ tone = "white" }: { tone?: SectionTone }) {
               href={`/portfolio/${c.slug}`}
               className="group flex flex-col border-b border-r border-line bg-paper"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-16/10 overflow-hidden">
                 <Image
                   src={c.image}
                   alt={c.imageAlt}

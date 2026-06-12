@@ -7,9 +7,10 @@ import {
   WhatsappLogoIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "@/components/ui/container";
-import { site } from "@/lib/site";
+import { getHome, getSite } from "@/lib/content";
 
-export function Hero() {
+export async function Hero() {
+  const [home, site] = await Promise.all([getHome(), getSite()]);
   return (
     <section className="relative overflow-hidden bg-paper pt-14 pb-10 sm:pt-20 lg:pt-24 lg:pb-16">
       {/* subtle dot texture */}
@@ -27,23 +28,20 @@ export function Hero() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Left — copy */}
           <div className="max-w-2xl">
-            <p className="mb-5 text-sm font-semibold">
-              <span className="text-flag-blue">Sierra&nbsp;Leone&rsquo;s</span>{" "}
-              <span className="text-forest-700">driver &amp; operator</span>{" "}
-              <span className="text-flag-red">training academy</span>
+            <p className="mb-5 text-sm font-semibold text-ink/70">
+              <span className="text-forest-700">{home.heroEyebrowAccent}</span>{" "}
+              {home.heroEyebrowRest}
             </p>
 
             <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-[4.4rem]">
-              Trained to drive.
+              {home.heroTitleLine1}
               <br />
-              <span className="text-forest-700">Certified</span> to standard.
+              <span className="text-forest-700">{home.heroTitleAccent}</span>{" "}
+              {home.heroTitleLine2}
             </h1>
 
-            <p className="mt-6 max-w-xl text-base font-light leading-relaxed text-ink/60 sm:text-lg md:text-xl">
-              Defensive driving, heavy-vehicle, surface mobile equipment and
-              agriculture operator training — with real assessment and
-              certification. Trusted by leading mines, farms and fleets across
-              West Africa.
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/70 sm:text-lg md:text-xl">
+              {home.heroSubhead}
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -59,7 +57,7 @@ export function Hero() {
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-ink/15 px-7 py-3.5 text-base font-semibold text-ink transition-all duration-200 hover:border-ink/30 hover:bg-ink/[0.04]"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-ink/15 px-7 py-3.5 text-base font-semibold text-ink transition-all duration-200 hover:border-ink/30 hover:bg-ink/4"
               >
                 Explore programmes
               </Link>
@@ -79,8 +77,9 @@ export function Hero() {
                 </a>
                 <span className="h-4 w-px bg-ink/15" aria-hidden />
                 <a
-                  href={`https://wa.me/${site.whatsapp}`}
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink/50 transition-colors hover:text-forest-700"
+                  href={site.whatsappHref}
+                  rel="noopener"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink/70 transition-colors hover:text-forest-700"
                 >
                   <WhatsappLogoIcon weight="fill" className="size-4" />
                   WhatsApp us
@@ -95,7 +94,7 @@ export function Hero() {
               className="absolute inset-0 scale-110 rounded-3xl bg-forest-600/10 blur-3xl"
               aria-hidden
             />
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative aspect-4/3 overflow-hidden rounded-2xl shadow-2xl">
               <Image
                 src="/gallery/instructor-truck-course.jpg"
                 alt="SierraZim instructor leading a heavy-vehicle defensive driving course on a field training ground"
@@ -113,8 +112,8 @@ export function Hero() {
                 <SealCheckIcon weight="fill" className="size-6" />
               </span>
               <div className="leading-tight">
-                <p className="text-sm font-semibold text-ink">Assessed &amp; certified</p>
-                <p className="text-xs text-ink/50">Theory + practical, every time</p>
+                <p className="text-sm font-semibold text-ink">{home.heroPillTitle}</p>
+                <p className="text-xs text-ink/60">{home.heroPillSubtitle}</p>
               </div>
             </div>
           </div>

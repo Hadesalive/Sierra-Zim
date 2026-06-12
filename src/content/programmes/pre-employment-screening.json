@@ -1,0 +1,17 @@
+{
+  "title": "Pre-Employment Screening & Consultancy",
+  "short": "Independent driver and operator assessment, on-the-job training and consultancy for employers.",
+  "description": "Employers rely on SierraZim to verify driver and operator competence before they hire. We provide independent pre-employment screening assessments, technical skills evaluation, on-the-job training and consultancy services, giving you confidence that every driver and operator on your fleet meets the standard before they get behind the wheel.",
+  "features": [
+    "Independent competence assessment",
+    "Technical skills evaluation",
+    "On-the-job training",
+    "Workforce consultancy"
+  ],
+  "image": "pickup-maneuvering.jpg",
+  "imageAlt": "Pre-employment driving assessment in progress",
+  "audience": "Employers who need to verify driver and operator competence before they hire.",
+  "format": "Independent assessment, technical skills evaluation and on-the-job training.",
+  "certification": "An honest, documented read on competency.",
+  "order": 6
+}

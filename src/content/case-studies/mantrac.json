@@ -1,0 +1,29 @@
+{
+  "client": "Mantrac",
+  "sector": "Equipment & machinery",
+  "location": "Sierra Leone",
+  "year": "Ongoing",
+  "title": "Operator training for heavy equipment",
+  "summary": "Operator training and certification supporting Mantrac's heavy equipment and machinery customers.",
+  "overview": "SierraZim partners on operator training for heavy equipment and machinery, combining classroom theory with practical, hands-on instruction and certification for competent, confident operators.",
+  "delivered": [
+    "Equipment operator training",
+    "Theory and practical instruction",
+    "Technical skills assessment",
+    "Operator certification"
+  ],
+  "outcomes": [
+    "Competent, certified equipment operators",
+    "Safer machine handling on site"
+  ],
+  "services": [
+    "surface-mobile-equipment-training",
+    "pre-employment-screening"
+  ],
+  "image": "light-vehicle-hilux.jpg",
+  "imageAlt": "Vehicle and equipment training in the field",
+  "gallery": [],
+  "realPhotos": false,
+  "featured": false,
+  "order": 5
+}

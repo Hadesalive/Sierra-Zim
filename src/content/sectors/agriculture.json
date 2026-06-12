@@ -1,0 +1,18 @@
+{
+  "name": "Agriculture & agribusiness",
+  "title": "Training for agriculture & agribusiness",
+  "intro": "We deliver agriculture equipment training and mechanical apprenticeships that build hands-on, market-driven skills — working with agribusinesses such as Sierra Tropical and in support of NAYCOM and UNDP youth programmes.",
+  "metaDescription": "Agriculture equipment operator training and mechanical apprenticeships in Sierra Leone — with Sierra Tropical, NAYCOM and UNDP.",
+  "image": "motorbike-training-team.jpg",
+  "imageAlt": "Training team during an agriculture and equipment programme",
+  "programmes": [
+    "agriculture-equipment-training",
+    "light-vehicle-defensive-driving",
+    "theory-and-classroom-training"
+  ],
+  "clients": [
+    "sierra-tropical",
+    "naycom-and-undp"
+  ],
+  "order": 1
+}

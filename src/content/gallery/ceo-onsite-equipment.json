@@ -1,0 +1,13 @@
+{
+  "caption": "On site with our clients",
+  "alt": "SierraZim team on site with a client at a processing plant",
+  "media": {
+    "discriminant": "image",
+    "value": {
+      "image": "ceo-onsite-equipment.jpg",
+      "width": 1152,
+      "height": 1536
+    }
+  },
+  "order": 3
+}
