@@ -1,9 +1,12 @@
-import { SITE_URL, site, services, type Service } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 import type { SiteSettings } from "@/lib/content";
 
 const ORG_ID = `${SITE_URL}/#organization`;
 
-export function organizationLd(site: SiteSettings): Record<string, unknown> {
+export function organizationLd(
+  site: SiteSettings,
+  knowsAbout: string[],
+): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": ["EducationalOrganization", "LocalBusiness"],
@@ -37,37 +40,26 @@ export function organizationLd(site: SiteSettings): Record<string, unknown> {
       opens: "08:00",
       closes: "16:30",
     },
-    knowsAbout: services.map((s) => s.title),
+    knowsAbout,
   };
 }
 
-export function serviceLd(service: Service): Record<string, unknown> {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: service.title,
-    description: service.short,
-    serviceType: "Vocational training and certification",
-    url: `${SITE_URL}/services/${service.slug}`,
-    image: `${SITE_URL}${service.image}`,
-    provider: { "@id": ORG_ID },
-    areaServed: { "@type": "Country", name: "Sierra Leone" },
-  };
-}
-
-export function courseLd(service: {
-  slug: string;
-  title: string;
-  short: string;
-  image: string;
-}): Record<string, unknown> {
+export function courseLd(
+  service: {
+    slug: string;
+    title: string;
+    short: string;
+    image: string;
+  },
+  site: SiteSettings,
+): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": "Course",
     name: service.title,
     description: service.short,
     url: `${SITE_URL}/services/${service.slug}`,
-    image: `${SITE_URL}${service.image}`,
+    image: service.image,
     provider: {
       "@type": "EducationalOrganization",
       "@id": ORG_ID,

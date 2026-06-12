@@ -75,7 +75,7 @@ export function SiteHeader({ site }: { site: SiteSettings }) {
         )}
       >
         <Container className="flex h-[68px] items-center justify-between gap-4">
-          <Logo />
+          <Logo name={site.name} />
 
           <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary">
             {mainNav.map((item) => (

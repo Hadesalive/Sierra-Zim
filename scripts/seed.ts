@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any -- one-off migration over
+   arbitrary, untyped Keystatic JSON; `any` is appropriate for the source shapes. */
 import fs from "fs";
 import path from "path";
 

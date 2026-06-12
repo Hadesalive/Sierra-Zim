@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const RATIO = 348 / 288;
@@ -9,15 +8,17 @@ export function Logo({
   height = 44,
   withWordmark = true,
   className,
+  name = "SierraZim Training Academy",
 }: {
   height?: number;
   withWordmark?: boolean;
   className?: string;
+  name?: string;
 }) {
   return (
     <Link
       href="/"
-      aria-label={`${site.name} — home`}
+      aria-label={`${name} — home`}
       className={cn("inline-flex items-center gap-3", className)}
     >
       <Image

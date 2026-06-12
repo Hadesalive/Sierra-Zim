@@ -7,7 +7,7 @@ import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { JsonLd } from "@/components/json-ld";
 import { organizationLd } from "@/lib/structured-data";
 import { SITE_URL } from "@/lib/site";
-import { getSite } from "@/lib/content";
+import { getSite, getProgrammes } from "@/lib/content";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -87,14 +87,14 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const site = await getSite();
+  const [site, programmes] = await Promise.all([getSite(), getProgrammes()]);
   return (
     <html
       lang="en"
       className={`${bricolage.variable} ${hanken.variable} ${spaceMono.variable} antialiased`}
     >
       <body className="flex min-h-dvh flex-col bg-paper text-ink">
-        <JsonLd data={organizationLd(site)} />
+        <JsonLd data={organizationLd(site, programmes.map((p) => p.title))} />
         <SiteHeader site={site} />
         <main className="flex-1">{children}</main>
         <SiteFooter />

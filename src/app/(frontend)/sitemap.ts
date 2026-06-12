@@ -1,8 +1,14 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL, services, caseStudies, sectors } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
+import { getProgrammes, getCaseStudies, getSectors } from "@/lib/content";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
+  const [services, caseStudies, sectors] = await Promise.all([
+    getProgrammes(),
+    getCaseStudies(),
+    getSectors(),
+  ]);
 
   const staticRoutes = [
     { path: "/", priority: 1, changeFrequency: "monthly" as const },

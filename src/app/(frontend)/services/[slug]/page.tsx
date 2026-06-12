@@ -12,8 +12,7 @@ import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button-link";
 import { JsonLd } from "@/components/json-ld";
 import { courseLd, breadcrumbLd } from "@/lib/structured-data";
-import { site } from "@/lib/site";
-import { getProgramme, getProgrammes } from "@/lib/content";
+import { getProgramme, getProgrammes, getSite } from "@/lib/content";
 import { programmeIcon, ProgrammeIcon } from "@/lib/icons";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -25,7 +24,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
-  const service = await getProgramme(slug);
+  const [service, site] = await Promise.all([getProgramme(slug), getSite()]);
   if (!service) return {};
   return {
     title: service.title,
@@ -41,7 +40,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function ServiceDetailPage({ params }: Params) {
   const { slug } = await params;
-  const programmes = await getProgrammes();
+  const [programmes, site] = await Promise.all([getProgrammes(), getSite()]);
   const service = programmes.find((p) => p.slug === slug);
   if (!service) notFound();
 
@@ -50,7 +49,7 @@ export default async function ServiceDetailPage({ params }: Params) {
 
   return (
     <>
-      <JsonLd data={courseLd(service)} />
+      <JsonLd data={courseLd(service, site)} />
       <JsonLd
         data={breadcrumbLd([
           { name: "Home", path: "/" },

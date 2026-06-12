@@ -23,10 +23,13 @@ const relSlug = (r: unknown): string | null =>
     ? (r as { slug: string }).slug
     : null;
 
-type Doc = Record<string, any>;
+type Doc = Record<string, unknown>;
 
 /** Coerce an unknown Payload field into a typed array of docs (concrete, not `any`). */
 const arr = (v: unknown): Doc[] => (Array.isArray(v) ? (v as Doc[]) : []);
+
+/** View a precisely-typed Payload global/doc through the loose Doc shape. */
+const asDoc = (v: unknown): Doc => v as Doc;
 
 async function findAll(collection: string, depth = 1): Promise<Doc[]> {
   const p = await payload();
@@ -83,7 +86,7 @@ export type SiteSettings = {
 
 export async function getSite(): Promise<SiteSettings> {
   const p = await payload();
-  const s = (await p.findGlobal({ slug: "site" })) as Doc;
+  const s = asDoc(await p.findGlobal({ slug: "site" }));
   const phonePrimary = str(s?.phonePrimary);
   const phoneSecondary = str(s?.phoneSecondary);
   const city = str(s?.addressCity);
@@ -114,7 +117,7 @@ export async function getSite(): Promise<SiteSettings> {
       full: [city, region, country].filter(Boolean).join(", "),
     },
     hours: str(s?.hours),
-    leadership: (s?.leadership ?? []).map((l: Doc) => ({
+    leadership: arr(s?.leadership).map((l) => ({
       name: str(l.name),
       role: str(l.role),
     })),
@@ -124,7 +127,7 @@ export async function getSite(): Promise<SiteSettings> {
 // --- Home page ---
 export async function getHome() {
   const p = await payload();
-  const h = (await p.findGlobal({ slug: "home" })) as Doc;
+  const h = asDoc(await p.findGlobal({ slug: "home" }));
   return {
     heroEyebrowAccent: str(h?.heroEyebrowAccent),
     heroEyebrowRest: str(h?.heroEyebrowRest),
@@ -169,15 +172,18 @@ export type HomeContent = Awaited<ReturnType<typeof getHome>>;
 // --- Other pages (about / contact / index heroes) ---
 export async function getPages() {
   const p = await payload();
-  const pg = (await p.findGlobal({ slug: "pages" })) as Doc;
-  const hero = (h: Doc | undefined) => ({
-    metaDescription: str(h?.metaDescription),
-    eyebrow: str(h?.eyebrow),
-    title: str(h?.title),
-    intro: str(h?.intro),
-  });
-  const a: Doc = pg?.about ?? {};
-  const c: Doc = pg?.contact ?? {};
+  const pg = asDoc(await p.findGlobal({ slug: "pages" }));
+  const hero = (v: unknown) => {
+    const h = asDoc(v ?? {});
+    return {
+      metaDescription: str(h.metaDescription),
+      eyebrow: str(h.eyebrow),
+      title: str(h.title),
+      intro: str(h.intro),
+    };
+  };
+  const a = asDoc(pg?.about ?? {});
+  const c = asDoc(pg?.contact ?? {});
   return {
     about: {
       metaDescription: str(a.metaDescription),
@@ -263,7 +269,7 @@ export async function getProgrammes(): Promise<ProgrammeItem[]> {
     title: str(d.title),
     short: str(d.short),
     description: str(d.description),
-    features: (d.features ?? []).map((f: Doc) => str(f.feature)).filter(Boolean),
+    features: arr(d.features).map((f) => str(f.feature)).filter(Boolean),
     image: mediaUrl(d.image),
     imageAlt: str(d.imageAlt),
     audience: str(d.audience),
@@ -301,8 +307,8 @@ export async function getSectors(): Promise<SectorItem[]> {
     metaDescription: str(d.metaDescription),
     image: mediaUrl(d.image),
     imageAlt: str(d.imageAlt),
-    programmeSlugs: (d.programmes ?? []).map(relSlug).filter((x: string | null): x is string => Boolean(x)),
-    clientSlugs: (d.clients ?? []).map(relSlug).filter((x: string | null): x is string => Boolean(x)),
+    programmeSlugs: arr(d.programmes).map(relSlug).filter((x): x is string => Boolean(x)),
+    clientSlugs: arr(d.clients).map(relSlug).filter((x): x is string => Boolean(x)),
     order: num(d.order),
   }));
 }
@@ -343,12 +349,12 @@ export async function getCaseStudies(): Promise<CaseStudyItem[]> {
     title: str(d.title),
     summary: str(d.summary),
     overview: str(d.overview),
-    delivered: (d.delivered ?? []).map((x: Doc) => str(x.item)).filter(Boolean),
-    outcomes: (d.outcomes ?? []).map((x: Doc) => str(x.item)).filter(Boolean),
-    serviceSlugs: (d.services ?? []).map(relSlug).filter((x: string | null): x is string => Boolean(x)),
+    delivered: arr(d.delivered).map((x) => str(x.item)).filter(Boolean),
+    outcomes: arr(d.outcomes).map((x) => str(x.item)).filter(Boolean),
+    serviceSlugs: arr(d.services).map(relSlug).filter((x): x is string => Boolean(x)),
     image: mediaUrl(d.image),
     imageAlt: str(d.imageAlt),
-    gallery: (d.gallery ?? []).map((g: Doc) => ({ src: mediaUrl(g.image), alt: str(g.alt) })),
+    gallery: arr(d.gallery).map((g) => ({ src: mediaUrl(g.image), alt: str(g.alt) })),
     realPhotos: Boolean(d.realPhotos),
     featured: Boolean(d.featured),
     order: num(d.order),
