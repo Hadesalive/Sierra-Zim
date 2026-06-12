@@ -68,7 +68,14 @@ export default buildConfig({
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   db: postgresAdapter({
-    pool: { connectionString: process.env.DATABASE_URI || "" },
+    pool: {
+      connectionString: process.env.DATABASE_URI || "",
+      // Force TLS regardless of the connection string's query params. Neon
+      // requires SSL; relying on `?sslmode=require` in the URL is fragile across
+      // environments (a no-sslmode URL set in Vercel fails the build prerender
+      // with "connection is insecure"). This pins it on.
+      ssl: { rejectUnauthorized: false },
+    },
   }),
   sharp,
   typescript: {
