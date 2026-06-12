@@ -66,7 +66,7 @@ export default async function AboutPage() {
         </div>
 
         <div className="relative">
-          <div className="relative aspect-[4/5] border border-ink/15">
+          <div className="relative aspect-4/5 border border-ink/15">
             <Image
               src="/gallery/ceo-onsite-equipment.jpg"
               alt="SierraZim team on site with a client at a processing plant"

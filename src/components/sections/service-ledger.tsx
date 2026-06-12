@@ -26,7 +26,7 @@ export async function ServiceLedger({
             href={`/services/${service.slug}`}
             className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-paper shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
-            <div className="relative aspect-[16/10] overflow-hidden">
+            <div className="relative aspect-16/10 overflow-hidden">
               <Image
                 src={service.image}
                 alt={service.imageAlt}

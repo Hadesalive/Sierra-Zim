@@ -86,7 +86,7 @@ export function ContactForm({
           </a>
           <a
             href={payload.mailto}
-            className="inline-flex items-center gap-2 border border-line px-5 py-3 font-mono text-[0.74rem] uppercase tracking-[0.14em] text-ink transition-colors hover:bg-ink/[0.04]"
+            className="inline-flex items-center gap-2 border border-line px-5 py-3 font-mono text-[0.74rem] uppercase tracking-[0.14em] text-ink transition-colors hover:bg-ink/4"
           >
             <EnvelopeSimpleIcon weight="bold" className="size-4" />
             Email us instead

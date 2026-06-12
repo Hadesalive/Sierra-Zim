@@ -158,7 +158,7 @@ export default async function CaseStudyPage({ params }: Params) {
                 {study.gallery.map((g) => (
                   <figure
                     key={g.src}
-                    className="relative aspect-[4/3] overflow-hidden border border-ink/15"
+                    className="relative aspect-4/3 overflow-hidden border border-ink/15"
                   >
                     <Image
                       src={g.src}
@@ -242,7 +242,7 @@ export default async function CaseStudyPage({ params }: Params) {
                 href={`/portfolio/${c.slug}`}
                 className="group flex flex-col border-b border-r border-line bg-paper"
               >
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className="relative aspect-16/10 overflow-hidden">
                   <Image
                     src={c.image}
                     alt={c.imageAlt}

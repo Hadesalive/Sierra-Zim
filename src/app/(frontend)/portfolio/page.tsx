@@ -49,7 +49,7 @@ export default async function PortfolioPage() {
           href={`/portfolio/${featured.slug}`}
           className="group mt-8 grid overflow-hidden border border-line lg:grid-cols-2"
         >
-          <div className="relative aspect-[4/3] lg:aspect-auto">
+          <div className="relative aspect-4/3 lg:aspect-auto">
             <Image
               src={featured.image}
               alt={featured.imageAlt}
@@ -97,7 +97,7 @@ export default async function PortfolioPage() {
                 href={`/portfolio/${c.slug}`}
                 className="group flex flex-col border-b border-r border-line bg-paper"
               >
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className="relative aspect-16/10 overflow-hidden">
                   <Image
                     src={c.image}
                     alt={c.imageAlt}

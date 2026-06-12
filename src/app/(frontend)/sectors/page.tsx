@@ -48,7 +48,7 @@ export default async function SectorsPage() {
               href={`/sectors/${s.slug}`}
               className="group flex flex-col overflow-hidden border border-line bg-paper transition-shadow hover:shadow-lg"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-16/10 overflow-hidden">
                 <Image
                   src={s.image}
                   alt={s.imageAlt}

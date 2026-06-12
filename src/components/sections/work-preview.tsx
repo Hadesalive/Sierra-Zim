@@ -42,7 +42,7 @@ export async function WorkPreview({ tone = "white" }: { tone?: SectionTone }) {
               href={`/portfolio/${c.slug}`}
               className="group flex flex-col border-b border-r border-line bg-paper"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-16/10 overflow-hidden">
                 <Image
                   src={c.image}
                   alt={c.imageAlt}

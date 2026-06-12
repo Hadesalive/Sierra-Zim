@@ -57,7 +57,7 @@ export async function Hero() {
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-ink/15 px-7 py-3.5 text-base font-semibold text-ink transition-all duration-200 hover:border-ink/30 hover:bg-ink/[0.04]"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-ink/15 px-7 py-3.5 text-base font-semibold text-ink transition-all duration-200 hover:border-ink/30 hover:bg-ink/4"
               >
                 Explore programmes
               </Link>
@@ -94,7 +94,7 @@ export async function Hero() {
               className="absolute inset-0 scale-110 rounded-3xl bg-forest-600/10 blur-3xl"
               aria-hidden
             />
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative aspect-4/3 overflow-hidden rounded-2xl shadow-2xl">
               <Image
                 src="/gallery/instructor-truck-course.jpg"
                 alt="SierraZim instructor leading a heavy-vehicle defensive driving course on a field training ground"

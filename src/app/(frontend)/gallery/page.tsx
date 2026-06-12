@@ -39,7 +39,7 @@ export default async function GalleryPage() {
       />
 
       <Container className="py-16 lg:py-20">
-        <div className="[column-fill:_balance] gap-4 sm:columns-2 lg:columns-3">
+        <div className="[column-fill:balance] gap-4 sm:columns-2 lg:columns-3">
           {gallery.map((item, i) => (
             <figure
               key={item.src}

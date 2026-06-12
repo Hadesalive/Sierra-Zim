@@ -46,7 +46,7 @@ export function ServiceCarousel({
               type="button"
               onClick={() => scroll(-1)}
               aria-label="Previous programmes"
-              className="flex size-12 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink/40 hover:bg-ink/[0.04]"
+              className="flex size-12 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink/40 hover:bg-ink/4"
             >
               <ArrowLeftIcon weight="bold" className="size-5" />
             </button>
@@ -54,7 +54,7 @@ export function ServiceCarousel({
               type="button"
               onClick={() => scroll(1)}
               aria-label="Next programmes"
-              className="flex size-12 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink/40 hover:bg-ink/[0.04]"
+              className="flex size-12 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-ink/40 hover:bg-ink/4"
             >
               <ArrowRightIcon weight="bold" className="size-5" />
             </button>
@@ -65,7 +65,7 @@ export function ServiceCarousel({
             right edge bleeds to the viewport so cards scroll all the way out. */}
         <div
           ref={scroller}
-          className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 [margin-right:calc(50%_-_50vw)] lg:gap-8"
+          className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2 mr-[calc(50%-50vw)] lg:gap-8"
         >
           {programmes.map((service) => (
             <article
@@ -73,7 +73,7 @@ export function ServiceCarousel({
               className="group w-[80vw] shrink-0 snap-start sm:w-[440px] lg:w-[520px]"
             >
               <Link href={`/services/${service.slug}`} className="block">
-                <div className="relative aspect-[5/4] overflow-hidden rounded-2xl">
+                <div className="relative aspect-5/4 overflow-hidden rounded-2xl">
                   <Image
                     src={service.image}
                     alt={service.imageAlt}
