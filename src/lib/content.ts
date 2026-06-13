@@ -81,12 +81,12 @@ export type SiteSettings = {
   mapsHref: string;
   address: { city: string; region: string; country: string; full: string };
   hours: string;
-  leadership: { name: string; role: string }[];
+  leadership: { name: string; role: string; photo: string }[];
 };
 
 export async function getSite(): Promise<SiteSettings> {
   const p = await payload();
-  const s = asDoc(await p.findGlobal({ slug: "site" }));
+  const s = asDoc(await p.findGlobal({ slug: "site", depth: 1 }));
   const phonePrimary = str(s?.phonePrimary);
   const phoneSecondary = str(s?.phoneSecondary);
   const city = str(s?.addressCity);
@@ -121,6 +121,7 @@ export async function getSite(): Promise<SiteSettings> {
     leadership: arr(s?.leadership).map((l) => ({
       name: str(l.name),
       role: str(l.role),
+      photo: mediaUrl(l.photo),
     })),
   };
 }

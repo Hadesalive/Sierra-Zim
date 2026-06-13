@@ -726,6 +726,7 @@ export interface Site {
     | {
         name?: string | null;
         role?: string | null;
+        photo?: (number | null) | Media;
         id?: string | null;
       }[]
     | null;
@@ -795,7 +796,6 @@ export interface Home {
  */
 export interface AboutPage {
   id: number;
-  metaDescription?: string | null;
   heroEyebrow?: string | null;
   heroTitleLine1?: string | null;
   heroTitleLine2?: string | null;
@@ -823,6 +823,7 @@ export interface AboutPage {
       }[]
     | null;
   clientsHeading?: string | null;
+  metaDescription?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -832,11 +833,11 @@ export interface AboutPage {
  */
 export interface ServicesPage {
   id: number;
-  metaDescription?: string | null;
   eyebrow?: string | null;
   title?: string | null;
   intro?: string | null;
   heroImage?: (number | null) | Media;
+  metaDescription?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -846,11 +847,11 @@ export interface ServicesPage {
  */
 export interface PortfolioPage {
   id: number;
-  metaDescription?: string | null;
   eyebrow?: string | null;
   title?: string | null;
   intro?: string | null;
   heroImage?: (number | null) | Media;
+  metaDescription?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -860,11 +861,11 @@ export interface PortfolioPage {
  */
 export interface GalleryPage {
   id: number;
-  metaDescription?: string | null;
   eyebrow?: string | null;
   title?: string | null;
   intro?: string | null;
   heroImage?: (number | null) | Media;
+  metaDescription?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -874,11 +875,11 @@ export interface GalleryPage {
  */
 export interface SectorsPage {
   id: number;
-  metaDescription?: string | null;
   eyebrow?: string | null;
   title?: string | null;
   intro?: string | null;
   heroImage?: (number | null) | Media;
+  metaDescription?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -888,13 +889,13 @@ export interface SectorsPage {
  */
 export interface ContactPage {
   id: number;
-  metaDescription?: string | null;
   heroEyebrow?: string | null;
   heroTitle?: string | null;
   heroIntro?: string | null;
   heroImage?: (number | null) | Media;
   detailsEyebrow?: string | null;
   detailsHeading?: string | null;
+  metaDescription?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -921,6 +922,7 @@ export interface SiteSelect<T extends boolean = true> {
     | {
         name?: T;
         role?: T;
+        photo?: T;
         id?: T;
       };
   updatedAt?: T;
@@ -989,7 +991,6 @@ export interface HomeSelect<T extends boolean = true> {
  * via the `definition` "about-page_select".
  */
 export interface AboutPageSelect<T extends boolean = true> {
-  metaDescription?: T;
   heroEyebrow?: T;
   heroTitleLine1?: T;
   heroTitleLine2?: T;
@@ -1017,6 +1018,7 @@ export interface AboutPageSelect<T extends boolean = true> {
         id?: T;
       };
   clientsHeading?: T;
+  metaDescription?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -1026,11 +1028,11 @@ export interface AboutPageSelect<T extends boolean = true> {
  * via the `definition` "services-page_select".
  */
 export interface ServicesPageSelect<T extends boolean = true> {
-  metaDescription?: T;
   eyebrow?: T;
   title?: T;
   intro?: T;
   heroImage?: T;
+  metaDescription?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -1040,11 +1042,11 @@ export interface ServicesPageSelect<T extends boolean = true> {
  * via the `definition` "portfolio-page_select".
  */
 export interface PortfolioPageSelect<T extends boolean = true> {
-  metaDescription?: T;
   eyebrow?: T;
   title?: T;
   intro?: T;
   heroImage?: T;
+  metaDescription?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -1054,11 +1056,11 @@ export interface PortfolioPageSelect<T extends boolean = true> {
  * via the `definition` "gallery-page_select".
  */
 export interface GalleryPageSelect<T extends boolean = true> {
-  metaDescription?: T;
   eyebrow?: T;
   title?: T;
   intro?: T;
   heroImage?: T;
+  metaDescription?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -1068,11 +1070,11 @@ export interface GalleryPageSelect<T extends boolean = true> {
  * via the `definition` "sectors-page_select".
  */
 export interface SectorsPageSelect<T extends boolean = true> {
-  metaDescription?: T;
   eyebrow?: T;
   title?: T;
   intro?: T;
   heroImage?: T;
+  metaDescription?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -1082,13 +1084,13 @@ export interface SectorsPageSelect<T extends boolean = true> {
  * via the `definition` "contact-page_select".
  */
 export interface ContactPageSelect<T extends boolean = true> {
-  metaDescription?: T;
   heroEyebrow?: T;
   heroTitle?: T;
   heroIntro?: T;
   heroImage?: T;
   detailsEyebrow?: T;
   detailsHeading?: T;
+  metaDescription?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

@@ -94,8 +94,18 @@ export default async function AboutPage() {
                 key={person.name}
                 className="flex items-center gap-5 border-b border-r border-line bg-paper p-8"
               >
-                <div className="flex size-16 shrink-0 items-center justify-center bg-forest-800 text-paper">
-                  <UserIcon weight="light" className="size-8" />
+                <div className="relative flex size-16 shrink-0 items-center justify-center overflow-hidden bg-forest-800 text-paper">
+                  {person.photo ? (
+                    <Image
+                      src={person.photo}
+                      alt={person.name}
+                      fill
+                      sizes="64px"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <UserIcon weight="light" className="size-8" />
+                  )}
                 </div>
                 <div>
                   <p className="font-display text-2xl font-bold text-ink">

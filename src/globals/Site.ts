@@ -29,6 +29,7 @@ export const Site: GlobalConfig = {
       fields: [
         { name: "name", type: "text" },
         { name: "role", type: "text" },
+        { name: "photo", type: "upload", relationTo: "media", label: "Photo" },
       ],
     },
   ],
