@@ -21,6 +21,13 @@ export const Home: GlobalConfig = {
             { name: "heroPillTitle", type: "text", label: "Hero badge — title" },
             { name: "heroPillSubtitle", type: "text", label: "Hero badge — subtitle" },
             {
+              name: "heroImage",
+              type: "upload",
+              relationTo: "media",
+              label: "Hero image",
+              admin: { description: "The main photo on the home hero. Leave empty to use the default." },
+            },
+            {
               name: "socialImage",
               type: "upload",
               relationTo: "media",
@@ -50,6 +57,13 @@ export const Home: GlobalConfig = {
             { name: "whyUsEyebrow", type: "text", label: "Why us — eyebrow" },
             { name: "whyUsHeading", type: "text", label: "Why us — heading" },
             { name: "whyUsIntro", type: "textarea", label: "Why us — intro" },
+            {
+              name: "whyUsImage",
+              type: "upload",
+              relationTo: "media",
+              label: "Why us — image",
+              admin: { description: "Leave empty to use the default." },
+            },
             { name: "whyUsImageCaption", type: "text", label: "Why us — image caption" },
             { name: "workEyebrow", type: "text", label: "Work — eyebrow" },
             { name: "workHeading", type: "text", label: "Work — heading" },

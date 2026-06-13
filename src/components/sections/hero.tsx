@@ -96,7 +96,7 @@ export async function Hero() {
             />
             <div className="relative aspect-4/3 overflow-hidden rounded-2xl shadow-2xl">
               <Image
-                src="/gallery/instructor-truck-course.jpg"
+                src={home.heroImage || "/gallery/instructor-truck-course.jpg"}
                 alt="SierraZim instructor leading a heavy-vehicle defensive driving course on a field training ground"
                 fill
                 priority

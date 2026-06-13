@@ -30,7 +30,7 @@ export async function WhyUs({ tone = "white" }: { tone?: SectionTone }) {
           <div className="relative mt-10 hidden overflow-hidden rounded-2xl shadow-lg lg:block">
             <div className="relative aspect-4/3">
               <Image
-                src="/gallery/graduation-certificates.jpg"
+                src={home.whyUsImage || "/gallery/graduation-certificates.jpg"}
                 alt="SierraZim graduates holding their completion certificates"
                 fill
                 sizes="40vw"

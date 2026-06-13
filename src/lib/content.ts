@@ -132,6 +132,7 @@ export async function getHome() {
   const h = asDoc(await p.findGlobal({ slug: "home", depth: 1 }));
   return {
     socialImage: mediaUrl(h?.socialImage),
+    heroImage: mediaUrl(h?.heroImage),
     heroEyebrowAccent: str(h?.heroEyebrowAccent),
     heroEyebrowRest: str(h?.heroEyebrowRest),
     heroTitleLine1: str(h?.heroTitleLine1),
@@ -154,6 +155,7 @@ export async function getHome() {
     whyUsEyebrow: str(h?.whyUsEyebrow),
     whyUsHeading: str(h?.whyUsHeading),
     whyUsIntro: str(h?.whyUsIntro),
+    whyUsImage: mediaUrl(h?.whyUsImage),
     whyUsImageCaption: str(h?.whyUsImageCaption),
     workEyebrow: str(h?.workEyebrow),
     workHeading: str(h?.workHeading),

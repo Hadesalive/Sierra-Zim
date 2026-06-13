@@ -747,6 +747,10 @@ export interface Home {
   heroSubhead?: string | null;
   heroPillTitle?: string | null;
   heroPillSubtitle?: string | null;
+  /**
+   * The main photo on the home hero. Leave empty to use the default.
+   */
+  heroImage?: (number | null) | Media;
   socialImage?: (number | null) | Media;
   clientsLabel?: string | null;
   programmesEyebrow?: string | null;
@@ -765,6 +769,10 @@ export interface Home {
   whyUsEyebrow?: string | null;
   whyUsHeading?: string | null;
   whyUsIntro?: string | null;
+  /**
+   * Leave empty to use the default.
+   */
+  whyUsImage?: (number | null) | Media;
   whyUsImageCaption?: string | null;
   workEyebrow?: string | null;
   workHeading?: string | null;
@@ -942,6 +950,7 @@ export interface HomeSelect<T extends boolean = true> {
   heroSubhead?: T;
   heroPillTitle?: T;
   heroPillSubtitle?: T;
+  heroImage?: T;
   socialImage?: T;
   clientsLabel?: T;
   programmesEyebrow?: T;
@@ -960,6 +969,7 @@ export interface HomeSelect<T extends boolean = true> {
   whyUsEyebrow?: T;
   whyUsHeading?: T;
   whyUsIntro?: T;
+  whyUsImage?: T;
   whyUsImageCaption?: T;
   workEyebrow?: T;
   workHeading?: T;
