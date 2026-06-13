@@ -7,10 +7,10 @@ import { ArrowUpRightIcon, MapPinIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { getCaseStudies, getPages } from "@/lib/content";
+import { getCaseStudies, getPortfolioPage } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { portfolioHero } = await getPages();
+  const portfolioHero = await getPortfolioPage();
   return {
     title: "Portfolio",
     description: portfolioHero.metaDescription,
@@ -18,19 +18,18 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       ...ogBase("/portfolio"),
       title: "Portfolio · SierraZim",
-      images: [
-        {
-          url: "/gallery/dadtco-heavy-truck.jpg",
-          alt: "A DADTCO haulage truck on the SierraZim training ground, Mozambique, 2018",
-        },
-      ],
+      images: portfolioHero.image
+        ? [{ url: portfolioHero.image, alt: portfolioHero.title }]
+        : undefined,
     },
   };
 }
 
 export default async function PortfolioPage() {
-  const [caseStudies, pages] = await Promise.all([getCaseStudies(), getPages()]);
-  const hero = pages.portfolioHero;
+  const [caseStudies, hero] = await Promise.all([
+    getCaseStudies(),
+    getPortfolioPage(),
+  ]);
   const featured = caseStudies.find((c) => c.featured) ?? caseStudies[0];
   if (!featured) notFound(); // no case studies yet
   const rest = caseStudies.filter((c) => c.slug !== featured.slug);
@@ -42,7 +41,7 @@ export default async function PortfolioPage() {
         eyebrow={hero.eyebrow}
         title={hero.title}
         intro={hero.intro}
-        image="/gallery/graduation-certificates.jpg"
+        image={hero.image}
         imageAlt="SierraZim graduates holding their completion certificates"
       />
 

@@ -7,7 +7,7 @@ import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { JsonLd } from "@/components/json-ld";
 import { organizationLd } from "@/lib/structured-data";
 import { SITE_URL } from "@/lib/site";
-import { getSite, getProgrammes } from "@/lib/content";
+import { getSite, getProgrammes, getHome } from "@/lib/content";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -29,7 +29,7 @@ const spaceMono = Space_Mono({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const site = await getSite();
+  const [site, home] = await Promise.all([getSite(), getHome()]);
   const titleDefault = `${site.name} — ${site.tagline}`;
   return {
     metadataBase: new URL(SITE_URL),
@@ -60,14 +60,14 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: site.name,
       title: titleDefault,
       description: site.description,
-      images: [
-        {
-          url: "/gallery/instructor-truck-course.jpg",
-          width: 1024,
-          height: 768,
-          alt: "SierraZim instructor leading a heavy-vehicle driver training course",
-        },
-      ],
+      images: home.socialImage
+        ? [
+            {
+              url: home.socialImage,
+              alt: "SierraZim instructor leading a heavy-vehicle driver training course",
+            },
+          ]
+        : undefined,
     },
     // Only the card type here — Next derives per-page twitter title/description/
     // images from each route's openGraph (the home card comes from the root OG).

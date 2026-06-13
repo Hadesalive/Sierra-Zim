@@ -22,8 +22,13 @@ import { Programmes } from "./collections/Programmes";
 import { Sectors } from "./collections/Sectors";
 import { Users } from "./collections/Users";
 import { ValueProps } from "./collections/ValueProps";
+import { AboutPage } from "./globals/AboutPage";
+import { ContactPage } from "./globals/ContactPage";
+import { GalleryPage } from "./globals/GalleryPage";
 import { Home } from "./globals/Home";
-import { Pages } from "./globals/Pages";
+import { PortfolioPage } from "./globals/PortfolioPage";
+import { SectorsPage } from "./globals/SectorsPage";
+import { ServicesPage } from "./globals/ServicesPage";
 import { Site } from "./globals/Site";
 
 const filename = fileURLToPath(import.meta.url);
@@ -64,7 +69,16 @@ export default buildConfig({
     ),
     Users,
   ],
-  globals: [Site, Home, Pages].map(withGlobalRevalidate),
+  globals: [
+    Site,
+    Home,
+    AboutPage,
+    ServicesPage,
+    PortfolioPage,
+    GalleryPage,
+    SectorsPage,
+    ContactPage,
+  ].map(withGlobalRevalidate),
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   db: postgresAdapter({

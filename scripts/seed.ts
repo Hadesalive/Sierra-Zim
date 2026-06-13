@@ -197,24 +197,53 @@ const run = async () => {
     slug: "home",
     data: {
       ...home,
+      socialImage: img("instructor-truck-course.jpg"),
       statementPartners: (home.statementPartners ?? []).map((partner: string) => ({
         partner,
       })),
     },
   });
 
+  // Per-page globals (split out of the old single `pages` global). Each hero
+  // image links to the already-uploaded media by filename via img().
   const pages = readJSON(contentDir("pages.json"));
   await payload.updateGlobal({
-    slug: "pages",
+    slug: "about-page",
     data: {
-      ...pages,
-      about: {
-        ...pages.about,
-        storyBlocks: (pages.about.storyBlocks ?? []).map((text: string) => ({ text })),
-      },
+      ...pages.about,
+      heroImage: img("heavy-truck-side.jpg"),
+      storyImage: img("ceo-onsite-equipment.jpg"),
+      storyBlocks: (pages.about.storyBlocks ?? []).map((text: string) => ({ text })),
     },
   });
-  console.log("• seeded globals: site, home, pages");
+  await payload.updateGlobal({
+    slug: "contact-page",
+    data: {
+      ...pages.contact,
+      metaDescription:
+        "Contact SierraZim Training Academy in Makeni, Sierra Leone — call, email or send an enquiry to enrol your drivers and operators for training and certification.",
+      heroImage: img("classroom-briefing.jpg"),
+    },
+  });
+  await payload.updateGlobal({
+    slug: "services-page",
+    data: { ...pages.servicesHero, heroImage: img("truck-cone-course.jpg") },
+  });
+  await payload.updateGlobal({
+    slug: "portfolio-page",
+    data: { ...pages.portfolioHero, heroImage: img("graduation-certificates.jpg") },
+  });
+  await payload.updateGlobal({
+    slug: "gallery-page",
+    data: { ...pages.galleryHero, heroImage: img("dadtco-heavy-truck.jpg") },
+  });
+  await payload.updateGlobal({
+    slug: "sectors-page",
+    data: { ...pages.sectorsHero, heroImage: img("instructor-truck-course.jpg") },
+  });
+  console.log(
+    "• seeded globals: site, home + about/services/portfolio/gallery/sectors/contact pages",
+  );
 
   console.log("\n✓ SEED COMPLETE");
   process.exit(0);

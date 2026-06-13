@@ -4,10 +4,10 @@ import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
 import { ServiceLedger } from "@/components/sections/service-ledger";
 import { CertificationPath } from "@/components/sections/certification-path";
-import { getPages } from "@/lib/content";
+import { getServicesPage } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { servicesHero } = await getPages();
+  const servicesHero = await getServicesPage();
   return {
     title: "Training Programmes",
     description: servicesHero.metaDescription,
@@ -15,18 +15,15 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       ...ogBase("/services"),
       title: "Training Programmes · SierraZim",
-      images: [
-        {
-          url: "/gallery/truck-cone-course.jpg",
-          alt: "Operator training course set out with cones on a red-earth field",
-        },
-      ],
+      images: servicesHero.image
+        ? [{ url: servicesHero.image, alt: servicesHero.title }]
+        : undefined,
     },
   };
 }
 
 export default async function ServicesPage() {
-  const { servicesHero } = await getPages();
+  const servicesHero = await getServicesPage();
   return (
     <>
       <PageHeader
@@ -34,7 +31,7 @@ export default async function ServicesPage() {
         eyebrow={servicesHero.eyebrow}
         title={servicesHero.title}
         intro={servicesHero.intro}
-        image="/gallery/truck-cone-course.jpg"
+        image={servicesHero.image}
         imageAlt="Operator training course laid out with safety cones"
       />
 

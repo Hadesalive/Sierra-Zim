@@ -11,34 +11,32 @@ import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { ContactForm } from "@/components/contact-form";
-import { getSite, getProgrammes, getPages } from "@/lib/content";
+import { getSite, getProgrammes, getContactPage } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const site = await getSite();
+  const [site, contact] = await Promise.all([getSite(), getContactPage()]);
   return {
     title: "Contact",
-    description: `Enrol your drivers and operators with ${site.name} in ${site.address.city}, ${site.address.country}. Call ${site.phones[0]}, email ${site.email}, or send an enquiry.`,
+    description:
+      contact.metaDescription ||
+      `Enrol your drivers and operators with ${site.name} in ${site.address.city}, ${site.address.country}. Call ${site.phones[0]}, email ${site.email}, or send an enquiry.`,
     alternates: { canonical: "/contact" },
     openGraph: {
       ...ogBase("/contact"),
       title: `Contact · ${site.shortName}`,
-      images: [
-        {
-          url: "/gallery/instructor-truck-course.jpg",
-          alt: "A SierraZim instructor leading a training course on a field ground",
-        },
-      ],
+      images: contact.heroImage
+        ? [{ url: contact.heroImage, alt: "Contact SierraZim Training Academy" }]
+        : undefined,
     },
   };
 }
 
 export default async function ContactPage() {
-  const [site, programmes, pages] = await Promise.all([
+  const [site, programmes, contact] = await Promise.all([
     getSite(),
     getProgrammes(),
-    getPages(),
+    getContactPage(),
   ]);
-  const contact = pages.contact;
   return (
     <>
       <PageHeader
@@ -46,7 +44,7 @@ export default async function ContactPage() {
         eyebrow={contact.heroEyebrow}
         title={contact.heroTitle}
         intro={contact.heroIntro}
-        image="/gallery/classroom-briefing.jpg"
+        image={contact.heroImage}
         imageAlt="Classroom briefing during a SierraZim training session"
       />
 

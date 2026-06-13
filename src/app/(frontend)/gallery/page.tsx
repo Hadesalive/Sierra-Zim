@@ -5,10 +5,10 @@ import { PlayIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
 import { GalleryVideo } from "@/components/gallery-video";
-import { getGallery, getPages } from "@/lib/content";
+import { getGallery, getGalleryPage } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { galleryHero } = await getPages();
+  const galleryHero = await getGalleryPage();
   return {
     title: "Gallery",
     description: galleryHero.metaDescription,
@@ -16,19 +16,15 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       ...ogBase("/gallery"),
       title: "Gallery · SierraZim",
-      images: [
-        {
-          url: "/gallery/dadtco-sunset.jpg",
-          alt: "The training truck and cone course at golden hour, DADTCO, Mozambique, 2018",
-        },
-      ],
+      images: galleryHero.image
+        ? [{ url: galleryHero.image, alt: galleryHero.title }]
+        : undefined,
     },
   };
 }
 
 export default async function GalleryPage() {
-  const [gallery, pages] = await Promise.all([getGallery(), getPages()]);
-  const hero = pages.galleryHero;
+  const [gallery, hero] = await Promise.all([getGallery(), getGalleryPage()]);
   return (
     <>
       <PageHeader
@@ -36,7 +32,7 @@ export default async function GalleryPage() {
         eyebrow={hero.eyebrow}
         title={hero.title}
         intro={hero.intro}
-        image="/gallery/dadtco-heavy-truck.jpg"
+        image={hero.image}
         imageAlt="DADTCO Mozambique heavy haulage truck on the training ground"
       />
 

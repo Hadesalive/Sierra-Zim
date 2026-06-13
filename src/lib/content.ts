@@ -128,8 +128,9 @@ export async function getSite(): Promise<SiteSettings> {
 // --- Home page ---
 export async function getHome() {
   const p = await payload();
-  const h = asDoc(await p.findGlobal({ slug: "home" }));
+  const h = asDoc(await p.findGlobal({ slug: "home", depth: 1 }));
   return {
+    socialImage: mediaUrl(h?.socialImage),
     heroEyebrowAccent: str(h?.heroEyebrowAccent),
     heroEyebrowRest: str(h?.heroEyebrowRest),
     heroTitleLine1: str(h?.heroTitleLine1),
@@ -170,56 +171,74 @@ export async function getHome() {
 }
 export type HomeContent = Awaited<ReturnType<typeof getHome>>;
 
-// --- Other pages (about / contact / index heroes) ---
-export async function getPages() {
+// --- Index pages (Services / Portfolio / Gallery / Sectors) ---
+export type IndexPage = {
+  metaDescription: string;
+  eyebrow: string;
+  title: string;
+  intro: string;
+  image: string;
+};
+
+async function getIndexPage(slug: string): Promise<IndexPage> {
   const p = await payload();
-  const pg = asDoc(await p.findGlobal({ slug: "pages" }));
-  const hero = (v: unknown) => {
-    const h = asDoc(v ?? {});
-    return {
-      metaDescription: str(h.metaDescription),
-      eyebrow: str(h.eyebrow),
-      title: str(h.title),
-      intro: str(h.intro),
-    };
-  };
-  const a = asDoc(pg?.about ?? {});
-  const c = asDoc(pg?.contact ?? {});
+  const g = asDoc(await p.findGlobal({ slug: slug as never, depth: 1 }));
   return {
-    about: {
-      metaDescription: str(a.metaDescription),
-      heroEyebrow: str(a.heroEyebrow),
-      heroTitleLine1: str(a.heroTitleLine1),
-      heroTitleLine2: str(a.heroTitleLine2),
-      heroIntro: str(a.heroIntro),
-      storyEyebrow: str(a.storyEyebrow),
-      storyHeading: str(a.storyHeading),
-      storyBlocks: arr(a.storyBlocks).map((s) => str(s.text)),
-      storyImageCaption: str(a.storyImageCaption),
-      leadershipEyebrow: str(a.leadershipEyebrow),
-      leadershipHeading: str(a.leadershipHeading),
-      locationsEyebrow: str(a.locationsEyebrow),
-      locationsHeading: str(a.locationsHeading),
-      locations: arr(a.locations).map((l) => ({
-        place: str(l.place),
-        note: str(l.note),
-      })),
-      clientsHeading: str(a.clientsHeading),
-    },
-    contact: {
-      heroEyebrow: str(c.heroEyebrow),
-      heroTitle: str(c.heroTitle),
-      heroIntro: str(c.heroIntro),
-      detailsEyebrow: str(c.detailsEyebrow),
-      detailsHeading: str(c.detailsHeading),
-    },
-    servicesHero: hero(pg?.servicesHero),
-    portfolioHero: hero(pg?.portfolioHero),
-    galleryHero: hero(pg?.galleryHero),
-    sectorsHero: hero(pg?.sectorsHero),
+    metaDescription: str(g?.metaDescription),
+    eyebrow: str(g?.eyebrow),
+    title: str(g?.title),
+    intro: str(g?.intro),
+    image: mediaUrl(g?.heroImage),
   };
 }
-export type PagesContent = Awaited<ReturnType<typeof getPages>>;
+
+export const getServicesPage = () => getIndexPage("services-page");
+export const getPortfolioPage = () => getIndexPage("portfolio-page");
+export const getGalleryPage = () => getIndexPage("gallery-page");
+export const getSectorsPage = () => getIndexPage("sectors-page");
+
+// --- About page ---
+export async function getAboutPage() {
+  const p = await payload();
+  const a = asDoc(await p.findGlobal({ slug: "about-page", depth: 1 }));
+  return {
+    metaDescription: str(a?.metaDescription),
+    heroEyebrow: str(a?.heroEyebrow),
+    heroTitleLine1: str(a?.heroTitleLine1),
+    heroTitleLine2: str(a?.heroTitleLine2),
+    heroIntro: str(a?.heroIntro),
+    heroImage: mediaUrl(a?.heroImage),
+    storyEyebrow: str(a?.storyEyebrow),
+    storyHeading: str(a?.storyHeading),
+    storyBlocks: arr(a?.storyBlocks).map((s) => str(s.text)),
+    storyImage: mediaUrl(a?.storyImage),
+    storyImageCaption: str(a?.storyImageCaption),
+    leadershipEyebrow: str(a?.leadershipEyebrow),
+    leadershipHeading: str(a?.leadershipHeading),
+    locationsEyebrow: str(a?.locationsEyebrow),
+    locationsHeading: str(a?.locationsHeading),
+    locations: arr(a?.locations).map((l) => ({
+      place: str(l.place),
+      note: str(l.note),
+    })),
+    clientsHeading: str(a?.clientsHeading),
+  };
+}
+
+// --- Contact page ---
+export async function getContactPage() {
+  const p = await payload();
+  const c = asDoc(await p.findGlobal({ slug: "contact-page", depth: 1 }));
+  return {
+    metaDescription: str(c?.metaDescription),
+    heroEyebrow: str(c?.heroEyebrow),
+    heroTitle: str(c?.heroTitle),
+    heroIntro: str(c?.heroIntro),
+    heroImage: mediaUrl(c?.heroImage),
+    detailsEyebrow: str(c?.detailsEyebrow),
+    detailsHeading: str(c?.detailsHeading),
+  };
+}
 
 // --- Gallery (image / video) ---
 export async function getGallery(): Promise<GalleryItem[]> {

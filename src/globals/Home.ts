@@ -2,9 +2,9 @@ import type { GlobalConfig } from "payload";
 
 export const Home: GlobalConfig = {
   slug: "home",
-  label: "Home page",
+  label: "Home Page",
   access: { read: () => true },
-  admin: { group: "Settings" },
+  admin: { group: "Pages" },
   fields: [
     {
       type: "tabs",
@@ -20,6 +20,12 @@ export const Home: GlobalConfig = {
             { name: "heroSubhead", type: "textarea", label: "Hero subhead" },
             { name: "heroPillTitle", type: "text", label: "Hero badge — title" },
             { name: "heroPillSubtitle", type: "text", label: "Hero badge — subtitle" },
+            {
+              name: "socialImage",
+              type: "upload",
+              relationTo: "media",
+              label: "Default social / OG image",
+            },
           ],
         },
         {

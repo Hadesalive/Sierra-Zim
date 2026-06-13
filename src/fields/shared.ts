@@ -62,15 +62,20 @@ export const orderField: Field = {
   },
 };
 
-/** The shared shape of an index-page hero (Services / Portfolio / Gallery / Sectors). */
-export const indexHeroGroup = (name: string, label: string): Field => ({
-  name,
-  type: "group",
+/** A hero / social image upload (resolves to a Blob URL on the frontend). */
+export const heroImageField = (label = "Hero / social image"): Field => ({
+  name: "heroImage",
+  type: "upload",
+  relationTo: "media",
   label,
-  fields: [
-    { name: "metaDescription", type: "textarea", label: "Meta description" },
-    { name: "eyebrow", type: "text" },
-    { name: "title", type: "text" },
-    { name: "intro", type: "textarea" },
-  ],
 });
+
+/** Fields shared by the four index-page globals (Services / Portfolio / Gallery /
+ *  Sectors): SEO copy, hero copy and an editable hero/social image. */
+export const indexPageFields = (): Field[] => [
+  { name: "metaDescription", type: "textarea", label: "Meta description" },
+  { name: "eyebrow", type: "text" },
+  { name: "title", type: "text" },
+  { name: "intro", type: "textarea" },
+  heroImageField(),
+];

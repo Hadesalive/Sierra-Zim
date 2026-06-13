@@ -5,10 +5,10 @@ import Image from "next/image";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHeader } from "@/components/ui/page-header";
 import { Container } from "@/components/ui/container";
-import { getSectors, getPages } from "@/lib/content";
+import { getSectors, getSectorsPage } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { sectorsHero } = await getPages();
+  const sectorsHero = await getSectorsPage();
   return {
     title: "Sectors we train",
     description: sectorsHero.metaDescription,
@@ -16,21 +16,16 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       ...ogBase("/sectors"),
       title: "Sectors we train · SierraZim",
-      description:
-        "Training and certification shaped around the equipment and conditions each sector works in.",
-      images: [
-        {
-          url: "/gallery/instructor-truck-course.jpg",
-          alt: "SierraZim instructor leading a training course on a field ground",
-        },
-      ],
+      description: sectorsHero.intro,
+      images: sectorsHero.image
+        ? [{ url: sectorsHero.image, alt: sectorsHero.title }]
+        : undefined,
     },
   };
 }
 
 export default async function SectorsPage() {
-  const [sectors, pages] = await Promise.all([getSectors(), getPages()]);
-  const hero = pages.sectorsHero;
+  const [sectors, hero] = await Promise.all([getSectors(), getSectorsPage()]);
   return (
     <>
       <PageHeader
@@ -38,7 +33,7 @@ export default async function SectorsPage() {
         eyebrow={hero.eyebrow}
         title={hero.title}
         intro={hero.intro}
-        image="/gallery/instructor-truck-course.jpg"
+        image={hero.image}
         imageAlt="SierraZim instructor leading a training course on a field ground"
       />
 

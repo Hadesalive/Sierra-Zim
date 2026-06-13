@@ -8,34 +8,30 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { StatsBand } from "@/components/sections/stats-band";
 import { WhyUs } from "@/components/sections/why-us";
 import { CertificationPath } from "@/components/sections/certification-path";
-import { getClients, getSite, getPages } from "@/lib/content";
+import { getClients, getSite, getAboutPage } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const pages = await getPages();
+  const about = await getAboutPage();
   return {
     title: "About",
-    description: pages.about.metaDescription,
+    description: about.metaDescription,
     alternates: { canonical: "/about" },
     openGraph: {
       ...ogBase("/about"),
       title: "About · SierraZim",
-      images: [
-        {
-          url: "/gallery/heavy-truck-side.jpg",
-          alt: "A heavy haulage truck on a SierraZim field training ground",
-        },
-      ],
+      images: about.heroImage
+        ? [{ url: about.heroImage, alt: "SierraZim Training Academy" }]
+        : undefined,
     },
   };
 }
 
 export default async function AboutPage() {
-  const [clients, site, pages] = await Promise.all([
+  const [clients, site, about] = await Promise.all([
     getClients(),
     getSite(),
-    getPages(),
+    getAboutPage(),
   ]);
-  const about = pages.about;
   return (
     <>
       <PageHeader
@@ -49,7 +45,7 @@ export default async function AboutPage() {
           </>
         }
         intro={about.heroIntro}
-        image="/gallery/heavy-truck-side.jpg"
+        image={about.heroImage}
         imageAlt="Heavy haulage truck on a SierraZim field training ground"
       />
 
@@ -70,7 +66,7 @@ export default async function AboutPage() {
         <div className="relative">
           <div className="relative aspect-4/5 border border-ink/15">
             <Image
-              src="/gallery/ceo-onsite-equipment.jpg"
+              src={about.storyImage}
               alt="SierraZim team on site with a client at a processing plant"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"

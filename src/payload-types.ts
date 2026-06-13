@@ -104,12 +104,22 @@ export interface Config {
   globals: {
     site: Site;
     home: Home;
-    pages: Page;
+    'about-page': AboutPage;
+    'services-page': ServicesPage;
+    'portfolio-page': PortfolioPage;
+    'gallery-page': GalleryPage;
+    'sectors-page': SectorsPage;
+    'contact-page': ContactPage;
   };
   globalsSelect: {
     site: SiteSelect<false> | SiteSelect<true>;
     home: HomeSelect<false> | HomeSelect<true>;
-    pages: PagesSelect<false> | PagesSelect<true>;
+    'about-page': AboutPageSelect<false> | AboutPageSelect<true>;
+    'services-page': ServicesPageSelect<false> | ServicesPageSelect<true>;
+    'portfolio-page': PortfolioPageSelect<false> | PortfolioPageSelect<true>;
+    'gallery-page': GalleryPageSelect<false> | GalleryPageSelect<true>;
+    'sectors-page': SectorsPageSelect<false> | SectorsPageSelect<true>;
+    'contact-page': ContactPageSelect<false> | ContactPageSelect<true>;
   };
   locale: null;
   widgets: {
@@ -736,6 +746,7 @@ export interface Home {
   heroSubhead?: string | null;
   heroPillTitle?: string | null;
   heroPillSubtitle?: string | null;
+  socialImage?: (number | null) | Media;
   clientsLabel?: string | null;
   programmesEyebrow?: string | null;
   programmesHeading?: string | null;
@@ -780,69 +791,110 @@ export interface Home {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pages".
+ * via the `definition` "about-page".
  */
-export interface Page {
+export interface AboutPage {
   id: number;
-  about?: {
-    metaDescription?: string | null;
-    heroEyebrow?: string | null;
-    heroTitleLine1?: string | null;
-    heroTitleLine2?: string | null;
-    heroIntro?: string | null;
-    storyEyebrow?: string | null;
-    storyHeading?: string | null;
-    storyBlocks?:
-      | {
-          text?: string | null;
-          id?: string | null;
-        }[]
-      | null;
-    storyImageCaption?: string | null;
-    leadershipEyebrow?: string | null;
-    leadershipHeading?: string | null;
-    locationsEyebrow?: string | null;
-    locationsHeading?: string | null;
-    locations?:
-      | {
-          place?: string | null;
-          note?: string | null;
-          id?: string | null;
-        }[]
-      | null;
-    clientsHeading?: string | null;
-  };
-  contact?: {
-    heroEyebrow?: string | null;
-    heroTitle?: string | null;
-    heroIntro?: string | null;
-    detailsEyebrow?: string | null;
-    detailsHeading?: string | null;
-  };
-  servicesHero?: {
-    metaDescription?: string | null;
-    eyebrow?: string | null;
-    title?: string | null;
-    intro?: string | null;
-  };
-  portfolioHero?: {
-    metaDescription?: string | null;
-    eyebrow?: string | null;
-    title?: string | null;
-    intro?: string | null;
-  };
-  galleryHero?: {
-    metaDescription?: string | null;
-    eyebrow?: string | null;
-    title?: string | null;
-    intro?: string | null;
-  };
-  sectorsHero?: {
-    metaDescription?: string | null;
-    eyebrow?: string | null;
-    title?: string | null;
-    intro?: string | null;
-  };
+  metaDescription?: string | null;
+  heroEyebrow?: string | null;
+  heroTitleLine1?: string | null;
+  heroTitleLine2?: string | null;
+  heroIntro?: string | null;
+  heroImage?: (number | null) | Media;
+  storyEyebrow?: string | null;
+  storyHeading?: string | null;
+  storyBlocks?:
+    | {
+        text?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  storyImage?: (number | null) | Media;
+  storyImageCaption?: string | null;
+  leadershipEyebrow?: string | null;
+  leadershipHeading?: string | null;
+  locationsEyebrow?: string | null;
+  locationsHeading?: string | null;
+  locations?:
+    | {
+        place?: string | null;
+        note?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  clientsHeading?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "services-page".
+ */
+export interface ServicesPage {
+  id: number;
+  metaDescription?: string | null;
+  eyebrow?: string | null;
+  title?: string | null;
+  intro?: string | null;
+  heroImage?: (number | null) | Media;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "portfolio-page".
+ */
+export interface PortfolioPage {
+  id: number;
+  metaDescription?: string | null;
+  eyebrow?: string | null;
+  title?: string | null;
+  intro?: string | null;
+  heroImage?: (number | null) | Media;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery-page".
+ */
+export interface GalleryPage {
+  id: number;
+  metaDescription?: string | null;
+  eyebrow?: string | null;
+  title?: string | null;
+  intro?: string | null;
+  heroImage?: (number | null) | Media;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sectors-page".
+ */
+export interface SectorsPage {
+  id: number;
+  metaDescription?: string | null;
+  eyebrow?: string | null;
+  title?: string | null;
+  intro?: string | null;
+  heroImage?: (number | null) | Media;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact-page".
+ */
+export interface ContactPage {
+  id: number;
+  metaDescription?: string | null;
+  heroEyebrow?: string | null;
+  heroTitle?: string | null;
+  heroIntro?: string | null;
+  heroImage?: (number | null) | Media;
+  detailsEyebrow?: string | null;
+  detailsHeading?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -888,6 +940,7 @@ export interface HomeSelect<T extends boolean = true> {
   heroSubhead?: T;
   heroPillTitle?: T;
   heroPillSubtitle?: T;
+  socialImage?: T;
   clientsLabel?: T;
   programmesEyebrow?: T;
   programmesHeading?: T;
@@ -933,80 +986,109 @@ export interface HomeSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pages_select".
+ * via the `definition` "about-page_select".
  */
-export interface PagesSelect<T extends boolean = true> {
-  about?:
+export interface AboutPageSelect<T extends boolean = true> {
+  metaDescription?: T;
+  heroEyebrow?: T;
+  heroTitleLine1?: T;
+  heroTitleLine2?: T;
+  heroIntro?: T;
+  heroImage?: T;
+  storyEyebrow?: T;
+  storyHeading?: T;
+  storyBlocks?:
     | T
     | {
-        metaDescription?: T;
-        heroEyebrow?: T;
-        heroTitleLine1?: T;
-        heroTitleLine2?: T;
-        heroIntro?: T;
-        storyEyebrow?: T;
-        storyHeading?: T;
-        storyBlocks?:
-          | T
-          | {
-              text?: T;
-              id?: T;
-            };
-        storyImageCaption?: T;
-        leadershipEyebrow?: T;
-        leadershipHeading?: T;
-        locationsEyebrow?: T;
-        locationsHeading?: T;
-        locations?:
-          | T
-          | {
-              place?: T;
-              note?: T;
-              id?: T;
-            };
-        clientsHeading?: T;
+        text?: T;
+        id?: T;
       };
-  contact?:
+  storyImage?: T;
+  storyImageCaption?: T;
+  leadershipEyebrow?: T;
+  leadershipHeading?: T;
+  locationsEyebrow?: T;
+  locationsHeading?: T;
+  locations?:
     | T
     | {
-        heroEyebrow?: T;
-        heroTitle?: T;
-        heroIntro?: T;
-        detailsEyebrow?: T;
-        detailsHeading?: T;
+        place?: T;
+        note?: T;
+        id?: T;
       };
-  servicesHero?:
-    | T
-    | {
-        metaDescription?: T;
-        eyebrow?: T;
-        title?: T;
-        intro?: T;
-      };
-  portfolioHero?:
-    | T
-    | {
-        metaDescription?: T;
-        eyebrow?: T;
-        title?: T;
-        intro?: T;
-      };
-  galleryHero?:
-    | T
-    | {
-        metaDescription?: T;
-        eyebrow?: T;
-        title?: T;
-        intro?: T;
-      };
-  sectorsHero?:
-    | T
-    | {
-        metaDescription?: T;
-        eyebrow?: T;
-        title?: T;
-        intro?: T;
-      };
+  clientsHeading?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "services-page_select".
+ */
+export interface ServicesPageSelect<T extends boolean = true> {
+  metaDescription?: T;
+  eyebrow?: T;
+  title?: T;
+  intro?: T;
+  heroImage?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "portfolio-page_select".
+ */
+export interface PortfolioPageSelect<T extends boolean = true> {
+  metaDescription?: T;
+  eyebrow?: T;
+  title?: T;
+  intro?: T;
+  heroImage?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery-page_select".
+ */
+export interface GalleryPageSelect<T extends boolean = true> {
+  metaDescription?: T;
+  eyebrow?: T;
+  title?: T;
+  intro?: T;
+  heroImage?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "sectors-page_select".
+ */
+export interface SectorsPageSelect<T extends boolean = true> {
+  metaDescription?: T;
+  eyebrow?: T;
+  title?: T;
+  intro?: T;
+  heroImage?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact-page_select".
+ */
+export interface ContactPageSelect<T extends boolean = true> {
+  metaDescription?: T;
+  heroEyebrow?: T;
+  heroTitle?: T;
+  heroIntro?: T;
+  heroImage?: T;
+  detailsEyebrow?: T;
+  detailsHeading?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

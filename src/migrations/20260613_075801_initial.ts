@@ -296,6 +296,7 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   	"hero_subhead" varchar,
   	"hero_pill_title" varchar,
   	"hero_pill_subtitle" varchar,
+  	"social_image_id" integer,
   	"clients_label" varchar,
   	"programmes_eyebrow" varchar,
   	"programmes_heading" varchar,
@@ -319,14 +320,14 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   	"created_at" timestamp(3) with time zone
   );
   
-  CREATE TABLE "pages_about_story_blocks" (
+  CREATE TABLE "about_page_story_blocks" (
   	"_order" integer NOT NULL,
   	"_parent_id" integer NOT NULL,
   	"id" varchar PRIMARY KEY NOT NULL,
   	"text" varchar
   );
   
-  CREATE TABLE "pages_about_locations" (
+  CREATE TABLE "about_page_locations" (
   	"_order" integer NOT NULL,
   	"_parent_id" integer NOT NULL,
   	"id" varchar PRIMARY KEY NOT NULL,
@@ -334,42 +335,80 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   	"note" varchar
   );
   
-  CREATE TABLE "pages" (
+  CREATE TABLE "about_page" (
   	"id" serial PRIMARY KEY NOT NULL,
-  	"about_meta_description" varchar,
-  	"about_hero_eyebrow" varchar,
-  	"about_hero_title_line1" varchar,
-  	"about_hero_title_line2" varchar,
-  	"about_hero_intro" varchar,
-  	"about_story_eyebrow" varchar,
-  	"about_story_heading" varchar,
-  	"about_story_image_caption" varchar,
-  	"about_leadership_eyebrow" varchar,
-  	"about_leadership_heading" varchar,
-  	"about_locations_eyebrow" varchar,
-  	"about_locations_heading" varchar,
-  	"about_clients_heading" varchar,
-  	"contact_hero_eyebrow" varchar,
-  	"contact_hero_title" varchar,
-  	"contact_hero_intro" varchar,
-  	"contact_details_eyebrow" varchar,
-  	"contact_details_heading" varchar,
-  	"services_hero_meta_description" varchar,
-  	"services_hero_eyebrow" varchar,
-  	"services_hero_title" varchar,
-  	"services_hero_intro" varchar,
-  	"portfolio_hero_meta_description" varchar,
-  	"portfolio_hero_eyebrow" varchar,
-  	"portfolio_hero_title" varchar,
-  	"portfolio_hero_intro" varchar,
-  	"gallery_hero_meta_description" varchar,
-  	"gallery_hero_eyebrow" varchar,
-  	"gallery_hero_title" varchar,
-  	"gallery_hero_intro" varchar,
-  	"sectors_hero_meta_description" varchar,
-  	"sectors_hero_eyebrow" varchar,
-  	"sectors_hero_title" varchar,
-  	"sectors_hero_intro" varchar,
+  	"meta_description" varchar,
+  	"hero_eyebrow" varchar,
+  	"hero_title_line1" varchar,
+  	"hero_title_line2" varchar,
+  	"hero_intro" varchar,
+  	"hero_image_id" integer,
+  	"story_eyebrow" varchar,
+  	"story_heading" varchar,
+  	"story_image_id" integer,
+  	"story_image_caption" varchar,
+  	"leadership_eyebrow" varchar,
+  	"leadership_heading" varchar,
+  	"locations_eyebrow" varchar,
+  	"locations_heading" varchar,
+  	"clients_heading" varchar,
+  	"updated_at" timestamp(3) with time zone,
+  	"created_at" timestamp(3) with time zone
+  );
+  
+  CREATE TABLE "services_page" (
+  	"id" serial PRIMARY KEY NOT NULL,
+  	"meta_description" varchar,
+  	"eyebrow" varchar,
+  	"title" varchar,
+  	"intro" varchar,
+  	"hero_image_id" integer,
+  	"updated_at" timestamp(3) with time zone,
+  	"created_at" timestamp(3) with time zone
+  );
+  
+  CREATE TABLE "portfolio_page" (
+  	"id" serial PRIMARY KEY NOT NULL,
+  	"meta_description" varchar,
+  	"eyebrow" varchar,
+  	"title" varchar,
+  	"intro" varchar,
+  	"hero_image_id" integer,
+  	"updated_at" timestamp(3) with time zone,
+  	"created_at" timestamp(3) with time zone
+  );
+  
+  CREATE TABLE "gallery_page" (
+  	"id" serial PRIMARY KEY NOT NULL,
+  	"meta_description" varchar,
+  	"eyebrow" varchar,
+  	"title" varchar,
+  	"intro" varchar,
+  	"hero_image_id" integer,
+  	"updated_at" timestamp(3) with time zone,
+  	"created_at" timestamp(3) with time zone
+  );
+  
+  CREATE TABLE "sectors_page" (
+  	"id" serial PRIMARY KEY NOT NULL,
+  	"meta_description" varchar,
+  	"eyebrow" varchar,
+  	"title" varchar,
+  	"intro" varchar,
+  	"hero_image_id" integer,
+  	"updated_at" timestamp(3) with time zone,
+  	"created_at" timestamp(3) with time zone
+  );
+  
+  CREATE TABLE "contact_page" (
+  	"id" serial PRIMARY KEY NOT NULL,
+  	"meta_description" varchar,
+  	"hero_eyebrow" varchar,
+  	"hero_title" varchar,
+  	"hero_intro" varchar,
+  	"hero_image_id" integer,
+  	"details_eyebrow" varchar,
+  	"details_heading" varchar,
   	"updated_at" timestamp(3) with time zone,
   	"created_at" timestamp(3) with time zone
   );
@@ -406,8 +445,16 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   ALTER TABLE "home_cert_path_steps" ADD CONSTRAINT "home_cert_path_steps_parent_id_fk" FOREIGN KEY ("_parent_id") REFERENCES "public"."home"("id") ON DELETE cascade ON UPDATE no action;
   ALTER TABLE "home_statement_partners" ADD CONSTRAINT "home_statement_partners_parent_id_fk" FOREIGN KEY ("_parent_id") REFERENCES "public"."home"("id") ON DELETE cascade ON UPDATE no action;
   ALTER TABLE "home_stats" ADD CONSTRAINT "home_stats_parent_id_fk" FOREIGN KEY ("_parent_id") REFERENCES "public"."home"("id") ON DELETE cascade ON UPDATE no action;
-  ALTER TABLE "pages_about_story_blocks" ADD CONSTRAINT "pages_about_story_blocks_parent_id_fk" FOREIGN KEY ("_parent_id") REFERENCES "public"."pages"("id") ON DELETE cascade ON UPDATE no action;
-  ALTER TABLE "pages_about_locations" ADD CONSTRAINT "pages_about_locations_parent_id_fk" FOREIGN KEY ("_parent_id") REFERENCES "public"."pages"("id") ON DELETE cascade ON UPDATE no action;
+  ALTER TABLE "home" ADD CONSTRAINT "home_social_image_id_media_id_fk" FOREIGN KEY ("social_image_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
+  ALTER TABLE "about_page_story_blocks" ADD CONSTRAINT "about_page_story_blocks_parent_id_fk" FOREIGN KEY ("_parent_id") REFERENCES "public"."about_page"("id") ON DELETE cascade ON UPDATE no action;
+  ALTER TABLE "about_page_locations" ADD CONSTRAINT "about_page_locations_parent_id_fk" FOREIGN KEY ("_parent_id") REFERENCES "public"."about_page"("id") ON DELETE cascade ON UPDATE no action;
+  ALTER TABLE "about_page" ADD CONSTRAINT "about_page_hero_image_id_media_id_fk" FOREIGN KEY ("hero_image_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
+  ALTER TABLE "about_page" ADD CONSTRAINT "about_page_story_image_id_media_id_fk" FOREIGN KEY ("story_image_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
+  ALTER TABLE "services_page" ADD CONSTRAINT "services_page_hero_image_id_media_id_fk" FOREIGN KEY ("hero_image_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
+  ALTER TABLE "portfolio_page" ADD CONSTRAINT "portfolio_page_hero_image_id_media_id_fk" FOREIGN KEY ("hero_image_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
+  ALTER TABLE "gallery_page" ADD CONSTRAINT "gallery_page_hero_image_id_media_id_fk" FOREIGN KEY ("hero_image_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
+  ALTER TABLE "sectors_page" ADD CONSTRAINT "sectors_page_hero_image_id_media_id_fk" FOREIGN KEY ("hero_image_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
+  ALTER TABLE "contact_page" ADD CONSTRAINT "contact_page_hero_image_id_media_id_fk" FOREIGN KEY ("hero_image_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
   CREATE INDEX "programmes_features_order_idx" ON "programmes_features" USING btree ("_order");
   CREATE INDEX "programmes_features_parent_id_idx" ON "programmes_features" USING btree ("_parent_id");
   CREATE UNIQUE INDEX "programmes_slug_idx" ON "programmes" USING btree ("slug");
@@ -491,10 +538,18 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   CREATE INDEX "home_statement_partners_parent_id_idx" ON "home_statement_partners" USING btree ("_parent_id");
   CREATE INDEX "home_stats_order_idx" ON "home_stats" USING btree ("_order");
   CREATE INDEX "home_stats_parent_id_idx" ON "home_stats" USING btree ("_parent_id");
-  CREATE INDEX "pages_about_story_blocks_order_idx" ON "pages_about_story_blocks" USING btree ("_order");
-  CREATE INDEX "pages_about_story_blocks_parent_id_idx" ON "pages_about_story_blocks" USING btree ("_parent_id");
-  CREATE INDEX "pages_about_locations_order_idx" ON "pages_about_locations" USING btree ("_order");
-  CREATE INDEX "pages_about_locations_parent_id_idx" ON "pages_about_locations" USING btree ("_parent_id");`)
+  CREATE INDEX "home_social_image_idx" ON "home" USING btree ("social_image_id");
+  CREATE INDEX "about_page_story_blocks_order_idx" ON "about_page_story_blocks" USING btree ("_order");
+  CREATE INDEX "about_page_story_blocks_parent_id_idx" ON "about_page_story_blocks" USING btree ("_parent_id");
+  CREATE INDEX "about_page_locations_order_idx" ON "about_page_locations" USING btree ("_order");
+  CREATE INDEX "about_page_locations_parent_id_idx" ON "about_page_locations" USING btree ("_parent_id");
+  CREATE INDEX "about_page_hero_image_idx" ON "about_page" USING btree ("hero_image_id");
+  CREATE INDEX "about_page_story_image_idx" ON "about_page" USING btree ("story_image_id");
+  CREATE INDEX "services_page_hero_image_idx" ON "services_page" USING btree ("hero_image_id");
+  CREATE INDEX "portfolio_page_hero_image_idx" ON "portfolio_page" USING btree ("hero_image_id");
+  CREATE INDEX "gallery_page_hero_image_idx" ON "gallery_page" USING btree ("hero_image_id");
+  CREATE INDEX "sectors_page_hero_image_idx" ON "sectors_page" USING btree ("hero_image_id");
+  CREATE INDEX "contact_page_hero_image_idx" ON "contact_page" USING btree ("hero_image_id");`)
 }
 
 export async function down({ db, payload, req }: MigrateDownArgs): Promise<void> {
@@ -527,9 +582,14 @@ export async function down({ db, payload, req }: MigrateDownArgs): Promise<void>
   DROP TABLE "home_statement_partners" CASCADE;
   DROP TABLE "home_stats" CASCADE;
   DROP TABLE "home" CASCADE;
-  DROP TABLE "pages_about_story_blocks" CASCADE;
-  DROP TABLE "pages_about_locations" CASCADE;
-  DROP TABLE "pages" CASCADE;
+  DROP TABLE "about_page_story_blocks" CASCADE;
+  DROP TABLE "about_page_locations" CASCADE;
+  DROP TABLE "about_page" CASCADE;
+  DROP TABLE "services_page" CASCADE;
+  DROP TABLE "portfolio_page" CASCADE;
+  DROP TABLE "gallery_page" CASCADE;
+  DROP TABLE "sectors_page" CASCADE;
+  DROP TABLE "contact_page" CASCADE;
   DROP TYPE "public"."enum_gallery_media_type";
   DROP TYPE "public"."enum_gallery_provider";`)
 }
