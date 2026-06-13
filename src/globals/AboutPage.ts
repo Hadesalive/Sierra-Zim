@@ -12,14 +12,18 @@ export const AboutPage: GlobalConfig = {
       type: "tabs",
       tabs: [
         {
-          label: "Hero & story",
+          label: "Hero",
           fields: [
-            { name: "metaDescription", type: "textarea", label: "Meta description" },
             { name: "heroEyebrow", type: "text" },
             { name: "heroTitleLine1", type: "text", label: "Hero title — line 1" },
             { name: "heroTitleLine2", type: "text", label: "Hero title — line 2" },
             { name: "heroIntro", type: "textarea" },
             heroImageField(),
+          ],
+        },
+        {
+          label: "Story",
+          fields: [
             { name: "storyEyebrow", type: "text" },
             { name: "storyHeading", type: "text" },
             {
@@ -33,7 +37,7 @@ export const AboutPage: GlobalConfig = {
           ],
         },
         {
-          label: "Leadership, locations & clients",
+          label: "Leadership & locations",
           fields: [
             { name: "leadershipEyebrow", type: "text" },
             { name: "leadershipHeading", type: "text" },
@@ -48,6 +52,12 @@ export const AboutPage: GlobalConfig = {
               ],
             },
             { name: "clientsHeading", type: "text" },
+          ],
+        },
+        {
+          label: "SEO",
+          fields: [
+            { name: "metaDescription", type: "textarea", label: "Meta description" },
           ],
         },
       ],

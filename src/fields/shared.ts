@@ -71,11 +71,27 @@ export const heroImageField = (label = "Hero / social image"): Field => ({
 });
 
 /** Fields shared by the four index-page globals (Services / Portfolio / Gallery /
- *  Sectors): SEO copy, hero copy and an editable hero/social image. */
+ *  Sectors), grouped into tabs by section. Tabs are unnamed, so the stored data
+ *  stays flat (eyebrow, title, intro, heroImage, metaDescription) — UI only. */
 export const indexPageFields = (): Field[] => [
-  { name: "metaDescription", type: "textarea", label: "Meta description" },
-  { name: "eyebrow", type: "text" },
-  { name: "title", type: "text" },
-  { name: "intro", type: "textarea" },
-  heroImageField(),
+  {
+    type: "tabs",
+    tabs: [
+      {
+        label: "Hero",
+        fields: [
+          { name: "eyebrow", type: "text" },
+          { name: "title", type: "text" },
+          { name: "intro", type: "textarea" },
+          heroImageField(),
+        ],
+      },
+      {
+        label: "SEO",
+        fields: [
+          { name: "metaDescription", type: "textarea", label: "Meta description" },
+        ],
+      },
+    ],
+  },
 ];
