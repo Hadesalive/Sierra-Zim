@@ -35,12 +35,14 @@ const run = async () => {
 
   // 1. Upload every manifest media file (→ Blob). Build file → mediaId.
   const mediaId: Record<string, number> = {};
+  const mediaUrlByFile: Record<string, string> = {};
   for (const m of manifest.media as any[]) {
     const filePath = path.join(STAGING, m.file);
     if (!fs.existsSync(filePath)) throw new Error(`manifest media missing on disk: ${m.file}`);
     if (DRY) { console.log(`  would upload ${m.file}`); continue; }
     const doc = await payload.create({ collection: "media", data: { alt: m.alt || m.caption || m.file }, filePath });
     mediaId[m.file] = doc.id as number;
+    mediaUrlByFile[m.file] = (doc as any).url as string;
   }
   console.log(`• ${DRY ? "would upload" : "uploaded"} ${manifest.media.length} media`);
   const ref = (file?: string | null) => (file && mediaId[file]) || undefined;
@@ -107,7 +109,7 @@ const run = async () => {
   for (const v of A.galleryVideos as any[]) {
     if (DRY) continue;
     await payload.create({ collection: "gallery", data: {
-      caption: v.caption, alt: v.caption, mediaType: "video", provider: "file", videoSrc: undefined,
+      caption: v.caption, alt: v.caption, mediaType: "video", provider: "file", videoSrc: mediaUrlByFile[v.file],
       poster: ref(v.poster), width: 1280, height: 720, order: v.order ?? 0,
     } });
   }
