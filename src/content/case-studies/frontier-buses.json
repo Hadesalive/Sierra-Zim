@@ -20,10 +20,6 @@
     "heavy-vehicle-defensive-driving",
     "theory-and-classroom-training"
   ],
-  "image": "heavy-truck-side.jpg",
-  "imageAlt": "Heavy vehicle used in defensive driver training",
-  "gallery": [],
-  "realPhotos": false,
   "featured": false,
   "order": 3
 }
