@@ -119,7 +119,7 @@ const run = async () => {
 
   // 6. Auto-fill assignments from the mapping. Covers = first image of each target; the rest join galleries.
   const imagesByTarget = {};
-  for (const m of media.filter((x) => !x.isVideo)) (imagesByTarget[m.target] ||= []).push(m.file);
+  for (const m of media.filter((x) => !x.isVideo && x.category !== "video")) (imagesByTarget[m.target] ||= []).push(m.file);
 
   const PROGRAMME_SLUGS = ["light-vehicle-defensive-driving","heavy-vehicle-defensive-driving","simulator-training","theory-and-classroom-training","surface-mobile-equipment-training","agriculture-equipment-training","pre-employment-screening"];
   const CASE_SLUGS = ["dadtco-mozambique","mantrac","sierra-rutile"];
