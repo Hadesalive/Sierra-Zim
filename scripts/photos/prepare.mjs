@@ -5,6 +5,7 @@
 //
 // Run: PHOTO_ARCHIVE_DIR="/abs/path/Sierrazim Photo Gallery 2026" node scripts/photos/prepare.mjs [--dry]
 //
+import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
@@ -103,6 +104,11 @@ const run = async () => {
       const file = `${base}.mp4`;
       fs.mkdirSync(path.dirname(path.join(STAGING, file)), { recursive: true });
       fs.copyFileSync(e.path, path.join(STAGING, file));
+      const posterFile = `${base}-poster.jpg`;
+      try {
+        execFileSync("ffmpeg", ["-y", "-i", e.path, "-vf", "thumbnail,scale=1280:-1", "-frames:v", "1", path.join(STAGING, posterFile)], { stdio: "ignore" });
+        media.push({ file: posterFile, alt: `${e.label} — video still`, caption: e.label, source, isVideo: false, category: "video", target: e.target });
+      } catch { /* no poster generated */ }
       media.push({ file, alt: e.label, caption: e.label, source, isVideo: true });
     } else {
       const file = `${base}.jpg`;
@@ -137,10 +143,14 @@ const run = async () => {
   // Everything with a gallery-ish target (not a programme/case-study/team) → gallery items.
   let order = 0;
   for (const m of media.filter((x) => !x.isVideo)) {
-    if (PROGRAMME_SLUGS.includes(m.target) || CASE_SLUGS.includes(m.target) || m.target === "team") continue;
+    if (PROGRAMME_SLUGS.includes(m.target) || CASE_SLUGS.includes(m.target) || m.target === "team" || m.category === "video") continue;
     assignments.gallery.push({ file: m.file, caption: m.caption, alt: m.alt, order: order++ });
   }
-  for (const m of media.filter((x) => x.isVideo)) assignments.galleryVideos.push({ file: m.file, poster: null, caption: m.caption, order: order++ });
+  const posterSet = new Set(media.filter((x) => !x.isVideo && x.category === "video").map((x) => x.file));
+  for (const m of media.filter((x) => x.isVideo)) {
+    const poster = m.file.replace(/\.mp4$/i, "-poster.jpg");
+    assignments.galleryVideos.push({ file: m.file, poster: posterSet.has(poster) ? poster : null, caption: m.caption, order: order++ });
+  }
 
   // Strip helper fields from media[] before writing (keep file/alt/caption/source/isVideo).
   const mediaOut = media.map(({ file, alt, caption, source, isVideo }) => ({ file, alt, caption, source, isVideo }));

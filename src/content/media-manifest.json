@@ -1324,6 +1324,13 @@
       "isVideo": false
     },
     {
+      "file": "video/general-182-poster.jpg",
+      "alt": "SierraZim training — video still",
+      "caption": "SierraZim training",
+      "source": "VID_20251112_101827.mp4",
+      "isVideo": false
+    },
+    {
       "file": "video/general-182.mp4",
       "alt": "SierraZim training",
       "caption": "SierraZim training",
@@ -1331,11 +1338,25 @@
       "isVideo": true
     },
     {
+      "file": "video/general-183-poster.jpg",
+      "alt": "SierraZim training — video still",
+      "caption": "SierraZim training",
+      "source": "VID-20250827-WA0092.mp4",
+      "isVideo": false
+    },
+    {
       "file": "video/general-183.mp4",
       "alt": "SierraZim training",
       "caption": "SierraZim training",
       "source": "VID-20250827-WA0092.mp4",
       "isVideo": true
+    },
+    {
+      "file": "video/general-184-poster.jpg",
+      "alt": "SierraZim training — video still",
+      "caption": "SierraZim training",
+      "source": "VID-20260317-WA0036(1).mp4",
+      "isVideo": false
     },
     {
       "file": "video/general-184.mp4",
@@ -2353,11 +2374,25 @@
       "isVideo": false
     },
     {
+      "file": "video/testimony-01-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0007.mp4",
+      "isVideo": false
+    },
+    {
       "file": "video/testimony-01.mp4",
       "alt": "Client testimonial",
       "caption": "Client testimonial",
       "source": "Sierrazim Testimony/VID-20260315-WA0007.mp4",
       "isVideo": true
+    },
+    {
+      "file": "video/testimony-02-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0008.mp4",
+      "isVideo": false
     },
     {
       "file": "video/testimony-02.mp4",
@@ -2367,11 +2402,25 @@
       "isVideo": true
     },
     {
+      "file": "video/testimony-03-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0009.mp4",
+      "isVideo": false
+    },
+    {
       "file": "video/testimony-03.mp4",
       "alt": "Client testimonial",
       "caption": "Client testimonial",
       "source": "Sierrazim Testimony/VID-20260315-WA0009.mp4",
       "isVideo": true
+    },
+    {
+      "file": "video/testimony-04-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0010.mp4",
+      "isVideo": false
     },
     {
       "file": "video/testimony-04.mp4",
@@ -2381,6 +2430,13 @@
       "isVideo": true
     },
     {
+      "file": "video/testimony-05-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0011.mp4",
+      "isVideo": false
+    },
+    {
       "file": "video/testimony-05.mp4",
       "alt": "Client testimonial",
       "caption": "Client testimonial",
@@ -2388,11 +2444,25 @@
       "isVideo": true
     },
     {
+      "file": "video/testimony-06-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0012.mp4",
+      "isVideo": false
+    },
+    {
       "file": "video/testimony-06.mp4",
       "alt": "Client testimonial",
       "caption": "Client testimonial",
       "source": "Sierrazim Testimony/VID-20260315-WA0012.mp4",
       "isVideo": true
+    },
+    {
+      "file": "video/testimony-07-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0014.mp4",
+      "isVideo": false
     },
     {
       "file": "video/testimony-07.mp4",
@@ -4524,61 +4594,61 @@
     "galleryVideos": [
       {
         "file": "video/general-182.mp4",
-        "poster": null,
+        "poster": "video/general-182-poster.jpg",
         "caption": "SierraZim training",
         "order": 256
       },
       {
         "file": "video/general-183.mp4",
-        "poster": null,
+        "poster": "video/general-183-poster.jpg",
         "caption": "SierraZim training",
         "order": 257
       },
       {
         "file": "video/general-184.mp4",
-        "poster": null,
+        "poster": "video/general-184-poster.jpg",
         "caption": "SierraZim training",
         "order": 258
       },
       {
         "file": "video/testimony-01.mp4",
-        "poster": null,
+        "poster": "video/testimony-01-poster.jpg",
         "caption": "Client testimonial",
         "order": 259
       },
       {
         "file": "video/testimony-02.mp4",
-        "poster": null,
+        "poster": "video/testimony-02-poster.jpg",
         "caption": "Client testimonial",
         "order": 260
       },
       {
         "file": "video/testimony-03.mp4",
-        "poster": null,
+        "poster": "video/testimony-03-poster.jpg",
         "caption": "Client testimonial",
         "order": 261
       },
       {
         "file": "video/testimony-04.mp4",
-        "poster": null,
+        "poster": "video/testimony-04-poster.jpg",
         "caption": "Client testimonial",
         "order": 262
       },
       {
         "file": "video/testimony-05.mp4",
-        "poster": null,
+        "poster": "video/testimony-05-poster.jpg",
         "caption": "Client testimonial",
         "order": 263
       },
       {
         "file": "video/testimony-06.mp4",
-        "poster": null,
+        "poster": "video/testimony-06-poster.jpg",
         "caption": "Client testimonial",
         "order": 264
       },
       {
         "file": "video/testimony-07.mp4",
-        "poster": null,
+        "poster": "video/testimony-07-poster.jpg",
         "caption": "Client testimonial",
         "order": 265
       }
