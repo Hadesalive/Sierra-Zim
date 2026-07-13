@@ -132,8 +132,18 @@ export default async function AboutPage() {
                 key={person.name}
                 className="flex items-center gap-7 bg-forest-950 px-8 py-9 text-white sm:px-10"
               >
-                <span className="flex size-[84px] shrink-0 items-center justify-center bg-safety-500 font-display text-[34px] font-extrabold text-ink">
-                  {initials(person.name)}
+                <span className="relative flex size-[84px] shrink-0 items-center justify-center overflow-hidden bg-safety-500 font-display text-[34px] font-extrabold text-ink">
+                  {person.photo ? (
+                    <Image
+                      src={person.photo}
+                      alt={person.name}
+                      fill
+                      sizes="84px"
+                      className="object-cover"
+                    />
+                  ) : (
+                    initials(person.name)
+                  )}
                 </span>
                 <div>
                   <p className="font-display text-[34px] font-extrabold uppercase leading-none tracking-[0.02em]">
