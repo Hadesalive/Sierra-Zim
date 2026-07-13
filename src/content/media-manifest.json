@@ -3070,1596 +3070,636 @@
     },
     "gallery": [
       {
-        "file": "gallery/cote-divoire-01.jpg",
-        "caption": "Côte d'Ivoire training programme",
-        "alt": "Côte d'Ivoire training programme",
+        "file": "programme/theory-and-classroom-training-05.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 0
       },
       {
-        "file": "gallery/general-01.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/theory-and-classroom-training-09.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 1
       },
       {
-        "file": "gallery/general-02.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/theory-and-classroom-training-10.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 2
       },
       {
-        "file": "gallery/general-03.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/theory-and-classroom-training-37.jpg",
+        "caption": "Oral coaching session",
+        "alt": "Oral coaching session",
+        "category": "classroom",
         "order": 3
       },
       {
-        "file": "gallery/general-04.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/theory-and-classroom-training-08.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 4
       },
       {
-        "file": "gallery/general-05.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/theory-and-classroom-training-01.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 5
       },
       {
-        "file": "gallery/general-06.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/theory-and-classroom-training-02.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 6
       },
       {
-        "file": "gallery/general-07.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/theory-and-classroom-training-36.jpg",
+        "caption": "On-the-job training",
+        "alt": "On-the-job training",
+        "category": "classroom",
         "order": 7
       },
       {
-        "file": "gallery/general-08.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/theory-and-classroom-training-35.jpg",
+        "caption": "On-the-job training",
+        "alt": "On-the-job training",
+        "category": "classroom",
         "order": 8
       },
       {
-        "file": "gallery/general-09.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/theory-and-classroom-training-13.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 9
       },
       {
-        "file": "gallery/general-10.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/theory-and-classroom-training-24.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 10
       },
       {
-        "file": "gallery/general-11.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/theory-and-classroom-training-28.jpg",
+        "caption": "On-the-job training",
+        "alt": "On-the-job training",
+        "category": "classroom",
         "order": 11
       },
       {
-        "file": "gallery/general-12.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/theory-and-classroom-training-21.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 12
       },
       {
-        "file": "gallery/general-13.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/light-vehicle-defensive-driving-11.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
         "order": 13
       },
       {
-        "file": "gallery/general-14.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/light-vehicle-defensive-driving-07.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
         "order": 14
       },
       {
-        "file": "gallery/general-15.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/light-vehicle-defensive-driving-05.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
         "order": 15
       },
       {
-        "file": "gallery/general-16.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/light-vehicle-defensive-driving-06.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
         "order": 16
       },
       {
-        "file": "gallery/general-17.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/light-vehicle-defensive-driving-02.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
         "order": 17
       },
       {
-        "file": "gallery/general-18.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/light-vehicle-defensive-driving-03.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
         "order": 18
       },
       {
-        "file": "gallery/general-19.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/light-vehicle-defensive-driving-04.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
         "order": 19
       },
       {
-        "file": "gallery/general-20.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/light-vehicle-defensive-driving-01.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
         "order": 20
       },
       {
-        "file": "gallery/general-21.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/light-vehicle-defensive-driving-17.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
         "order": 21
       },
       {
-        "file": "gallery/general-22.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/light-vehicle-defensive-driving-13.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
         "order": 22
       },
       {
-        "file": "gallery/general-23.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/light-vehicle-defensive-driving-15.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
         "order": 23
       },
       {
-        "file": "gallery/general-24.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/light-vehicle-defensive-driving-12.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
         "order": 24
       },
       {
-        "file": "gallery/general-25.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/heavy-vehicle-defensive-driving-01.jpg",
+        "caption": "Heavy vehicle defensive-driving training",
+        "alt": "Heavy vehicle defensive-driving training",
+        "category": "heavy-equipment",
         "order": 25
       },
       {
-        "file": "gallery/general-26.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/agriculture-equipment-training-08.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
         "order": 26
       },
       {
-        "file": "gallery/general-27.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/surface-mobile-equipment-training-03.jpg",
+        "caption": "Articulated dump truck training",
+        "alt": "Articulated dump truck training",
+        "category": "heavy-equipment",
         "order": 27
       },
       {
-        "file": "gallery/general-28.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/agriculture-equipment-training-06.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
         "order": 28
       },
       {
-        "file": "gallery/general-29.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/surface-mobile-equipment-training-08.jpg",
+        "caption": "Excavator operator training",
+        "alt": "Excavator operator training",
+        "category": "heavy-equipment",
         "order": 29
       },
       {
-        "file": "gallery/general-30.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/surface-mobile-equipment-training-10.jpg",
+        "caption": "Excavator operator training",
+        "alt": "Excavator operator training",
+        "category": "heavy-equipment",
         "order": 30
       },
       {
-        "file": "gallery/general-31.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/surface-mobile-equipment-training-05.jpg",
+        "caption": "Articulated dump truck training",
+        "alt": "Articulated dump truck training",
+        "category": "heavy-equipment",
         "order": 31
       },
       {
-        "file": "gallery/general-32.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/agriculture-equipment-training-05.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
         "order": 32
       },
       {
-        "file": "gallery/general-33.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/surface-mobile-equipment-training-04.jpg",
+        "caption": "Articulated dump truck training",
+        "alt": "Articulated dump truck training",
+        "category": "heavy-equipment",
         "order": 33
       },
       {
-        "file": "gallery/general-34.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/agriculture-equipment-training-03.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
         "order": 34
       },
       {
-        "file": "gallery/general-35.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/agriculture-equipment-training-11.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
         "order": 35
       },
       {
-        "file": "gallery/general-36.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/surface-mobile-equipment-training-12.jpg",
+        "caption": "Front-end loader operator training",
+        "alt": "Front-end loader operator training",
+        "category": "heavy-equipment",
         "order": 36
       },
       {
-        "file": "gallery/general-37.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/surface-mobile-equipment-training-02.jpg",
+        "caption": "Articulated dump truck training",
+        "alt": "Articulated dump truck training",
+        "category": "heavy-equipment",
         "order": 37
       },
       {
-        "file": "gallery/general-38.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/simulator-training-12.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
         "order": 38
       },
       {
-        "file": "gallery/general-39.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/simulator-training-08.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
         "order": 39
       },
       {
-        "file": "gallery/general-40.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/simulator-training-01.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
         "order": 40
       },
       {
-        "file": "gallery/general-41.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/simulator-training-05.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
         "order": 41
       },
       {
-        "file": "gallery/general-42.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/simulator-training-21.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
         "order": 42
       },
       {
-        "file": "gallery/general-43.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/simulator-training-17.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
         "order": 43
       },
       {
-        "file": "gallery/general-44.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/simulator-training-06.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
         "order": 44
       },
       {
-        "file": "gallery/general-45.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/simulator-training-20.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
         "order": 45
       },
       {
-        "file": "gallery/general-46.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/simulator-training-07.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
         "order": 46
       },
       {
-        "file": "gallery/general-47.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
+        "file": "programme/simulator-training-13.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
         "order": 47
-      },
-      {
-        "file": "gallery/general-48.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 48
-      },
-      {
-        "file": "gallery/general-49.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 49
-      },
-      {
-        "file": "gallery/general-50.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 50
-      },
-      {
-        "file": "gallery/general-51.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 51
-      },
-      {
-        "file": "gallery/general-52.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 52
-      },
-      {
-        "file": "gallery/general-53.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 53
-      },
-      {
-        "file": "gallery/general-54.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 54
-      },
-      {
-        "file": "gallery/general-55.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 55
-      },
-      {
-        "file": "gallery/general-56.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 56
-      },
-      {
-        "file": "gallery/general-57.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 57
-      },
-      {
-        "file": "gallery/general-58.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 58
-      },
-      {
-        "file": "gallery/general-59.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 59
-      },
-      {
-        "file": "gallery/general-60.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 60
-      },
-      {
-        "file": "gallery/general-61.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 61
-      },
-      {
-        "file": "gallery/general-62.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 62
-      },
-      {
-        "file": "gallery/general-63.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 63
-      },
-      {
-        "file": "gallery/general-64.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 64
-      },
-      {
-        "file": "gallery/general-65.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 65
-      },
-      {
-        "file": "gallery/general-66.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 66
-      },
-      {
-        "file": "gallery/general-67.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 67
-      },
-      {
-        "file": "gallery/general-68.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 68
-      },
-      {
-        "file": "gallery/general-69.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 69
-      },
-      {
-        "file": "gallery/general-70.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 70
-      },
-      {
-        "file": "gallery/general-71.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 71
-      },
-      {
-        "file": "gallery/general-72.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 72
-      },
-      {
-        "file": "gallery/general-73.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 73
-      },
-      {
-        "file": "gallery/general-74.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 74
-      },
-      {
-        "file": "gallery/general-75.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 75
-      },
-      {
-        "file": "gallery/general-76.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 76
-      },
-      {
-        "file": "gallery/general-77.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 77
-      },
-      {
-        "file": "gallery/general-78.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 78
-      },
-      {
-        "file": "gallery/general-79.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 79
-      },
-      {
-        "file": "gallery/general-80.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 80
-      },
-      {
-        "file": "gallery/general-81.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 81
-      },
-      {
-        "file": "gallery/general-82.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 82
-      },
-      {
-        "file": "gallery/general-83.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 83
-      },
-      {
-        "file": "gallery/general-84.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 84
-      },
-      {
-        "file": "gallery/general-85.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 85
-      },
-      {
-        "file": "gallery/general-86.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 86
-      },
-      {
-        "file": "gallery/general-87.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 87
-      },
-      {
-        "file": "gallery/general-88.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 88
-      },
-      {
-        "file": "gallery/general-89.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 89
-      },
-      {
-        "file": "gallery/general-90.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 90
-      },
-      {
-        "file": "gallery/general-91.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 91
-      },
-      {
-        "file": "gallery/general-92.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 92
-      },
-      {
-        "file": "gallery/general-93.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 93
-      },
-      {
-        "file": "gallery/general-94.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 94
-      },
-      {
-        "file": "gallery/general-95.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 95
-      },
-      {
-        "file": "gallery/general-96.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 96
-      },
-      {
-        "file": "gallery/general-97.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 97
-      },
-      {
-        "file": "gallery/general-98.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 98
-      },
-      {
-        "file": "gallery/general-99.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 99
-      },
-      {
-        "file": "gallery/general-100.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 100
-      },
-      {
-        "file": "gallery/general-101.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 101
-      },
-      {
-        "file": "gallery/general-102.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 102
-      },
-      {
-        "file": "gallery/general-103.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 103
-      },
-      {
-        "file": "gallery/general-104.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 104
-      },
-      {
-        "file": "gallery/general-105.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 105
-      },
-      {
-        "file": "gallery/general-106.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 106
-      },
-      {
-        "file": "gallery/general-107.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 107
-      },
-      {
-        "file": "gallery/general-108.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 108
-      },
-      {
-        "file": "gallery/general-109.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 109
-      },
-      {
-        "file": "gallery/general-110.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 110
-      },
-      {
-        "file": "gallery/general-111.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 111
-      },
-      {
-        "file": "gallery/general-112.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 112
-      },
-      {
-        "file": "gallery/general-113.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 113
-      },
-      {
-        "file": "gallery/general-114.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 114
-      },
-      {
-        "file": "gallery/general-115.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 115
-      },
-      {
-        "file": "gallery/general-116.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 116
-      },
-      {
-        "file": "gallery/general-117.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 117
-      },
-      {
-        "file": "gallery/general-118.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 118
-      },
-      {
-        "file": "gallery/general-119.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 119
-      },
-      {
-        "file": "gallery/general-120.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 120
-      },
-      {
-        "file": "gallery/general-121.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 121
-      },
-      {
-        "file": "gallery/general-122.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 122
-      },
-      {
-        "file": "gallery/general-123.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 123
-      },
-      {
-        "file": "gallery/general-124.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 124
-      },
-      {
-        "file": "gallery/general-125.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 125
-      },
-      {
-        "file": "gallery/general-126.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 126
-      },
-      {
-        "file": "gallery/general-127.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 127
-      },
-      {
-        "file": "gallery/general-128.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 128
-      },
-      {
-        "file": "gallery/general-129.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 129
-      },
-      {
-        "file": "gallery/general-130.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 130
-      },
-      {
-        "file": "gallery/general-131.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 131
-      },
-      {
-        "file": "gallery/general-132.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 132
-      },
-      {
-        "file": "gallery/general-133.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 133
-      },
-      {
-        "file": "gallery/general-134.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 134
-      },
-      {
-        "file": "gallery/general-135.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 135
-      },
-      {
-        "file": "gallery/general-136.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 136
-      },
-      {
-        "file": "gallery/general-137.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 137
-      },
-      {
-        "file": "gallery/general-138.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 138
-      },
-      {
-        "file": "gallery/general-139.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 139
-      },
-      {
-        "file": "gallery/general-140.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 140
-      },
-      {
-        "file": "gallery/general-141.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 141
-      },
-      {
-        "file": "gallery/general-142.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 142
-      },
-      {
-        "file": "gallery/general-143.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 143
-      },
-      {
-        "file": "gallery/general-144.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 144
-      },
-      {
-        "file": "gallery/general-145.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 145
-      },
-      {
-        "file": "gallery/general-146.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 146
-      },
-      {
-        "file": "gallery/general-147.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 147
-      },
-      {
-        "file": "gallery/general-148.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 148
-      },
-      {
-        "file": "gallery/general-149.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 149
-      },
-      {
-        "file": "gallery/general-150.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 150
-      },
-      {
-        "file": "gallery/general-151.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 151
-      },
-      {
-        "file": "gallery/general-152.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 152
-      },
-      {
-        "file": "gallery/general-153.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 153
-      },
-      {
-        "file": "gallery/general-154.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 154
-      },
-      {
-        "file": "gallery/general-155.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 155
-      },
-      {
-        "file": "gallery/general-156.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 156
-      },
-      {
-        "file": "gallery/general-157.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 157
-      },
-      {
-        "file": "gallery/general-158.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 158
-      },
-      {
-        "file": "gallery/general-159.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 159
-      },
-      {
-        "file": "gallery/general-160.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 160
-      },
-      {
-        "file": "gallery/general-161.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 161
-      },
-      {
-        "file": "gallery/general-162.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 162
-      },
-      {
-        "file": "gallery/general-163.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 163
-      },
-      {
-        "file": "gallery/general-164.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 164
-      },
-      {
-        "file": "gallery/general-165.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 165
-      },
-      {
-        "file": "gallery/general-166.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 166
-      },
-      {
-        "file": "gallery/general-167.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 167
-      },
-      {
-        "file": "gallery/general-168.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 168
-      },
-      {
-        "file": "gallery/general-169.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 169
-      },
-      {
-        "file": "gallery/general-170.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 170
-      },
-      {
-        "file": "gallery/general-171.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 171
-      },
-      {
-        "file": "gallery/general-172.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 172
-      },
-      {
-        "file": "gallery/general-173.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 173
-      },
-      {
-        "file": "gallery/general-174.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 174
-      },
-      {
-        "file": "gallery/general-175.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 175
-      },
-      {
-        "file": "gallery/general-176.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 176
-      },
-      {
-        "file": "gallery/general-177.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 177
-      },
-      {
-        "file": "gallery/general-178.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 178
-      },
-      {
-        "file": "gallery/general-179.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 179
-      },
-      {
-        "file": "gallery/general-180.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 180
-      },
-      {
-        "file": "gallery/cote-divoire-02.jpg",
-        "caption": "Côte d'Ivoire training programme",
-        "alt": "Côte d'Ivoire training programme",
-        "order": 182
-      },
-      {
-        "file": "gallery/cote-divoire-03.jpg",
-        "caption": "Côte d'Ivoire training programme",
-        "alt": "Côte d'Ivoire training programme",
-        "order": 183
-      },
-      {
-        "file": "gallery/cote-divoire-04.jpg",
-        "caption": "Côte d'Ivoire training programme",
-        "alt": "Côte d'Ivoire training programme",
-        "order": 184
-      },
-      {
-        "file": "gallery/bam-natull-01.jpg",
-        "caption": "BAM Natull operator training",
-        "alt": "BAM Natull operator training",
-        "order": 185
-      },
-      {
-        "file": "gallery/cote-divoire-05.jpg",
-        "caption": "Côte d'Ivoire training programme",
-        "alt": "Côte d'Ivoire training programme",
-        "order": 186
-      },
-      {
-        "file": "gallery/bam-natull-02.jpg",
-        "caption": "BAM Natull operator training",
-        "alt": "BAM Natull operator training",
-        "order": 187
-      },
-      {
-        "file": "gallery/bam-natull-03.jpg",
-        "caption": "BAM Natull operator training",
-        "alt": "BAM Natull operator training",
-        "order": 188
-      },
-      {
-        "file": "gallery/bam-natull-04.jpg",
-        "caption": "BAM Natull operator training",
-        "alt": "BAM Natull operator training",
-        "order": 189
-      },
-      {
-        "file": "gallery/bam-natull-05.jpg",
-        "caption": "BAM Natull operator training",
-        "alt": "BAM Natull operator training",
-        "order": 190
-      },
-      {
-        "file": "gallery/bam-natull-06.jpg",
-        "caption": "BAM Natull operator training",
-        "alt": "BAM Natull operator training",
-        "order": 191
-      },
-      {
-        "file": "gallery/bam-natull-07.jpg",
-        "caption": "BAM Natull operator training",
-        "alt": "BAM Natull operator training",
-        "order": 192
-      },
-      {
-        "file": "gallery/bam-natull-08.jpg",
-        "caption": "BAM Natull operator training",
-        "alt": "BAM Natull operator training",
-        "order": 193
-      },
-      {
-        "file": "gallery/bam-natull-09.jpg",
-        "caption": "BAM Natull operator training",
-        "alt": "BAM Natull operator training",
-        "order": 194
-      },
-      {
-        "file": "gallery/bam-natull-10.jpg",
-        "caption": "BAM Natull operator training",
-        "alt": "BAM Natull operator training",
-        "order": 195
-      },
-      {
-        "file": "gallery/sembehun-opening-01.jpg",
-        "caption": "Sembehun academy official opening",
-        "alt": "Sembehun academy official opening",
-        "order": 196
-      },
-      {
-        "file": "gallery/sembehun-opening-02.jpg",
-        "caption": "Sembehun academy official opening",
-        "alt": "Sembehun academy official opening",
-        "order": 197
-      },
-      {
-        "file": "gallery/sembehun-opening-03.jpg",
-        "caption": "Sembehun academy official opening",
-        "alt": "Sembehun academy official opening",
-        "order": 198
-      },
-      {
-        "file": "gallery/sembehun-opening-04.jpg",
-        "caption": "Sembehun academy official opening",
-        "alt": "Sembehun academy official opening",
-        "order": 199
-      },
-      {
-        "file": "gallery/sembehun-opening-05.jpg",
-        "caption": "Sembehun academy official opening",
-        "alt": "Sembehun academy official opening",
-        "order": 200
-      },
-      {
-        "file": "gallery/sembehun-opening-06.jpg",
-        "caption": "Sembehun academy official opening",
-        "alt": "Sembehun academy official opening",
-        "order": 201
-      },
-      {
-        "file": "gallery/certification-01.jpg",
-        "caption": "Certificates awarded to graduates",
-        "alt": "Certificates awarded to graduates",
-        "order": 202
-      },
-      {
-        "file": "gallery/certification-02.jpg",
-        "caption": "Certificates awarded to graduates",
-        "alt": "Certificates awarded to graduates",
-        "order": 203
-      },
-      {
-        "file": "gallery/certification-03.jpg",
-        "caption": "Certificates awarded to graduates",
-        "alt": "Certificates awarded to graduates",
-        "order": 204
-      },
-      {
-        "file": "gallery/certification-04.jpg",
-        "caption": "Operator certification ceremony",
-        "alt": "Operator certification ceremony",
-        "order": 205
-      },
-      {
-        "file": "gallery/certification-05.jpg",
-        "caption": "Operator certification ceremony",
-        "alt": "Operator certification ceremony",
-        "order": 206
-      },
-      {
-        "file": "gallery/certification-06.jpg",
-        "caption": "Operator certification ceremony",
-        "alt": "Operator certification ceremony",
-        "order": 207
       },
       {
         "file": "gallery/certification-07.jpg",
         "caption": "Operator certification ceremony",
         "alt": "Operator certification ceremony",
-        "order": 208
+        "category": "certification",
+        "order": 48
       },
       {
         "file": "gallery/certification-08.jpg",
         "caption": "Operator certification ceremony",
         "alt": "Operator certification ceremony",
-        "order": 209
+        "category": "certification",
+        "order": 49
+      },
+      {
+        "file": "gallery/certification-06.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 50
+      },
+      {
+        "file": "gallery/certification-04.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 51
+      },
+      {
+        "file": "gallery/certification-05.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 52
+      },
+      {
+        "file": "gallery/certification-01.jpg",
+        "caption": "Certificates awarded to graduates",
+        "alt": "Certificates awarded to graduates",
+        "category": "certification",
+        "order": 53
       },
       {
         "file": "gallery/certification-09.jpg",
         "caption": "Operator certification ceremony",
         "alt": "Operator certification ceremony",
-        "order": 210
+        "category": "certification",
+        "order": 54
+      },
+      {
+        "file": "programme/pre-employment-screening-03.jpg",
+        "caption": "Operator assessment and certification",
+        "alt": "Operator assessment and certification",
+        "category": "certification",
+        "order": 55
       },
       {
         "file": "gallery/certification-10.jpg",
         "caption": "Operator certification ceremony",
         "alt": "Operator certification ceremony",
-        "order": 211
-      },
-      {
-        "file": "gallery/certification-11.jpg",
-        "caption": "Operator certification ceremony",
-        "alt": "Operator certification ceremony",
-        "order": 212
-      },
-      {
-        "file": "gallery/certification-12.jpg",
-        "caption": "Operator certification ceremony",
-        "alt": "Operator certification ceremony",
-        "order": 213
+        "category": "certification",
+        "order": 56
       },
       {
         "file": "gallery/certification-13.jpg",
         "caption": "Operator certification ceremony",
         "alt": "Operator certification ceremony",
-        "order": 214
+        "category": "certification",
+        "order": 57
       },
       {
-        "file": "gallery/certification-14.jpg",
-        "caption": "Operator certification ceremony",
-        "alt": "Operator certification ceremony",
-        "order": 215
+        "file": "gallery/sembehun-opening-05.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 58
       },
       {
-        "file": "gallery/general-185.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 216
+        "file": "gallery/sembehun-opening-06.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 59
       },
       {
-        "file": "gallery/general-186.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 217
+        "file": "gallery/bam-natull-03.jpg",
+        "caption": "BAM Natull operator training",
+        "alt": "BAM Natull operator training",
+        "category": "projects",
+        "order": 60
+      },
+      {
+        "file": "gallery/sembehun-opening-01.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 61
+      },
+      {
+        "file": "gallery/sembehun-opening-04.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 62
       },
       {
         "file": "gallery/mano-01.jpg",
         "caption": "Mano certification ceremony",
         "alt": "Mano certification ceremony",
-        "order": 218
+        "category": "projects",
+        "order": 63
       },
       {
-        "file": "gallery/web-selection-01.jpg",
-        "caption": "Trainees kitted out in personal protective equipment",
-        "alt": "Group of SierraZim trainees in full PPE — hi-vis vests, hard hats and safety glasses",
-        "order": 219
+        "file": "gallery/bam-natull-02.jpg",
+        "caption": "BAM Natull operator training",
+        "alt": "BAM Natull operator training",
+        "category": "projects",
+        "order": 64
       },
       {
-        "file": "gallery/web-selection-02.jpg",
-        "caption": "The SierraZim training team on site at a mining operation",
-        "alt": "SierraZim instructors in branded workwear and hard hats standing on a mine site",
-        "order": 220
+        "file": "gallery/bam-natull-01.jpg",
+        "caption": "BAM Natull operator training",
+        "alt": "BAM Natull operator training",
+        "category": "projects",
+        "order": 65
       },
       {
-        "file": "gallery/web-selection-03.jpg",
-        "caption": "A SierraZim training cohort during their programme",
-        "alt": "A cohort of SierraZim trainees in hi-vis vests gathered in a training room",
-        "order": 221
+        "file": "gallery/sembehun-opening-03.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 66
       },
       {
-        "file": "gallery/web-selection-04.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 222
+        "file": "gallery/bam-natull-10.jpg",
+        "caption": "BAM Natull operator training",
+        "alt": "BAM Natull operator training",
+        "category": "projects",
+        "order": 67
       },
       {
-        "file": "gallery/web-selection-05.jpg",
-        "caption": "SierraZim training",
-        "alt": "SierraZim training",
-        "order": 223
+        "file": "gallery/sembehun-opening-02.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 68
       },
       {
-        "file": "gallery/web-selection-06.jpg",
-        "caption": "SierraZim driving-school team with a branded training vehicle",
-        "alt": "Three SierraZim staff members standing beside a branded driving-school car",
-        "order": 224
+        "file": "gallery/bam-natull-04.jpg",
+        "caption": "BAM Natull operator training",
+        "alt": "BAM Natull operator training",
+        "category": "projects",
+        "order": 69
       },
       {
-        "file": "gallery/web-selection-07.jpg",
-        "caption": "Heavy earthmoving in action at a client mine site",
-        "alt": "Volvo tracked excavator loading red earth into a yellow dump truck at a mine",
-        "order": 225
+        "file": "gallery/bam-natull-08.jpg",
+        "caption": "BAM Natull operator training",
+        "alt": "BAM Natull operator training",
+        "category": "projects",
+        "order": 70
       },
       {
-        "file": "gallery/students-01.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 226
+        "file": "gallery/bam-natull-05.jpg",
+        "caption": "BAM Natull operator training",
+        "alt": "BAM Natull operator training",
+        "category": "projects",
+        "order": 71
       },
       {
-        "file": "gallery/students-02.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 227
-      },
-      {
-        "file": "gallery/students-03.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 228
-      },
-      {
-        "file": "gallery/students-04.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 229
-      },
-      {
-        "file": "gallery/students-05.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 230
-      },
-      {
-        "file": "gallery/students-06.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 231
-      },
-      {
-        "file": "gallery/students-07.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 232
+        "file": "gallery/bam-natull-06.jpg",
+        "caption": "BAM Natull operator training",
+        "alt": "BAM Natull operator training",
+        "category": "projects",
+        "order": 72
       },
       {
         "file": "gallery/students-08.jpg",
         "caption": "Trainees during a SierraZim programme",
         "alt": "Trainees during a SierraZim programme",
-        "order": 233
-      },
-      {
-        "file": "gallery/students-09.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 234
-      },
-      {
-        "file": "gallery/students-10.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 235
+        "category": "trainees",
+        "order": 73
       },
       {
         "file": "gallery/students-11.jpg",
         "caption": "Trainees during a SierraZim programme",
         "alt": "Trainees during a SierraZim programme",
-        "order": 236
-      },
-      {
-        "file": "gallery/students-12.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 237
-      },
-      {
-        "file": "gallery/students-13.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 238
-      },
-      {
-        "file": "gallery/students-14.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 239
-      },
-      {
-        "file": "gallery/students-15.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 240
-      },
-      {
-        "file": "gallery/students-16.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 241
-      },
-      {
-        "file": "gallery/students-17.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 242
-      },
-      {
-        "file": "gallery/students-18.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 243
-      },
-      {
-        "file": "gallery/students-19.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 244
-      },
-      {
-        "file": "gallery/students-20.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 245
-      },
-      {
-        "file": "gallery/students-21.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 246
-      },
-      {
-        "file": "gallery/students-22.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 247
-      },
-      {
-        "file": "gallery/students-23.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 248
-      },
-      {
-        "file": "gallery/students-24.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 249
-      },
-      {
-        "file": "gallery/students-25.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 250
-      },
-      {
-        "file": "gallery/students-26.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 251
-      },
-      {
-        "file": "gallery/students-27.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 252
-      },
-      {
-        "file": "gallery/students-28.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 253
-      },
-      {
-        "file": "gallery/students-29.jpg",
-        "caption": "Trainees during a SierraZim programme",
-        "alt": "Trainees during a SierraZim programme",
-        "order": 254
+        "category": "trainees",
+        "order": 74
       },
       {
         "file": "gallery/students-30.jpg",
         "caption": "Trainees during a SierraZim programme",
         "alt": "Trainees during a SierraZim programme",
-        "order": 255
+        "category": "trainees",
+        "order": 75
+      },
+      {
+        "file": "gallery/students-09.jpg",
+        "caption": "Trainees during a SierraZim programme",
+        "alt": "Trainees during a SierraZim programme",
+        "category": "trainees",
+        "order": 76
+      },
+      {
+        "file": "gallery/students-28.jpg",
+        "caption": "Trainees during a SierraZim programme",
+        "alt": "Trainees during a SierraZim programme",
+        "category": "trainees",
+        "order": 77
+      },
+      {
+        "file": "gallery/students-13.jpg",
+        "caption": "Trainees during a SierraZim programme",
+        "alt": "Trainees during a SierraZim programme",
+        "category": "trainees",
+        "order": 78
+      },
+      {
+        "file": "gallery/students-12.jpg",
+        "caption": "Trainees during a SierraZim programme",
+        "alt": "Trainees during a SierraZim programme",
+        "category": "trainees",
+        "order": 79
+      },
+      {
+        "file": "gallery/students-10.jpg",
+        "caption": "Trainees during a SierraZim programme",
+        "alt": "Trainees during a SierraZim programme",
+        "category": "trainees",
+        "order": 80
+      },
+      {
+        "file": "gallery/students-19.jpg",
+        "caption": "Trainees during a SierraZim programme",
+        "alt": "Trainees during a SierraZim programme",
+        "category": "trainees",
+        "order": 81
+      },
+      {
+        "file": "gallery/students-18.jpg",
+        "caption": "Trainees during a SierraZim programme",
+        "alt": "Trainees during a SierraZim programme",
+        "category": "trainees",
+        "order": 82
       }
     ],
     "galleryVideos": [
       {
-        "file": "video/general-182.mp4",
-        "poster": "video/general-182-poster.jpg",
-        "caption": "SierraZim training",
-        "order": 256
-      },
-      {
-        "file": "video/general-183.mp4",
-        "poster": "video/general-183-poster.jpg",
-        "caption": "SierraZim training",
-        "order": 257
-      },
-      {
-        "file": "video/general-184.mp4",
-        "poster": "video/general-184-poster.jpg",
-        "caption": "SierraZim training",
-        "order": 258
-      },
-      {
         "file": "video/testimony-01.mp4",
         "poster": "video/testimony-01-poster.jpg",
         "caption": "Client testimonial",
-        "order": 259
+        "order": 1000,
+        "category": "testimonials"
       },
       {
         "file": "video/testimony-02.mp4",
         "poster": "video/testimony-02-poster.jpg",
         "caption": "Client testimonial",
-        "order": 260
+        "order": 1001,
+        "category": "testimonials"
       },
       {
         "file": "video/testimony-03.mp4",
         "poster": "video/testimony-03-poster.jpg",
         "caption": "Client testimonial",
-        "order": 261
+        "order": 1002,
+        "category": "testimonials"
       },
       {
         "file": "video/testimony-04.mp4",
         "poster": "video/testimony-04-poster.jpg",
         "caption": "Client testimonial",
-        "order": 262
+        "order": 1003,
+        "category": "testimonials"
       },
       {
         "file": "video/testimony-05.mp4",
         "poster": "video/testimony-05-poster.jpg",
         "caption": "Client testimonial",
-        "order": 263
+        "order": 1004,
+        "category": "testimonials"
       },
       {
         "file": "video/testimony-06.mp4",
         "poster": "video/testimony-06-poster.jpg",
         "caption": "Client testimonial",
-        "order": 264
+        "order": 1005,
+        "category": "testimonials"
       },
       {
         "file": "video/testimony-07.mp4",
         "poster": "video/testimony-07-poster.jpg",
         "caption": "Client testimonial",
-        "order": 265
+        "order": 1006,
+        "category": "testimonials"
       }
     ],
     "leadership": {
