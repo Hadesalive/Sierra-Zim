@@ -52,7 +52,7 @@ export function PageHero({
         <div className="grid lg:min-h-[62vh] lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col justify-center px-6 py-16 sm:px-14 sm:py-18">
             <div className="mb-6">{eyebrowEl}</div>
-            <div className="text-[clamp(48px,6.4vw,104px)]">{titleEl}</div>
+            <div className="text-fluid-hero-split">{titleEl}</div>
             {intro && (
               <p
                 className="rise mt-8 max-w-[520px] text-lg leading-[1.6] text-white/80"
@@ -97,7 +97,7 @@ export function PageHero({
     <section className="bg-forest-950 text-white">
       <div className="mx-auto w-full max-w-[90rem] px-6 pb-18 pt-24 sm:px-14">
         <div className="mb-6">{eyebrowEl}</div>
-        <div className="text-[clamp(56px,8vw,132px)]">{titleEl}</div>
+        <div className="text-fluid-hero">{titleEl}</div>
 
         {specs ? (
           <div

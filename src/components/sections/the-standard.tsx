@@ -10,7 +10,7 @@ export function TheStandard({ steps }: { steps: HomeContent["certPathSteps"] }) 
     <section className="border-t border-line-strong bg-paper-2 text-ink">
       <div className="mx-auto w-full max-w-[90rem] px-6 py-[104px] sm:px-14">
         <div className="mb-16 flex flex-wrap items-baseline gap-x-6 gap-y-3">
-          <h2 className="font-display text-[clamp(44px,6vw,96px)] font-extrabold uppercase leading-[0.9]">
+          <h2 className="font-display text-fluid-3 font-extrabold uppercase leading-[0.9]">
             The standard
           </h2>
           <p className="font-mono text-[12px] uppercase tracking-[0.24em] text-safety-600">

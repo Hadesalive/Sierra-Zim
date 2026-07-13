@@ -74,7 +74,7 @@ export default async function AboutPage() {
               <p className="mb-4 font-mono text-[12px] uppercase tracking-[0.24em] text-safety-600">
                 {about.storyEyebrow || "Our story"}
               </p>
-              <h2 className="font-display text-[clamp(40px,4.6vw,76px)] font-extrabold uppercase leading-[0.9]">
+              <h2 className="font-display text-fluid-5 font-extrabold uppercase leading-[0.9]">
                 {about.storyHeading}
               </h2>
               {about.storyImage && (
@@ -119,7 +119,7 @@ export default async function AboutPage() {
       <section className="border-t border-line-strong bg-paper-2 text-ink">
         <div className={`${SHELL} py-24`}>
           <div className="mb-12 flex flex-wrap items-baseline gap-x-6 gap-y-3">
-            <h2 className="font-display text-[clamp(40px,4.6vw,76px)] font-extrabold uppercase leading-[0.9]">
+            <h2 className="font-display text-fluid-5 font-extrabold uppercase leading-[0.9]">
               {about.leadershipHeading || "Leadership"}
             </h2>
             <p className="font-mono text-[12px] uppercase tracking-[0.24em] text-safety-600">
@@ -164,7 +164,7 @@ export default async function AboutPage() {
         <div aria-hidden className="hazard h-3.5" />
         <div className={`${SHELL} py-24`}>
           <div className="mb-14 flex flex-wrap items-baseline gap-x-6 gap-y-3">
-            <h2 className="font-display text-[clamp(40px,4.6vw,76px)] font-extrabold uppercase leading-[0.9]">
+            <h2 className="font-display text-fluid-5 font-extrabold uppercase leading-[0.9]">
               On the ground,
               <br />
               <span className="stroke-white-thin">across borders.</span>
@@ -177,7 +177,7 @@ export default async function AboutPage() {
             {about.locations.map((loc, i) => (
               <div
                 key={loc.place}
-                className="grid grid-cols-[52px_1fr] items-center gap-5 border-b border-white/15 py-5 sm:grid-cols-[80px_minmax(200px,0.7fr)_1fr] sm:gap-8"
+                className="grid grid-cols-[52px_1fr] items-center gap-5 border-b border-white/15 py-5 sm:grid-cols-[80px_0.7fr_1fr] sm:gap-8"
               >
                 <span className="font-mono text-[12px] tracking-[0.2em] text-safety-400">
                   {String(i + 1).padStart(2, "0")}

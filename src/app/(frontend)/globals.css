@@ -45,6 +45,24 @@
   --font-display: var(--font-barlow-condensed), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  /* Fluid display sizes → `text-fluid-*` utilities. Defined as theme tokens
+     (not `text-[clamp(...)]`) because Turbopack dev does NOT generate arbitrary
+     Tailwind values containing commas; theme utilities generate reliably. */
+  --text-fluid-hero: clamp(56px, 8vw, 132px);
+  --text-fluid-hero-xl: clamp(56px, 11vw, 148px);
+  --text-fluid-hero-split: clamp(48px, 6.4vw, 104px);
+  --text-fluid-1: clamp(48px, 6vw, 104px);
+  --text-fluid-2: clamp(44px, 6vw, 104px);
+  --text-fluid-3: clamp(44px, 6vw, 96px);
+  --text-fluid-4: clamp(40px, 5vw, 88px);
+  --text-fluid-5: clamp(40px, 4.6vw, 76px);
+  --text-fluid-6: clamp(36px, 4.4vw, 72px);
+  --text-fluid-7: clamp(34px, 4vw, 64px);
+  --text-fluid-8: clamp(32px, 3.6vw, 60px);
+  --text-fluid-9: clamp(32px, 3.6vw, 56px);
+  --text-fluid-quote: clamp(28px, 3.6vw, 54px);
+  --text-fluid-acc: clamp(24px, 3.2vw, 48px);
 }
 
 @layer base {

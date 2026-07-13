@@ -88,7 +88,7 @@ export default async function PortfolioPage() {
               Field record Nº 001
             </span>
             <div className="absolute inset-x-0 bottom-0 p-9 sm:p-10">
-              <p className="stroke-white-thin font-display text-[clamp(40px,5vw,88px)] font-extrabold uppercase leading-[0.85] tracking-[0.02em]">
+              <p className="stroke-white-thin font-display text-fluid-4 font-extrabold uppercase leading-[0.85] tracking-[0.02em]">
                 {featured.location}
               </p>
               <p className="mt-3.5 font-mono text-[11px] uppercase tracking-[0.22em] text-white/80">
@@ -100,7 +100,7 @@ export default async function PortfolioPage() {
             <p className="mb-4.5 font-mono text-[12px] uppercase tracking-[0.24em] text-safety-400">
               Cross-border delivery — {featured.year}
             </p>
-            <h2 className="font-display text-[clamp(34px,4vw,64px)] font-extrabold uppercase leading-[0.9]">
+            <h2 className="font-display text-fluid-7 font-extrabold uppercase leading-[0.9]">
               {featured.title}
             </h2>
             <p className="mt-6 text-[16.5px] leading-[1.65] text-white/80">
@@ -132,7 +132,7 @@ export default async function PortfolioPage() {
       <section className="bg-paper text-ink">
         <div className={`${SHELL} py-24`}>
           <div className="mb-12 flex flex-wrap items-baseline gap-x-6 gap-y-3">
-            <h2 className="font-display text-[clamp(40px,4.6vw,76px)] font-extrabold uppercase leading-[0.9]">
+            <h2 className="font-display text-fluid-5 font-extrabold uppercase leading-[0.9]">
               All records
             </h2>
             <p className="font-mono text-[12px] uppercase tracking-[0.24em] text-safety-600">
@@ -144,7 +144,7 @@ export default async function PortfolioPage() {
               <Link
                 key={c.slug}
                 href={`/portfolio/${c.slug}`}
-                className="group grid grid-cols-[52px_1fr_auto] items-center gap-4 border-b border-line-strong py-6 transition-colors hover:bg-paper-2 lg:grid-cols-[80px_minmax(200px,0.8fr)_150px_1.3fr_48px] lg:gap-8"
+                className="group grid grid-cols-[52px_1fr_auto] items-center gap-4 border-b border-line-strong py-6 transition-colors hover:bg-paper-2 lg:grid-cols-[80px_0.8fr_150px_1.3fr_48px] lg:gap-8"
               >
                 <span className="self-start font-mono text-[12px] uppercase tracking-[0.2em] text-safety-600 lg:self-center">
                   {`Nº ${String(i + 1).padStart(3, "0")}`}
@@ -187,7 +187,7 @@ export default async function PortfolioPage() {
         <section className="border-t border-line-strong bg-paper-2 text-ink">
           <div className={`${SHELL} py-24`}>
             <div className="mb-12 flex flex-wrap items-baseline gap-x-6 gap-y-3">
-              <h2 className="font-display text-[clamp(40px,4.6vw,76px)] font-extrabold uppercase leading-[0.9]">
+              <h2 className="font-display text-fluid-5 font-extrabold uppercase leading-[0.9]">
                 Built for the work
                 <br />
                 each sector does.

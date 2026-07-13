@@ -92,7 +92,7 @@ export default async function ServicesPage() {
                 </div>
 
                 <div>
-                  <h2 className="font-display text-[clamp(32px,3.6vw,60px)] font-extrabold uppercase leading-[0.92]">
+                  <h2 className="font-display text-fluid-8 font-extrabold uppercase leading-[0.92]">
                     {prog.title}
                   </h2>
                   <p className="mt-5 text-[16.5px] leading-[1.65] text-ink-soft">

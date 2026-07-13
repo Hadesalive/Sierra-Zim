@@ -31,7 +31,7 @@ export function ProofRail({
     <section className="bg-paper text-ink">
       <div className="mx-auto w-full max-w-[90rem] px-6 pb-14 pt-[104px] sm:px-14">
         <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-8">
-          <h2 className="font-display text-[clamp(44px,6vw,96px)] font-extrabold uppercase leading-[0.88]">
+          <h2 className="font-display text-fluid-3 font-extrabold uppercase leading-[0.88]">
             Real ground.
             <br />
             Real machines.

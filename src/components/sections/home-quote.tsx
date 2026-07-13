@@ -24,7 +24,7 @@ export function HomeQuote({
           <QuotesIcon weight="fill" className="size-7 text-ink sm:size-9" />
         </span>
         <div>
-          <p className="max-w-[920px] font-display text-[clamp(28px,3.6vw,54px)] font-bold leading-[1.05]">
+          <p className="max-w-[920px] font-display text-fluid-quote font-bold leading-[1.05]">
             {quote}
           </p>
           {partners.length > 0 && (

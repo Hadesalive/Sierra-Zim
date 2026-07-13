@@ -59,7 +59,7 @@ export default async function ContactPage() {
         <div className="mx-auto grid w-full max-w-[90rem] gap-14 px-6 py-20 sm:px-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           {/* Channels */}
           <div>
-            <h2 className="font-display text-[clamp(32px,3.6vw,56px)] font-extrabold uppercase leading-[0.9]">
+            <h2 className="font-display text-fluid-9 font-extrabold uppercase leading-[0.9]">
               {contact.detailsHeading || "Talk to the academy."}
             </h2>
             <p className="mt-5 text-[16.5px] leading-[1.6] text-ink-soft">

@@ -60,7 +60,7 @@ export function FieldRecord({
             Field record Nº 001
           </span>
           <div className="absolute inset-x-0 bottom-0 p-9 sm:p-10">
-            <p className="stroke-white-thin font-display text-[clamp(44px,6vw,104px)] font-extrabold uppercase leading-[0.85] tracking-[0.02em]">
+            <p className="stroke-white-thin font-display text-fluid-2 font-extrabold uppercase leading-[0.85] tracking-[0.02em]">
               {caseStudy.location}
             </p>
             <p className="mt-3.5 font-mono text-[11px] uppercase tracking-[0.22em] text-white/80">
@@ -74,7 +74,7 @@ export function FieldRecord({
           <p className="mb-4.5 font-mono text-[12px] uppercase tracking-[0.24em] text-safety-400">
             Cross-border delivery — {caseStudy.year}
           </p>
-          <h2 className="font-display text-[clamp(36px,4.4vw,72px)] font-extrabold uppercase leading-[0.9]">
+          <h2 className="font-display text-fluid-6 font-extrabold uppercase leading-[0.9]">
             We took the academy across borders.
           </h2>
 
