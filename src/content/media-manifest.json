@@ -3105,284 +3105,445 @@
         "order": 4
       },
       {
-        "file": "programme/light-vehicle-defensive-driving-06.jpg",
-        "caption": "Light vehicle defensive-driving training",
-        "alt": "Light vehicle defensive-driving training",
-        "category": "light-vehicle",
+        "file": "programme/theory-and-classroom-training-08.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 5
       },
       {
-        "file": "programme/light-vehicle-defensive-driving-05.jpg",
-        "caption": "Light vehicle defensive-driving training",
-        "alt": "Light vehicle defensive-driving training",
-        "category": "light-vehicle",
+        "file": "programme/theory-and-classroom-training-36.jpg",
+        "caption": "On-the-job training",
+        "alt": "On-the-job training",
+        "category": "classroom",
         "order": 6
       },
       {
-        "file": "programme/light-vehicle-defensive-driving-04.jpg",
-        "caption": "Light vehicle defensive-driving training",
-        "alt": "Light vehicle defensive-driving training",
-        "category": "light-vehicle",
+        "file": "programme/theory-and-classroom-training-13.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 7
       },
       {
-        "file": "programme/light-vehicle-defensive-driving-03.jpg",
-        "caption": "Light vehicle defensive-driving training",
-        "alt": "Light vehicle defensive-driving training",
-        "category": "light-vehicle",
+        "file": "programme/theory-and-classroom-training-24.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 8
       },
       {
-        "file": "programme/light-vehicle-defensive-driving-07.jpg",
-        "caption": "Light vehicle defensive-driving training",
-        "alt": "Light vehicle defensive-driving training",
-        "category": "light-vehicle",
+        "file": "programme/theory-and-classroom-training-28.jpg",
+        "caption": "On-the-job training",
+        "alt": "On-the-job training",
+        "category": "classroom",
         "order": 9
       },
       {
-        "file": "programme/light-vehicle-defensive-driving-17.jpg",
-        "caption": "Light vehicle defensive-driving training",
-        "alt": "Light vehicle defensive-driving training",
-        "category": "light-vehicle",
+        "file": "programme/theory-and-classroom-training-21.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
         "order": 10
       },
       {
-        "file": "programme/light-vehicle-defensive-driving-15.jpg",
+        "file": "programme/light-vehicle-defensive-driving-06.jpg",
         "caption": "Light vehicle defensive-driving training",
         "alt": "Light vehicle defensive-driving training",
         "category": "light-vehicle",
         "order": 11
       },
       {
-        "file": "programme/light-vehicle-defensive-driving-11.jpg",
+        "file": "programme/light-vehicle-defensive-driving-05.jpg",
         "caption": "Light vehicle defensive-driving training",
         "alt": "Light vehicle defensive-driving training",
         "category": "light-vehicle",
         "order": 12
       },
       {
+        "file": "programme/light-vehicle-defensive-driving-04.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 13
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-03.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 14
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-07.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 15
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-17.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 16
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-15.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 17
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-11.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 18
+      },
+      {
         "file": "gallery/students-18.jpg",
         "caption": "SierraZim training team on site",
         "alt": "A SierraZim training team in branded shirts beside a pickup",
         "category": "light-vehicle",
-        "order": 13
+        "order": 19
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-02.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 20
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-01.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 21
       },
       {
         "file": "programme/surface-mobile-equipment-training-08.jpg",
         "caption": "Excavator operator training",
         "alt": "Excavator operator training",
         "category": "heavy-equipment",
-        "order": 14
+        "order": 22
       },
       {
         "file": "programme/surface-mobile-equipment-training-10.jpg",
         "caption": "Excavator operator training",
         "alt": "Excavator operator training",
         "category": "heavy-equipment",
-        "order": 15
+        "order": 23
       },
       {
         "file": "programme/surface-mobile-equipment-training-03.jpg",
         "caption": "Articulated dump truck training",
         "alt": "Articulated dump truck training",
         "category": "heavy-equipment",
-        "order": 16
+        "order": 24
       },
       {
         "file": "programme/surface-mobile-equipment-training-04.jpg",
         "caption": "Articulated dump truck training",
         "alt": "Articulated dump truck training",
         "category": "heavy-equipment",
-        "order": 17
+        "order": 25
       },
       {
         "file": "programme/surface-mobile-equipment-training-12.jpg",
         "caption": "Front-end loader operator training",
         "alt": "Front-end loader operator training",
         "category": "heavy-equipment",
-        "order": 18
+        "order": 26
       },
       {
         "file": "programme/heavy-vehicle-defensive-driving-01.jpg",
         "caption": "Heavy vehicle defensive-driving training",
         "alt": "Heavy vehicle defensive-driving training",
         "category": "heavy-equipment",
-        "order": 19
+        "order": 27
       },
       {
         "file": "programme/agriculture-equipment-training-05.jpg",
         "caption": "Tractor and agriculture equipment training",
         "alt": "Tractor and agriculture equipment training",
         "category": "heavy-equipment",
-        "order": 20
+        "order": 28
       },
       {
         "file": "programme/agriculture-equipment-training-11.jpg",
         "caption": "Tractor and agriculture equipment training",
         "alt": "Tractor and agriculture equipment training",
         "category": "heavy-equipment",
-        "order": 21
+        "order": 29
+      },
+      {
+        "file": "programme/agriculture-equipment-training-08.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
+        "order": 30
+      },
+      {
+        "file": "programme/agriculture-equipment-training-06.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
+        "order": 31
+      },
+      {
+        "file": "programme/surface-mobile-equipment-training-05.jpg",
+        "caption": "Articulated dump truck training",
+        "alt": "Articulated dump truck training",
+        "category": "heavy-equipment",
+        "order": 32
+      },
+      {
+        "file": "programme/agriculture-equipment-training-03.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
+        "order": 33
       },
       {
         "file": "programme/simulator-training-21.jpg",
         "caption": "Driving simulator training",
         "alt": "Driving simulator training",
         "category": "simulator",
-        "order": 22
+        "order": 34
       },
       {
         "file": "programme/simulator-training-01.jpg",
         "caption": "Driving simulator training",
         "alt": "Driving simulator training",
         "category": "simulator",
-        "order": 23
+        "order": 35
       },
       {
         "file": "programme/simulator-training-05.jpg",
         "caption": "Driving simulator training",
         "alt": "Driving simulator training",
         "category": "simulator",
-        "order": 24
+        "order": 36
       },
       {
         "file": "programme/simulator-training-12.jpg",
         "caption": "Driving simulator training",
         "alt": "Driving simulator training",
         "category": "simulator",
-        "order": 25
+        "order": 37
       },
       {
         "file": "programme/simulator-training-08.jpg",
         "caption": "Driving simulator training",
         "alt": "Driving simulator training",
         "category": "simulator",
-        "order": 26
+        "order": 38
       },
       {
         "file": "programme/simulator-training-17.jpg",
         "caption": "Driving simulator training",
         "alt": "Driving simulator training",
         "category": "simulator",
-        "order": 27
+        "order": 39
+      },
+      {
+        "file": "programme/simulator-training-06.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 40
+      },
+      {
+        "file": "programme/simulator-training-20.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 41
+      },
+      {
+        "file": "programme/simulator-training-07.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 42
+      },
+      {
+        "file": "programme/simulator-training-13.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 43
       },
       {
         "file": "gallery/certification-08.jpg",
         "caption": "Operator certification ceremony",
         "alt": "Operator certification ceremony",
         "category": "certification",
-        "order": 28
+        "order": 44
       },
       {
         "file": "gallery/certification-05.jpg",
         "caption": "Operator certification ceremony",
         "alt": "Operator certification ceremony",
         "category": "certification",
-        "order": 29
+        "order": 45
       },
       {
         "file": "gallery/certification-06.jpg",
         "caption": "Operator certification ceremony",
         "alt": "Operator certification ceremony",
         "category": "certification",
-        "order": 30
+        "order": 46
       },
       {
         "file": "gallery/certification-10.jpg",
         "caption": "Operator certification ceremony",
         "alt": "Operator certification ceremony",
         "category": "certification",
-        "order": 31
+        "order": 47
       },
       {
         "file": "gallery/certification-09.jpg",
         "caption": "Operator certification ceremony",
         "alt": "Operator certification ceremony",
         "category": "certification",
-        "order": 32
+        "order": 48
       },
       {
         "file": "gallery/certification-13.jpg",
         "caption": "Operator certification ceremony",
         "alt": "Operator certification ceremony",
         "category": "certification",
-        "order": 33
+        "order": 49
       },
       {
         "file": "programme/pre-employment-screening-03.jpg",
         "caption": "Graduating cohort in SierraZim colours",
         "alt": "A SierraZim training cohort in matching branded shirts",
         "category": "certification",
-        "order": 34
+        "order": 50
+      },
+      {
+        "file": "gallery/certification-12.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 51
+      },
+      {
+        "file": "gallery/certification-14.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 52
+      },
+      {
+        "file": "gallery/certification-11.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 53
       },
       {
         "file": "gallery/bam-natull-01.jpg",
         "caption": "BAM Natull operator training",
         "alt": "BAM Natull operator training",
         "category": "projects",
-        "order": 35
+        "order": 54
       },
       {
         "file": "gallery/bam-natull-03.jpg",
         "caption": "BAM Natull operator training",
         "alt": "BAM Natull operator training",
         "category": "projects",
-        "order": 36
+        "order": 55
       },
       {
         "file": "gallery/bam-natull-10.jpg",
         "caption": "BAM Natull operator training",
         "alt": "BAM Natull operator training",
         "category": "projects",
-        "order": 37
+        "order": 56
       },
       {
         "file": "gallery/bam-natull-02.jpg",
         "caption": "BAM Natull operator training",
         "alt": "BAM Natull operator training",
         "category": "projects",
-        "order": 38
+        "order": 57
       },
       {
         "file": "programme/theory-and-classroom-training-37.jpg",
         "caption": "On-site operator coaching at a client mine",
         "alt": "A SierraZim trainer coaching an operator trainee at a mine site",
         "category": "projects",
-        "order": 39
+        "order": 58
       },
       {
         "file": "programme/surface-mobile-equipment-training-02.jpg",
         "caption": "On-site safety briefing with trainees",
         "alt": "Trainees in PPE during an on-site safety briefing at a mine",
         "category": "projects",
-        "order": 40
+        "order": 59
       },
       {
         "file": "programme/theory-and-classroom-training-35.jpg",
         "caption": "On-site tractor operator assessment",
         "alt": "A SierraZim trainer assessing a tractor operator trainee in the field",
         "category": "projects",
-        "order": 41
+        "order": 60
       },
       {
         "file": "gallery/sembehun-opening-01.jpg",
         "caption": "Sembehun academy official opening",
         "alt": "Sembehun academy official opening",
         "category": "projects",
-        "order": 42
+        "order": 61
       },
       {
         "file": "gallery/sembehun-opening-02.jpg",
         "caption": "Sembehun academy official opening",
         "alt": "Sembehun academy official opening",
         "category": "projects",
-        "order": 43
+        "order": 62
       },
       {
         "file": "gallery/certification-01.jpg",
         "caption": "SierraZim trainer with a Sierra Rutile partner",
         "alt": "A SierraZim trainer and a Sierra Rutile Limited colleague on site",
         "category": "projects",
-        "order": 44
+        "order": 63
+      },
+      {
+        "file": "gallery/sembehun-opening-05.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 64
+      },
+      {
+        "file": "gallery/sembehun-opening-06.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 65
+      },
+      {
+        "file": "gallery/sembehun-opening-04.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 66
+      },
+      {
+        "file": "gallery/mano-01.jpg",
+        "caption": "Mano certification ceremony",
+        "alt": "Mano certification ceremony",
+        "category": "projects",
+        "order": 67
       }
     ],
     "galleryVideos": [
