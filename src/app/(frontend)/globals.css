@@ -2,8 +2,9 @@
 
 /* ------------------------------------------------------------------ *
  * SierraZim Training Academy — design tokens
- * Art direction: "field manual" — warm paper, hairline rules,
- * forest green + safety amber + red-earth clay, technical mono labels.
+ * Art direction v2: "safety-yard / road-signage" — dark forest surfaces,
+ * huge condensed uppercase display type, hazard stripes, square edges,
+ * docket tables, technical mono labels, safety amber accents.
  * ------------------------------------------------------------------ */
 @theme {
   /* Surfaces & ink — clean, lightly green-cool neutrals (no more cream) */
@@ -26,6 +27,7 @@
   --color-forest-800: #094e1d;
   --color-forest-900: #073a17;
   --color-forest-950: #04250f;
+  --color-forest-975: #031b0b; /* deepest forest — ticker strip + field-record band */
 
   /* Gold — accent, from the bulldozer / Zimbabwe yellow */
   --color-safety-300: #ffe487;
@@ -40,9 +42,9 @@
   --color-flag-blue-ink: #0a52a3;
 
   /* Fonts (wired to next/font variables in layout.tsx) */
-  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
-  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-space-mono), ui-monospace, monospace;
+  --font-display: var(--font-barlow-condensed), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
 }
 
 @layer base {
@@ -162,17 +164,87 @@
   }
 
   .rise {
-    animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
   @keyframes rise {
     from {
       opacity: 0;
-      transform: translateY(14px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * v2 "safety-yard / road-signage" — home redesign helpers
+ * ------------------------------------------------------------------ */
+@layer components {
+  /* Programme accordion — native <details>, no JS */
+  details.prog-row > summary {
+    list-style: none;
+  }
+  details.prog-row > summary::-webkit-details-marker {
+    display: none;
+  }
+  .acc-plus {
+    transition: transform 0.25s ease;
+  }
+  details.prog-row[open] .acc-plus {
+    transform: rotate(45deg);
+  }
+  details.prog-row[open] .acc-title,
+  details.prog-row:hover .acc-title {
+    color: var(--color-forest-700);
+  }
+}
+
+@layer utilities {
+  /* Infinite client ticker — duplicated track translated 0 → -50% */
+  .ticker-track {
+    width: max-content;
+    animation: ticker 36s linear infinite;
+  }
+  .ticker-track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes ticker {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Outlined "road-signage" stroke type — one line of a stacked headline */
+  .stroke-white {
+    color: transparent;
+    -webkit-text-stroke: 2.5px rgba(255, 255, 255, 0.9);
+  }
+  .stroke-white-thin {
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.85);
+  }
+  .stroke-green {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--color-forest-700);
+  }
+  .stroke-line {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--color-line-strong);
+  }
+
+  /* Hazard stripe — dark bar defaults to forest-950; override --hz for others */
+  .hazard {
+    --hz: var(--color-forest-950);
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--color-safety-500) 0 18px,
+      var(--hz) 18px 36px
+    );
   }
 }
 
@@ -185,6 +257,7 @@
   *::before,
   *::after {
     animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Hanken_Grotesk, Space_Mono } from "next/font/google";
+import { Barlow, Barlow_Condensed, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -9,22 +9,27 @@ import { organizationLd } from "@/lib/structured-data";
 import { SITE_URL } from "@/lib/site";
 import { getSite, getProgrammes, getHome } from "@/lib/content";
 
-const bricolage = Bricolage_Grotesque({
+// Barlow Condensed — all display / headings / nav / buttons (uppercase, tight)
+const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
-  variable: "--font-bricolage",
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-barlow-condensed",
   display: "swap",
 });
 
-const hanken = Hanken_Grotesk({
+// Barlow — body copy
+const barlow = Barlow({
   subsets: ["latin"],
-  variable: "--font-hanken",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-barlow",
   display: "swap",
 });
 
-const spaceMono = Space_Mono({
+// IBM Plex Mono — technical labels / eyebrows
+const plexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-space-mono",
+  weight: ["400", "500", "600"],
+  variable: "--font-plex-mono",
   display: "swap",
 });
 
@@ -90,9 +95,9 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bricolage.variable} ${hanken.variable} ${spaceMono.variable} antialiased`}
+      className={`${barlowCondensed.variable} ${barlow.variable} ${plexMono.variable} antialiased`}
     >
-      <body className="flex min-h-dvh flex-col bg-paper text-ink">
+      <body className="flex min-h-dvh flex-col bg-forest-950 text-ink">
         <JsonLd data={organizationLd(site, programmes.map((p) => p.title))} />
         <SiteHeader site={site} />
         <main className="flex-1">{children}</main>
