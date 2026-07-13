@@ -255,6 +255,7 @@ export async function getGallery(): Promise<GalleryItem[]> {
         poster: mediaUrl(d.poster),
         alt: str(d.alt),
         caption: str(d.caption),
+        category: (d.category as GalleryItem["category"]) || undefined,
         w: num(d.width, 1280),
         h: num(d.height, 720),
       };
@@ -264,6 +265,7 @@ export async function getGallery(): Promise<GalleryItem[]> {
       src: mediaUrl(d.image),
       alt: str(d.alt),
       caption: str(d.caption),
+      category: (d.category as GalleryItem["category"]) || undefined,
       w: mediaDim(d.image, "width", 1536),
       h: mediaDim(d.image, "height", 1152),
     };
