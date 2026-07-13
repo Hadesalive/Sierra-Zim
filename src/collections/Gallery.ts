@@ -21,6 +21,21 @@ export const Gallery: CollectionConfig = {
     { name: "caption", type: "text", required: true },
     { name: "alt", type: "textarea", label: "Alt text" },
     {
+      name: "category",
+      type: "select",
+      label: "Category",
+      admin: { description: "Groups this item under a filter tab on the gallery page." },
+      options: [
+        { label: "Classroom & Theory", value: "classroom" },
+        { label: "Light Vehicle", value: "light-vehicle" },
+        { label: "Heavy Equipment", value: "heavy-equipment" },
+        { label: "Simulator", value: "simulator" },
+        { label: "Certification", value: "certification" },
+        { label: "Projects & Events", value: "projects" },
+        { label: "Testimonials", value: "testimonials" },
+      ],
+    },
+    {
       name: "mediaType",
       type: "select",
       required: true,

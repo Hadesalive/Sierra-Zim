@@ -23,11 +23,22 @@ export const mainNav: NavItem[] = [
   { label: "Contact", href: "/contact" },
 ];
 
+/** Gallery filter categories (mirrors the `category` select in the Gallery collection). */
+export type GalleryCategory =
+  | "classroom"
+  | "light-vehicle"
+  | "heavy-equipment"
+  | "simulator"
+  | "certification"
+  | "projects"
+  | "testimonials";
+
 export type GalleryImage = {
   type?: "image";
   src: string;
   alt: string;
   caption: string;
+  category?: GalleryCategory;
   w: number;
   h: number;
 };
@@ -42,6 +53,7 @@ export type GalleryVideoItem = {
   poster: string;
   alt: string;
   caption: string;
+  category?: GalleryCategory;
   w: number;
   h: number;
 };

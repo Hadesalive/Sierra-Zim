@@ -334,6 +334,12 @@ export interface Gallery {
   id: number;
   caption: string;
   alt?: string | null;
+  /**
+   * Groups this item under a filter tab on the gallery page.
+   */
+  category?:
+    | ('classroom' | 'light-vehicle' | 'heavy-equipment' | 'simulator' | 'certification' | 'projects' | 'testimonials')
+    | null;
   mediaType: 'image' | 'video';
   image?: (number | null) | Media;
   provider?: ('youtube' | 'vimeo' | 'file') | null;
@@ -608,6 +614,7 @@ export interface FaqsSelect<T extends boolean = true> {
 export interface GallerySelect<T extends boolean = true> {
   caption?: T;
   alt?: T;
+  category?: T;
   mediaType?: T;
   image?: T;
   provider?: T;
