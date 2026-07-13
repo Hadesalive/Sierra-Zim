@@ -36,10 +36,13 @@ export function PageHero({
     </p>
   );
 
-  const titleEl = (
+  // fontSize is set inline (literal clamp) rather than via a Tailwind utility:
+  // Turbopack dev is unreliable at generating just-edited theme/arbitrary
+  // utilities, which left heroes tiny. Inline never touches the CSS pipeline.
+  const renderTitle = (fontSize: string) => (
     <h1
       className="rise font-display font-extrabold uppercase leading-[0.86] tracking-[0.005em]"
-      style={{ animationDelay: "0.08s" }}
+      style={{ animationDelay: "0.08s", fontSize }}
     >
       {title}
     </h1>
@@ -52,7 +55,7 @@ export function PageHero({
         <div className="grid lg:min-h-[62vh] lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col justify-center px-6 py-16 sm:px-14 sm:py-18">
             <div className="mb-6">{eyebrowEl}</div>
-            <div className="text-fluid-hero-split">{titleEl}</div>
+            {renderTitle("clamp(48px, 6.4vw, 104px)")}
             {intro && (
               <p
                 className="rise mt-8 max-w-[520px] text-lg leading-[1.6] text-white/80"
@@ -97,7 +100,7 @@ export function PageHero({
     <section className="bg-forest-950 text-white">
       <div className="mx-auto w-full max-w-[90rem] px-6 pb-18 pt-24 sm:px-14">
         <div className="mb-6">{eyebrowEl}</div>
-        <div className="text-fluid-hero">{titleEl}</div>
+        {renderTitle("clamp(56px, 8vw, 132px)")}
 
         {specs ? (
           <div

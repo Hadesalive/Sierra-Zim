@@ -39,8 +39,8 @@ export function HomeHero({
           </p>
 
           <h1
-            className="rise font-display text-fluid-hero-xl font-extrabold uppercase leading-[0.88] tracking-[0.005em]"
-            style={{ animationDelay: "0.08s" }}
+            className="rise font-display font-extrabold uppercase leading-[0.88] tracking-[0.005em]"
+            style={{ animationDelay: "0.08s", fontSize: "clamp(56px, 11vw, 148px)" }}
           >
             Trained.
             <br />
