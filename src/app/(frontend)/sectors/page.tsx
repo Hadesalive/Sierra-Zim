@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { ogBase } from "@/lib/metadata";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
-import { PageHeader } from "@/components/ui/page-header";
-import { Container } from "@/components/ui/container";
-import { getSectors, getSectorsPage } from "@/lib/content";
+import { PageHero } from "@/components/sections/page-hero";
+import { CtaBand } from "@/components/sections/cta-band";
+import { getSectors, getSite, getSectorsPage } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
   const sectorsHero = await getSectorsPage();
@@ -24,52 +23,68 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+const SHELL = "mx-auto w-full max-w-[90rem] px-6 sm:px-14";
+
 export default async function SectorsPage() {
-  const [sectors, hero] = await Promise.all([getSectors(), getSectorsPage()]);
+  const [sectors, site, hero] = await Promise.all([
+    getSectors(),
+    getSite(),
+    getSectorsPage(),
+  ]);
   return (
     <>
-      <PageHeader
-        index="01"
-        eyebrow={hero.eyebrow}
-        title={hero.title}
-        intro={hero.intro}
-        image={hero.image}
-        imageAlt="SierraZim instructor leading a training course on a field ground"
+      <PageHero
+        eyebrow={hero.eyebrow || "Built for the work each sector does"}
+        title={
+          <>
+            Sectors we
+            <br />
+            <span className="text-safety-400">train.</span>
+          </>
+        }
+        intro={
+          hero.intro ||
+          "From mining and agriculture to transport and fleets — training and certification built for the work each sector actually does."
+        }
       />
 
-      <Container className="py-16 lg:py-24">
-        <div className="grid gap-8 lg:grid-cols-3">
-          {sectors.map((s) => (
-            <Link
-              key={s.slug}
-              href={`/sectors/${s.slug}`}
-              className="group flex flex-col overflow-hidden border border-line bg-paper transition-shadow hover:shadow-lg"
-            >
-              <div className="relative aspect-16/10 overflow-hidden">
-                <Image
-                  src={s.image}
-                  alt={s.imageAlt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex flex-1 flex-col p-7">
-                <h2 className="font-display text-2xl font-bold text-ink">
-                  {s.name}
-                </h2>
-                <p className="mt-3 line-clamp-4 flex-1 text-sm leading-relaxed text-ink-soft">
-                  {s.intro}
-                </p>
-                <span className="label-mono mt-6 flex items-center gap-2 text-ink group-hover:text-safety-600">
-                  Explore
-                  <ArrowUpRightIcon weight="bold" className="size-3.5" />
-                </span>
-              </div>
-            </Link>
-          ))}
+      <section className="bg-paper">
+        <div aria-hidden className="hazard h-3.5" />
+        <div className={`${SHELL} py-24`}>
+          <div className="grid gap-1 md:grid-cols-3">
+            {sectors.map((sec) => (
+              <Link
+                key={sec.slug}
+                href={`/sectors/${sec.slug}`}
+                className="group flex flex-col bg-forest-950 text-white"
+              >
+                <div className="relative aspect-16/10 overflow-hidden">
+                  <Image
+                    src={sec.image || "/gallery/truck-cone-course.jpg"}
+                    alt={sec.imageAlt || sec.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                  />
+                  <span className="absolute bottom-0 left-0 bg-safety-500 px-3.5 py-1.5 font-display text-[15px] font-extrabold uppercase tracking-[0.1em] text-ink">
+                    {sec.name}
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col gap-3.5 p-7 pb-8">
+                  <h2 className="font-display text-[27px] font-extrabold uppercase leading-none tracking-[0.01em]">
+                    {sec.title}
+                  </h2>
+                  <p className="text-[14.5px] leading-[1.6] text-white/75">
+                    {sec.intro}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-      </Container>
+      </section>
+
+      <CtaBand site={site} />
     </>
   );
 }

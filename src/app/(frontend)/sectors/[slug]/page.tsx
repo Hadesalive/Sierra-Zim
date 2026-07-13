@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
-import { PageHeader } from "@/components/ui/page-header";
+import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -67,20 +67,13 @@ export default async function SectorPage({ params }: Params) {
         ])}
       />
 
-      <PageHeader
-        index="01"
+      <PageHero
         eyebrow={`Sectors · ${sector.name}`}
         title={sector.title}
         intro={sector.intro}
-        image={sector.image}
+        image={sector.image || undefined}
         imageAlt={sector.imageAlt}
-      >
-        <div className="mt-8">
-          <ButtonLink href="/contact" variant="primary">
-            Enquire about a programme
-          </ButtonLink>
-        </div>
-      </PageHeader>
+      />
 
       <Container className="py-16 lg:py-24">
         <Eyebrow index="02">Programmes</Eyebrow>

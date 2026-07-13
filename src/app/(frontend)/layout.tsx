@@ -97,7 +97,7 @@ export default async function RootLayout({
       lang="en"
       className={`${barlowCondensed.variable} ${barlow.variable} ${plexMono.variable} antialiased`}
     >
-      <body className="flex min-h-dvh flex-col bg-forest-950 text-ink">
+      <body className="flex min-h-dvh flex-col bg-paper text-ink">
         <JsonLd data={organizationLd(site, programmes.map((p) => p.title))} />
         <SiteHeader site={site} />
         <main className="flex-1">{children}</main>

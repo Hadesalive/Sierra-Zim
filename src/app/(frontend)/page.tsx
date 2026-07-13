@@ -77,7 +77,10 @@ export default async function HomePage() {
         partnersLabel={home.statementPartnersLabel}
         partners={home.statementPartners}
       />
-      <CtaBand site={site} />
+      <CtaBand
+        site={site}
+        intro="Tell us the programme, how many people and where — we reply within one business day."
+      />
     </>
   );
 }
