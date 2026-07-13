@@ -12,20 +12,33 @@ export const SITE_URL = "https://www.sierrazim.com";
 
 export type NavItem = { label: string; href: string };
 
+// Labels follow the v2 "safety-yard" redesign (Training / Work); routes are kept
+// as the original app paths (/services, /portfolio) for SEO stability.
 export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Training", href: "/services" },
+  { label: "Work", href: "/portfolio" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
+
+/** Gallery filter categories (mirrors the `category` select in the Gallery collection). */
+export type GalleryCategory =
+  | "classroom"
+  | "light-vehicle"
+  | "heavy-equipment"
+  | "simulator"
+  | "certification"
+  | "projects"
+  | "testimonials";
 
 export type GalleryImage = {
   type?: "image";
   src: string;
   alt: string;
   caption: string;
+  category?: GalleryCategory;
   w: number;
   h: number;
 };
@@ -40,6 +53,7 @@ export type GalleryVideoItem = {
   poster: string;
   alt: string;
   caption: string;
+  category?: GalleryCategory;
   w: number;
   h: number;
 };

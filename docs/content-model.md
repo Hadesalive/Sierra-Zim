@@ -102,3 +102,28 @@ deep link, a Google Maps link, and the full address string.
 `getCaseStudies`/`getCaseStudy`, `getClients`, `getValueProps`, `getFaqs`,
 `getGallery`, `getSite`, `getHome`, `getPages`. Each returns a typed object the pages
 and components consume as props.
+
+---
+
+## Images: the media-manifest workflow
+
+Photos are **not** hardcoded by filename anywhere in code or content JSON. Instead:
+
+1. **`scripts/photos/prepare.mjs`** reads the real photo archive (path via
+   `PHOTO_ARCHIVE_DIR`; the archive lives outside the repo), dedupes it, skips junk,
+   **optimizes** each image with `sharp` (auto-orient → long edge ≤ 2000 px → mozjpeg
+   q80 → EXIF stripped), extracts a poster frame per video with `ffmpeg`, and writes the
+   results to **`media-staging/`** (gitignored) plus **`src/content/media-manifest.json`**.
+   `scripts/photos/config.mjs` holds the folder→placement mapping; hand-tuning (covers,
+   alt text, leadership, heroes) happens in the manifest.
+2. **`src/content/media-manifest.json`** is the single source of image→placement truth —
+   `assignments` for programme covers, sector images, case-study cover/gallery, gallery
+   images/videos, `site.leadership[].photo`, and each global's hero/story/why-us/social.
+   Validate it with `node scripts/photos/verify-manifest.mjs`.
+3. **`scripts/seed.ts`** uploads every `media[]` entry to Blob and wires all image slots
+   via manifest lookups (no `img("file.jpg")` calls). Run with `--dry-run` first.
+
+The seed is a full rebuild (it clears the content collections). **After it runs, Payload
++ Blob is the source of truth** and every image is editable in `/admin`; the manifest is
+only needed to re-seed from scratch. Content copy still lives in `src/content/*.json` —
+those files carry no image filenames.

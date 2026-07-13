@@ -6,10 +6,9 @@ import {
   MapPinLineIcon,
   ClockIcon,
   WhatsappLogoIcon,
+  ArrowUpRightIcon,
 } from "@phosphor-icons/react/dist/ssr";
-import { PageHeader } from "@/components/ui/page-header";
-import { Container } from "@/components/ui/container";
-import { Eyebrow } from "@/components/ui/eyebrow";
+import { PageHero } from "@/components/sections/page-hero";
 import { ContactForm } from "@/components/contact-form";
 import { getSite, getProgrammes, getContactPage } from "@/lib/content";
 
@@ -37,108 +36,101 @@ export default async function ContactPage() {
     getProgrammes(),
     getContactPage(),
   ]);
+
   return (
     <>
-      <PageHeader
-        index="01"
-        eyebrow={contact.heroEyebrow}
-        title={contact.heroTitle}
-        intro={contact.heroIntro}
-        image={contact.heroImage}
-        imageAlt="Classroom briefing during a SierraZim training session"
+      <PageHero
+        eyebrow={contact.heroEyebrow || "Contact — reply within one business day"}
+        title={
+          <>
+            Get your fleet
+            <br />
+            <span className="text-safety-400">certified.</span>
+          </>
+        }
+        intro={
+          contact.heroIntro ||
+          "Tell us about your drivers, operators and equipment, and we'll put together the right training and certification plan."
+        }
       />
 
-      <Container className="grid gap-12 py-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-20">
-        {/* Details */}
-        <div>
-          <Eyebrow index="02">{contact.detailsEyebrow}</Eyebrow>
-          <h2 className="mt-5 font-display text-3xl font-bold text-ink sm:text-4xl">
-            {contact.detailsHeading}
-          </h2>
+      <section className="bg-paper text-ink">
+        <div aria-hidden className="hazard h-3.5" />
+        <div className="mx-auto grid w-full max-w-[90rem] gap-14 px-6 py-20 sm:px-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+          {/* Channels */}
+          <div>
+            <h2 className="font-display text-[clamp(32px,3.6vw,56px)] font-extrabold uppercase leading-[0.9]">
+              {contact.detailsHeading || "Talk to the academy."}
+            </h2>
+            <p className="mt-5 text-[16.5px] leading-[1.6] text-ink-soft">
+              WhatsApp is fastest — most of our clients book that way.
+            </p>
 
-          <ul className="mt-10 divide-y divide-line border-y border-line">
-            {site.phones.map((p, i) => (
-              <li key={p} className="flex items-center gap-4 py-5">
-                <span className="flex size-11 shrink-0 items-center justify-center bg-forest-800 text-paper">
-                  <PhoneCallIcon weight="bold" className="size-5" />
+            <div className="mt-8 flex flex-col gap-3">
+              <a
+                href={site.whatsappHref}
+                rel="noopener"
+                className="flex items-center gap-4 bg-forest-950 px-6 py-5 text-white transition-colors hover:bg-forest-900"
+              >
+                <WhatsappLogoIcon weight="fill" className="size-7 shrink-0 text-safety-400" />
+                <span className="flex-1">
+                  <span className="block font-display text-[22px] font-extrabold uppercase leading-none tracking-[0.04em]">
+                    WhatsApp us
+                  </span>
+                  <span className="mt-1.5 block font-mono text-[11px] tracking-[0.16em] text-white/65">
+                    {site.phones[0]}
+                  </span>
                 </span>
-                <div>
-                  <p className="label-mono text-ink-soft">Call us</p>
-                  <a
-                    href={`tel:${site.phonesE164[i]}`}
-                    className="font-display text-xl font-bold text-ink hover:text-forest-700"
-                  >
-                    {p}
-                  </a>
-                </div>
-              </li>
-            ))}
-            <li className="flex items-center gap-4 py-5">
-              <span className="flex size-11 shrink-0 items-center justify-center bg-forest-800 text-paper">
-                <EnvelopeSimpleIcon weight="bold" className="size-5" />
-              </span>
-              <div>
-                <p className="label-mono text-ink-soft">Email</p>
-                <a
-                  href={`mailto:${site.email}`}
-                  className="font-display text-xl font-bold text-ink hover:text-forest-700"
-                >
-                  {site.email}
-                </a>
-              </div>
-            </li>
-            <li className="flex items-center gap-4 py-5">
-              <span className="flex size-11 shrink-0 items-center justify-center bg-forest-800 text-paper">
-                <MapPinLineIcon weight="bold" className="size-5" />
-              </span>
-              <div>
-                <p className="label-mono text-ink-soft">Visit</p>
-                <p className="font-display text-xl font-bold text-ink">
-                  {site.address.full}
-                </p>
-              </div>
-            </li>
-            <li className="flex items-center gap-4 py-5">
-              <span className="flex size-11 shrink-0 items-center justify-center bg-forest-800 text-paper">
-                <ClockIcon weight="bold" className="size-5" />
-              </span>
-              <div>
-                <p className="label-mono text-ink-soft">Opening hours</p>
-                <p className="font-display text-xl font-bold text-ink">
-                  {site.hours}
-                </p>
-              </div>
-            </li>
-          </ul>
+                <ArrowUpRightIcon weight="bold" className="size-[18px] text-safety-400" />
+              </a>
 
-          <a
-            href={site.whatsappHref}
-            className="group mt-8 inline-flex items-center gap-2.5 border border-forest-700 px-6 py-3.5 font-mono text-[0.78rem] uppercase tracking-[0.16em] text-forest-700 transition-colors hover:bg-forest-700 hover:text-paper"
-          >
-            <WhatsappLogoIcon weight="fill" className="size-4" />
-            Chat on WhatsApp
-          </a>
+              <a
+                href={`tel:${site.phonesE164[0]}`}
+                className="flex items-center gap-4 border-[3px] border-ink px-6 py-4 transition-colors hover:bg-paper-2"
+              >
+                <PhoneCallIcon weight="fill" className="size-6 shrink-0 text-forest-700" />
+                <span>
+                  <span className="block font-display text-[22px] font-extrabold uppercase leading-none tracking-[0.04em]">
+                    Call us
+                  </span>
+                  <span className="mt-1.5 block font-mono text-[11px] tracking-[0.16em] text-ink-soft">
+                    {site.phones.join(" · ")}
+                  </span>
+                </span>
+              </a>
 
-          {/* Map */}
-          <div className="mt-10 border border-line">
-            <iframe
-              title={`Map of ${site.address.full}`}
-              src="https://www.google.com/maps?q=Makeni,Sierra%20Leone&output=embed"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="h-72 w-full"
-            />
+              <a
+                href={`mailto:${site.email}`}
+                className="flex items-center gap-4 border-[3px] border-ink px-6 py-4 transition-colors hover:bg-paper-2"
+              >
+                <EnvelopeSimpleIcon weight="bold" className="size-6 shrink-0 text-forest-700" />
+                <span>
+                  <span className="block font-display text-[22px] font-extrabold uppercase leading-none tracking-[0.04em]">
+                    Email us
+                  </span>
+                  <span className="mt-1.5 block font-mono text-[11px] tracking-[0.16em] text-ink-soft">
+                    {site.email}
+                  </span>
+                </span>
+              </a>
+            </div>
+
+            <div className="mt-9 flex flex-col gap-3.5 border-t-2 border-dashed border-line-strong pt-6 text-[14.5px] text-ink">
+              <span className="flex items-start gap-3">
+                <MapPinLineIcon weight="bold" className="mt-0.5 size-4 shrink-0 text-safety-600" />
+                {site.address.full}
+              </span>
+              <span className="flex items-start gap-3">
+                <ClockIcon weight="bold" className="mt-0.5 size-4 shrink-0 text-safety-600" />
+                {site.hours}
+              </span>
+            </div>
           </div>
-        </div>
 
-        {/* Form */}
-        <div>
-          <Eyebrow index="03">Send an enquiry</Eyebrow>
-          <div className="mt-5">
-            <ContactForm site={site} programmes={programmes.map((p) => p.title)} />
-          </div>
+          {/* Enquiry docket */}
+          <ContactForm site={site} programmes={programmes.map((p) => p.title)} />
         </div>
-      </Container>
+      </section>
     </>
   );
 }

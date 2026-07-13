@@ -20,10 +20,6 @@
     "light-vehicle-defensive-driving",
     "heavy-vehicle-defensive-driving"
   ],
-  "image": "instructor-truck-course.jpg",
-  "imageAlt": "Instructor guiding a driver through a practical training course",
-  "gallery": [],
-  "realPhotos": false,
   "featured": false,
   "order": 4
 }

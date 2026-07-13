@@ -1,0 +1,3631 @@
+{
+  "media": [
+    {
+      "file": "case-study/dadtco-mozambique-01.jpg",
+      "alt": "DADTCO Mozambique trainees holding completion certificates in a conference room",
+      "caption": "DADTCO Mozambique trainees at their certification",
+      "source": "Dadtco Mozambique.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "case-study/dadtco-mozambique-02.jpg",
+      "alt": "Orange DADTCO Mozambique DAF 4x4 truck on a cone training course",
+      "caption": "Fleet-driver training delivered for DADTCO in Mozambique",
+      "source": "dadtco-heavy-truck.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/cote-divoire-01.jpg",
+      "alt": "Côte d'Ivoire training programme",
+      "caption": "Côte d'Ivoire training programme",
+      "source": "DDC IVORY COAST 1.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-01.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241012_150240_805.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-02.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241012_150245_952.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-03.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241012_154230_956.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-04.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_101127_355.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-05.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_101136_262.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-06.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_101142_337.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-07.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_101507_820.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-08.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_101514_126.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-09.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_101525_612.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-10.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_112356_506.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-11.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_112405_273.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-12.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_112435_913.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-13.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_135441_898.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-14.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_135442_793.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-15.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_135443_809.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-16.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_135449_758.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-17.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_135450_684.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-18.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_135451_613.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-19.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_135509_232.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-20.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_135511_209.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-21.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20241016_135512_444.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-22.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250217_145957_106.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-23.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250217_150000_852.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-24.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250217_150205_958.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-25.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250217_150207_594.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-26.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250217_155958_060.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-27.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250217_155959_385.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-28.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250217_160001_136.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-29.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250220_200412_985.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-30.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250220_200415_533.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-31.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250221_100333_416.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-32.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250221_100336_887.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-33.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250221_100341_649.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-34.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250222_102536_540.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-35.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250222_102556_725.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-36.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250222_103912_401.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-37.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250222_103914_984.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-38.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250222_103917_241.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-39.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250222_103918_983.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-40.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250222_103924_605.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-41.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250228_134932_053.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-42.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250228_135025_507.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-43.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250228_135028_082.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-44.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250228_135028_647.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-45.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_095933_564.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-46.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_095958_732.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-47.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100015_922.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-48.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100045_771.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-49.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100050_068.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-50.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100052_777.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-51.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100110_122.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-52.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100115_447.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-53.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100116_807.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-54.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100120_217.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-55.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100356_041.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-56.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100357_254.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-57.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100402_442.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-58.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100406_096.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-59.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100410_142.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-60.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100646_759.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-61.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100649_298.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-62.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100651_668.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-63.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100654_017.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-64.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100655_488.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-65.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100656_399.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-66.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100657_797.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-67.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_100658_997.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-68.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_101015_544.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-69.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_101017_303.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-70.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_101829_977.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-71.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_101831_076.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-72.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_101842_237.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-73.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_101847_341.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-74.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250305_144153_130.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-75.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_094333_416.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-76.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_094334_348.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-77.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_094335_992.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-78.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_100948_261.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-79.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_100951_534.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-80.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_101011_321.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-81.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_101717_822.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-82.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_101720_812.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-83.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_101722_734.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-84.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_103220_986.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-85.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_120027_117.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-86.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_120031_170.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-87.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250325_120032_651.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-88.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_070522_271.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-89.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_070720_434.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-90.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_070721_912.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-91.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_070725_060.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-92.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_070726_803.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-93.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_070814_090.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-94.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_070845_799.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-95.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_070847_184.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-96.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_073104_529.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-97.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_073111_265.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-98.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_073116_609.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-99.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_074749_741.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-100.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_074758_745.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-101.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_074759_832.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-102.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_075055_579.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-103.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_075214_330.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-104.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_075219_105.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-105.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_075226_902.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-106.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_081309_510.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-107.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_081313_958.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-108.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_081321_459.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-109.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_081325_195.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-110.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_083218_810.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-111.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_083229_421.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-112.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_083231_092.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-113.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_083231_092~2.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-114.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_085449_598.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-115.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_092330_330.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-116.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_092331_290.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-117.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250410_092332_149.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-118.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250801_072928_741.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-119.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250801_072933_498.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-120.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250801_072935_956.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-121.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250805_145541_648.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-122.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250805_145544_670.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-123.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250805_145549_038.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-124.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250805_145556_237.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-125.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250805_145558_634.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-126.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250908_161057_940.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-127.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250908_161059_862.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-128.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250908_161101_845.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-129.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250919_182414_023.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-130.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250919_182416_011.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-131.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250920_114213_884.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-132.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250920_135036_119.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-133.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20250920_195643_991.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-134.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20251110_125513_790.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-135.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20251110_125527_400.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-136.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20251114_081007_760.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-137.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG_20251222_161038_492.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-138.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20230815-WA0050.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-139.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20230816-WA0019.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-140.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20240325-WA0036.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-141.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20241030-WA0043.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-142.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20241122-WA0012.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-143.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250202-WA0027.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-144.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250222-WA0037.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-145.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250515-WA0015.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-146.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0004.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-147.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0020.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-148.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0023.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-149.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0029.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-150.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0030.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-151.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0031.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-152.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0038.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-153.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0043.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-154.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0044.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-155.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0053.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-156.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0057.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-157.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0065.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-158.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0067.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-159.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0086.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-160.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250604-WA0092.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-161.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250608-WA0010.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-162.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250608-WA0011.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-163.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250706-WA0056.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-164.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250706-WA0057.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-165.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250722-WA0024.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-166.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250724-WA0058.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-167.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250801-WA0077.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-168.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250808-WA0034.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-169.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250827-WA0067.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-170.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250827-WA0068.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-171.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250924-WA0070.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-172.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20250924-WA0073.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-173.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20251004-WA0015.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-174.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20251004-WA0018.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-175.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20251106-WA0025.jpeg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-176.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20251110-WA0048.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-177.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20251205-WA0069.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-178.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20251205-WA0073.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-179.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20260206-WA0002.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-180.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20260402-WA0010.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-181.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "IMG-20260413-WA0027.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/cote-divoire-02.jpg",
+      "alt": "Côte d'Ivoire training programme",
+      "caption": "Côte d'Ivoire training programme",
+      "source": "Ivory Theory Training.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/cote-divoire-03.jpg",
+      "alt": "Côte d'Ivoire training programme",
+      "caption": "Côte d'Ivoire training programme",
+      "source": "Marie Stopes DDC Picture 2.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/cote-divoire-04.jpg",
+      "alt": "Côte d'Ivoire training programme",
+      "caption": "Côte d'Ivoire training programme",
+      "source": "Marie Stopes DDC Picture1.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/bam-natull-01.jpg",
+      "alt": "BAM Natull operator training",
+      "caption": "BAM Natull operator training",
+      "source": "Team BAM Natull.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/cote-divoire-05.jpg",
+      "alt": "Côte d'Ivoire training programme",
+      "caption": "Côte d'Ivoire training programme",
+      "source": "Team Cote D’ivoire.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "video/general-182-poster.jpg",
+      "alt": "SierraZim training — video still",
+      "caption": "SierraZim training",
+      "source": "VID_20251112_101827.mp4",
+      "isVideo": false
+    },
+    {
+      "file": "video/general-182.mp4",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "VID_20251112_101827.mp4",
+      "isVideo": true
+    },
+    {
+      "file": "video/general-183-poster.jpg",
+      "alt": "SierraZim training — video still",
+      "caption": "SierraZim training",
+      "source": "VID-20250827-WA0092.mp4",
+      "isVideo": false
+    },
+    {
+      "file": "video/general-183.mp4",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "VID-20250827-WA0092.mp4",
+      "isVideo": true
+    },
+    {
+      "file": "video/general-184-poster.jpg",
+      "alt": "SierraZim training — video still",
+      "caption": "SierraZim training",
+      "source": "VID-20260317-WA0036(1).mp4",
+      "isVideo": false
+    },
+    {
+      "file": "video/general-184.mp4",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "VID-20260317-WA0036(1).mp4",
+      "isVideo": true
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-01.jpg",
+      "alt": "Trainees in hi-vis and hard hats briefed beside a large Volvo articulated dump truck",
+      "caption": "Operator training alongside heavy articulated haul trucks",
+      "source": "ADT Training/IMG-20250303-WA0008.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-02.jpg",
+      "alt": "Articulated dump truck training",
+      "caption": "Articulated dump truck training",
+      "source": "ADT Training/IMG-20250303-WA0011.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-03.jpg",
+      "alt": "Articulated dump truck training",
+      "caption": "Articulated dump truck training",
+      "source": "ADT Training/IMG-20250328-WA0014.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-04.jpg",
+      "alt": "Articulated dump truck training",
+      "caption": "Articulated dump truck training",
+      "source": "ADT Training/IMG-20250328-WA0016.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-05.jpg",
+      "alt": "Articulated dump truck training",
+      "caption": "Articulated dump truck training",
+      "source": "ADT Training/IMG-20250328-WA0023.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/bam-natull-02.jpg",
+      "alt": "BAM Natull operator training",
+      "caption": "BAM Natull operator training",
+      "source": "Bam Natull/BAM Operator Training 2.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/bam-natull-03.jpg",
+      "alt": "BAM Natull operator training",
+      "caption": "BAM Natull operator training",
+      "source": "Bam Natull/BAM Operator Training.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/bam-natull-04.jpg",
+      "alt": "BAM Natull operator training",
+      "caption": "BAM Natull operator training",
+      "source": "Bam Natull/Excavator Loading Training.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/bam-natull-05.jpg",
+      "alt": "BAM Natull operator training",
+      "caption": "BAM Natull operator training",
+      "source": "Bam Natull/IMG-20250604-WA0008.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/bam-natull-06.jpg",
+      "alt": "BAM Natull operator training",
+      "caption": "BAM Natull operator training",
+      "source": "Bam Natull/IMG-20250604-WA0009.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/bam-natull-07.jpg",
+      "alt": "BAM Natull operator training",
+      "caption": "BAM Natull operator training",
+      "source": "Bam Natull/IMG-20250604-WA0017.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/bam-natull-08.jpg",
+      "alt": "BAM Natull operator training",
+      "caption": "BAM Natull operator training",
+      "source": "Bam Natull/IMG-20250604-WA0018.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/bam-natull-09.jpg",
+      "alt": "BAM Natull operator training",
+      "caption": "BAM Natull operator training",
+      "source": "Bam Natull/IMG-20250604-WA0021.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/bam-natull-10.jpg",
+      "alt": "BAM Natull operator training",
+      "caption": "BAM Natull operator training",
+      "source": "Bam Natull/Self Loading techniques training.png",
+      "isVideo": false
+    },
+    {
+      "file": "programme/pre-employment-screening-01.jpg",
+      "alt": "Operator assessment and certification",
+      "caption": "Operator assessment and certification",
+      "source": "Certification/IMG-20250604-WA0014.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/pre-employment-screening-02.jpg",
+      "alt": "A graduating group in matching polos hold certificates outdoors after assessment",
+      "caption": "Candidates certified after pre-employment operator assessment",
+      "source": "Certification/IMG-20250604-WA0019.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/pre-employment-screening-03.jpg",
+      "alt": "Operator assessment and certification",
+      "caption": "Operator assessment and certification",
+      "source": "Certification/IMG-20250604-WA0026.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/pre-employment-screening-04.jpg",
+      "alt": "Operator assessment and certification",
+      "caption": "Operator assessment and certification",
+      "source": "Certification/IMG-20250604-WA0033.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/pre-employment-screening-05.jpg",
+      "alt": "Operator assessment and certification",
+      "caption": "Operator assessment and certification",
+      "source": "Certification/IMG-20250711-WA0046.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-01.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG_20251113_082425_888.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-02.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20240123-WA0012.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-03.jpg",
+      "alt": "Instructor teaching road signs from a SierraZim wall chart to a group of seated trainees",
+      "caption": "Classroom theory session on road signs and markings",
+      "source": "Classroom Training/IMG-20240307-WA0009.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-04.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20240319-WA0015.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-05.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20240627-WA0049.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-06.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20240724-WA0024.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-07.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20240724-WA0025.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-08.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20240805-WA0025.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-09.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20240808-WA0011.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-10.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20240809-WA0024.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-11.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20241007-WA0012.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-12.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20241008-WA0027.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-13.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20241126-WA0026.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-14.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250109-WA0051.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-15.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250109-WA0073.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-16.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250111-WA0008.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-17.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250115-WA0029.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-18.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250127-WA0026.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-19.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250129-WA0029.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-20.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250129-WA0034.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-21.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250130-WA0010.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-22.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250217-WA0007.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-23.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250217-WA0010.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-24.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250218-WA0014.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-25.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250219-WA0009.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-26.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250219-WA0012.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-27.jpg",
+      "alt": "Classroom and theory training",
+      "caption": "Classroom and theory training",
+      "source": "Classroom Training/IMG-20250604-WA0012.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-06.jpg",
+      "alt": "Trainee operating a Volvo tracked excavator from the cab on a red-earth worksite",
+      "caption": "Hands-on excavator operation during surface mobile equipment training",
+      "source": "Excavator Training/IMG-20250328-WA0018.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-07.jpg",
+      "alt": "Excavator operator training",
+      "caption": "Excavator operator training",
+      "source": "Excavator Training/IMG-20250430-WA0019.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-08.jpg",
+      "alt": "Excavator operator training",
+      "caption": "Excavator operator training",
+      "source": "Excavator Training/IMG-20250502-WA0018.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-09.jpg",
+      "alt": "Excavator operator training",
+      "caption": "Excavator operator training",
+      "source": "Excavator Training/IMG-20250522-WA0006.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-10.jpg",
+      "alt": "Excavator operator training",
+      "caption": "Excavator operator training",
+      "source": "Excavator Training/IMG-20250527-WA0012.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-11.jpg",
+      "alt": "Excavator operator training",
+      "caption": "Excavator operator training",
+      "source": "Excavator Training/IMG-20250604-WA0058.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-12.jpg",
+      "alt": "Front-end loader operator training",
+      "caption": "Front-end loader operator training",
+      "source": "FEL TRAINING/IMG-20250604-WA0007.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-13.jpg",
+      "alt": "Grader operator training",
+      "caption": "Grader operator training",
+      "source": "Grader Training/IMG-20250430-WA0023.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/surface-mobile-equipment-training-14.jpg",
+      "alt": "Grader operator training",
+      "caption": "Grader operator training",
+      "source": "Grader Training/IMG-20250430-WA0025.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/heavy-vehicle-defensive-driving-01.jpg",
+      "alt": "Heavy vehicle defensive-driving training",
+      "caption": "Heavy vehicle defensive-driving training",
+      "source": "Heavy Duty Training/IMG_20251112_101833_709.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/heavy-vehicle-defensive-driving-02.jpg",
+      "alt": "Heavy tipper truck navigating an orange-cone course during defensive-driving training",
+      "caption": "Heavy-vehicle defensive-driving practice on the SierraZim manoeuvring ground",
+      "source": "Heavy Duty Training/IMG_20251113_170018_766.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-01.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20240202-WA0083.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-02.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20240202-WA0088.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-03.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20240202-WA0089.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-04.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20240202-WA0092.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-05.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20240202-WA0094.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-06.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20240213-WA0016.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-07.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20240213-WA0017.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-08.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20240510-WA0015.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-09.jpg",
+      "alt": "Learner driver at the wheel of a SierraZim-branded car on the road",
+      "caption": "Professional driver training on public roads with SierraZim",
+      "source": "Light Vehicle Training/IMG-20240805-WA0017.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-10.jpg",
+      "alt": "SierraZim instructor coaching a learner driver at the wheel of a branded training car",
+      "caption": "One-on-one light-vehicle instruction in a SierraZim training car",
+      "source": "Light Vehicle Training/IMG-20240805-WA0020.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-11.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20240805-WA0023.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-12.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20240829-WA0030.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-13.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20241204-WA0000.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-14.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20241204-WA0001.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-15.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20241204-WA0002.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-16.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20250222-WA0039.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/light-vehicle-defensive-driving-17.jpg",
+      "alt": "Light vehicle defensive-driving training",
+      "caption": "Light vehicle defensive-driving training",
+      "source": "Light Vehicle Training/IMG-20250604-WA0010.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "case-study/mantrac-01.jpg",
+      "alt": "Instructor delivering a defensive-driving presentation for Mantrac staff",
+      "caption": "Defensive-driving theory session for Mantrac",
+      "source": "Mantrac/IMG-20250626-WA0054.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "case-study/mantrac-02.jpg",
+      "alt": "SierraZim instructor presenting a driver-safety slide at a Mantrac training session",
+      "caption": "Driver-safety classroom session delivered for Mantrac",
+      "source": "Mantrac/IMG-20250626-WA0055.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-28.jpg",
+      "alt": "On-the-job training",
+      "caption": "On-the-job training",
+      "source": "On The Job Training/IMG-20241003-WA0001.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-29.jpg",
+      "alt": "On-the-job training",
+      "caption": "On-the-job training",
+      "source": "On The Job Training/IMG-20241003-WA0007.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-30.jpg",
+      "alt": "On-the-job training",
+      "caption": "On-the-job training",
+      "source": "On The Job Training/IMG-20241029-WA0017.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-31.jpg",
+      "alt": "On-the-job training",
+      "caption": "On-the-job training",
+      "source": "On The Job Training/IMG-20250203-WA0049.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-32.jpg",
+      "alt": "On-the-job training",
+      "caption": "On-the-job training",
+      "source": "On The Job Training/IMG-20250528-WA0002.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-33.jpg",
+      "alt": "On-the-job training",
+      "caption": "On-the-job training",
+      "source": "On The Job Training/IMG-20250528-WA0003.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-34.jpg",
+      "alt": "On-the-job training",
+      "caption": "On-the-job training",
+      "source": "On The Job Training/IMG-20250528-WA0004.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-35.jpg",
+      "alt": "On-the-job training",
+      "caption": "On-the-job training",
+      "source": "On The Job Training/IMG-20250528-WA0052.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-36.jpg",
+      "alt": "On-the-job training",
+      "caption": "On-the-job training",
+      "source": "On The Job Training/IMG-20250528-WA0053.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-37.jpg",
+      "alt": "Oral coaching session",
+      "caption": "Oral coaching session",
+      "source": "Orial Coaching/IMG_20251114_081522_047.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/theory-and-classroom-training-38.jpg",
+      "alt": "Oral coaching session",
+      "caption": "Oral coaching session",
+      "source": "Orial Coaching/IMG-20240709-WA0048.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/sembehun-opening-01.jpg",
+      "alt": "Sembehun academy official opening",
+      "caption": "Sembehun academy official opening",
+      "source": "Sembehun Official Opening/IMG_20260226_120817_873.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/sembehun-opening-02.jpg",
+      "alt": "Sembehun academy official opening",
+      "caption": "Sembehun academy official opening",
+      "source": "Sembehun Official Opening/IMG_20260226_125013_722.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/sembehun-opening-03.jpg",
+      "alt": "Sembehun academy official opening",
+      "caption": "Sembehun academy official opening",
+      "source": "Sembehun Official Opening/IMG_20260226_125214_069.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/sembehun-opening-04.jpg",
+      "alt": "Sembehun academy official opening",
+      "caption": "Sembehun academy official opening",
+      "source": "Sembehun Official Opening/IMG_20260226_125214_087.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/sembehun-opening-05.jpg",
+      "alt": "Sembehun academy official opening",
+      "caption": "Sembehun academy official opening",
+      "source": "Sembehun Official Opening/IMG_20260226_131941_046.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/sembehun-opening-06.jpg",
+      "alt": "Sembehun academy official opening",
+      "caption": "Sembehun academy official opening",
+      "source": "Sembehun Official Opening/IMG_20260226_132209_969.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-01.jpg",
+      "alt": "Certificates awarded to graduates",
+      "caption": "Certificates awarded to graduates",
+      "source": "Sierrazim Certificates/IMG-20250202-WA0033.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-02.jpg",
+      "alt": "Certificates awarded to graduates",
+      "caption": "Certificates awarded to graduates",
+      "source": "Sierrazim Certificates/IMG-20250604-WA0059.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-03.jpg",
+      "alt": "Certificates awarded to graduates",
+      "caption": "Certificates awarded to graduates",
+      "source": "Sierrazim Certificates/IMG-20250604-WA0083.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-04.jpg",
+      "alt": "Operator certification ceremony",
+      "caption": "Operator certification ceremony",
+      "source": "Sierrazim Certification/IMG_20260227_162451_816.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-05.jpg",
+      "alt": "Operator certification ceremony",
+      "caption": "Operator certification ceremony",
+      "source": "Sierrazim Certification/IMG_20260227_162503_542.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-06.jpg",
+      "alt": "Operator certification ceremony",
+      "caption": "Operator certification ceremony",
+      "source": "Sierrazim Certification/IMG_20260227_162528_633.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-07.jpg",
+      "alt": "Operator certification ceremony",
+      "caption": "Operator certification ceremony",
+      "source": "Sierrazim Certification/IMG_20260227_162726_866.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-08.jpg",
+      "alt": "Operator certification ceremony",
+      "caption": "Operator certification ceremony",
+      "source": "Sierrazim Certification/IMG_20260227_162729_408.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-09.jpg",
+      "alt": "Operator certification ceremony",
+      "caption": "Operator certification ceremony",
+      "source": "Sierrazim Certification/IMG-20250408-WA0030.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-10.jpg",
+      "alt": "Operator certification ceremony",
+      "caption": "Operator certification ceremony",
+      "source": "Sierrazim Certification/IMG-20250408-WA0031.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-11.jpg",
+      "alt": "Operator certification ceremony",
+      "caption": "Operator certification ceremony",
+      "source": "Sierrazim Certification/IMG-20250408-WA0033.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-12.jpg",
+      "alt": "Operator certification ceremony",
+      "caption": "Operator certification ceremony",
+      "source": "Sierrazim Certification/IMG-20250408-WA0034.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-13.jpg",
+      "alt": "Operator certification ceremony",
+      "caption": "Operator certification ceremony",
+      "source": "Sierrazim Certification/IMG-20250408-WA0038.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/certification-14.jpg",
+      "alt": "Operator certification ceremony",
+      "caption": "Operator certification ceremony",
+      "source": "Sierrazim Certification/IMG-20250408-WA0040.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-185.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "sierrazim Gallery/IMG-20250819-WA0031.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/general-186.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "sierrazim Gallery/IMG-20250819-WA0036.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "case-study/sierra-rutile-01.jpg",
+      "alt": "Staff and community members gathered at the SierraZim programme launch at Sierra Rutile",
+      "caption": "Launch of the SierraZim operator-training programme at Sierra Rutile",
+      "source": "Sierrazim Launching Ceremony Rutile/IMG-20231119-WA0028.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/mano-01.jpg",
+      "alt": "Mano certification ceremony",
+      "caption": "Mano certification ceremony",
+      "source": "Sierrazim Mano Certication Ceremony/IMG_20260227_160800_675.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-01.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/256208a9-9720-4823-a24b-ca400c832c9d_5_watermark.jpeg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-02.jpg",
+      "alt": "Portrait of Stephen Mafunga, SierraZim Chief Executive Officer",
+      "caption": "Stephen Mafunga, Chief Executive Officer",
+      "source": "Sierrazim Team/CEO Sierrazim.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-03.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG_20251113_082158_547.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-04.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG_20251113_082221_271.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-05.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG_20251113_185651_774.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-06.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG_20260227_161453_272.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-07.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG_20260302_103406_550.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-08.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20230901-WA0047.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-09.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20230913-WA0032.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-10.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20231119-WA0029.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-11.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20231119-WA0031.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-12.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20231119-WA0038.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-13.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20231119-WA0040.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-14.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20240319-WA0023.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-15.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20240627-WA0035.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-16.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20241106-WA0070.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-17.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250120-WA0017.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-18.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250120-WA0019.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-19.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250120-WA0020.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-20.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250202-WA0035.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-21.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250202-WA0036.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-22.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250210-WA0018.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-23.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250210-WA0022.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-24.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250210-WA0023.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-25.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250210-WA0024.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-26.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250224-WA0032.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-27.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250224-WA0034.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-28.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250311-WA0016.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-29.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250604-WA0093.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-30.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250604-WA0094.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-31.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250604-WA0095.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-32.jpg",
+      "alt": "The SierraZim team",
+      "caption": "The SierraZim team",
+      "source": "Sierrazim Team/IMG-20250604-WA0098.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "team/team-33.jpg",
+      "alt": "Portrait of Anastasia R. Zayat, SierraZim Managing Director",
+      "caption": "Anastasia R. Zayat, Managing Director",
+      "source": "Sierrazim Team/Sierrazim Managing Director.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "video/testimony-01-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0007.mp4",
+      "isVideo": false
+    },
+    {
+      "file": "video/testimony-01.mp4",
+      "alt": "Client testimonial",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0007.mp4",
+      "isVideo": true
+    },
+    {
+      "file": "video/testimony-02-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0008.mp4",
+      "isVideo": false
+    },
+    {
+      "file": "video/testimony-02.mp4",
+      "alt": "Client testimonial",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0008.mp4",
+      "isVideo": true
+    },
+    {
+      "file": "video/testimony-03-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0009.mp4",
+      "isVideo": false
+    },
+    {
+      "file": "video/testimony-03.mp4",
+      "alt": "Client testimonial",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0009.mp4",
+      "isVideo": true
+    },
+    {
+      "file": "video/testimony-04-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0010.mp4",
+      "isVideo": false
+    },
+    {
+      "file": "video/testimony-04.mp4",
+      "alt": "Client testimonial",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0010.mp4",
+      "isVideo": true
+    },
+    {
+      "file": "video/testimony-05-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0011.mp4",
+      "isVideo": false
+    },
+    {
+      "file": "video/testimony-05.mp4",
+      "alt": "Client testimonial",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0011.mp4",
+      "isVideo": true
+    },
+    {
+      "file": "video/testimony-06-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0012.mp4",
+      "isVideo": false
+    },
+    {
+      "file": "video/testimony-06.mp4",
+      "alt": "Client testimonial",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0012.mp4",
+      "isVideo": true
+    },
+    {
+      "file": "video/testimony-07-poster.jpg",
+      "alt": "Client testimonial — video still",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0014.mp4",
+      "isVideo": false
+    },
+    {
+      "file": "video/testimony-07.mp4",
+      "alt": "Client testimonial",
+      "caption": "Client testimonial",
+      "source": "Sierrazim Testimony/VID-20260315-WA0014.mp4",
+      "isVideo": true
+    },
+    {
+      "file": "gallery/web-selection-01.jpg",
+      "alt": "Group of SierraZim trainees in full PPE — hi-vis vests, hard hats and safety glasses",
+      "caption": "Trainees kitted out in personal protective equipment",
+      "source": "Sierrazim Web Selection Photos/IMG-20250124-WA0011.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/web-selection-02.jpg",
+      "alt": "SierraZim instructors in branded workwear and hard hats standing on a mine site",
+      "caption": "The SierraZim training team on site at a mining operation",
+      "source": "Sierrazim Web Selection Photos/IMG-20250224-WA0036.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/web-selection-03.jpg",
+      "alt": "A cohort of SierraZim trainees in hi-vis vests gathered in a training room",
+      "caption": "A SierraZim training cohort during their programme",
+      "source": "Sierrazim Web Selection Photos/IMG-20250228-WA0048.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/web-selection-04.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "Sierrazim Web Selection Photos/IMG-20250228-WA0049.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/web-selection-05.jpg",
+      "alt": "SierraZim training",
+      "caption": "SierraZim training",
+      "source": "Sierrazim Web Selection Photos/IMG-20250228-WA0050.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/web-selection-06.jpg",
+      "alt": "Three SierraZim staff members standing beside a branded driving-school car",
+      "caption": "SierraZim driving-school team with a branded training vehicle",
+      "source": "Sierrazim Web Selection Photos/IMG-20250412-WA0052.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/web-selection-07.jpg",
+      "alt": "Volvo tracked excavator loading red earth into a yellow dump truck at a mine",
+      "caption": "Heavy earthmoving in action at a client mine site",
+      "source": "Sierrazim Web Selection Photos/On the Job Training Sierrazim.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-01.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20241010-WA0066.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-02.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20241010-WA0070.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-03.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20241010-WA0080.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-04.jpg",
+      "alt": "Trainee operating the twin joysticks of an excavator simulator while an instructor guides him",
+      "caption": "Hands-on excavator simulator training with instructor guidance",
+      "source": "Simulator Training/IMG-20241010-WA0084.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-05.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20241010-WA0085.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-06.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20241010-WA0086.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-07.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20241016-WA0106.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-08.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20241016-WA0114.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-09.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20241016-WA0116.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-10.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250113-WA0011.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-11.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250113-WA0015.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-12.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250113-WA0038.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-13.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250115-WA0032.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-14.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250115-WA0034.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-15.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250116-WA0065.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-16.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250116-WA0069.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-17.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250118-WA0013.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-18.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250118-WA0037.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-19.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250124-WA0014.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-20.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250124-WA0015.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-21.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250124-WA0022.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-22.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250129-WA0009.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-23.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250129-WA0013.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-24.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250129-WA0015.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-25.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250129-WA0017.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-26.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250129-WA0020.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/simulator-training-27.jpg",
+      "alt": "Driving simulator training",
+      "caption": "Driving simulator training",
+      "source": "Simulator Training/IMG-20250129-WA0021.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-01.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240307-WA0011.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-02.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240320-WA0131.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-03.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240320-WA0139.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-04.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240320-WA0141.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-05.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240603-WA0008.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-06.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240614-WA0029.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-07.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240614-WA0030.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-08.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240627-WA0023.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-09.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240627-WA0031.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-10.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240627-WA0033.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-11.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240627-WA0043.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-12.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240805-WA0011.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-13.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240805-WA0015.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-14.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240902-WA0029.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-15.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20240912-WA0029.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-16.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20241125-WA0026.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-17.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20241125-WA0027.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-18.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250106-WA0034.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-19.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250106-WA0037.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-20.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250107-WA0008.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-21.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250107-WA0009.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-22.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250118-WA0029.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-23.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250217-WA0025.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-24.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250315-WA0030.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-25.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250315-WA0031.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-26.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250527-WA0013.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-27.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250604-WA0039.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-28.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250604-WA0040.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-29.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250604-WA0041.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "gallery/students-30.jpg",
+      "alt": "Trainees during a SierraZim programme",
+      "caption": "Trainees during a SierraZim programme",
+      "source": "Students Gallery/IMG-20250604-WA0042.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/agriculture-equipment-training-01.jpg",
+      "alt": "Tractor and agriculture equipment training",
+      "caption": "Tractor and agriculture equipment training",
+      "source": "Tractor Training/IMG-20240812-WA0019.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/agriculture-equipment-training-02.jpg",
+      "alt": "Operator driving a blue Landini tractor through an orange-cone course during training",
+      "caption": "Agricultural tractor handling practice on a cone course",
+      "source": "Tractor Training/IMG-20240814-WA0029.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/agriculture-equipment-training-03.jpg",
+      "alt": "Tractor and agriculture equipment training",
+      "caption": "Tractor and agriculture equipment training",
+      "source": "Tractor Training/IMG-20240909-WA0017.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/agriculture-equipment-training-04.jpg",
+      "alt": "Blue tractor manoeuvring between cones on a wet training ground",
+      "caption": "Tractor operation training on the manoeuvring course",
+      "source": "Tractor Training/IMG-20240909-WA0018.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/agriculture-equipment-training-05.jpg",
+      "alt": "Tractor and agriculture equipment training",
+      "caption": "Tractor and agriculture equipment training",
+      "source": "Tractor Training/IMG-20240909-WA0019.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/agriculture-equipment-training-06.jpg",
+      "alt": "Tractor and agriculture equipment training",
+      "caption": "Tractor and agriculture equipment training",
+      "source": "Tractor Training/IMG-20240909-WA0020.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/agriculture-equipment-training-07.jpg",
+      "alt": "Tractor and agriculture equipment training",
+      "caption": "Tractor and agriculture equipment training",
+      "source": "Tractor Training/IMG-20241015-WA0024.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/agriculture-equipment-training-08.jpg",
+      "alt": "Tractor and agriculture equipment training",
+      "caption": "Tractor and agriculture equipment training",
+      "source": "Tractor Training/IMG-20250127-WA0087.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/agriculture-equipment-training-09.jpg",
+      "alt": "Tractor and agriculture equipment training",
+      "caption": "Tractor and agriculture equipment training",
+      "source": "Tractor Training/IMG-20250422-WA0010.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/agriculture-equipment-training-10.jpg",
+      "alt": "Tractor and agriculture equipment training",
+      "caption": "Tractor and agriculture equipment training",
+      "source": "Tractor Training/IMG-20250422-WA0015.jpg",
+      "isVideo": false
+    },
+    {
+      "file": "programme/agriculture-equipment-training-11.jpg",
+      "alt": "Tractor and agriculture equipment training",
+      "caption": "Tractor and agriculture equipment training",
+      "source": "Tractor Training/IMG-20250422-WA0017.jpg",
+      "isVideo": false
+    }
+  ],
+  "assignments": {
+    "programmes": {
+      "light-vehicle-defensive-driving": {
+        "cover": "programme/light-vehicle-defensive-driving-10.jpg"
+      },
+      "heavy-vehicle-defensive-driving": {
+        "cover": "programme/heavy-vehicle-defensive-driving-02.jpg"
+      },
+      "simulator-training": {
+        "cover": "programme/simulator-training-04.jpg"
+      },
+      "theory-and-classroom-training": {
+        "cover": "programme/theory-and-classroom-training-03.jpg"
+      },
+      "surface-mobile-equipment-training": {
+        "cover": "programme/surface-mobile-equipment-training-06.jpg"
+      },
+      "agriculture-equipment-training": {
+        "cover": "programme/agriculture-equipment-training-02.jpg"
+      },
+      "pre-employment-screening": {
+        "cover": "programme/pre-employment-screening-02.jpg"
+      }
+    },
+    "sectors": {
+      "mining": {
+        "image": "gallery/web-selection-07.jpg"
+      },
+      "agriculture": {
+        "image": "programme/agriculture-equipment-training-02.jpg"
+      },
+      "transport-and-fleets": {
+        "image": "gallery/web-selection-06.jpg"
+      }
+    },
+    "caseStudies": {
+      "dadtco-mozambique": {
+        "cover": "case-study/dadtco-mozambique-02.jpg",
+        "gallery": [
+          "case-study/dadtco-mozambique-01.jpg"
+        ],
+        "realPhotos": true
+      },
+      "mantrac": {
+        "cover": "case-study/mantrac-02.jpg",
+        "gallery": [
+          "case-study/mantrac-01.jpg"
+        ],
+        "realPhotos": true
+      },
+      "sierra-rutile": {
+        "cover": "case-study/sierra-rutile-01.jpg",
+        "gallery": [],
+        "realPhotos": true
+      },
+      "frontier-buses": {
+        "cover": "programme/light-vehicle-defensive-driving-09.jpg",
+        "gallery": [],
+        "realPhotos": false
+      },
+      "miro-forestry": {
+        "cover": "programme/heavy-vehicle-defensive-driving-02.jpg",
+        "gallery": [],
+        "realPhotos": false
+      },
+      "sierra-tropical": {
+        "cover": "programme/agriculture-equipment-training-04.jpg",
+        "gallery": [],
+        "realPhotos": false
+      }
+    },
+    "gallery": [
+      {
+        "file": "programme/theory-and-classroom-training-05.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
+        "order": 0
+      },
+      {
+        "file": "programme/theory-and-classroom-training-09.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
+        "order": 1
+      },
+      {
+        "file": "programme/theory-and-classroom-training-10.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
+        "order": 2
+      },
+      {
+        "file": "programme/theory-and-classroom-training-01.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
+        "order": 3
+      },
+      {
+        "file": "programme/theory-and-classroom-training-02.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
+        "order": 4
+      },
+      {
+        "file": "programme/theory-and-classroom-training-08.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
+        "order": 5
+      },
+      {
+        "file": "programme/theory-and-classroom-training-36.jpg",
+        "caption": "On-the-job training",
+        "alt": "On-the-job training",
+        "category": "classroom",
+        "order": 6
+      },
+      {
+        "file": "programme/theory-and-classroom-training-13.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
+        "order": 7
+      },
+      {
+        "file": "programme/theory-and-classroom-training-24.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
+        "order": 8
+      },
+      {
+        "file": "programme/theory-and-classroom-training-28.jpg",
+        "caption": "On-the-job training",
+        "alt": "On-the-job training",
+        "category": "classroom",
+        "order": 9
+      },
+      {
+        "file": "programme/theory-and-classroom-training-21.jpg",
+        "caption": "Classroom and theory training",
+        "alt": "Classroom and theory training",
+        "category": "classroom",
+        "order": 10
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-06.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 11
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-05.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 12
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-04.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 13
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-03.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 14
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-07.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 15
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-17.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 16
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-15.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 17
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-11.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 18
+      },
+      {
+        "file": "gallery/students-18.jpg",
+        "caption": "SierraZim training team on site",
+        "alt": "A SierraZim training team in branded shirts beside a pickup",
+        "category": "light-vehicle",
+        "order": 19
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-02.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 20
+      },
+      {
+        "file": "programme/light-vehicle-defensive-driving-01.jpg",
+        "caption": "Light vehicle defensive-driving training",
+        "alt": "Light vehicle defensive-driving training",
+        "category": "light-vehicle",
+        "order": 21
+      },
+      {
+        "file": "programme/surface-mobile-equipment-training-08.jpg",
+        "caption": "Excavator operator training",
+        "alt": "Excavator operator training",
+        "category": "heavy-equipment",
+        "order": 22
+      },
+      {
+        "file": "programme/surface-mobile-equipment-training-10.jpg",
+        "caption": "Excavator operator training",
+        "alt": "Excavator operator training",
+        "category": "heavy-equipment",
+        "order": 23
+      },
+      {
+        "file": "programme/surface-mobile-equipment-training-03.jpg",
+        "caption": "Articulated dump truck training",
+        "alt": "Articulated dump truck training",
+        "category": "heavy-equipment",
+        "order": 24
+      },
+      {
+        "file": "programme/surface-mobile-equipment-training-04.jpg",
+        "caption": "Articulated dump truck training",
+        "alt": "Articulated dump truck training",
+        "category": "heavy-equipment",
+        "order": 25
+      },
+      {
+        "file": "programme/surface-mobile-equipment-training-12.jpg",
+        "caption": "Front-end loader operator training",
+        "alt": "Front-end loader operator training",
+        "category": "heavy-equipment",
+        "order": 26
+      },
+      {
+        "file": "programme/heavy-vehicle-defensive-driving-01.jpg",
+        "caption": "Heavy vehicle defensive-driving training",
+        "alt": "Heavy vehicle defensive-driving training",
+        "category": "heavy-equipment",
+        "order": 27
+      },
+      {
+        "file": "programme/agriculture-equipment-training-05.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
+        "order": 28
+      },
+      {
+        "file": "programme/agriculture-equipment-training-11.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
+        "order": 29
+      },
+      {
+        "file": "programme/agriculture-equipment-training-08.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
+        "order": 30
+      },
+      {
+        "file": "programme/agriculture-equipment-training-06.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
+        "order": 31
+      },
+      {
+        "file": "programme/surface-mobile-equipment-training-05.jpg",
+        "caption": "Articulated dump truck training",
+        "alt": "Articulated dump truck training",
+        "category": "heavy-equipment",
+        "order": 32
+      },
+      {
+        "file": "programme/agriculture-equipment-training-03.jpg",
+        "caption": "Tractor and agriculture equipment training",
+        "alt": "Tractor and agriculture equipment training",
+        "category": "heavy-equipment",
+        "order": 33
+      },
+      {
+        "file": "programme/simulator-training-21.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 34
+      },
+      {
+        "file": "programme/simulator-training-01.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 35
+      },
+      {
+        "file": "programme/simulator-training-05.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 36
+      },
+      {
+        "file": "programme/simulator-training-12.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 37
+      },
+      {
+        "file": "programme/simulator-training-08.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 38
+      },
+      {
+        "file": "programme/simulator-training-17.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 39
+      },
+      {
+        "file": "programme/simulator-training-06.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 40
+      },
+      {
+        "file": "programme/simulator-training-20.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 41
+      },
+      {
+        "file": "programme/simulator-training-07.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 42
+      },
+      {
+        "file": "programme/simulator-training-13.jpg",
+        "caption": "Driving simulator training",
+        "alt": "Driving simulator training",
+        "category": "simulator",
+        "order": 43
+      },
+      {
+        "file": "gallery/certification-08.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 44
+      },
+      {
+        "file": "gallery/certification-05.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 45
+      },
+      {
+        "file": "gallery/certification-06.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 46
+      },
+      {
+        "file": "gallery/certification-10.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 47
+      },
+      {
+        "file": "gallery/certification-09.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 48
+      },
+      {
+        "file": "gallery/certification-13.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 49
+      },
+      {
+        "file": "programme/pre-employment-screening-03.jpg",
+        "caption": "Graduating cohort in SierraZim colours",
+        "alt": "A SierraZim training cohort in matching branded shirts",
+        "category": "certification",
+        "order": 50
+      },
+      {
+        "file": "gallery/certification-12.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 51
+      },
+      {
+        "file": "gallery/certification-14.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 52
+      },
+      {
+        "file": "gallery/certification-11.jpg",
+        "caption": "Operator certification ceremony",
+        "alt": "Operator certification ceremony",
+        "category": "certification",
+        "order": 53
+      },
+      {
+        "file": "gallery/bam-natull-01.jpg",
+        "caption": "BAM Natull operator training",
+        "alt": "BAM Natull operator training",
+        "category": "projects",
+        "order": 54
+      },
+      {
+        "file": "gallery/bam-natull-03.jpg",
+        "caption": "BAM Natull operator training",
+        "alt": "BAM Natull operator training",
+        "category": "projects",
+        "order": 55
+      },
+      {
+        "file": "gallery/bam-natull-10.jpg",
+        "caption": "BAM Natull operator training",
+        "alt": "BAM Natull operator training",
+        "category": "projects",
+        "order": 56
+      },
+      {
+        "file": "gallery/bam-natull-02.jpg",
+        "caption": "BAM Natull operator training",
+        "alt": "BAM Natull operator training",
+        "category": "projects",
+        "order": 57
+      },
+      {
+        "file": "programme/theory-and-classroom-training-37.jpg",
+        "caption": "On-site operator coaching at a client mine",
+        "alt": "A SierraZim trainer coaching an operator trainee at a mine site",
+        "category": "projects",
+        "order": 58
+      },
+      {
+        "file": "programme/surface-mobile-equipment-training-02.jpg",
+        "caption": "On-site safety briefing with trainees",
+        "alt": "Trainees in PPE during an on-site safety briefing at a mine",
+        "category": "projects",
+        "order": 59
+      },
+      {
+        "file": "programme/theory-and-classroom-training-35.jpg",
+        "caption": "On-site tractor operator assessment",
+        "alt": "A SierraZim trainer assessing a tractor operator trainee in the field",
+        "category": "projects",
+        "order": 60
+      },
+      {
+        "file": "gallery/sembehun-opening-01.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 61
+      },
+      {
+        "file": "gallery/sembehun-opening-02.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 62
+      },
+      {
+        "file": "gallery/certification-01.jpg",
+        "caption": "SierraZim trainer with a Sierra Rutile partner",
+        "alt": "A SierraZim trainer and a Sierra Rutile Limited colleague on site",
+        "category": "projects",
+        "order": 63
+      },
+      {
+        "file": "gallery/sembehun-opening-05.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 64
+      },
+      {
+        "file": "gallery/sembehun-opening-06.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 65
+      },
+      {
+        "file": "gallery/sembehun-opening-04.jpg",
+        "caption": "Sembehun academy official opening",
+        "alt": "Sembehun academy official opening",
+        "category": "projects",
+        "order": 66
+      },
+      {
+        "file": "gallery/mano-01.jpg",
+        "caption": "Mano certification ceremony",
+        "alt": "Mano certification ceremony",
+        "category": "projects",
+        "order": 67
+      }
+    ],
+    "galleryVideos": [
+      {
+        "file": "video/testimony-01.mp4",
+        "poster": "video/testimony-01-poster.jpg",
+        "caption": "Client testimonial",
+        "order": 1000,
+        "category": "testimonials"
+      },
+      {
+        "file": "video/testimony-02.mp4",
+        "poster": "video/testimony-02-poster.jpg",
+        "caption": "Client testimonial",
+        "order": 1001,
+        "category": "testimonials"
+      },
+      {
+        "file": "video/testimony-03.mp4",
+        "poster": "video/testimony-03-poster.jpg",
+        "caption": "Client testimonial",
+        "order": 1002,
+        "category": "testimonials"
+      },
+      {
+        "file": "video/testimony-04.mp4",
+        "poster": "video/testimony-04-poster.jpg",
+        "caption": "Client testimonial",
+        "order": 1003,
+        "category": "testimonials"
+      },
+      {
+        "file": "video/testimony-05.mp4",
+        "poster": "video/testimony-05-poster.jpg",
+        "caption": "Client testimonial",
+        "order": 1004,
+        "category": "testimonials"
+      },
+      {
+        "file": "video/testimony-06.mp4",
+        "poster": "video/testimony-06-poster.jpg",
+        "caption": "Client testimonial",
+        "order": 1005,
+        "category": "testimonials"
+      },
+      {
+        "file": "video/testimony-07.mp4",
+        "poster": "video/testimony-07-poster.jpg",
+        "caption": "Client testimonial",
+        "order": 1006,
+        "category": "testimonials"
+      }
+    ],
+    "leadership": {
+      "Stephen Mafunga": "team/team-02.jpg",
+      "Anastasia R. Zayat": "team/team-33.jpg"
+    },
+    "pages": {
+      "home": {
+        "heroImage": "gallery/web-selection-02.jpg",
+        "whyUsImage": "gallery/web-selection-07.jpg",
+        "socialImage": "gallery/web-selection-06.jpg"
+      },
+      "about-page": {
+        "heroImage": "gallery/web-selection-03.jpg",
+        "storyImage": "gallery/web-selection-01.jpg"
+      },
+      "services-page": {
+        "heroImage": "programme/surface-mobile-equipment-training-01.jpg"
+      },
+      "portfolio-page": {
+        "heroImage": "case-study/dadtco-mozambique-02.jpg"
+      },
+      "gallery-page": {
+        "heroImage": "programme/theory-and-classroom-training-03.jpg"
+      },
+      "sectors-page": {
+        "heroImage": "gallery/web-selection-02.jpg"
+      },
+      "contact-page": {
+        "heroImage": "gallery/web-selection-06.jpg"
+      }
+    }
+  }
+}
