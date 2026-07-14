@@ -51,7 +51,8 @@ export function PageHero({
   if (image) {
     // Split layout (About)
     return (
-      <section className="surface-hero overflow-hidden text-white">
+      <section className="bg-forest-950 overflow-hidden text-white">
+        <div aria-hidden className="hazard h-3.5" />
         <div className="grid lg:min-h-[62vh] lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col justify-center px-6 py-20 sm:px-14 sm:py-24">
             <div className="mb-6">{eyebrowEl}</div>
@@ -97,7 +98,8 @@ export function PageHero({
 
   // Stacked layout (Training / Work / Gallery / Contact)
   return (
-    <section className="surface-hero text-white">
+    <section className="bg-forest-950 text-white">
+      <div aria-hidden className="hazard h-3.5" />
       <div className="mx-auto w-full max-w-[90rem] px-6 pb-24 pt-28 sm:px-14">
         <div className="mb-6">{eyebrowEl}</div>
         {renderTitle("clamp(56px, 8vw, 132px)")}
