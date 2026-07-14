@@ -264,6 +264,20 @@
       var(--hz) 18px 36px
     );
   }
+
+  /* Dark hero surface — a subtle shade at the top separates the hero from the
+     sticky forest-950 nav (otherwise they merge into one flat block), plus a
+     faint ground glow for depth. */
+  .surface-hero {
+    background-color: var(--color-forest-950);
+    background-image:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 20%),
+      radial-gradient(
+        115% 85% at 50% 120%,
+        rgba(10, 99, 34, 0.18),
+        transparent 62%
+      );
+  }
 }
 
 /* Respect reduced-motion preferences */

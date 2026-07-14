@@ -26,7 +26,7 @@ export function HomeHero({
   ];
 
   return (
-    <section className="relative overflow-hidden bg-forest-950 text-white">
+    <section className="surface-hero relative overflow-hidden text-white">
       <div className="grid lg:min-h-[calc(92vh-72px)] lg:grid-cols-[1.05fr_0.95fr]">
         {/* Left — copy */}
         <div className="flex flex-col justify-center px-6 py-16 sm:px-14">

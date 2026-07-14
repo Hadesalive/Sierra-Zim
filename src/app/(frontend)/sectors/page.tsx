@@ -50,7 +50,7 @@ export default async function SectorsPage() {
 
       <section className="bg-paper">
         <div aria-hidden className="hazard h-3.5" />
-        <div className={`${SHELL} py-24`}>
+        <div className={`${SHELL} py-28`}>
           <div className="grid gap-1 md:grid-cols-3">
             {sectors.map((sec) => (
               <Link

@@ -38,7 +38,7 @@ export function SiteHeader({ site }: { site: SiteSettings }) {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/15 bg-forest-950 text-white">
+    <header className="sticky top-0 z-50 border-b border-white/15 bg-forest-950 text-white shadow-[0_16px_30px_-20px_#000000cc]">
       <div className="flex h-[72px] items-stretch justify-between">
         {/* Logo */}
         <Link

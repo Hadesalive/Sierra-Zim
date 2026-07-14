@@ -68,7 +68,7 @@ export default async function AboutPage() {
 
       {/* Story */}
       <section className="bg-paper text-ink">
-        <div className={`${SHELL} py-24`}>
+        <div className={`${SHELL} py-28`}>
           <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
             <div>
               <p className="mb-4 font-mono text-[12px] uppercase tracking-[0.24em] text-safety-600">
@@ -117,7 +117,7 @@ export default async function AboutPage() {
 
       {/* Leadership */}
       <section className="border-t border-line-strong bg-paper-2 text-ink">
-        <div className={`${SHELL} py-24`}>
+        <div className={`${SHELL} py-28`}>
           <div className="mb-12 flex flex-wrap items-baseline gap-x-6 gap-y-3">
             <h2 className="font-display text-fluid-5 font-extrabold uppercase leading-[0.9]">
               {about.leadershipHeading || "Leadership"}
@@ -162,7 +162,7 @@ export default async function AboutPage() {
       {/* Where we work */}
       <section className="bg-forest-950 text-white">
         <div aria-hidden className="hazard h-3.5" />
-        <div className={`${SHELL} py-24`}>
+        <div className={`${SHELL} py-28`}>
           <div className="mb-14 flex flex-wrap items-baseline gap-x-6 gap-y-3">
             <h2 className="font-display text-fluid-5 font-extrabold uppercase leading-[0.9]">
               On the ground,

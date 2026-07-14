@@ -16,7 +16,7 @@ export function HomeQuote({
   if (!quote) return null;
   return (
     <section className="border-t border-line-strong bg-paper text-ink">
-      <div className="mx-auto grid w-full max-w-[90rem] grid-cols-[auto_1fr] gap-8 px-6 py-[104px] sm:gap-12 sm:px-14">
+      <div className="mx-auto grid w-full max-w-[90rem] grid-cols-[auto_1fr] gap-8 px-6 py-[120px] sm:gap-12 sm:px-14">
         <span
           aria-hidden
           className="flex size-14 items-center justify-center bg-safety-500 sm:size-18"
