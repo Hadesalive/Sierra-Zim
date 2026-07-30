@@ -4,6 +4,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { CtaBand } from "@/components/sections/cta-band";
 import { GalleryExplorer } from "@/components/gallery-explorer";
 import { getGallery, getGalleryPage, getSite } from "@/lib/content";
+import { splitAccentHeading } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
   const galleryHero = await getGalleryPage();
@@ -28,15 +29,19 @@ export default async function GalleryPage() {
     getSite(),
   ]);
 
+  const [heroLine1, heroLine2] = hero.title
+    ? splitAccentHeading(hero.title)
+    : ["The yard,", "captured."];
+
   return (
     <>
       <PageHero
         eyebrow={hero.eyebrow || "On the ground — no stock photos"}
         title={
           <>
-            The yard,
+            {heroLine1}
             <br />
-            <span className="text-safety-400">captured.</span>
+            <span className="text-safety-400">{heroLine2}</span>
           </>
         }
         intro={

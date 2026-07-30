@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PlusIcon, ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
-import { numberToWord } from "@/lib/site";
+import { numberToWord, splitAccentHeading } from "@/lib/site";
 import type { ProgrammeItem } from "@/lib/content";
 
 /**
@@ -23,6 +23,9 @@ export function ProgrammesAccordion({
 }) {
   // Never hardcode the count — it must follow the Programmes collection.
   const countLine = `${numberToWord(programmes.length)} programmes.`;
+  const [headingLine1, headingLine2] = heading
+    ? splitAccentHeading(heading)
+    : [countLine, "One standard."];
 
   return (
     <section className="bg-paper text-ink">
@@ -33,9 +36,9 @@ export function ProgrammesAccordion({
               {eyebrow || "What we train"}
             </p>
             <h2 className="font-display text-fluid-3 font-extrabold uppercase leading-[0.9] tracking-[0.005em]">
-              {heading || countLine}
+              {headingLine1}
               <br />
-              <span className="text-forest-700">One standard.</span>
+              <span className="text-forest-700">{headingLine2}</span>
             </h2>
           </div>
           <p className="max-w-[380px] text-[17px] leading-[1.6] text-ink-soft">

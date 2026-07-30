@@ -5,6 +5,7 @@ import Image from "next/image";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaBand } from "@/components/sections/cta-band";
 import { getSectors, getSite, getSectorsPage } from "@/lib/content";
+import { splitAccentHeading } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
   const sectorsHero = await getSectorsPage();
@@ -31,15 +32,20 @@ export default async function SectorsPage() {
     getSite(),
     getSectorsPage(),
   ]);
+
+  const [heroLine1, heroLine2] = hero.title
+    ? splitAccentHeading(hero.title)
+    : ["Sectors we", "train."];
+
   return (
     <>
       <PageHero
         eyebrow={hero.eyebrow || "Built for the work each sector does"}
         title={
           <>
-            Sectors we
+            {heroLine1}
             <br />
-            <span className="text-safety-400">train.</span>
+            <span className="text-safety-400">{heroLine2}</span>
           </>
         }
         intro={

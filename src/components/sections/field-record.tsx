@@ -75,7 +75,7 @@ export function FieldRecord({
             Cross-border delivery — {caseStudy.year}
           </p>
           <h2 className="font-display text-fluid-6 font-extrabold uppercase leading-[0.9]">
-            We took the academy across borders.
+            {caseStudy.title || "We took the academy across borders."}
           </h2>
 
           {/* Route line */}

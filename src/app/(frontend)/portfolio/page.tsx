@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaBand } from "@/components/sections/cta-band";
-import { COUNTRIES_SERVED, numberToWord } from "@/lib/site";
+import { COUNTRIES_SERVED, numberToWord, splitAccentHeading } from "@/lib/site";
 import {
   getCaseStudies,
   getSectors,
@@ -39,6 +39,11 @@ export default async function PortfolioPage() {
     getSite(),
     getPortfolioPage(),
   ]);
+
+  const [heroLine1, heroLine2] = hero.title
+    ? splitAccentHeading(hero.title)
+    : ["The field", "record."];
+
   const featured = caseStudies.find((c) => c.featured) ?? caseStudies[0];
   if (!featured) notFound();
 
@@ -50,9 +55,9 @@ export default async function PortfolioPage() {
         eyebrow={hero.eyebrow || "Portfolio — programmes delivered"}
         title={
           <>
-            The field
+            {heroLine1}
             <br />
-            <span className="stroke-white">record.</span>
+            <span className="stroke-white">{heroLine2}</span>
           </>
         }
         intro={

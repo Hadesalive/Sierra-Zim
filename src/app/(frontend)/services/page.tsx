@@ -6,7 +6,7 @@ import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHero } from "@/components/sections/page-hero";
 import { TheStandard } from "@/components/sections/the-standard";
 import { CtaBand } from "@/components/sections/cta-band";
-import { numberToWord } from "@/lib/site";
+import { numberToWord, splitAccentHeading } from "@/lib/site";
 import { getServicesPage, getProgrammes, getHome, getSite } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -41,15 +41,19 @@ export default async function ServicesPage() {
     getSite(),
   ]);
 
+  const [heroLine1, heroLine2] = servicesHero.title
+    ? splitAccentHeading(servicesHero.title)
+    : [`${numberToWord(programmes.length)} programmes.`, "One standard."];
+
   return (
     <>
       <PageHero
         eyebrow={servicesHero.eyebrow || "The programmes"}
         title={
           <>
-            {`${numberToWord(programmes.length)} programmes.`}
+            {heroLine1}
             <br />
-            <span className="text-safety-400">One standard.</span>
+            <span className="text-safety-400">{heroLine2}</span>
           </>
         }
         intro={
