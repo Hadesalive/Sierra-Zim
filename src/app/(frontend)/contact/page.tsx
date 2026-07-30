@@ -70,7 +70,8 @@ export default async function ContactPage() {
               {contact.detailsHeading || "Talk to the academy."}
             </h2>
             <p className="mt-5 text-[16.5px] leading-[1.6] text-ink-soft">
-              WhatsApp is fastest — most of our clients book that way.
+              {contact.whatsappNote ||
+                "WhatsApp is fastest — most of our clients book that way."}
             </p>
 
             <div className="mt-8 flex flex-col gap-3">

@@ -25,6 +25,7 @@ export const ContactPage: GlobalConfig = {
           fields: [
             { name: "detailsEyebrow", type: "text" },
             { name: "detailsHeading", type: "text" },
+            { name: "whatsappNote", type: "textarea", label: "WhatsApp note (under the headline)" },
           ],
         },
         {

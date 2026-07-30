@@ -60,11 +60,15 @@ export default async function ServicesPage() {
           servicesHero.intro ||
           "Each combines classroom theory, practical on-vehicle training and independent assessment — ending in certification you can rely on."
         }
-        specs={[
-          { accent: "Theory", rest: "+ oral exam" },
-          { accent: "Practical", rest: "on the yard" },
-          { accent: "Certified", rest: "only when both passed" },
-        ]}
+        specs={
+          servicesHero.heroSpecs.length > 0
+            ? servicesHero.heroSpecs
+            : [
+                { accent: "Theory", rest: "+ oral exam" },
+                { accent: "Practical", rest: "on the yard" },
+                { accent: "Certified", rest: "only when both passed" },
+              ]
+        }
       />
 
       {/* Programme dockets */}

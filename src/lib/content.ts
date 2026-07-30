@@ -174,6 +174,8 @@ export async function getHome() {
       title: str(s.title),
       body: str(s.body),
     })),
+    proofRailHeading: str(h?.proofRailHeading),
+    proofRailIntro: str(h?.proofRailIntro),
     whyUsEyebrow: str(h?.whyUsEyebrow),
     whyUsHeading: str(h?.whyUsHeading),
     whyUsIntro: str(h?.whyUsIntro),
@@ -220,7 +222,27 @@ async function getIndexPage(slug: string): Promise<IndexPage> {
   };
 }
 
-export const getServicesPage = () => getIndexPage("services-page");
+export type ServicesPageContent = IndexPage & {
+  heroSpecs: { accent: string; rest: string }[];
+};
+
+export async function getServicesPage(): Promise<ServicesPageContent> {
+  const p = await payload();
+  const g = asDoc(await p.findGlobal({ slug: "services-page", depth: 1 }));
+  return {
+    metaDescription: str(g?.metaDescription),
+    eyebrow: str(g?.eyebrow),
+    title: str(g?.title),
+    intro: str(g?.intro),
+    image: mediaUrl(g?.heroImage),
+    cta: ctaOf(g?.cta),
+    heroSpecs: arr(g?.heroSpecs).map((s) => ({
+      accent: str(s.accent),
+      rest: str(s.rest),
+    })),
+  };
+}
+
 export const getPortfolioPage = () => getIndexPage("portfolio-page");
 export const getGalleryPage = () => getIndexPage("gallery-page");
 export const getSectorsPage = () => getIndexPage("sectors-page");
@@ -266,6 +288,7 @@ export async function getContactPage() {
     heroImage: mediaUrl(c?.heroImage),
     detailsEyebrow: str(c?.detailsEyebrow),
     detailsHeading: str(c?.detailsHeading),
+    whatsappNote: str(c?.whatsappNote),
   };
 }
 

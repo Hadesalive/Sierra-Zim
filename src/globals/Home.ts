@@ -56,6 +56,8 @@ export const Home: GlobalConfig = {
                 { name: "body", type: "textarea" },
               ],
             },
+            { name: "proofRailHeading", type: "text", label: "Proof rail — heading" },
+            { name: "proofRailIntro", type: "textarea", label: "Proof rail — intro" },
             { name: "whyUsEyebrow", type: "text", label: "Why us — eyebrow" },
             { name: "whyUsHeading", type: "text", label: "Why us — heading" },
             { name: "whyUsIntro", type: "textarea", label: "Why us — intro" },

@@ -77,7 +77,12 @@ export default async function HomePage() {
           otherClients={otherClients}
         />
       )}
-      <ProofRail photos={photos} stats={home.stats} />
+      <ProofRail
+        photos={photos}
+        stats={home.stats}
+        heading={home.proofRailHeading}
+        intro={home.proofRailIntro}
+      />
       <HomeQuote
         quote={home.statementQuote}
         partnersLabel={home.statementPartnersLabel}
