@@ -113,7 +113,7 @@ export default async function PortfolioPage() {
               {featured.summary}
             </p>
             <dl className="mt-7 border-t border-white/25">
-              <div className="grid grid-cols-[110px_1fr] gap-6 border-b border-white/15 py-3.5 sm:grid-cols-[150px_1fr]">
+              <div className="grid grid-cols-[120px_1fr] gap-6 border-b border-white/15 py-3.5 sm:grid-cols-[150px_1fr]">
                 <dt className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/55">
                   Delivered
                 </dt>
@@ -121,7 +121,7 @@ export default async function PortfolioPage() {
                   {featured.delivered.join(" · ")}
                 </dd>
               </div>
-              <div className="grid grid-cols-[110px_1fr] gap-6 border-b border-white/15 py-3.5 sm:grid-cols-[150px_1fr]">
+              <div className="grid grid-cols-[120px_1fr] gap-6 border-b border-white/15 py-3.5 sm:grid-cols-[150px_1fr]">
                 <dt className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/55">
                   Outcome
                 </dt>

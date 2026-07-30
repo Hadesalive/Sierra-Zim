@@ -107,7 +107,7 @@ export default async function ServicesPage() {
                     {DOCKET_ROWS.map((row) => (
                       <div
                         key={row.label}
-                        className="grid grid-cols-[110px_1fr] gap-5 border-b border-line py-3 sm:grid-cols-[140px_1fr] sm:gap-6"
+                        className="grid grid-cols-[120px_1fr] gap-5 border-b border-line py-3 sm:grid-cols-[140px_1fr] sm:gap-6"
                       >
                         <dt className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-safety-600">
                           {row.label}

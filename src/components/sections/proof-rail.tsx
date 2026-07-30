@@ -82,7 +82,7 @@ export function ProofRail({
             >
               <div aria-hidden className="hazard h-2.5" />
               <div className="flex flex-1 flex-col justify-between p-7">
-                <p className="font-display text-[104px] font-extrabold leading-[0.85] text-safety-400">
+                <p className="break-all font-display text-[clamp(48px,9vw,104px)] font-extrabold leading-[0.85] text-safety-400">
                   {item.data.value}
                 </p>
                 <p className="font-mono text-[11px] uppercase leading-[1.7] tracking-[0.16em] text-white/75">

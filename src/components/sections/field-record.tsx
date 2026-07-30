@@ -79,7 +79,7 @@ export function FieldRecord({
           </h2>
 
           {/* Route line */}
-          <div className="mt-9 flex items-center gap-4 font-mono text-[12px] uppercase tracking-[0.2em] text-white/85">
+          <div className="mt-9 flex flex-wrap items-center gap-4 gap-y-2 font-mono text-[12px] uppercase tracking-[0.2em] text-white/85">
             <span className="flex items-center gap-2">
               <span aria-hidden className="size-2 bg-safety-400" />
               {homeCity}, SL
@@ -104,7 +104,7 @@ export function FieldRecord({
             {rows.map((r) => (
               <div
                 key={r.label}
-                className="grid grid-cols-[110px_1fr] gap-6 border-b border-white/15 py-3.5 sm:grid-cols-[150px_1fr]"
+                className="grid grid-cols-[120px_1fr] gap-6 border-b border-white/15 py-3.5 sm:grid-cols-[150px_1fr]"
               >
                 <dt className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/55">
                   {r.label}
