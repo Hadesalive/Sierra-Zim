@@ -57,13 +57,19 @@ export default async function HomePage() {
   return (
     <>
       <HomeHero home={home} site={site} programmeCount={programmes.length} />
-      <ClientTicker clients={clients} />
+      <ClientTicker clients={clients} label={home.clientsLabel} />
       <ProgrammesAccordion
         programmes={programmes}
         eyebrow={home.programmesEyebrow}
+        heading={home.programmesHeading}
         intro={home.programmesIntro}
       />
-      <TheStandard steps={home.certPathSteps} />
+      <TheStandard
+        steps={home.certPathSteps}
+        eyebrow={home.certPathEyebrow}
+        heading={home.certPathHeading}
+        intro={home.certPathIntro}
+      />
       {featured && (
         <FieldRecord
           caseStudy={featured}

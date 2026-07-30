@@ -5,7 +5,14 @@ import type { ClientItem } from "@/lib/content";
  * marquee of real client names + sector tags. Pure CSS (duplicated track
  * translated 0 → -50%); pauses on hover and stops under reduced-motion.
  */
-export function ClientTicker({ clients }: { clients: ClientItem[] }) {
+export function ClientTicker({
+  clients,
+  label,
+}: {
+  clients: ClientItem[];
+  /** Home global `clientsLabel`; falls back to the plate's original copy. */
+  label?: string;
+}) {
   if (clients.length === 0) return null;
   // Duplicate the list so the -50% translate loops seamlessly.
   const track = [...clients, ...clients];
@@ -16,7 +23,7 @@ export function ClientTicker({ clients }: { clients: ClientItem[] }) {
       className="flex items-center overflow-hidden border-t border-white/15 bg-forest-975"
     >
       <div className="z-[1] shrink-0 bg-safety-500 px-6 py-4 font-display text-base font-extrabold uppercase tracking-[0.1em] text-ink">
-        Trained for
+        {label || "Trained for"}
       </div>
       <div className="flex-1 overflow-hidden">
         <ul className="ticker-track flex items-center gap-14 px-7 py-4">

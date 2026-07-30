@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaBand } from "@/components/sections/cta-band";
+import { COUNTRIES_SERVED, numberToWord } from "@/lib/site";
 import {
   getCaseStudies,
   getSectors,
@@ -136,7 +137,8 @@ export default async function PortfolioPage() {
               All records
             </h2>
             <p className="font-mono text-[12px] uppercase tracking-[0.24em] text-safety-600">
-              {clientCount} clients · three countries · ongoing
+              {clientCount} clients · {numberToWord(COUNTRIES_SERVED).toLowerCase()}{" "}
+              countries · ongoing
             </p>
           </div>
           <div className="border-t-[3px] border-ink">

@@ -3,6 +3,7 @@ import { ogBase } from "@/lib/metadata";
 import Image from "next/image";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaBand } from "@/components/sections/cta-band";
+import { COUNTRIES_SERVED, splitAccentHeading } from "@/lib/site";
 import { getClients, getSite, getProgrammes, getAboutPage } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -40,9 +41,15 @@ export default async function AboutPage() {
     getAboutPage(),
   ]);
 
+  // `locationsHeading` is one CMS string; the v2 heading is two-tone (plain line
+  // + outline-stroke line), so split it and fall back to the original copy.
+  const [locationsLine1, locationsLine2] = about.locationsHeading
+    ? splitAccentHeading(about.locationsHeading)
+    : ["On the ground,", "across borders."];
+
   const stats = [
     { value: String(programmes.length).padStart(2, "0"), label: "programmes" },
-    { value: "03", label: "countries" },
+    { value: String(COUNTRIES_SERVED).padStart(2, "0"), label: "countries" },
     { value: `${String(clients.length).padStart(2, "0")}+`, label: "clients & partners" },
   ];
 
@@ -51,13 +58,21 @@ export default async function AboutPage() {
       <PageHero
         eyebrow={about.heroEyebrow || "About Sierrazim Limited"}
         title={
-          <>
-            Sierra Leone roots.
-            <br />
-            <span className="stroke-white">Zimbabwean</span>
-            <br />
-            <span className="text-safety-400">Training standards.</span>
-          </>
+          about.heroTitleLine1 || about.heroTitleLine2 ? (
+            <>
+              {about.heroTitleLine1}
+              <br />
+              <span className="text-safety-400">{about.heroTitleLine2}</span>
+            </>
+          ) : (
+            <>
+              Sierra Leone roots.
+              <br />
+              <span className="stroke-white">Zimbabwean</span>
+              <br />
+              <span className="text-safety-400">Training standards.</span>
+            </>
+          )
         }
         intro={about.heroIntro}
         image={about.heroImage || "/gallery/ceo-onsite-equipment.jpg"}
@@ -86,6 +101,11 @@ export default async function AboutPage() {
                     sizes="(max-width: 1024px) 100vw, 45vw"
                     className="object-cover"
                   />
+                  {about.storyImageCaption && (
+                    <span className="absolute bottom-0 left-0 max-w-full bg-forest-950 px-3.5 py-2 font-mono text-[10px] uppercase tracking-[0.18em] text-white">
+                      {about.storyImageCaption}
+                    </span>
+                  )}
                 </div>
               )}
             </div>
@@ -165,9 +185,9 @@ export default async function AboutPage() {
         <div className={`${SHELL} py-28`}>
           <div className="mb-14 flex flex-wrap items-baseline gap-x-6 gap-y-3">
             <h2 className="font-display text-fluid-5 font-extrabold uppercase leading-[0.9]">
-              On the ground,
+              {locationsLine1}
               <br />
-              <span className="stroke-white-thin">across borders.</span>
+              <span className="stroke-white-thin">{locationsLine2}</span>
             </h2>
             <p className="font-mono text-[12px] uppercase tracking-[0.24em] text-safety-400">
               {about.locationsEyebrow || "Where we work"}

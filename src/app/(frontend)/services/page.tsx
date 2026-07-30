@@ -6,6 +6,7 @@ import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHero } from "@/components/sections/page-hero";
 import { TheStandard } from "@/components/sections/the-standard";
 import { CtaBand } from "@/components/sections/cta-band";
+import { numberToWord } from "@/lib/site";
 import { getServicesPage, getProgrammes, getHome, getSite } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -46,7 +47,7 @@ export default async function ServicesPage() {
         eyebrow={servicesHero.eyebrow || "The programmes"}
         title={
           <>
-            Seven programmes.
+            {`${numberToWord(programmes.length)} programmes.`}
             <br />
             <span className="text-safety-400">One standard.</span>
           </>
@@ -127,7 +128,12 @@ export default async function ServicesPage() {
         ))}
       </section>
 
-      <TheStandard steps={home.certPathSteps} />
+      <TheStandard
+        steps={home.certPathSteps}
+        eyebrow={home.certPathEyebrow}
+        heading={home.certPathHeading}
+        intro={home.certPathIntro}
+      />
 
       <CtaBand
         site={site}

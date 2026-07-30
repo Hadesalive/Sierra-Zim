@@ -10,6 +10,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { PageHero } from "@/components/sections/page-hero";
 import { ContactForm } from "@/components/contact-form";
+import { splitAccentHeading } from "@/lib/site";
 import { getSite, getProgrammes, getContactPage } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -37,15 +38,21 @@ export default async function ContactPage() {
     getContactPage(),
   ]);
 
+  // `heroTitle` is one CMS string; the v2 hero heading is two-tone (plain line +
+  // amber line), so split it and fall back to the original copy.
+  const [titleLine1, titleLine2] = contact.heroTitle
+    ? splitAccentHeading(contact.heroTitle)
+    : ["Get your fleet", "certified."];
+
   return (
     <>
       <PageHero
         eyebrow={contact.heroEyebrow || "Contact — reply within one business day"}
         title={
           <>
-            Get your fleet
+            {titleLine1}
             <br />
-            <span className="text-safety-400">certified.</span>
+            <span className="text-safety-400">{titleLine2}</span>
           </>
         }
         intro={

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PlusIcon, ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
+import { numberToWord } from "@/lib/site";
 import type { ProgrammeItem } from "@/lib/content";
 
 /**
@@ -11,12 +12,18 @@ import type { ProgrammeItem } from "@/lib/content";
 export function ProgrammesAccordion({
   programmes,
   eyebrow,
+  heading,
   intro,
 }: {
   programmes: ProgrammeItem[];
   eyebrow: string;
+  /** Home global `programmesHeading`; falls back to the derived count line. */
+  heading?: string;
   intro: string;
 }) {
+  // Never hardcode the count — it must follow the Programmes collection.
+  const countLine = `${numberToWord(programmes.length)} programmes.`;
+
   return (
     <section className="bg-paper text-ink">
       <div className="mx-auto w-full max-w-[90rem] px-6 py-[120px] sm:px-14">
@@ -26,7 +33,7 @@ export function ProgrammesAccordion({
               {eyebrow || "What we train"}
             </p>
             <h2 className="font-display text-fluid-3 font-extrabold uppercase leading-[0.9] tracking-[0.005em]">
-              Seven programmes.
+              {heading || countLine}
               <br />
               <span className="text-forest-700">One standard.</span>
             </h2>
