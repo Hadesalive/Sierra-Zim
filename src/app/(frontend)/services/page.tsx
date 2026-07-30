@@ -141,11 +141,14 @@ export default async function ServicesPage() {
 
       <CtaBand
         site={site}
-        titleTop="Not sure which"
-        titleBottom="programme?"
-        intro="Tell us your fleet and we'll build the training plan."
-        primaryLabel="Talk to us"
-        secondary="whatsapp"
+        titleTop={servicesHero.cta.titleTop || "Not sure which"}
+        titleBottom={servicesHero.cta.titleBottom || "programme?"}
+        intro={
+          servicesHero.cta.intro ||
+          "Tell us your fleet and we'll build the training plan."
+        }
+        primaryLabel={servicesHero.cta.primaryLabel || "Talk to us"}
+        secondary={servicesHero.cta.secondary || "whatsapp"}
       />
     </>
   );

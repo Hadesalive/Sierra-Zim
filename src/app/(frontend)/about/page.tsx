@@ -236,7 +236,14 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      <CtaBand site={site} />
+      <CtaBand
+        site={site}
+        titleTop={about.cta.titleTop || "Get your fleet"}
+        titleBottom={about.cta.titleBottom || "certified."}
+        intro={about.cta.intro || undefined}
+        primaryLabel={about.cta.primaryLabel || "Book a programme"}
+        secondary={about.cta.secondary || "phone"}
+      />
     </>
   );
 }

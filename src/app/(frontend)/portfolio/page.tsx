@@ -239,9 +239,11 @@ export default async function PortfolioPage() {
 
       <CtaBand
         site={site}
-        titleTop="Your fleet could be"
-        titleBottom="the next record."
-        secondary="none"
+        titleTop={hero.cta.titleTop || "Your fleet could be"}
+        titleBottom={hero.cta.titleBottom || "the next record."}
+        intro={hero.cta.intro || undefined}
+        primaryLabel={hero.cta.primaryLabel || undefined}
+        secondary={hero.cta.secondary || "none"}
       />
     </>
   );

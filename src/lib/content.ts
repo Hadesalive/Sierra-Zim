@@ -31,6 +31,28 @@ const arr = (v: unknown): Doc[] => (Array.isArray(v) ? (v as Doc[]) : []);
 /** View a precisely-typed Payload global/doc through the loose Doc shape. */
 const asDoc = (v: unknown): Doc => v as Doc;
 
+export type CtaBandContent = {
+  titleTop: string;
+  titleBottom: string;
+  intro: string;
+  primaryLabel: string;
+  secondary: "phone" | "whatsapp" | "none" | "";
+};
+
+const ctaSecondary = (v: unknown): CtaBandContent["secondary"] =>
+  v === "phone" || v === "whatsapp" || v === "none" ? v : "";
+
+const ctaOf = (v: unknown): CtaBandContent => {
+  const c = asDoc(v);
+  return {
+    titleTop: str(c?.titleTop),
+    titleBottom: str(c?.titleBottom),
+    intro: str(c?.intro),
+    primaryLabel: str(c?.primaryLabel),
+    secondary: ctaSecondary(c?.secondary),
+  };
+};
+
 async function findAll(collection: string, depth = 1): Promise<Doc[]> {
   const p = await payload();
   const res = await p.find({
@@ -170,6 +192,7 @@ export async function getHome() {
       value: str(s.value),
       label: str(s.label),
     })),
+    cta: ctaOf(h?.cta),
   };
 }
 export type HomeContent = Awaited<ReturnType<typeof getHome>>;
@@ -181,6 +204,7 @@ export type IndexPage = {
   title: string;
   intro: string;
   image: string;
+  cta: CtaBandContent;
 };
 
 async function getIndexPage(slug: string): Promise<IndexPage> {
@@ -192,6 +216,7 @@ async function getIndexPage(slug: string): Promise<IndexPage> {
     title: str(g?.title),
     intro: str(g?.intro),
     image: mediaUrl(g?.heroImage),
+    cta: ctaOf(g?.cta),
   };
 }
 
@@ -225,6 +250,7 @@ export async function getAboutPage() {
       note: str(l.note),
     })),
     clientsHeading: str(a?.clientsHeading),
+    cta: ctaOf(a?.cta),
   };
 }
 

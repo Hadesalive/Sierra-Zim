@@ -85,7 +85,14 @@ export default async function HomePage() {
       />
       <CtaBand
         site={site}
-        intro="Tell us the programme, how many people and where — we reply within one business day."
+        titleTop={home.cta.titleTop || "Get your fleet"}
+        titleBottom={home.cta.titleBottom || "certified."}
+        intro={
+          home.cta.intro ||
+          "Tell us the programme, how many people and where — we reply within one business day."
+        }
+        primaryLabel={home.cta.primaryLabel || "Book a programme"}
+        secondary={home.cta.secondary || "phone"}
       />
     </>
   );

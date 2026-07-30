@@ -1,5 +1,7 @@
 import type { GlobalConfig } from "payload";
 
+import { ctaBandFields } from "../fields/shared";
+
 export const Home: GlobalConfig = {
   slug: "home",
   label: "Home Page",
@@ -94,6 +96,10 @@ export const Home: GlobalConfig = {
               ],
             },
           ],
+        },
+        {
+          label: "Closing CTA",
+          fields: [ctaBandFields()],
         },
       ],
     },

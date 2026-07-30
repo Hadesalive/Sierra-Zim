@@ -802,6 +802,13 @@ export interface Home {
         id?: string | null;
       }[]
     | null;
+  cta?: {
+    titleTop?: string | null;
+    titleBottom?: string | null;
+    intro?: string | null;
+    primaryLabel?: string | null;
+    secondary?: ('phone' | 'whatsapp' | 'none') | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -838,6 +845,13 @@ export interface AboutPage {
       }[]
     | null;
   clientsHeading?: string | null;
+  cta?: {
+    titleTop?: string | null;
+    titleBottom?: string | null;
+    intro?: string | null;
+    primaryLabel?: string | null;
+    secondary?: ('phone' | 'whatsapp' | 'none') | null;
+  };
   metaDescription?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -852,6 +866,13 @@ export interface ServicesPage {
   title?: string | null;
   intro?: string | null;
   heroImage?: (number | null) | Media;
+  cta?: {
+    titleTop?: string | null;
+    titleBottom?: string | null;
+    intro?: string | null;
+    primaryLabel?: string | null;
+    secondary?: ('phone' | 'whatsapp' | 'none') | null;
+  };
   metaDescription?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -866,6 +887,13 @@ export interface PortfolioPage {
   title?: string | null;
   intro?: string | null;
   heroImage?: (number | null) | Media;
+  cta?: {
+    titleTop?: string | null;
+    titleBottom?: string | null;
+    intro?: string | null;
+    primaryLabel?: string | null;
+    secondary?: ('phone' | 'whatsapp' | 'none') | null;
+  };
   metaDescription?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -880,6 +908,13 @@ export interface GalleryPage {
   title?: string | null;
   intro?: string | null;
   heroImage?: (number | null) | Media;
+  cta?: {
+    titleTop?: string | null;
+    titleBottom?: string | null;
+    intro?: string | null;
+    primaryLabel?: string | null;
+    secondary?: ('phone' | 'whatsapp' | 'none') | null;
+  };
   metaDescription?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -894,6 +929,13 @@ export interface SectorsPage {
   title?: string | null;
   intro?: string | null;
   heroImage?: (number | null) | Media;
+  cta?: {
+    titleTop?: string | null;
+    titleBottom?: string | null;
+    intro?: string | null;
+    primaryLabel?: string | null;
+    secondary?: ('phone' | 'whatsapp' | 'none') | null;
+  };
   metaDescription?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -999,6 +1041,15 @@ export interface HomeSelect<T extends boolean = true> {
         label?: T;
         id?: T;
       };
+  cta?:
+    | T
+    | {
+        titleTop?: T;
+        titleBottom?: T;
+        intro?: T;
+        primaryLabel?: T;
+        secondary?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
@@ -1035,6 +1086,15 @@ export interface AboutPageSelect<T extends boolean = true> {
         id?: T;
       };
   clientsHeading?: T;
+  cta?:
+    | T
+    | {
+        titleTop?: T;
+        titleBottom?: T;
+        intro?: T;
+        primaryLabel?: T;
+        secondary?: T;
+      };
   metaDescription?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -1049,6 +1109,15 @@ export interface ServicesPageSelect<T extends boolean = true> {
   title?: T;
   intro?: T;
   heroImage?: T;
+  cta?:
+    | T
+    | {
+        titleTop?: T;
+        titleBottom?: T;
+        intro?: T;
+        primaryLabel?: T;
+        secondary?: T;
+      };
   metaDescription?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -1063,6 +1132,15 @@ export interface PortfolioPageSelect<T extends boolean = true> {
   title?: T;
   intro?: T;
   heroImage?: T;
+  cta?:
+    | T
+    | {
+        titleTop?: T;
+        titleBottom?: T;
+        intro?: T;
+        primaryLabel?: T;
+        secondary?: T;
+      };
   metaDescription?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -1077,6 +1155,15 @@ export interface GalleryPageSelect<T extends boolean = true> {
   title?: T;
   intro?: T;
   heroImage?: T;
+  cta?:
+    | T
+    | {
+        titleTop?: T;
+        titleBottom?: T;
+        intro?: T;
+        primaryLabel?: T;
+        secondary?: T;
+      };
   metaDescription?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -1091,6 +1178,15 @@ export interface SectorsPageSelect<T extends boolean = true> {
   title?: T;
   intro?: T;
   heroImage?: T;
+  cta?:
+    | T
+    | {
+        titleTop?: T;
+        titleBottom?: T;
+        intro?: T;
+        primaryLabel?: T;
+        secondary?: T;
+      };
   metaDescription?: T;
   updatedAt?: T;
   createdAt?: T;

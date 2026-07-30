@@ -90,7 +90,14 @@ export default async function SectorsPage() {
         </div>
       </section>
 
-      <CtaBand site={site} />
+      <CtaBand
+        site={site}
+        titleTop={hero.cta.titleTop || "Get your fleet"}
+        titleBottom={hero.cta.titleBottom || "certified."}
+        intro={hero.cta.intro || undefined}
+        primaryLabel={hero.cta.primaryLabel || "Book a programme"}
+        secondary={hero.cta.secondary || "phone"}
+      />
     </>
   );
 }

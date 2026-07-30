@@ -70,6 +70,31 @@ export const heroImageField = (label = "Hero / social image"): Field => ({
   label,
 });
 
+/** The closing CTA band shown near the bottom of most pages. Every field
+ *  falls back to that page's hardcoded copy when left empty. */
+export const ctaBandFields = (): Field => ({
+  name: "cta",
+  type: "group",
+  label: "Closing CTA Band",
+  fields: [
+    { name: "titleTop", type: "text", label: "Headline — line 1" },
+    { name: "titleBottom", type: "text", label: "Headline — line 2" },
+    { name: "intro", type: "textarea" },
+    { name: "primaryLabel", type: "text", label: "Primary button label" },
+    {
+      name: "secondary",
+      type: "select",
+      label: "Secondary action",
+      defaultValue: "phone",
+      options: [
+        { label: "Phone", value: "phone" },
+        { label: "WhatsApp", value: "whatsapp" },
+        { label: "None", value: "none" },
+      ],
+    },
+  ],
+});
+
 /** Fields shared by the four index-page globals (Services / Portfolio / Gallery /
  *  Sectors), grouped into tabs by section. Tabs are unnamed, so the stored data
  *  stays flat (eyebrow, title, intro, heroImage, metaDescription) — UI only. */
@@ -85,6 +110,10 @@ export const indexPageFields = (): Field[] => [
           { name: "intro", type: "textarea" },
           heroImageField(),
         ],
+      },
+      {
+        label: "Closing CTA",
+        fields: [ctaBandFields()],
       },
       {
         label: "SEO",

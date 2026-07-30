@@ -1,6 +1,6 @@
 import type { GlobalConfig } from "payload";
 
-import { heroImageField } from "../fields/shared";
+import { ctaBandFields, heroImageField } from "../fields/shared";
 
 export const AboutPage: GlobalConfig = {
   slug: "about-page",
@@ -53,6 +53,10 @@ export const AboutPage: GlobalConfig = {
             },
             { name: "clientsHeading", type: "text" },
           ],
+        },
+        {
+          label: "Closing CTA",
+          fields: [ctaBandFields()],
         },
         {
           label: "SEO",

@@ -57,9 +57,11 @@ export default async function GalleryPage() {
 
       <CtaBand
         site={site}
-        titleTop="Put your team"
-        titleBottom="in the picture."
-        secondary="none"
+        titleTop={hero.cta.titleTop || "Put your team"}
+        titleBottom={hero.cta.titleBottom || "in the picture."}
+        intro={hero.cta.intro || undefined}
+        primaryLabel={hero.cta.primaryLabel || undefined}
+        secondary={hero.cta.secondary || "none"}
       />
     </>
   );
