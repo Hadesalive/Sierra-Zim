@@ -1,5 +1,5 @@
 import * as migration_20260613_075801_initial from './20260613_075801_initial';
-import * as migration_20260730_163128_add_cta_band_fields from './20260730_163128_add_cta_band_fields';
+import * as migration_20260730_164423_add_cta_band_fields from './20260730_164423_add_cta_band_fields';
 
 export const migrations = [
   {
@@ -8,8 +8,8 @@ export const migrations = [
     name: '20260613_075801_initial',
   },
   {
-    up: migration_20260730_163128_add_cta_band_fields.up,
-    down: migration_20260730_163128_add_cta_band_fields.down,
-    name: '20260730_163128_add_cta_band_fields'
+    up: migration_20260730_164423_add_cta_band_fields.up,
+    down: migration_20260730_164423_add_cta_band_fields.down,
+    name: '20260730_164423_add_cta_band_fields'
   },
 ];

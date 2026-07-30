@@ -85,7 +85,6 @@ export const ctaBandFields = (): Field => ({
       name: "secondary",
       type: "select",
       label: "Secondary action",
-      defaultValue: "phone",
       options: [
         { label: "Phone", value: "phone" },
         { label: "WhatsApp", value: "whatsapp" },

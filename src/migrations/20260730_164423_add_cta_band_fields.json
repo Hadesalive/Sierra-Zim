@@ -3563,8 +3563,7 @@
           "type": "enum_home_cta_secondary",
           "typeSchema": "public",
           "primaryKey": false,
-          "notNull": false,
-          "default": "'phone'"
+          "notNull": false
         },
         "updated_at": {
           "name": "updated_at",
@@ -3966,8 +3965,7 @@
           "type": "enum_about_page_cta_secondary",
           "typeSchema": "public",
           "primaryKey": false,
-          "notNull": false,
-          "default": "'phone'"
+          "notNull": false
         },
         "meta_description": {
           "name": "meta_description",
@@ -4117,8 +4115,7 @@
           "type": "enum_services_page_cta_secondary",
           "typeSchema": "public",
           "primaryKey": false,
-          "notNull": false,
-          "default": "'phone'"
+          "notNull": false
         },
         "meta_description": {
           "name": "meta_description",
@@ -4240,8 +4237,7 @@
           "type": "enum_portfolio_page_cta_secondary",
           "typeSchema": "public",
           "primaryKey": false,
-          "notNull": false,
-          "default": "'phone'"
+          "notNull": false
         },
         "meta_description": {
           "name": "meta_description",
@@ -4363,8 +4359,7 @@
           "type": "enum_gallery_page_cta_secondary",
           "typeSchema": "public",
           "primaryKey": false,
-          "notNull": false,
-          "default": "'phone'"
+          "notNull": false
         },
         "meta_description": {
           "name": "meta_description",
@@ -4486,8 +4481,7 @@
           "type": "enum_sectors_page_cta_secondary",
           "typeSchema": "public",
           "primaryKey": false,
-          "notNull": false,
-          "default": "'phone'"
+          "notNull": false
         },
         "meta_description": {
           "name": "meta_description",
@@ -4746,6 +4740,6 @@
     "tables": {},
     "columns": {}
   },
-  "id": "b9ad7cef-d29a-4bb8-8226-fce98c5e29ee",
+  "id": "b4475b9e-8361-4362-9dcc-488f51c2dc84",
   "prevId": "00000000-0000-0000-0000-000000000000"
 }
