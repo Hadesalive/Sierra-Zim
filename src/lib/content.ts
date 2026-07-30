@@ -236,10 +236,12 @@ export async function getServicesPage(): Promise<ServicesPageContent> {
     intro: str(g?.intro),
     image: mediaUrl(g?.heroImage),
     cta: ctaOf(g?.cta),
-    heroSpecs: arr(g?.heroSpecs).map((s) => ({
-      accent: str(s.accent),
-      rest: str(s.rest),
-    })),
+    heroSpecs: arr(g?.heroSpecs)
+      .map((s) => ({
+        accent: str(s.accent),
+        rest: str(s.rest),
+      }))
+      .filter((s) => s.accent || s.rest),
   };
 }
 

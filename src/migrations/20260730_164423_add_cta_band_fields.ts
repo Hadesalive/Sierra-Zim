@@ -2,17 +2,21 @@ import { MigrateUpArgs, MigrateDownArgs, sql } from '@payloadcms/db-postgres'
 
 export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   await db.execute(sql`
+   DO $$ BEGIN
    CREATE TYPE "public"."enum_gallery_category" AS ENUM('classroom', 'light-vehicle', 'heavy-equipment', 'simulator', 'certification', 'projects', 'testimonials');
+  EXCEPTION
+   WHEN duplicate_object THEN null;
+  END $$;
   CREATE TYPE "public"."enum_home_cta_secondary" AS ENUM('phone', 'whatsapp', 'none');
   CREATE TYPE "public"."enum_about_page_cta_secondary" AS ENUM('phone', 'whatsapp', 'none');
   CREATE TYPE "public"."enum_services_page_cta_secondary" AS ENUM('phone', 'whatsapp', 'none');
   CREATE TYPE "public"."enum_portfolio_page_cta_secondary" AS ENUM('phone', 'whatsapp', 'none');
   CREATE TYPE "public"."enum_gallery_page_cta_secondary" AS ENUM('phone', 'whatsapp', 'none');
   CREATE TYPE "public"."enum_sectors_page_cta_secondary" AS ENUM('phone', 'whatsapp', 'none');
-  ALTER TABLE "gallery" ADD COLUMN "category" "enum_gallery_category";
-  ALTER TABLE "site_leadership" ADD COLUMN "photo_id" integer;
-  ALTER TABLE "home" ADD COLUMN "hero_image_id" integer;
-  ALTER TABLE "home" ADD COLUMN "why_us_image_id" integer;
+  ALTER TABLE "gallery" ADD COLUMN IF NOT EXISTS "category" "enum_gallery_category";
+  ALTER TABLE "site_leadership" ADD COLUMN IF NOT EXISTS "photo_id" integer;
+  ALTER TABLE "home" ADD COLUMN IF NOT EXISTS "hero_image_id" integer;
+  ALTER TABLE "home" ADD COLUMN IF NOT EXISTS "why_us_image_id" integer;
   ALTER TABLE "home" ADD COLUMN "cta_title_top" varchar;
   ALTER TABLE "home" ADD COLUMN "cta_title_bottom" varchar;
   ALTER TABLE "home" ADD COLUMN "cta_intro" varchar;
@@ -43,12 +47,24 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   ALTER TABLE "sectors_page" ADD COLUMN "cta_intro" varchar;
   ALTER TABLE "sectors_page" ADD COLUMN "cta_primary_label" varchar;
   ALTER TABLE "sectors_page" ADD COLUMN "cta_secondary" "enum_sectors_page_cta_secondary";
-  ALTER TABLE "site_leadership" ADD CONSTRAINT "site_leadership_photo_id_media_id_fk" FOREIGN KEY ("photo_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
-  ALTER TABLE "home" ADD CONSTRAINT "home_hero_image_id_media_id_fk" FOREIGN KEY ("hero_image_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
-  ALTER TABLE "home" ADD CONSTRAINT "home_why_us_image_id_media_id_fk" FOREIGN KEY ("why_us_image_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
-  CREATE INDEX "site_leadership_photo_idx" ON "site_leadership" USING btree ("photo_id");
-  CREATE INDEX "home_hero_image_idx" ON "home" USING btree ("hero_image_id");
-  CREATE INDEX "home_why_us_image_idx" ON "home" USING btree ("why_us_image_id");`)
+  DO $$ BEGIN
+   ALTER TABLE "site_leadership" ADD CONSTRAINT "site_leadership_photo_id_media_id_fk" FOREIGN KEY ("photo_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
+  EXCEPTION
+   WHEN duplicate_object THEN null;
+  END $$;
+  DO $$ BEGIN
+   ALTER TABLE "home" ADD CONSTRAINT "home_hero_image_id_media_id_fk" FOREIGN KEY ("hero_image_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
+  EXCEPTION
+   WHEN duplicate_object THEN null;
+  END $$;
+  DO $$ BEGIN
+   ALTER TABLE "home" ADD CONSTRAINT "home_why_us_image_id_media_id_fk" FOREIGN KEY ("why_us_image_id") REFERENCES "public"."media"("id") ON DELETE set null ON UPDATE no action;
+  EXCEPTION
+   WHEN duplicate_object THEN null;
+  END $$;
+  CREATE INDEX IF NOT EXISTS "site_leadership_photo_idx" ON "site_leadership" USING btree ("photo_id");
+  CREATE INDEX IF NOT EXISTS "home_hero_image_idx" ON "home" USING btree ("hero_image_id");
+  CREATE INDEX IF NOT EXISTS "home_why_us_image_idx" ON "home" USING btree ("why_us_image_id");`)
 }
 
 export async function down({ db, payload, req }: MigrateDownArgs): Promise<void> {

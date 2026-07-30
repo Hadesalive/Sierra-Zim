@@ -36,17 +36,11 @@ export function ProofRail({
       <div className="mx-auto w-full max-w-[90rem] px-6 pb-14 pt-16 sm:px-14 sm:pt-20 lg:pt-[120px]">
         <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-8">
           <h2 className="font-display text-fluid-3 font-extrabold uppercase leading-[0.88]">
-            {heading ? (
-              <span className="stroke-green">{heading}</span>
-            ) : (
-              <>
-                Real ground.
-                <br />
-                Real machines.
-                <br />
-                <span className="stroke-green">Real results.</span>
-              </>
-            )}
+            Real ground.
+            <br />
+            Real machines.
+            <br />
+            <span className="stroke-green">{heading || "Real results."}</span>
           </h2>
           <div className="max-w-[360px] pb-2">
             <p className="text-base leading-[1.6] text-ink-soft">

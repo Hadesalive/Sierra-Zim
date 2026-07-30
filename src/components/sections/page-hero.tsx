@@ -115,8 +115,8 @@ export function PageHero({
               </p>
             )}
             <dl className="flex flex-wrap gap-x-10 gap-y-3 border-t-2 border-dashed border-white/25 pt-5 font-mono text-[11px] uppercase tracking-[0.2em] text-white/60">
-              {specs.map((s) => (
-                <div key={s.accent} className="flex gap-2">
+              {specs.map((s, i) => (
+                <div key={`spec-${i}`} className="flex gap-2">
                   <dt className="text-safety-400">{s.accent}</dt>
                   <dd>{s.rest}</dd>
                 </div>

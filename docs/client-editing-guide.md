@@ -196,4 +196,4 @@ minute and do a hard refresh (**Ctrl+Shift+R**, or **Cmd+Shift+R** on a Mac).
 | The closing call-to-action block on any page | that Page's own entry → **Closing CTA** tab |
 | The "Real ground / Real machines / Real results" section on Home | Pages → **Home Page** → Sections → Proof rail heading/intro |
 | The WhatsApp line on the Contact page | Pages → **Contact Page** → Details |
-| The Theory/Practical/Certified row on the Training page | Pages → **Training Page** → Hero specs |
+| The Theory/Practical/Certified row on the Training page | Pages → **Services Page** → Hero specs |
