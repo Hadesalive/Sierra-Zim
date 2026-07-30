@@ -143,6 +143,10 @@ find things. Field names describe where the text appears:
 - **Heading** = the large title.
 - **Intro** = the paragraph under the heading.
 - **Green word / accent** = the word shown in green for emphasis.
+- **Closing CTA Band** = the big two-line call-to-action block near the
+  bottom of Home, About, Training, Work, Gallery and Sectors pages
+  ("Line 1" / "Line 2", an optional intro line, the button text, and
+  whether the second button calls, WhatsApps, or is left off).
 
 **If you leave a field empty, the site falls back to the original wording.** So
 you cannot break a page by clearing a box — it just returns to the default.
@@ -189,3 +193,7 @@ minute and do a hard refresh (**Ctrl+Shift+R**, or **Cmd+Shift+R** on a Mac).
 | The big text on the home page | Pages → **Home Page** → Hero |
 | The About page story | Pages → **About Page** |
 | Text on the contact page | Pages → **Contact Page** |
+| The closing call-to-action block on any page | that Page's own entry → **Closing CTA** tab |
+| The "Real ground / Real machines / Real results" section on Home | Pages → **Home Page** → Sections → Proof rail heading/intro |
+| The WhatsApp line on the Contact page | Pages → **Contact Page** → Details |
+| The Theory/Practical/Certified row on the Training page | Pages → **Training Page** → Hero specs |
