@@ -41,7 +41,7 @@ export function PageHero({
   // utilities, which left heroes tiny. Inline never touches the CSS pipeline.
   const renderTitle = (fontSize: string) => (
     <h1
-      className="rise font-display font-extrabold uppercase leading-[0.86] tracking-[0.005em]"
+      className="rise break-words font-display font-extrabold uppercase leading-[0.86] tracking-[0.005em]"
       style={{ animationDelay: "0.08s", fontSize }}
     >
       {title}
@@ -56,7 +56,7 @@ export function PageHero({
         <div className="grid lg:min-h-[62vh] lg:grid-cols-[1.05fr_0.95fr]">
           <div className="flex flex-col justify-center px-6 py-20 sm:px-14 sm:py-24">
             <div className="mb-6">{eyebrowEl}</div>
-            {renderTitle("clamp(48px, 6.4vw, 104px)")}
+            {renderTitle("clamp(36px, 9vw, 104px)")}
             {intro && (
               <p
                 className="rise mt-8 max-w-[520px] text-lg leading-[1.6] text-white/80"
@@ -102,7 +102,7 @@ export function PageHero({
       <div aria-hidden className="hazard h-3.5" />
       <div className="mx-auto w-full max-w-[90rem] px-6 pb-24 pt-28 sm:px-14">
         <div className="mb-6">{eyebrowEl}</div>
-        {renderTitle("clamp(56px, 8vw, 132px)")}
+        {renderTitle("clamp(40px, 12vw, 132px)")}
 
         {specs ? (
           <div

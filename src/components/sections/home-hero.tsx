@@ -50,8 +50,8 @@ export function HomeHero({
           </p>
 
           <h1
-            className="rise font-display font-extrabold uppercase leading-[0.88] tracking-[0.005em]"
-            style={{ animationDelay: "0.08s", fontSize: "clamp(56px, 11vw, 148px)" }}
+            className="rise break-words font-display font-extrabold uppercase leading-[0.88] tracking-[0.005em]"
+            style={{ animationDelay: "0.08s", fontSize: "clamp(40px, 13vw, 148px)" }}
           >
             {home.heroTitleLine1 || "Trained."}
             <br />
