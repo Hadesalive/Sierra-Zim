@@ -136,7 +136,7 @@ export default async function PortfolioPage() {
 
       {/* All records */}
       <section className="bg-paper text-ink">
-        <div className={`${SHELL} py-28`}>
+        <div className={`${SHELL} py-14 sm:py-20 lg:py-28`}>
           <div className="mb-12 flex flex-wrap items-baseline gap-x-6 gap-y-3">
             <h2 className="font-display text-fluid-5 font-extrabold uppercase leading-[0.9]">
               All records
@@ -192,7 +192,7 @@ export default async function PortfolioPage() {
       {/* Sectors */}
       {sectors.length > 0 && (
         <section className="border-t border-line-strong bg-paper-2 text-ink">
-          <div className={`${SHELL} py-28`}>
+          <div className={`${SHELL} py-14 sm:py-20 lg:py-28`}>
             <div className="mb-12 flex flex-wrap items-baseline gap-x-6 gap-y-3">
               <h2 className="font-display text-fluid-5 font-extrabold uppercase leading-[0.9]">
                 Built for the work

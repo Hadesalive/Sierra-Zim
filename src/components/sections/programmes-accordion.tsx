@@ -29,7 +29,7 @@ export function ProgrammesAccordion({
 
   return (
     <section className="bg-paper text-ink">
-      <div className="mx-auto w-full max-w-[90rem] px-6 py-[120px] sm:px-14">
+      <div className="mx-auto w-full max-w-[90rem] px-6 py-16 sm:px-14 sm:py-20 lg:py-[120px]">
         <div className="mb-14 flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
           <div>
             <p className="mb-4 font-mono text-[12px] uppercase tracking-[0.24em] text-safety-600">
