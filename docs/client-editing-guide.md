@@ -80,6 +80,22 @@ Same as above, but set **Media type** to *Video*, set **Provider** to *File
 the video ID. Add a **Poster** image — this is the still picture shown before
 someone presses play.
 
+### Uploading many photos at once
+
+If you have a batch of photos to add, don't upload one at a time from your
+computer for every single gallery item — upload them all first, then attach
+them:
+
+1. Go to **Media** in the sidebar → **Create new**.
+2. Drag in (or select) **all the photos at once** — they all upload together
+   in one go.
+3. Now go to **Content → Gallery** and create each entry as before, but on
+   the **Image** field choose **"Choose from existing"** instead of
+   uploading again — search by filename and pick the one you just uploaded.
+
+This splits the slow part (uploading) from the careful part (writing a good
+caption for each one), so you're not waiting on uploads between every entry.
+
 ---
 
 ## 4. Training programmes
@@ -113,7 +129,22 @@ construction, etc.).
 
 ---
 
-## 6. Contact details, staff and company info
+## 6. "Why us" and FAQ sections
+
+**Content → Value Props** is the list of three reasons shown on the Home
+page just below the client logos (e.g. *"Certified & Competent"*,
+*"Industry Proven"*, *"Trained by Experts"*) — each has a short **Title**
+and one-line **Description**. The heading and intro text above these three
+cards, plus the photo alongside them, are set separately in
+**Pages → Home Page → Sections** (the "Why us" fields).
+
+**Content → FAQ** is the list of questions and answers shown on the
+Contact page, right where people are deciding whether to reach out. Add,
+edit, remove or reorder freely — **Order** controls which appears first.
+
+---
+
+## 7. Contact details, staff and company info
 
 **Pages → Site Settings**
 
@@ -131,7 +162,7 @@ This is the single place for information that appears **everywhere** on the site
 
 ---
 
-## 7. Editing the words on a page
+## 8. Editing the words on a page
 
 **Pages → Home Page / About Page / Contact Page / …**
 
@@ -153,7 +184,7 @@ you cannot break a page by clearing a box — it just returns to the default.
 
 ---
 
-## 8. Saving and seeing your changes
+## 9. Saving and seeing your changes
 
 1. Click **Save**.
 2. Open the live site and refresh.
@@ -164,7 +195,7 @@ minute and do a hard refresh (**Ctrl+Shift+R**, or **Cmd+Shift+R** on a Mac).
 
 ---
 
-## 9. A few things worth knowing
+## 10. A few things worth knowing
 
 - **Always fill in Alt text** on photos. It's how blind visitors and Google
   understand your images. It takes five seconds and helps you rank.
@@ -180,20 +211,24 @@ minute and do a hard refresh (**Ctrl+Shift+R**, or **Cmd+Shift+R** on a Mac).
 
 ---
 
-## 10. Quick reference — "where do I change…?"
+## 11. Quick reference — "where do I change…?"
 
 | I want to change… | Go to |
 |---|---|
 | Add / remove gallery photos | Content → **Gallery** |
+| Add many photos at once | **Media** → Create new → drag in multiple files |
 | Add a new course | Content → **Programmes** |
 | Add a past job / project | Content → **Case Studies** |
 | A client's name in the client band | Content → **Clients** |
+| The three "why us" reasons on Home | Content → **Value Props** |
+| The FAQ questions on the Contact page | Content → **FAQ** |
 | Phone, WhatsApp, email, address | Pages → **Site Settings** |
 | Staff members and their photos | Pages → **Site Settings** → Leadership |
 | The big text on the home page | Pages → **Home Page** → Hero |
+| The "why us" heading/intro/photo on Home | Pages → **Home Page** → Sections |
 | The About page story | Pages → **About Page** |
 | Text on the contact page | Pages → **Contact Page** |
 | The closing call-to-action block on any page | that Page's own entry → **Closing CTA** tab |
-| The "Real ground / Real machines / Real results" section on Home | Pages → **Home Page** → Sections → Proof rail heading/intro |
+| The last line of the "Real ground / Real machines / Real results" section on Home | Pages → **Home Page** → Sections → Proof rail heading |
 | The WhatsApp line on the Contact page | Pages → **Contact Page** → Details |
 | The Theory/Practical/Certified row on the Training page | Pages → **Services Page** → Hero specs |
