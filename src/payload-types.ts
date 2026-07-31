@@ -783,10 +783,6 @@ export interface Home {
    */
   whyUsImage?: (number | null) | Media;
   whyUsImageCaption?: string | null;
-  workEyebrow?: string | null;
-  workHeading?: string | null;
-  galleryEyebrow?: string | null;
-  galleryHeading?: string | null;
   faqEyebrow?: string | null;
   faqHeading?: string | null;
   statementQuote?: string | null;
@@ -1032,10 +1028,6 @@ export interface HomeSelect<T extends boolean = true> {
   whyUsIntro?: T;
   whyUsImage?: T;
   whyUsImageCaption?: T;
-  workEyebrow?: T;
-  workHeading?: T;
-  galleryEyebrow?: T;
-  galleryHeading?: T;
   faqEyebrow?: T;
   faqHeading?: T;
   statementQuote?: T;
