@@ -9,9 +9,16 @@ import {
   ArrowUpRightIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { PageHero } from "@/components/sections/page-hero";
+import { Faq } from "@/components/sections/faq";
 import { ContactForm } from "@/components/contact-form";
 import { splitAccentHeading } from "@/lib/site";
-import { getSite, getProgrammes, getContactPage } from "@/lib/content";
+import {
+  getSite,
+  getProgrammes,
+  getContactPage,
+  getHome,
+  getFaqs,
+} from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
   const [site, contact] = await Promise.all([getSite(), getContactPage()]);
@@ -32,10 +39,12 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ContactPage() {
-  const [site, programmes, contact] = await Promise.all([
+  const [site, programmes, contact, home, faqs] = await Promise.all([
     getSite(),
     getProgrammes(),
     getContactPage(),
+    getHome(),
+    getFaqs(),
   ]);
 
   // `heroTitle` is one CMS string; the v2 hero heading is two-tone (plain line +
@@ -139,6 +148,8 @@ export default async function ContactPage() {
           <ContactForm site={site} programmes={programmes.map((p) => p.title)} />
         </div>
       </section>
+
+      <Faq faqs={faqs} eyebrow={home.faqEyebrow} heading={home.faqHeading} />
     </>
   );
 }
