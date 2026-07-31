@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaBand } from "@/components/sections/cta-band";
+import { COUNTRIES_SERVED, numberToWord, splitAccentHeading } from "@/lib/site";
 import {
   getCaseStudies,
   getSectors,
@@ -38,6 +39,11 @@ export default async function PortfolioPage() {
     getSite(),
     getPortfolioPage(),
   ]);
+
+  const [heroLine1, heroLine2] = hero.title
+    ? splitAccentHeading(hero.title)
+    : ["The field", "record."];
+
   const featured = caseStudies.find((c) => c.featured) ?? caseStudies[0];
   if (!featured) notFound();
 
@@ -49,9 +55,9 @@ export default async function PortfolioPage() {
         eyebrow={hero.eyebrow || "Portfolio — programmes delivered"}
         title={
           <>
-            The field
+            {heroLine1}
             <br />
-            <span className="stroke-white">record.</span>
+            <span className="stroke-white">{heroLine2}</span>
           </>
         }
         intro={
@@ -88,7 +94,7 @@ export default async function PortfolioPage() {
               Field record Nº 001
             </span>
             <div className="absolute inset-x-0 bottom-0 p-9 sm:p-10">
-              <p className="stroke-white-thin font-display text-[clamp(40px,5vw,88px)] font-extrabold uppercase leading-[0.85] tracking-[0.02em]">
+              <p className="stroke-white-thin font-display text-fluid-4 font-extrabold uppercase leading-[0.85] tracking-[0.02em]">
                 {featured.location}
               </p>
               <p className="mt-3.5 font-mono text-[11px] uppercase tracking-[0.22em] text-white/80">
@@ -100,14 +106,14 @@ export default async function PortfolioPage() {
             <p className="mb-4.5 font-mono text-[12px] uppercase tracking-[0.24em] text-safety-400">
               Cross-border delivery — {featured.year}
             </p>
-            <h2 className="font-display text-[clamp(34px,4vw,64px)] font-extrabold uppercase leading-[0.9]">
+            <h2 className="font-display text-fluid-7 font-extrabold uppercase leading-[0.9]">
               {featured.title}
             </h2>
             <p className="mt-6 text-[16.5px] leading-[1.65] text-white/80">
               {featured.summary}
             </p>
             <dl className="mt-7 border-t border-white/25">
-              <div className="grid grid-cols-[110px_1fr] gap-6 border-b border-white/15 py-3.5 sm:grid-cols-[150px_1fr]">
+              <div className="grid grid-cols-[120px_1fr] gap-6 border-b border-white/15 py-3.5 sm:grid-cols-[150px_1fr]">
                 <dt className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/55">
                   Delivered
                 </dt>
@@ -115,7 +121,7 @@ export default async function PortfolioPage() {
                   {featured.delivered.join(" · ")}
                 </dd>
               </div>
-              <div className="grid grid-cols-[110px_1fr] gap-6 border-b border-white/15 py-3.5 sm:grid-cols-[150px_1fr]">
+              <div className="grid grid-cols-[120px_1fr] gap-6 border-b border-white/15 py-3.5 sm:grid-cols-[150px_1fr]">
                 <dt className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/55">
                   Outcome
                 </dt>
@@ -130,13 +136,14 @@ export default async function PortfolioPage() {
 
       {/* All records */}
       <section className="bg-paper text-ink">
-        <div className={`${SHELL} py-24`}>
+        <div className={`${SHELL} py-14 sm:py-20 lg:py-28`}>
           <div className="mb-12 flex flex-wrap items-baseline gap-x-6 gap-y-3">
-            <h2 className="font-display text-[clamp(40px,4.6vw,76px)] font-extrabold uppercase leading-[0.9]">
+            <h2 className="font-display text-fluid-5 font-extrabold uppercase leading-[0.9]">
               All records
             </h2>
             <p className="font-mono text-[12px] uppercase tracking-[0.24em] text-safety-600">
-              {clientCount} clients · three countries · ongoing
+              {clientCount} clients · {numberToWord(COUNTRIES_SERVED).toLowerCase()}{" "}
+              countries · ongoing
             </p>
           </div>
           <div className="border-t-[3px] border-ink">
@@ -144,7 +151,7 @@ export default async function PortfolioPage() {
               <Link
                 key={c.slug}
                 href={`/portfolio/${c.slug}`}
-                className="group grid grid-cols-[52px_1fr_auto] items-center gap-4 border-b border-line-strong py-6 transition-colors hover:bg-paper-2 lg:grid-cols-[80px_minmax(200px,0.8fr)_150px_1.3fr_48px] lg:gap-8"
+                className="group grid grid-cols-[52px_1fr_auto] items-center gap-4 border-b border-line-strong py-6 transition-colors hover:bg-paper-2 lg:grid-cols-[80px_0.8fr_150px_1.3fr_48px] lg:gap-8"
               >
                 <span className="self-start font-mono text-[12px] uppercase tracking-[0.2em] text-safety-600 lg:self-center">
                   {`Nº ${String(i + 1).padStart(3, "0")}`}
@@ -185,9 +192,9 @@ export default async function PortfolioPage() {
       {/* Sectors */}
       {sectors.length > 0 && (
         <section className="border-t border-line-strong bg-paper-2 text-ink">
-          <div className={`${SHELL} py-24`}>
+          <div className={`${SHELL} py-14 sm:py-20 lg:py-28`}>
             <div className="mb-12 flex flex-wrap items-baseline gap-x-6 gap-y-3">
-              <h2 className="font-display text-[clamp(40px,4.6vw,76px)] font-extrabold uppercase leading-[0.9]">
+              <h2 className="font-display text-fluid-5 font-extrabold uppercase leading-[0.9]">
                 Built for the work
                 <br />
                 each sector does.
@@ -232,9 +239,11 @@ export default async function PortfolioPage() {
 
       <CtaBand
         site={site}
-        titleTop="Your fleet could be"
-        titleBottom="the next record."
-        secondary="none"
+        titleTop={hero.cta.titleTop || "Your fleet could be"}
+        titleBottom={hero.cta.titleBottom || "the next record."}
+        intro={hero.cta.intro || undefined}
+        primaryLabel={hero.cta.primaryLabel || undefined}
+        secondary={hero.cta.secondary || "none"}
       />
     </>
   );

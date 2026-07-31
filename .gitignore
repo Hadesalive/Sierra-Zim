@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Optimized seed source for the media migration (regenerated from the archive)
 media-staging/
+
+# subagent-driven-development worktrees
+/.worktrees/

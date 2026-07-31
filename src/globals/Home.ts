@@ -1,5 +1,7 @@
 import type { GlobalConfig } from "payload";
 
+import { ctaBandFields } from "../fields/shared";
+
 export const Home: GlobalConfig = {
   slug: "home",
   label: "Home Page",
@@ -54,6 +56,8 @@ export const Home: GlobalConfig = {
                 { name: "body", type: "textarea" },
               ],
             },
+            { name: "proofRailHeading", type: "text", label: "Proof rail — heading" },
+            { name: "proofRailIntro", type: "textarea", label: "Proof rail — intro" },
             { name: "whyUsEyebrow", type: "text", label: "Why us — eyebrow" },
             { name: "whyUsHeading", type: "text", label: "Why us — heading" },
             { name: "whyUsIntro", type: "textarea", label: "Why us — intro" },
@@ -65,10 +69,6 @@ export const Home: GlobalConfig = {
               admin: { description: "Leave empty to use the default." },
             },
             { name: "whyUsImageCaption", type: "text", label: "Why us — image caption" },
-            { name: "workEyebrow", type: "text", label: "Work — eyebrow" },
-            { name: "workHeading", type: "text", label: "Work — heading" },
-            { name: "galleryEyebrow", type: "text", label: "Gallery preview — eyebrow" },
-            { name: "galleryHeading", type: "text", label: "Gallery preview — heading" },
             { name: "faqEyebrow", type: "text", label: "FAQ — eyebrow" },
             { name: "faqHeading", type: "text", label: "FAQ — heading" },
           ],
@@ -94,6 +94,10 @@ export const Home: GlobalConfig = {
               ],
             },
           ],
+        },
+        {
+          label: "Closing CTA",
+          fields: [ctaBandFields()],
         },
       ],
     },

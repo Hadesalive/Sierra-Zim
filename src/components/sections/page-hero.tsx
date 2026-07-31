@@ -36,10 +36,13 @@ export function PageHero({
     </p>
   );
 
-  const titleEl = (
+  // fontSize is set inline (literal clamp) rather than via a Tailwind utility:
+  // Turbopack dev is unreliable at generating just-edited theme/arbitrary
+  // utilities, which left heroes tiny. Inline never touches the CSS pipeline.
+  const renderTitle = (fontSize: string) => (
     <h1
-      className="rise font-display font-extrabold uppercase leading-[0.86] tracking-[0.005em]"
-      style={{ animationDelay: "0.08s" }}
+      className="rise break-words font-display font-extrabold uppercase leading-[0.86] tracking-[0.005em]"
+      style={{ animationDelay: "0.08s", fontSize }}
     >
       {title}
     </h1>
@@ -48,11 +51,12 @@ export function PageHero({
   if (image) {
     // Split layout (About)
     return (
-      <section className="overflow-hidden bg-forest-950 text-white">
+      <section className="bg-forest-950 overflow-hidden text-white">
+        <div aria-hidden className="hazard h-3.5" />
         <div className="grid lg:min-h-[62vh] lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="flex flex-col justify-center px-6 py-16 sm:px-14 sm:py-18">
+          <div className="flex flex-col justify-center px-6 py-20 sm:px-14 sm:py-24">
             <div className="mb-6">{eyebrowEl}</div>
-            <div className="text-[clamp(48px,6.4vw,104px)]">{titleEl}</div>
+            {renderTitle("clamp(36px, 9vw, 104px)")}
             {intro && (
               <p
                 className="rise mt-8 max-w-[520px] text-lg leading-[1.6] text-white/80"
@@ -95,9 +99,10 @@ export function PageHero({
   // Stacked layout (Training / Work / Gallery / Contact)
   return (
     <section className="bg-forest-950 text-white">
-      <div className="mx-auto w-full max-w-[90rem] px-6 pb-18 pt-24 sm:px-14">
+      <div aria-hidden className="hazard h-3.5" />
+      <div className="mx-auto w-full max-w-[90rem] px-6 pb-24 pt-28 sm:px-14">
         <div className="mb-6">{eyebrowEl}</div>
-        <div className="text-[clamp(56px,8vw,132px)]">{titleEl}</div>
+        {renderTitle("clamp(40px, 12vw, 132px)")}
 
         {specs ? (
           <div
@@ -110,8 +115,8 @@ export function PageHero({
               </p>
             )}
             <dl className="flex flex-wrap gap-x-10 gap-y-3 border-t-2 border-dashed border-white/25 pt-5 font-mono text-[11px] uppercase tracking-[0.2em] text-white/60">
-              {specs.map((s) => (
-                <div key={s.accent} className="flex gap-2">
+              {specs.map((s, i) => (
+                <div key={`spec-${i}`} className="flex gap-2">
                   <dt className="text-safety-400">{s.accent}</dt>
                   <dd>{s.rest}</dd>
                 </div>

@@ -1,5 +1,6 @@
 import { HomeHero } from "@/components/sections/home-hero";
 import { ClientTicker } from "@/components/sections/client-ticker";
+import { WhyUs } from "@/components/sections/why-us";
 import { ProgrammesAccordion } from "@/components/sections/programmes-accordion";
 import { TheStandard } from "@/components/sections/the-standard";
 import { FieldRecord } from "@/components/sections/field-record";
@@ -13,6 +14,7 @@ import {
   getClients,
   getCaseStudies,
   getGallery,
+  getValueProps,
 } from "@/lib/content";
 
 /** Local field photos, always present in /public/gallery — a safe fallback for
@@ -27,7 +29,7 @@ const FALLBACK_PHOTOS = [
 ];
 
 export default async function HomePage() {
-  const [home, site, programmes, clients, caseStudies, gallery] =
+  const [home, site, programmes, clients, caseStudies, gallery, valueProps] =
     await Promise.all([
       getHome(),
       getSite(),
@@ -35,6 +37,7 @@ export default async function HomePage() {
       getClients(),
       getCaseStudies(),
       getGallery(),
+      getValueProps(),
     ]);
 
   // Featured case study drives the "field record" band.
@@ -57,13 +60,20 @@ export default async function HomePage() {
   return (
     <>
       <HomeHero home={home} site={site} programmeCount={programmes.length} />
-      <ClientTicker clients={clients} />
+      <ClientTicker clients={clients} label={home.clientsLabel} />
+      <WhyUs home={home} valueProps={valueProps} />
       <ProgrammesAccordion
         programmes={programmes}
         eyebrow={home.programmesEyebrow}
+        heading={home.programmesHeading}
         intro={home.programmesIntro}
       />
-      <TheStandard steps={home.certPathSteps} />
+      <TheStandard
+        steps={home.certPathSteps}
+        eyebrow={home.certPathEyebrow}
+        heading={home.certPathHeading}
+        intro={home.certPathIntro}
+      />
       {featured && (
         <FieldRecord
           caseStudy={featured}
@@ -71,7 +81,12 @@ export default async function HomePage() {
           otherClients={otherClients}
         />
       )}
-      <ProofRail photos={photos} stats={home.stats} />
+      <ProofRail
+        photos={photos}
+        stats={home.stats}
+        heading={home.proofRailHeading}
+        intro={home.proofRailIntro}
+      />
       <HomeQuote
         quote={home.statementQuote}
         partnersLabel={home.statementPartnersLabel}
@@ -79,7 +94,14 @@ export default async function HomePage() {
       />
       <CtaBand
         site={site}
-        intro="Tell us the programme, how many people and where — we reply within one business day."
+        titleTop={home.cta.titleTop || "Get your fleet"}
+        titleBottom={home.cta.titleBottom || "certified."}
+        intro={
+          home.cta.intro ||
+          "Tell us the programme, how many people and where — we reply within one business day."
+        }
+        primaryLabel={home.cta.primaryLabel || "Book a programme"}
+        secondary={home.cta.secondary || "phone"}
       />
     </>
   );

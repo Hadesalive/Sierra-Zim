@@ -15,7 +15,10 @@ import { getProgrammes, getSite } from "@/lib/content";
  * footer is chrome only.
  */
 export async function SiteFooter() {
-  const year = 2026;
+  // Async server component — evaluated on the server when the layout renders,
+  // so this never ships a client/server clock mismatch. (Routes are prerendered
+  // at build, so the copyright year refreshes with each deploy.)
+  const year = new Date().getFullYear();
   const [programmes, site] = await Promise.all([getProgrammes(), getSite()]);
 
   return (

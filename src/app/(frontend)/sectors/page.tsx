@@ -5,6 +5,7 @@ import Image from "next/image";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaBand } from "@/components/sections/cta-band";
 import { getSectors, getSite, getSectorsPage } from "@/lib/content";
+import { splitAccentHeading } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
   const sectorsHero = await getSectorsPage();
@@ -31,15 +32,20 @@ export default async function SectorsPage() {
     getSite(),
     getSectorsPage(),
   ]);
+
+  const [heroLine1, heroLine2] = hero.title
+    ? splitAccentHeading(hero.title)
+    : ["Sectors we", "train."];
+
   return (
     <>
       <PageHero
         eyebrow={hero.eyebrow || "Built for the work each sector does"}
         title={
           <>
-            Sectors we
+            {heroLine1}
             <br />
-            <span className="text-safety-400">train.</span>
+            <span className="text-safety-400">{heroLine2}</span>
           </>
         }
         intro={
@@ -50,7 +56,7 @@ export default async function SectorsPage() {
 
       <section className="bg-paper">
         <div aria-hidden className="hazard h-3.5" />
-        <div className={`${SHELL} py-24`}>
+        <div className={`${SHELL} py-14 sm:py-20 lg:py-28`}>
           <div className="grid gap-1 md:grid-cols-3">
             {sectors.map((sec) => (
               <Link
@@ -84,7 +90,14 @@ export default async function SectorsPage() {
         </div>
       </section>
 
-      <CtaBand site={site} />
+      <CtaBand
+        site={site}
+        titleTop={hero.cta.titleTop || "Get your fleet"}
+        titleBottom={hero.cta.titleBottom || "certified."}
+        intro={hero.cta.intro || undefined}
+        primaryLabel={hero.cta.primaryLabel || "Book a programme"}
+        secondary={hero.cta.secondary || "phone"}
+      />
     </>
   );
 }

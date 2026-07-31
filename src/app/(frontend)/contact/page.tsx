@@ -9,8 +9,16 @@ import {
   ArrowUpRightIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { PageHero } from "@/components/sections/page-hero";
+import { Faq } from "@/components/sections/faq";
 import { ContactForm } from "@/components/contact-form";
-import { getSite, getProgrammes, getContactPage } from "@/lib/content";
+import { splitAccentHeading } from "@/lib/site";
+import {
+  getSite,
+  getProgrammes,
+  getContactPage,
+  getHome,
+  getFaqs,
+} from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
   const [site, contact] = await Promise.all([getSite(), getContactPage()]);
@@ -31,11 +39,19 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ContactPage() {
-  const [site, programmes, contact] = await Promise.all([
+  const [site, programmes, contact, home, faqs] = await Promise.all([
     getSite(),
     getProgrammes(),
     getContactPage(),
+    getHome(),
+    getFaqs(),
   ]);
+
+  // `heroTitle` is one CMS string; the v2 hero heading is two-tone (plain line +
+  // amber line), so split it and fall back to the original copy.
+  const [titleLine1, titleLine2] = contact.heroTitle
+    ? splitAccentHeading(contact.heroTitle)
+    : ["Get your fleet", "certified."];
 
   return (
     <>
@@ -43,9 +59,9 @@ export default async function ContactPage() {
         eyebrow={contact.heroEyebrow || "Contact — reply within one business day"}
         title={
           <>
-            Get your fleet
+            {titleLine1}
             <br />
-            <span className="text-safety-400">certified.</span>
+            <span className="text-safety-400">{titleLine2}</span>
           </>
         }
         intro={
@@ -59,11 +75,12 @@ export default async function ContactPage() {
         <div className="mx-auto grid w-full max-w-[90rem] gap-14 px-6 py-20 sm:px-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           {/* Channels */}
           <div>
-            <h2 className="font-display text-[clamp(32px,3.6vw,56px)] font-extrabold uppercase leading-[0.9]">
+            <h2 className="font-display text-fluid-9 font-extrabold uppercase leading-[0.9]">
               {contact.detailsHeading || "Talk to the academy."}
             </h2>
             <p className="mt-5 text-[16.5px] leading-[1.6] text-ink-soft">
-              WhatsApp is fastest — most of our clients book that way.
+              {contact.whatsappNote ||
+                "WhatsApp is fastest — most of our clients book that way."}
             </p>
 
             <div className="mt-8 flex flex-col gap-3">
@@ -131,6 +148,8 @@ export default async function ContactPage() {
           <ContactForm site={site} programmes={programmes.map((p) => p.title)} />
         </div>
       </section>
+
+      <Faq faqs={faqs} eyebrow={home.faqEyebrow} heading={home.faqHeading} />
     </>
   );
 }

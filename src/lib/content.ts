@@ -31,6 +31,28 @@ const arr = (v: unknown): Doc[] => (Array.isArray(v) ? (v as Doc[]) : []);
 /** View a precisely-typed Payload global/doc through the loose Doc shape. */
 const asDoc = (v: unknown): Doc => v as Doc;
 
+export type CtaBandContent = {
+  titleTop: string;
+  titleBottom: string;
+  intro: string;
+  primaryLabel: string;
+  secondary: "phone" | "whatsapp" | "none" | "";
+};
+
+const ctaSecondary = (v: unknown): CtaBandContent["secondary"] =>
+  v === "phone" || v === "whatsapp" || v === "none" ? v : "";
+
+const ctaOf = (v: unknown): CtaBandContent => {
+  const c = asDoc(v);
+  return {
+    titleTop: str(c?.titleTop),
+    titleBottom: str(c?.titleBottom),
+    intro: str(c?.intro),
+    primaryLabel: str(c?.primaryLabel),
+    secondary: ctaSecondary(c?.secondary),
+  };
+};
+
 async function findAll(collection: string, depth = 1): Promise<Doc[]> {
   const p = await payload();
   const res = await p.find({
@@ -152,15 +174,13 @@ export async function getHome() {
       title: str(s.title),
       body: str(s.body),
     })),
+    proofRailHeading: str(h?.proofRailHeading),
+    proofRailIntro: str(h?.proofRailIntro),
     whyUsEyebrow: str(h?.whyUsEyebrow),
     whyUsHeading: str(h?.whyUsHeading),
     whyUsIntro: str(h?.whyUsIntro),
     whyUsImage: mediaUrl(h?.whyUsImage),
     whyUsImageCaption: str(h?.whyUsImageCaption),
-    workEyebrow: str(h?.workEyebrow),
-    workHeading: str(h?.workHeading),
-    galleryEyebrow: str(h?.galleryEyebrow),
-    galleryHeading: str(h?.galleryHeading),
     faqEyebrow: str(h?.faqEyebrow),
     faqHeading: str(h?.faqHeading),
     statementQuote: str(h?.statementQuote),
@@ -170,6 +190,7 @@ export async function getHome() {
       value: str(s.value),
       label: str(s.label),
     })),
+    cta: ctaOf(h?.cta),
   };
 }
 export type HomeContent = Awaited<ReturnType<typeof getHome>>;
@@ -181,6 +202,7 @@ export type IndexPage = {
   title: string;
   intro: string;
   image: string;
+  cta: CtaBandContent;
 };
 
 async function getIndexPage(slug: string): Promise<IndexPage> {
@@ -192,10 +214,33 @@ async function getIndexPage(slug: string): Promise<IndexPage> {
     title: str(g?.title),
     intro: str(g?.intro),
     image: mediaUrl(g?.heroImage),
+    cta: ctaOf(g?.cta),
   };
 }
 
-export const getServicesPage = () => getIndexPage("services-page");
+export type ServicesPageContent = IndexPage & {
+  heroSpecs: { accent: string; rest: string }[];
+};
+
+export async function getServicesPage(): Promise<ServicesPageContent> {
+  const p = await payload();
+  const g = asDoc(await p.findGlobal({ slug: "services-page", depth: 1 }));
+  return {
+    metaDescription: str(g?.metaDescription),
+    eyebrow: str(g?.eyebrow),
+    title: str(g?.title),
+    intro: str(g?.intro),
+    image: mediaUrl(g?.heroImage),
+    cta: ctaOf(g?.cta),
+    heroSpecs: arr(g?.heroSpecs)
+      .map((s) => ({
+        accent: str(s.accent),
+        rest: str(s.rest),
+      }))
+      .filter((s) => s.accent || s.rest),
+  };
+}
+
 export const getPortfolioPage = () => getIndexPage("portfolio-page");
 export const getGalleryPage = () => getIndexPage("gallery-page");
 export const getSectorsPage = () => getIndexPage("sectors-page");
@@ -225,6 +270,7 @@ export async function getAboutPage() {
       note: str(l.note),
     })),
     clientsHeading: str(a?.clientsHeading),
+    cta: ctaOf(a?.cta),
   };
 }
 
@@ -240,6 +286,7 @@ export async function getContactPage() {
     heroImage: mediaUrl(c?.heroImage),
     detailsEyebrow: str(c?.detailsEyebrow),
     detailsHeading: str(c?.detailsHeading),
+    whatsappNote: str(c?.whatsappNote),
   };
 }
 
@@ -255,6 +302,7 @@ export async function getGallery(): Promise<GalleryItem[]> {
         poster: mediaUrl(d.poster),
         alt: str(d.alt),
         caption: str(d.caption),
+        category: (d.category as GalleryItem["category"]) || undefined,
         w: num(d.width, 1280),
         h: num(d.height, 720),
       };
@@ -264,6 +312,7 @@ export async function getGallery(): Promise<GalleryItem[]> {
       src: mediaUrl(d.image),
       alt: str(d.alt),
       caption: str(d.caption),
+      category: (d.category as GalleryItem["category"]) || undefined,
       w: mediaDim(d.image, "width", 1536),
       h: mediaDim(d.image, "height", 1152),
     };

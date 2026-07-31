@@ -13,9 +13,13 @@ type Photo = { src: string; alt: string; caption: string };
 export function ProofRail({
   photos,
   stats,
+  heading,
+  intro,
 }: {
   photos: Photo[];
   stats: HomeContent["stats"];
+  heading?: string;
+  intro?: string;
 }) {
   // Interleave photo, stat, photo, stat … then trail with the leftover photos.
   type Item =
@@ -29,19 +33,19 @@ export function ProofRail({
 
   return (
     <section className="bg-paper text-ink">
-      <div className="mx-auto w-full max-w-[90rem] px-6 pb-14 pt-[104px] sm:px-14">
+      <div className="mx-auto w-full max-w-[90rem] px-6 pb-14 pt-16 sm:px-14 sm:pt-20 lg:pt-[120px]">
         <div className="flex flex-wrap items-end justify-between gap-x-12 gap-y-8">
-          <h2 className="font-display text-[clamp(44px,6vw,96px)] font-extrabold uppercase leading-[0.88]">
+          <h2 className="font-display text-fluid-3 font-extrabold uppercase leading-[0.88]">
             Real ground.
             <br />
             Real machines.
             <br />
-            <span className="stroke-green">Real results.</span>
+            <span className="stroke-green">{heading || "Real results."}</span>
           </h2>
           <div className="max-w-[360px] pb-2">
             <p className="text-base leading-[1.6] text-ink-soft">
-              No mock-ups, no stock photos — the yard, the machines and the people
-              we actually train.
+              {intro ||
+                "No mock-ups, no stock photos — the yard, the machines and the people we actually train."}
             </p>
             <Link
               href="/gallery"
@@ -82,7 +86,7 @@ export function ProofRail({
             >
               <div aria-hidden className="hazard h-2.5" />
               <div className="flex flex-1 flex-col justify-between p-7">
-                <p className="font-display text-[104px] font-extrabold leading-[0.85] text-safety-400">
+                <p className="break-all font-display text-[clamp(48px,9vw,104px)] font-extrabold leading-[0.85] text-safety-400">
                   {item.data.value}
                 </p>
                 <p className="font-mono text-[11px] uppercase leading-[1.7] tracking-[0.16em] text-white/75">

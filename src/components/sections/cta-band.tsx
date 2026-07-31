@@ -38,9 +38,9 @@ export function CtaBand({
             "repeating-linear-gradient(-45deg, #14201a 0 18px, #f0c000 18px 36px)",
         }}
       />
-      <div className="mx-auto flex w-full max-w-[90rem] flex-wrap items-center justify-between gap-10 px-6 py-24 sm:px-14">
+      <div className="mx-auto flex w-full max-w-[90rem] flex-wrap items-center justify-between gap-10 px-6 py-14 sm:px-14 sm:py-20 lg:py-28">
         <div>
-          <h2 className="font-display text-[clamp(48px,6vw,104px)] font-extrabold uppercase leading-[0.88]">
+          <h2 className="font-display text-fluid-1 font-extrabold uppercase leading-[0.88]">
             {titleTop}
             <br />
             {titleBottom}

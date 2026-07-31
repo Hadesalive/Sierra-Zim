@@ -6,6 +6,7 @@ import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { PageHero } from "@/components/sections/page-hero";
 import { TheStandard } from "@/components/sections/the-standard";
 import { CtaBand } from "@/components/sections/cta-band";
+import { numberToWord, splitAccentHeading } from "@/lib/site";
 import { getServicesPage, getProgrammes, getHome, getSite } from "@/lib/content";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -40,26 +41,34 @@ export default async function ServicesPage() {
     getSite(),
   ]);
 
+  const [heroLine1, heroLine2] = servicesHero.title
+    ? splitAccentHeading(servicesHero.title)
+    : [`${numberToWord(programmes.length)} programmes.`, "One standard."];
+
   return (
     <>
       <PageHero
         eyebrow={servicesHero.eyebrow || "The programmes"}
         title={
           <>
-            Seven programmes.
+            {heroLine1}
             <br />
-            <span className="text-safety-400">One standard.</span>
+            <span className="text-safety-400">{heroLine2}</span>
           </>
         }
         intro={
           servicesHero.intro ||
           "Each combines classroom theory, practical on-vehicle training and independent assessment — ending in certification you can rely on."
         }
-        specs={[
-          { accent: "Theory", rest: "+ oral exam" },
-          { accent: "Practical", rest: "on the yard" },
-          { accent: "Certified", rest: "only when both passed" },
-        ]}
+        specs={
+          servicesHero.heroSpecs.length > 0
+            ? servicesHero.heroSpecs
+            : [
+                { accent: "Theory", rest: "+ oral exam" },
+                { accent: "Practical", rest: "on the yard" },
+                { accent: "Certified", rest: "only when both passed" },
+              ]
+        }
       />
 
       {/* Programme dockets */}
@@ -92,7 +101,7 @@ export default async function ServicesPage() {
                 </div>
 
                 <div>
-                  <h2 className="font-display text-[clamp(32px,3.6vw,60px)] font-extrabold uppercase leading-[0.92]">
+                  <h2 className="font-display text-fluid-8 font-extrabold uppercase leading-[0.92]">
                     {prog.title}
                   </h2>
                   <p className="mt-5 text-[16.5px] leading-[1.65] text-ink-soft">
@@ -102,7 +111,7 @@ export default async function ServicesPage() {
                     {DOCKET_ROWS.map((row) => (
                       <div
                         key={row.label}
-                        className="grid grid-cols-[110px_1fr] gap-5 border-b border-line py-3 sm:grid-cols-[140px_1fr] sm:gap-6"
+                        className="grid grid-cols-[120px_1fr] gap-5 border-b border-line py-3 sm:grid-cols-[140px_1fr] sm:gap-6"
                       >
                         <dt className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-safety-600">
                           {row.label}
@@ -127,15 +136,23 @@ export default async function ServicesPage() {
         ))}
       </section>
 
-      <TheStandard steps={home.certPathSteps} />
+      <TheStandard
+        steps={home.certPathSteps}
+        eyebrow={home.certPathEyebrow}
+        heading={home.certPathHeading}
+        intro={home.certPathIntro}
+      />
 
       <CtaBand
         site={site}
-        titleTop="Not sure which"
-        titleBottom="programme?"
-        intro="Tell us your fleet and we'll build the training plan."
-        primaryLabel="Talk to us"
-        secondary="whatsapp"
+        titleTop={servicesHero.cta.titleTop || "Not sure which"}
+        titleBottom={servicesHero.cta.titleBottom || "programme?"}
+        intro={
+          servicesHero.cta.intro ||
+          "Tell us your fleet and we'll build the training plan."
+        }
+        primaryLabel={servicesHero.cta.primaryLabel || "Talk to us"}
+        secondary={servicesHero.cta.secondary || "whatsapp"}
       />
     </>
   );

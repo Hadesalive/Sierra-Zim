@@ -104,12 +104,12 @@ const run = async () => {
   // 5. Gallery — images then videos, from the manifest.
   for (const g of A.gallery as any[]) {
     if (DRY) continue;
-    await payload.create({ collection: "gallery", data: { caption: g.caption, alt: g.alt ?? g.caption, mediaType: "image", image: ref(g.file), order: g.order ?? 0 } });
+    await payload.create({ collection: "gallery", data: { caption: g.caption, alt: g.alt ?? g.caption, mediaType: "image", category: g.category, image: ref(g.file), order: g.order ?? 0 } });
   }
   for (const v of A.galleryVideos as any[]) {
     if (DRY) continue;
     await payload.create({ collection: "gallery", data: {
-      caption: v.caption, alt: v.caption, mediaType: "video", provider: "file", videoSrc: mediaUrlByFile[v.file],
+      caption: v.caption, alt: v.caption, mediaType: "video", category: v.category ?? "testimonials", provider: "file", videoSrc: mediaUrlByFile[v.file],
       poster: ref(v.poster), width: 1280, height: 720, order: v.order ?? 0,
     } });
   }

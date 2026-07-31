@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon, WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
+import { COUNTRIES_SERVED } from "@/lib/site";
 import type { HomeContent, SiteSettings } from "@/lib/content";
 
 /**
@@ -21,12 +22,13 @@ export function HomeHero({
   const heroSrc = home.heroImage || "/gallery/dadtco-heavy-truck.jpg";
   const specs = [
     { value: String(programmeCount).padStart(2, "0"), label: "programmes" },
-    { value: "03", label: "countries" },
+    { value: String(COUNTRIES_SERVED).padStart(2, "0"), label: "countries" },
     { value: "100%", label: "assessed before certified" },
   ];
 
   return (
     <section className="relative overflow-hidden bg-forest-950 text-white">
+      <div aria-hidden className="hazard h-3.5" />
       <div className="grid lg:min-h-[calc(92vh-72px)] lg:grid-cols-[1.05fr_0.95fr]">
         {/* Left — copy */}
         <div className="flex flex-col justify-center px-6 py-16 sm:px-14">
@@ -34,19 +36,32 @@ export function HomeHero({
             className="rise mb-7 flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.24em] text-white/65"
           >
             <span aria-hidden className="size-2 shrink-0 bg-safety-400" />
-            {site.address.city}, {site.address.country} — on real ground since day
-            one
+            {home.heroEyebrowAccent || home.heroEyebrowRest ? (
+              <span>
+                <span className="text-safety-400">{home.heroEyebrowAccent}</span>{" "}
+                {home.heroEyebrowRest}
+              </span>
+            ) : (
+              <span>
+                {site.address.city}, {site.address.country} — on real ground since
+                day one
+              </span>
+            )}
           </p>
 
           <h1
-            className="rise font-display text-[clamp(56px,11vw,148px)] font-extrabold uppercase leading-[0.88] tracking-[0.005em]"
-            style={{ animationDelay: "0.08s" }}
+            className="rise break-words font-display font-extrabold uppercase leading-[0.88] tracking-[0.005em]"
+            style={{ animationDelay: "0.08s", fontSize: "clamp(40px, 13vw, 148px)" }}
           >
-            Trained.
+            {home.heroTitleLine1 || "Trained."}
             <br />
-            <span className="stroke-white">Tested.</span>
+            <span className="stroke-white">
+              {home.heroTitleAccent || "Tested."}
+            </span>
             <br />
-            <span className="text-safety-400">Certified.</span>
+            <span className="text-safety-400">
+              {home.heroTitleLine2 || "Certified."}
+            </span>
           </h1>
 
           <p
@@ -123,10 +138,10 @@ export function HomeHero({
                 {site.shortName} · {site.address.city}
               </span>
               <span className="my-1 block font-display text-[26px] font-extrabold uppercase leading-none tracking-[0.14em]">
-                Certified
+                {home.heroPillTitle || "Certified"}
               </span>
               <span className="block font-mono text-[9px] uppercase tracking-[0.26em]">
-                Theory + Practical
+                {home.heroPillSubtitle || "Theory + Practical"}
               </span>
             </div>
           </div>

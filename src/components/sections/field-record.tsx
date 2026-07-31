@@ -60,7 +60,7 @@ export function FieldRecord({
             Field record Nº 001
           </span>
           <div className="absolute inset-x-0 bottom-0 p-9 sm:p-10">
-            <p className="stroke-white-thin font-display text-[clamp(44px,6vw,104px)] font-extrabold uppercase leading-[0.85] tracking-[0.02em]">
+            <p className="stroke-white-thin font-display text-fluid-2 font-extrabold uppercase leading-[0.85] tracking-[0.02em]">
               {caseStudy.location}
             </p>
             <p className="mt-3.5 font-mono text-[11px] uppercase tracking-[0.22em] text-white/80">
@@ -74,12 +74,12 @@ export function FieldRecord({
           <p className="mb-4.5 font-mono text-[12px] uppercase tracking-[0.24em] text-safety-400">
             Cross-border delivery — {caseStudy.year}
           </p>
-          <h2 className="font-display text-[clamp(36px,4.4vw,72px)] font-extrabold uppercase leading-[0.9]">
-            We took the academy across borders.
+          <h2 className="font-display text-fluid-6 font-extrabold uppercase leading-[0.9]">
+            {caseStudy.title || "We took the academy across borders."}
           </h2>
 
           {/* Route line */}
-          <div className="mt-9 flex items-center gap-4 font-mono text-[12px] uppercase tracking-[0.2em] text-white/85">
+          <div className="mt-9 flex flex-wrap items-center gap-4 gap-y-2 font-mono text-[12px] uppercase tracking-[0.2em] text-white/85">
             <span className="flex items-center gap-2">
               <span aria-hidden className="size-2 bg-safety-400" />
               {homeCity}, SL
@@ -104,7 +104,7 @@ export function FieldRecord({
             {rows.map((r) => (
               <div
                 key={r.label}
-                className="grid grid-cols-[110px_1fr] gap-6 border-b border-white/15 py-3.5 sm:grid-cols-[150px_1fr]"
+                className="grid grid-cols-[120px_1fr] gap-6 border-b border-white/15 py-3.5 sm:grid-cols-[150px_1fr]"
               >
                 <dt className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/55">
                   {r.label}

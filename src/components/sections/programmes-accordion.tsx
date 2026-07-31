@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PlusIcon, ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
+import { numberToWord, splitAccentHeading } from "@/lib/site";
 import type { ProgrammeItem } from "@/lib/content";
 
 /**
@@ -11,24 +12,33 @@ import type { ProgrammeItem } from "@/lib/content";
 export function ProgrammesAccordion({
   programmes,
   eyebrow,
+  heading,
   intro,
 }: {
   programmes: ProgrammeItem[];
   eyebrow: string;
+  /** Home global `programmesHeading`; falls back to the derived count line. */
+  heading?: string;
   intro: string;
 }) {
+  // Never hardcode the count — it must follow the Programmes collection.
+  const countLine = `${numberToWord(programmes.length)} programmes.`;
+  const [headingLine1, headingLine2] = heading
+    ? splitAccentHeading(heading)
+    : [countLine, "One standard."];
+
   return (
     <section className="bg-paper text-ink">
-      <div className="mx-auto w-full max-w-[90rem] px-6 py-[104px] sm:px-14">
+      <div className="mx-auto w-full max-w-[90rem] px-6 py-16 sm:px-14 sm:py-20 lg:py-[120px]">
         <div className="mb-14 flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
           <div>
             <p className="mb-4 font-mono text-[12px] uppercase tracking-[0.24em] text-safety-600">
               {eyebrow || "What we train"}
             </p>
-            <h2 className="font-display text-[clamp(44px,6vw,96px)] font-extrabold uppercase leading-[0.9] tracking-[0.005em]">
-              Seven programmes.
+            <h2 className="font-display text-fluid-3 font-extrabold uppercase leading-[0.9] tracking-[0.005em]">
+              {headingLine1}
               <br />
-              <span className="text-forest-700">One standard.</span>
+              <span className="text-forest-700">{headingLine2}</span>
             </h2>
           </div>
           <p className="max-w-[380px] text-[17px] leading-[1.6] text-ink-soft">
@@ -47,7 +57,7 @@ export function ProgrammesAccordion({
                 <span className="w-9 font-display text-[28px] font-bold text-line-strong sm:w-[90px]">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="acc-title font-display text-[clamp(24px,3.2vw,48px)] font-extrabold uppercase leading-none tracking-[0.01em] text-ink transition-colors">
+                <span className="acc-title font-display text-fluid-acc font-extrabold uppercase leading-none tracking-[0.01em] text-ink transition-colors">
                   {prog.title}
                 </span>
                 <span className="acc-plus flex size-11 items-center justify-center border-2 border-ink text-ink">
